@@ -2833,3 +2833,7 @@ a:hover {
   color: #fff;
   text-align: center;
 }
+body.about-page {
+  background: #ffffff; /* flat white background */
+  color: #111; /* ensure text contrast */
+}
