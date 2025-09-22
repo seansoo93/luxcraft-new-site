@@ -45,4 +45,35 @@
   .lux-button {
     @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-lux-gold px-8 py-3 font-semibold text-lux-dark shadow-lg shadow-lux-gold/30 transition hover:-translate-y-0.5 hover:bg-white;
   }
+
+  .about-hero-section {
+    @apply relative overflow-hidden;
+    background-color: #0a0a0a;
+  }
+
+  .about-hero-content {
+    @apply mx-auto flex flex-col items-center justify-center text-center;
+    gap: clamp(2.25rem, 6vw, 3rem);
+    padding: clamp(5.5rem, 16vw, 7.1875rem) 0 clamp(2.5rem, 9vw, 3.25rem);
+  }
+
+  .about-hero-title {
+    @apply m-0 font-semibold text-white;
+    line-height: 1.1;
+    font-size: clamp(3rem, 8vw, 4.75rem);
+  }
+
+  .about-hero-indicator {
+    @apply inline-flex items-center justify-center;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: -0.35rem;
+    flex-shrink: 0;
+  }
+
+  .about-hero-indicator svg {
+    @apply block;
+    width: 14.626px;
+    height: 8.639px;
+    fill: currentColor;
+  }
 }

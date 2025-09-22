@@ -2816,23 +2816,45 @@ a:hover {
 
 .about-hero-section {
   position: relative;
-  min-height: 30vh;
-  background: #000000;
+  background-color: #0a0a0a;
+  overflow: hidden;
+}
+
+.about-hero-content {
+  margin: 0 auto;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: clamp(2.25rem, 6vw, 3rem);
+  padding: clamp(5.5rem, 16vw, 7.1875rem) 0 clamp(2.5rem, 9vw, 3.25rem);
   text-align: center;
-  padding: 4rem 1rem;
-  overflow: hidden;
 }
 
 .about-hero-title {
   margin: 0;
-  font-size: clamp(3rem, 8vw, 5rem);
-  font-weight: 700;
+  font-size: clamp(3rem, 8vw, 4.75rem);
+  font-weight: 600;
+  line-height: 1.1;
   color: #fff;
-  text-align: center;
 }
+
+.about-hero-indicator {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: -0.35rem;
+  flex-shrink: 0;
+}
+
+.about-hero-indicator svg {
+  display: block;
+  width: 14.626px;
+  height: 8.639px;
+  fill: currentColor;
+}
+
 body.about-page {
   background: #ffffff; /* flat white background */
   color: #111; /* ensure text contrast */
