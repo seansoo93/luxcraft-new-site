@@ -2814,7 +2814,8 @@ a:hover {
 }
 
 
-.about-hero-section {
+.about-hero-section,
+.page-hero-section {
   position: relative;
   background-color: #0a0a0a;
   overflow: hidden;
