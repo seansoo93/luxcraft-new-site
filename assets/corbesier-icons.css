@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'CorbesierIcons';
+  src: url('./fonts/corbesier/fontello.woff2') format('woff2'),
+       url('./fonts/corbesier/fontello.woff') format('woff'),
+       url('./fonts/corbesier/fontello.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+[class^='icon-corbesier-']::before,
+[class*=' icon-corbesier-']::before {
+  font-family: 'CorbesierIcons';
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: '\ea1e';
+}
+
+.icon-corbesier-1::before { content: '\ea1e'; }
+.icon-corbesier-2::before { content: '\ea1f'; }
+.icon-corbesier-3::before { content: '\ea20'; }
+.icon-corbesier-4::before { content: '\ea21'; }
+.icon-corbesier-5::before { content: '\ea22'; }
+.icon-corbesier-6::before { content: '\ea23'; }
+.icon-corbesier-7::before { content: '\ea24'; }
+.icon-corbesier-8::before { content: '\ea25'; }
+.icon-corbesier-9::before { content: '\ea26'; }
+.icon-corbesier-10::before { content: '\ea27'; }

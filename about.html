@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About LuxCraft - Interior Designer Singapore</title>
+    <meta
+      name="description"
+      content="Discover the LuxCraft team, our renovation expertise, and how we bring Singapore homes and commercial spaces to life."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Syne:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="192x192" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body class="min-h-screen bg-lux-dark text-white">
+    <header class="site-header sticky top-0 z-50">
+      <div class="lux-container header-row">
+        <a href="index.html" class="header-logo" aria-label="LuxCraft Home">
+          <img src="assets/images/logo.png" alt="LuxCraft" />
+        </a>
+        <nav class="header-nav" aria-label="Primary">
+          <a href="about.html">Who We Are</a>
+          <a href="services.html">What We Do</a>
+          <a href="portfolio.html">Our Past Works</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="header-controls">
+          <button class="header-action" type="button" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-3.2-3.2" stroke-linecap="round" />
+            </svg>
+          </button>
+          <button
+            class="header-toggle md:hidden"
+            type="button"
+            aria-label="Open navigation"
+            onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden border-t border-white/10 bg-lux-darker/95 px-4 py-6 md:hidden">
+        <nav class="flex flex-col gap-4 text-sm uppercase tracking-[0.25em] text-white/80">
+          <a href="about.html" class="text-white">Who We Are</a>
+          <a href="services.html" class="hover:text-white">What We Do</a>
+          <a href="portfolio.html" class="hover:text-white">Our Past Works</a>
+          <a href="contact.html" class="hover:text-white">Contact Us</a>
+        </nav>
+        <div class="mt-6 flex flex-col gap-2 text-white/70">
+          <a href="tel:+6583126212" class="hover:text-white">+65 8312 6212 (Shamim)</a>
+          <a href="tel:+6588991245" class="hover:text-white">+65 8899 1245 (Manfred)</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="lux-section pt-16">
+        <div class="lux-container grid gap-16 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+          <div class="space-y-8">
+            <span class="lux-tag">About LuxCraft</span>
+            <h1 class="text-4xl font-semibold leading-tight sm:text-5xl lg:text-6xl">
+              Your go-to interior designer in Singapore
+            </h1>
+            <p class="max-w-2xl text-lg text-white/70">
+              Welcome to LuxCraft, your go-to interior designer in Singapore. We specialise in hacking, carpentry, painting, glass and metal work, masonry, tiling, electrical work, and plumbing-every trade you need to bring a timeless space to life.
+            </p>
+            <p class="max-w-2xl text-base text-white/60">
+              We offer complimentary 3D renderings of your design concept before starting any project, ensuring your vision is perfectly realised. At LuxCraft, renovation dreams are crafted with precision, excellence, and sincere collaboration.
+            </p>
+            <div class="grid gap-4 sm:grid-cols-">
+              <dl class="lux-card">
+                <dt class="text-xs uppercase tracking-[0.4em] text-white/50">Registered trades</dt>
+                <dd class="mt-4 text-3xl font-semibold text-white">7+</dd>
+                <dd class="mt-2 text-sm text-white/60">HDB-licensed contractors and certified specialists for every core renovation discipline.</dd>
+              </dl>
+              <dl class="lux-card">
+                <dt class="text-xs uppercase tracking-[0.4em] text-white/50">Years of experience</dt>
+                <dd class="mt-4 text-3xl font-semibold text-white">10+</dd>
+                <dd class="mt-2 text-sm text-white/60">Seasoned consultants and project leads guiding builds across Singapore neighbourhoods.</dd>
+              </dl>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <img
+              src="https://placehold.co/640x420/111111/FFFFFF?text=Studio+Team"
+              alt="LuxCraft interior design team"
+              class="w-full rounded-[2.5rem] border border-white/10 object-cover shadow-lux"
+            />
+            <div class="lux-card space-y-4">
+              <h2 class="text-2xl font-semibold">Our philosophy</h2>
+              <p class="text-sm text-white/60">
+                Every project starts by listening deeply to how you live. We translate those insights into future-ready layouts, mood-led palettes, and bespoke carpentry that feels personal from day one.
+              </p>
+              <p class="text-sm text-white/60">
+                Your design lead stays with you through selections, approvals, and on-site coordination, ensuring a clear point of contact at every milestone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lux-section">
+        <div class="lux-container grid gap-14 lg:grid-cols-2 lg:items-start">
+          <div class="space-y-6">
+            <span class="lux-tag">How we work</span>
+            <h2 class="text-3xl font-semibold sm:text-4xl">An integrated renovation journey</h2>
+            <p class="text-base text-white/70">
+              From the first consultation, we map out a clear process so you know exactly what to expect-from compliance checks to materials, schedules, and styling.
+            </p>
+            <ul class="space-y-4 text-sm text-white/60">
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-lux-gold"></span>
+                Complimentary site recce, proposal, and 3D renderings so decisions are confident and informed.
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-lux-gold"></span>
+                Dedicated project lead coordinating certified subcontractors across carpentry, electrical, plumbing, and wet works.
+              </li>
+              <li class="flex items-start gap-3">
+                <span class="mt-1 h-2.5 w-2.5 rounded-full bg-lux-gold"></span>
+                Progress walkthroughs and snag rectification to make sure handover day feels effortless.
+              </li>
+            </ul>
+          </div>
+          <div class="space-y-6">
+            <div class="lux-card">
+              <h3 class="text-xl font-semibold">Our capabilities</h3>
+              <p class="mt-3 text-sm text-white/60">
+                Integrated services include hacking and demolition, bespoke carpentry, premium painting systems, glass and metal fabrications, artisan masonry and tiling, certified electrical work, and licensed plumbing.
+              </p>
+              <p class="mt-3 text-sm text-white/60">
+                We're equally at home with HDB BTO homes, spacious landed properties, and commercial interiors that call for a distinctive brand experience.
+              </p>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-">
+              <div class="lux-card">
+                <h3 class="text-xl font-semibold">Design leadership</h3>
+                <p class="mt-2 text-sm text-white/60">
+                  Our senior designers guide mood direction, material selection, and space planning with a balance of aesthetics and practicality.
+                </p>
+              </div>
+              <div class="lux-card">
+                <h3 class="text-xl font-semibold">Project governance</h3>
+                <p class="mt-2 text-sm text-white/60">
+                  Every timeline, permit, and site update is tracked so workflows stay compliant and transparent.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lux-section">
+        <div class="lux-container space-y-12">
+          <div>
+            <span class="lux-tag">Words from our clients</span>
+            <h2 class="mt-6 text-3xl font-semibold sm:text-4xl">Stories that keep us inspired</h2>
+          </div>
+          <div class="grid gap-8 lg:grid-cols-3">
+            <article class="lux-card space-y-4">
+              <p class="text-sm text-white/70">
+                "Thank you so much for the amazing first renovations work experience. I'm really glad to have met a reliable and efficient team."
+              </p>
+              <p class="text-sm font-semibold text-white">Feng Kai &amp; Elsie</p>
+            </article>
+            <article class="lux-card space-y-4">
+              <p class="text-sm text-white/70">
+                "Manfred offers great advice and help as the project lead. The renovation process was smooth and completed on time. Highly recommend this team!"
+              </p>
+              <p class="text-sm font-semibold text-white">Anna &amp; Edwin</p>
+            </article>
+            <article class="lux-card space-y-4">
+              <p class="text-sm text-white/70">
+                "Excellent service, highly professional painters, and a friendly, co-operative team. Definite recommendation."
+              </p>
+              <p class="text-sm font-semibold text-white">Leia</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="lux-section">
+        <div class="lux-container rounded-[3rem] border border-white/10 bg-white/5 p-12 text-center shadow-lux backdrop-blur">
+          <h2 class="text-3xl font-semibold sm:text-4xl">Meet us for a consultation</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-base text-white/70">
+            Arrange a visit to our Woodlands Bizhub studio or schedule a virtual session. We'll walk through your floor plan, budget, and aspirations step by step.
+          </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="contact.html" class="lux-button">Book an Appointment</a>
+            <a href="portfolio.html" class="inline-flex items-center gap-2 rounded-full border border-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white/80 hover:bg-white/10">
+              View Past Works
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 bg-lux-darker/80">
+      <div class="lux-container grid gap-8 py-12 md:grid-cols-[1.2fr_0.8fr]">
+        <div class="space-y-6">
+          <a href="index.html" class="flex items-center gap-3 text-white" aria-label="LuxCraft Home">
+            <img src="assets/images/logo.png" alt="LuxCraft" class="h-10 w-auto" />
+          </a>
+          <p class="max-w-sm text-sm text-white/60">
+            190 Woodlands Industrial Park E5<br />
+            Woodlands Bizhub, #04-05<br />
+            Singapore 757516
+          </p>
+          <div class="grid gap-2 text-sm text-white/60">
+            <a href="mailto:contact@luxcraft.sg" class="hover:text-white">contact@luxcraft.sg</a>
+            <a href="tel:+658312621" class="hover:text-white">+65 8312 6212 (Shamim)</a>
+            <a href="tel:+6588991245" class="hover:text-white">+65 8899 1245 (Manfred)</a>
+          </div>
+        </div>
+        <div class="grid gap-6 md:justify-items-end">
+          <nav class="flex flex-wrap gap-6 text-sm uppercase tracking-[0.3em] text-white/60">
+            <a href="about.html" class="text-white">Who We Are</a>
+            <a href="services.html" class="hover:text-white">What We Do</a>
+            <a href="portfolio.html" class="hover:text-white">Our Past Works</a>
+            <a href="contact.html" class="hover:text-white">Contact Us</a>
+          </nav>
+          <div class="flex gap-4 text-white/60">
+            <a href="https://business.facebook.com/ThemeRexStudio/" target="_blank" rel="noreferrer" class="hover:text-white">Facebook</a>
+            <a href="https://twitter.com/ThemerexThemes" target="_blank" rel="noreferrer" class="hover:text-white">Twitter</a>
+            <a href="https://dribbble.com/ThemeREX" target="_blank" rel="noreferrer" class="hover:text-white">Dribbble</a>
+            <a href="https://www.instagram.com/themerex_net/" target="_blank" rel="noreferrer" class="hover:text-white">Instagram</a>
+          </div>
+          <p class="text-xs uppercase tracking-[0.3em] text-white/40">
+            LuxCraft Pte. Ltd &copy; 2025. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

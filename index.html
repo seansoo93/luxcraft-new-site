@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuxCraft - Interior Designer Singapore</title>
+    <meta
+      name="description"
+      content="LuxCraft is a Singapore interior design studio delivering concept development, tailored renovations, and complimentary 3D renderings for homes and commercial spaces."
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Syne:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="192x192" />
+    <link rel="stylesheet" href="./assets/corbesier-icons.css" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body class="min-h-screen bg-lux-dark text-white">
+    <header class="site-header sticky top-0 z-50">
+      <div class="lux-container header-row">
+        <a href="index.html" class="header-logo" aria-label="LuxCraft Home">
+          <img src="assets/images/logo.png" alt="LuxCraft" />
+        </a>
+        <nav class="header-nav" aria-label="Primary">
+          <a href="about.html">Who We Are</a>
+          <a href="services.html">What We Do</a>
+          <a href="portfolio.html">Our Past Works</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="header-controls">
+          <button class="header-action" type="button" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-3.2-3.2" stroke-linecap="round" />
+            </svg>
+          </button>
+          <button
+            class="header-toggle md:hidden"
+            type="button"
+            aria-label="Open navigation"
+            onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden border-t border-white/10 bg-lux-darker/95 px-4 py-6 md:hidden">
+        <nav class="flex flex-col gap-4 text-sm uppercase tracking-[0.25em] text-white/80">
+          <a href="about.html" class="hover:text-white">Who We Are</a>
+          <a href="services.html" class="hover:text-white">What We Do</a>
+          <a href="portfolio.html" class="hover:text-white">Our Past Works</a>
+          <a href="contact.html" class="hover:text-white">Contact Us</a>
+        </nav>
+        <div class="mt-6 flex flex-col gap-2 text-white/70">
+          <a href="tel:+6583126212" class="hover:text-white">+65 8312 6212 (Shamim)</a>
+          <a href="tel:+6588991245" class="hover:text-white">+65 8899 1245 (Manfred)</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="relative overflow-hidden bg-lux-darker" aria-label="Featured projects">
+        <div class="relative h-[calc(100vh-5rem)] min-h-[620px] w-full">
+          <div class="absolute inset-0" role="list">
+            <article
+              class="hero-slide hero-slide--active hero-slide--copy-visible absolute inset-0 flex h-full w-full flex-col justify-center overflow-hidden opacity-0 transition-opacity duration-700"
+              data-hero-slide="0"
+              aria-hidden="false"
+            >
+              <img
+                src="assets/images/Hero-1.jpg"
+                alt="LuxCraft kitchen renovation with pendant lights"
+                class="absolute inset-0 h-full w-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/60 to-transparent"></div>
+              <div class="hero-copy">
+                <span class="hero-kicker">Interior Trends</span>
+                <h1 class="hero-headline">All the best trends for your house</h1>
+                <p class="hero-subcopy">
+                  Choose your interior style provided by LuxCraft—from concept to completion with meticulous project management.
+                </p>
+                <div class="hero-actions">
+                  <a href="contact.html" class="hero-button hero-button--ghost">Book a Consultation</a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="hero-slide absolute inset-0 flex h-full w-full flex-col justify-center overflow-hidden opacity-0 transition-opacity duration-700"
+              data-hero-slide="1"
+              aria-hidden="true"
+            >
+              <img
+                src="assets/images/Hero-2.jpg"
+                alt="LuxCraft living room with warm lighting"
+                class="absolute inset-0 h-full w-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/62 to-transparent"></div>
+              <div class="hero-copy">
+                <span class="hero-kicker">Curated Spaces</span>
+                <h1 class="hero-headline">Tailored interiors for everyday comfort</h1>
+                <p class="hero-subcopy">
+                  From bespoke carpentry to lighting plans, every LuxCraft home is engineered around the way you live.
+                </p>
+                <div class="hero-actions">
+                  <a href="about.html" class="hero-button hero-button--ghost">Meet the Team</a>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="hero-slide absolute inset-0 flex h-full w-full flex-col justify-center overflow-hidden opacity-0 transition-opacity duration-700"
+              data-hero-slide="2"
+              aria-hidden="true"
+            >
+              <img
+                src="assets/images/Hero-3.jpg"
+                alt="LuxCraft entertainment area with natural light"
+                class="absolute inset-0 h-full w-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/62 to-transparent"></div>
+              <div class="hero-copy">
+                <span class="hero-kicker">Project Delivery</span>
+                <h1 class="hero-headline">Renovations managed with precision</h1>
+                <p class="hero-subcopy">
+                  Dedicated project leads coordinate every trade, timeline, and inspection so your dream space is turnkey-ready.
+                </p>
+                <div class="hero-actions">
+                  <a href="#why-luxcraft" class="hero-button hero-button--ghost">Why LuxCraft</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
+
+          <div class="hero-chrome-bar" aria-hidden="true"></div>
+
+          <div class="hero-chrome absolute bottom-8 left-8 sm:left-[8%] lg:left-[10%]">
+            <div class="flex items-center gap-5 text-xs font-semibold uppercase tracking-[0.35em] text-white/60" role="tablist" aria-label="Hero slides">
+              <button type="button" class="hero-nav-item relative pb-2 text-white/60 transition hover:text-white" data-hero-nav="0" aria-selected="true">
+                01
+                <span class="hero-underline absolute bottom-0 left-0 h-[2px] w-10 origin-left scale-x-0 bg-white transition-transform duration-500"></span>
+              </button>
+              <button type="button" class="hero-nav-item relative pb-2 text-white/60 transition hover:text-white" data-hero-nav="1" aria-selected="false">
+                02
+                <span class="hero-underline absolute bottom-0 left-0 h-[2px] w-10 origin-left scale-x-0 bg-white transition-transform duration-500"></span>
+              </button>
+              <button type="button" class="hero-nav-item relative pb-2 text-white/60 transition hover:text-white" data-hero-nav="2" aria-selected="false">
+                03
+                <span class="hero-underline absolute bottom-0 left-0 h-[2px] w-10 origin-left scale-x-0 bg-white transition-transform duration-500"></span>
+              </button>
+            </div>
+            <div class="h-px w-full overflow-hidden bg-white/20">
+              <div class="h-full w-full origin-left scale-x-0 bg-white" data-hero-progress></div>
+            </div>
+          </div>
+
+          <button type="button" class="hero-scroll group absolute right-8 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-white/60 transition hover:text-white sm:right-[10%]" data-scroll-target="#about-preview">
+            <span class="inline-flex h-px w-10 bg-white/40 transition group-hover:bg-white"></span>
+            <span>Scroll Down</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="about-panel" id="about-preview">
+        <div class="about-panel__shell">
+          <header class="about-panel__header">
+            <span class="about-panel__eyebrow">About Us</span>
+            <h2 class="about-panel__title">We go beyond the ordinary.</h2>
+            <p class="about-panel__lede">
+              Concept development, complimentary renderings, bespoke space planning, and renovation services that translate your vision into a refined reality.
+            </p>
+          </header>
+          <div class="about-features">
+            <article class="about-feature">
+              <span class="about-feature__icon icon-corbesier-6" aria-hidden="true"></span>
+              <span class="about-feature__label">Concept<br />Development</span>
+            </article>
+            <article class="about-feature">
+              <span class="about-feature__icon icon-corbesier-7" aria-hidden="true"></span>
+              <span class="about-feature__label">Free<br />Rendering</span>
+            </article>
+            <article class="about-feature">
+              <span class="about-feature__icon icon-corbesier-8" aria-hidden="true"></span>
+              <span class="about-feature__label">Space<br />Planning</span>
+            </article>
+            <article class="about-feature">
+              <span class="about-feature__icon icon-corbesier-9" aria-hidden="true"></span>
+              <span class="about-feature__label">Renovation<br />Services</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="why-panel" id="why-luxcraft">
+        <div class="why-panel__overlay" aria-hidden="true"></div>
+        <div class="lux-container why-panel__inner">
+          <div class="why-panel__grid">
+            <div class="why-panel__intro">
+              <span class="why-panel__eyebrow">You Must Be Asking</span>
+              <h2 class="why-panel__title">Why Choose LuxCraft?</h2>
+            </div>
+            <div class="why-panel__copy">
+              <p>
+                At <strong>LuxCraft</strong>, our certified team offers comprehensive services from <strong>design to execution</strong>, including <strong>complimentary 3D renderings</strong> to ensure your vision is perfectly realized.
+              </p>
+              <p>
+                We prioritize a customer-centric approach, ensuring seamless communication and meticulous attention to detail throughout the renovation process. With <strong>LuxCraft</strong>, experience peace of mind and satisfaction as we transform your space to match your exact needs.
+              </p>
+            </div>
+          </div>
+          <div class="why-panel__brands">
+            <h3>We work with the best brands</h3>
+            <ul class="why-panel__logos">
+              <li><img src="assets/images/brands/nippon-paint.png" alt="Nippon Paint logo" loading="lazy" /></li>
+              <li><img src="assets/images/brands/hafary.png" alt="Hafary logo" loading="lazy" /></li>
+              <li><img src="assets/images/brands/excel.png" alt="Excel Hardware logo" loading="lazy" /></li>
+              <li><img src="assets/images/brands/EDL.png" alt="EDL logo" loading="lazy" /></li>
+              <li><img src="assets/images/brands/lamitak.png" alt="Lamitak logo" loading="lazy" /></li>
+              <li><img src="assets/images/brands/evorich.png" alt="Evorich logo" loading="lazy" /></li>
+              <li><img src="assets/images/brands/rafflespaint.png" alt="Raffles Paint logo" loading="lazy" /></li>
+              <li><img src="assets/images/brands/blum.png" alt="Blum logo" loading="lazy" /></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="design-services">
+        <div class="design-services__inner">
+          <div class="design-services__lead">
+            <span class="design-services__eyebrow">Design Services</span>
+            <h2 class="design-services__title">Turning dreams into reality.</h2>
+            <p>
+              At LuxCraft, we specialise in transforming your vision into a tangible design with our expert 3D renderings. Our design team <strong>collaborates closely with you</strong> from the initial consultation to the final details, ensuring every aspect of the renovation meets your specific needs and preferences. Whether it's a minor room refresh or a major renovation, we guarantee a <strong>seamless and satisfying design experience</strong>, with a focus on quality and client satisfaction.
+            </p>
+            <div class="design-services__metrics">
+              <div>
+                <span class="design-services__metric-value" data-count="154" data-count-suffix="+">0</span>
+                <span class="design-services__metric-label">Satisfied Customers</span>
+              </div>
+              <div>
+                <span class="design-services__metric-value" data-count="1283" data-count-suffix="+">0</span>
+                <span class="design-services__metric-label">3D Renders</span>
+              </div>
+            </div>
+          </div>
+          <div class="design-services__media">
+            <img src="assets/images/design-livingroom.jpg" alt="LuxCraft living room concept" loading="lazy" />
+          </div>
+        </div>
+      </section>
+
+      <section class="design-gallery">
+        <div class="design-gallery__media">
+          <div class="design-gallery__slides">
+            <div class="design-gallery__slide is-active" data-gallery-slide="0">
+              <img
+                src="assets/images/design-gallery-01.jpg"
+                alt="LuxCraft gallery preview 1"
+                loading="lazy"
+              />
+            </div>
+            <div class="design-gallery__slide" data-gallery-slide="1">
+              <img
+                src="assets/images/design-gallery-02.jpg"
+                alt="LuxCraft gallery preview 2"
+                loading="lazy"
+              />
+            </div>
+            <div class="design-gallery__slide" data-gallery-slide="2">
+              <img
+                src="assets/images/design-gallery-03.jpg"
+                alt="LuxCraft gallery preview 3"
+                loading="lazy"
+              />
+            </div>
+            <div class="design-gallery__slide" data-gallery-slide="3">
+              <img
+                src="https://placehold.co/1200x800/282828/f0f0f0?text=Gallery+04"
+                alt="LuxCraft gallery preview 4"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="design-gallery__card">
+          <div class="design-gallery__card-inner">
+            <span class="design-gallery__eyebrow">Dream comes alive</span>
+            <h3 class="design-gallery__title">Your personal inspiration.</h3>
+            <p>
+              We immerse ourselves in our clients' dreams and desires, ensuring every detail aligns perfectly before any work begins.
+            </p>
+            <div class="design-gallery__controls" style="display:flex; flex-direction:column; align-items:flex-start; gap:12px; margin-top:12px;">
+              <div class="design-gallery__dots" role="tablist" aria-label="Select gallery slide">
+                <button type="button" class="design-gallery__dot design-gallery__dot--active" data-gallery-dot="0" aria-selected="true">
+                  <span class="sr-only">Slide 1</span>
+                </button>
+                <button type="button" class="design-gallery__dot" data-gallery-dot="1" aria-selected="false">
+                  <span class="sr-only">Slide 2</span>
+                </button>
+                <button type="button" class="design-gallery__dot" data-gallery-dot="2" aria-selected="false">
+                  <span class="sr-only">Slide 3</span>
+                </button>
+                <button type="button" class="design-gallery__dot" data-gallery-dot="3" aria-selected="false">
+                  <span class="sr-only">Slide 4</span>
+                </button>
+              </div>
+              <div class="design-gallery__nav" aria-label="Gallery navigation" style="position:relative; display:flex; gap:12px;">
+                <button type="button" class="design-gallery__nav-btn" data-gallery-prev aria-label="Previous slide">
+                  <span class="sr-only">Previous slide</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M15 6 9 12l6 6" />
+                  </svg>
+                </button>
+                <button type="button" class="design-gallery__nav-btn" data-gallery-next aria-label="Next slide">
+                  <span class="sr-only">Next slide</span>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="m9 6 6 6-6 6" />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner">
+        <div class="site-footer__top">
+          <a href="index.html" class="site-footer__brand" aria-label="LuxCraft Home">
+            <img src="assets/images/logo.png" alt="LuxCraft" />
+          </a>
+          <nav class="site-footer__nav" aria-label="Footer navigation">
+            <a href="about.html">Who We Are</a>
+            <a href="services.html">What We Do</a>
+            <a href="portfolio.html">Our Past Works</a>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+        </div>
+
+        <div class="site-footer__divider" aria-hidden="true"></div>
+
+        <div class="site-footer__content">
+          <div class="site-footer__column">
+            <p>190 Woodlands Industrial Park E5</p>
+            <p>Woodlands Bizhub, #04-05</p>
+            <p>Singapore 757516</p>
+          </div>
+          <div class="site-footer__column site-footer__column--contact">
+            <a href="tel:+6583126212">+65 8312 6212 <span>(Shamim)</span></a>
+            <a href="tel:+6588991245">+65 8899 1245 <span>(Manfred)</span></a>
+            <a href="mailto:contact@luxcraft.sg" class="site-footer__email">contact@luxcraft.sg</a>
+          </div>
+          <div class="site-footer__socials" aria-label="Social media">
+            <a href="https://www.instagram.com/themerex_net/" target="_blank" rel="noreferrer" aria-label="Instagram" class="site-footer__social">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="3.5" />
+                <circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+            <a href="https://business.facebook.com/ThemeRexStudio/" target="_blank" rel="noreferrer" aria-label="Facebook" class="site-footer__social">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 7h-2.2c-.6 0-.8.3-.8.8V11h3l-.4 3h-2.6v8h-3.1v-8H7v-3h2.9V7.5C9.9 5.6 11 4 13.6 4H15v3z" />
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/" target="_blank" rel="noreferrer" aria-label="TikTok" class="site-footer__social">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M16.5 3.5C16.9 5.1 18.2 6.3 19.8 6.6v2.6c-1.5-.1-2.9-.6-4.1-1.4v6.5a5.1 5.1 0 1 1-5.1-5.1c.3 0 .7 0 1 .1v2.8a2.2 2.2 0 1 0 1.5 2.1V3.5h2.7z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <p class="site-footer__legal">LuxCraft Pte. Ltd © 2025. All Rights Reserved.</p>
+      </div>
+    </footer>
+    <button type="button" class="back-to-top" aria-label="Back to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m0 0-5 5m5-5 5 5" />
+      </svg>
+    </button>
+    <div class="cursor-follower" aria-hidden="true"></div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const slides = Array.from(document.querySelectorAll('[data-hero-slide]'));
+        const navButtons = Array.from(document.querySelectorAll('[data-hero-nav]'));
+        const progressEl = document.querySelector('[data-hero-progress]');
+        const transitionMs = 6000;
+        const wipeDurationMs = 1000;
+        const copySafetyBufferMs = 150;
+        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        let activeIndex = 0;
+        let timerId;
+        const copyTransitions = new WeakMap();
+
+        const detachCopyListener = (slide) => {
+          const record = copyTransitions.get(slide);
+          if (!record) return;
+          slide.removeEventListener('transitionend', record.listener);
+          if (record.fallbackId) {
+            window.clearTimeout(record.fallbackId);
+          }
+          copyTransitions.delete(slide);
+        };
+
+        const queueCopyReveal = (slide) => {
+          if (!slide) return;
+          const reveal = () => {
+            detachCopyListener(slide);
+            if (!slide.classList.contains('hero-slide--active')) {
+              return;
+            }
+            slide.classList.add('hero-slide--copy-visible');
+          };
+          const listener = (event) => {
+            const property = event.propertyName || '';
+            if (property !== 'clip-path' && property !== 'clipPath') {
+              return;
+            }
+            reveal();
+          };
+          const fallbackId = window.setTimeout(reveal, wipeDurationMs + copySafetyBufferMs);
+          copyTransitions.set(slide, { listener, fallbackId });
+          slide.addEventListener('transitionend', listener);
+        };
+
+        const applyState = (nextIndex, userInitiated = false) => {
+          if (!slides.length) return;
+
+          slides.forEach((slide, idx) => {
+            const isActive = idx === nextIndex;
+            detachCopyListener(slide);
+            if (!prefersReduced) {
+              slide.classList.remove('hero-slide--copy-visible');
+            } else if (!isActive) {
+              slide.classList.remove('hero-slide--copy-visible');
+            }
+
+            slide.classList.remove('hero-slide--active');
+            if (isActive) {
+              if (!prefersReduced) {
+                void slide.offsetWidth;
+              }
+              slide.classList.add('hero-slide--active');
+            }
+
+            if (isActive) {
+              if (prefersReduced) {
+                slide.classList.add('hero-slide--copy-visible');
+              } else {
+                queueCopyReveal(slide);
+              }
+            }
+            slide.setAttribute('aria-hidden', String(!isActive));
+          });
+
+          navButtons.forEach((btn, idx) => {
+            const underline = btn.querySelector('.hero-underline');
+            const selected = idx === nextIndex;
+            btn.setAttribute('aria-selected', String(selected));
+            btn.classList.toggle('text-white', selected);
+            btn.classList.toggle('text-white/60', !selected);
+            if (underline) {
+              underline.style.transform = selected ? 'scaleX(1)' : 'scaleX(0)';
+            }
+          });
+
+          if (progressEl && !prefersReduced) {
+            progressEl.style.transition = 'none';
+            progressEl.style.transform = 'scaleX(0)';
+            // Force reflow before animating so the bar restarts cleanly.
+            void progressEl.offsetWidth;
+            progressEl.style.transition = `transform ${transitionMs}ms linear`;
+            progressEl.style.transform = 'scaleX(1)';
+          }
+
+          activeIndex = nextIndex;
+
+          if (timerId) {
+            clearTimeout(timerId);
+          }
+          if (!prefersReduced) {
+            timerId = setTimeout(() => {
+              const following = (activeIndex + 1) % slides.length;
+              applyState(following);
+            }, transitionMs);
+          }
+        };
+
+        navButtons.forEach((button) => {
+          button.addEventListener('click', () => {
+            const target = Number(button.dataset.heroNav);
+            if (!Number.isNaN(target)) {
+              applyState(target, true);
+            }
+          });
+        });
+
+        if (!prefersReduced) {
+          slides.forEach((slide) => {
+            slide.classList.remove('hero-slide--copy-visible');
+            slide.classList.remove('hero-slide--active');
+          });
+          requestAnimationFrame(() => {
+            applyState(0);
+          });
+        } else {
+          applyState(0);
+        }
+
+        const cursorEl = document.querySelector('.cursor-follower');
+        const supportsFinePointer = window.matchMedia('(pointer: fine)').matches;
+        if (cursorEl && supportsFinePointer) {
+          const offsetX = 33;
+          const offsetY = 27;
+          let targetX = window.innerWidth / 2 + offsetX;
+          let targetY = window.innerHeight / 2 + offsetY;
+          let currentX = targetX;
+          let currentY = targetY;
+          let rafId = null;
+
+          const render = () => {
+            const ease = 0.18;
+            currentX += (targetX - currentX) * ease;
+            currentY += (targetY - currentY) * ease;
+            cursorEl.style.left = `${currentX}px`;
+            cursorEl.style.top = `${currentY}px`;
+
+            if (Math.abs(targetX - currentX) > 0.1 || Math.abs(targetY - currentY) > 0.1) {
+              rafId = requestAnimationFrame(render);
+            } else {
+              rafId = null;
+            }
+          };
+
+          const startRendering = () => {
+            if (!rafId) {
+              rafId = requestAnimationFrame(render);
+            }
+          };
+
+          const showFollower = (event) => {
+            targetX = event.clientX + offsetX;
+            targetY = event.clientY + offsetY;
+
+            if (!cursorEl.classList.contains('is-visible')) {
+              cursorEl.classList.add('is-visible');
+              currentX = targetX;
+              currentY = targetY;
+              cursorEl.style.left = `${currentX}px`;
+              cursorEl.style.top = `${currentY}px`;
+            }
+
+            startRendering();
+          };
+
+          const hideFollower = () => {
+            cursorEl.classList.remove('is-visible');
+            cursorEl.classList.remove('is-active');
+            if (rafId) {
+              cancelAnimationFrame(rafId);
+              rafId = null;
+            }
+          };
+
+          window.addEventListener('pointermove', showFollower);
+          window.addEventListener('pointerdown', () => cursorEl.classList.add('is-active'));
+          window.addEventListener('pointerup', () => cursorEl.classList.remove('is-active'));
+          window.addEventListener('pointerleave', hideFollower);
+          window.addEventListener('blur', hideFollower);
+        } else if (cursorEl) {
+          cursorEl.remove();
+        }
+
+        const logoTrack = document.querySelector('.why-panel__logos');
+        if (logoTrack && logoTrack.children.length) {
+          const originalItems = Array.from(logoTrack.children);
+          const clones = originalItems.map((item) => item.cloneNode(true));
+          logoTrack.append(...clones);
+
+          let loopWidth = 0;
+          const recalcLoopWidth = () => {
+            const previous = loopWidth || logoTrack.scrollLeft || 0;
+            loopWidth = logoTrack.scrollWidth / 2;
+            if (loopWidth > 0) {
+              logoTrack.scrollLeft = previous % loopWidth;
+            }
+          };
+          recalcLoopWidth();
+
+          let lastTimestamp;
+          let autoScrollId;
+          const speedPerMs = 0.045;
+          let speedMultiplier = 1;
+
+          const step = (timestamp) => {
+            if (!lastTimestamp) {
+              lastTimestamp = timestamp;
+            }
+            const delta = timestamp - lastTimestamp;
+            lastTimestamp = timestamp;
+
+            if (loopWidth > 0) {
+              const increment = delta * speedPerMs * speedMultiplier;
+              let nextScroll = logoTrack.scrollLeft + increment;
+              if (nextScroll >= loopWidth) {
+                nextScroll = nextScroll % loopWidth;
+              }
+              logoTrack.scrollLeft = nextScroll;
+            }
+
+            autoScrollId = requestAnimationFrame(step);
+          };
+
+          const startScroll = () => {
+            if (!autoScrollId) {
+              lastTimestamp = undefined;
+              autoScrollId = requestAnimationFrame(step);
+            }
+          };
+
+          const stopScroll = () => {
+            if (autoScrollId) {
+              cancelAnimationFrame(autoScrollId);
+              autoScrollId = null;
+            }
+          };
+
+          const handleVisibility = () => {
+            if (document.hidden) {
+              stopScroll();
+            } else {
+              startScroll();
+            }
+          };
+
+          const handleEnter = () => {
+            speedMultiplier = 0.6;
+          };
+
+          const handleLeave = () => {
+            speedMultiplier = 1;
+          };
+
+          const resumeIfNotFocused = () => {
+            if (!logoTrack.matches(':focus-within')) {
+              startScroll();
+            }
+          };
+
+          logoTrack.addEventListener('mouseenter', handleEnter);
+          logoTrack.addEventListener('mouseleave', handleLeave);
+          logoTrack.addEventListener('focusin', () => {
+            speedMultiplier = 0.6;
+          });
+          logoTrack.addEventListener('focusout', () => {
+            speedMultiplier = 1;
+            if (!logoTrack.matches(':focus-within')) {
+              startScroll();
+            }
+          });
+          logoTrack.addEventListener('pointerdown', () => {
+            speedMultiplier = 0.4;
+          });
+          logoTrack.addEventListener('pointerup', () => {
+            speedMultiplier = 0.6;
+          });
+          logoTrack.addEventListener('scroll', () => {
+            if (!autoScrollId) {
+              lastTimestamp = undefined;
+            }
+          });
+          document.addEventListener('visibilitychange', handleVisibility);
+          window.addEventListener('resize', () => {
+            recalcLoopWidth();
+            resumeIfNotFocused();
+          });
+
+          startScroll();
+        }
+
+        const colorProbe = document.createElement('span');
+        colorProbe.style.position = 'absolute';
+        colorProbe.style.opacity = '0';
+        colorProbe.style.pointerEvents = 'none';
+        colorProbe.style.zIndex = '-1';
+        document.body.appendChild(colorProbe);
+
+        const parseColor = (value) => {
+          if (!value || value === 'transparent') return null;
+          colorProbe.style.color = value;
+          const computed = window.getComputedStyle(colorProbe).color;
+          const matches = computed.match(/[\d.]+/g);
+          if (!matches || matches.length < 3) return null;
+          const [r, g, b, a = '1'] = matches;
+          const red = Number.parseFloat(r);
+          const green = Number.parseFloat(g);
+          const blue = Number.parseFloat(b);
+          const alpha = Number.parseFloat(a);
+          if ([red, green, blue].some(Number.isNaN)) return null;
+          return {
+            r: red,
+            g: green,
+            b: blue,
+            a: Number.isNaN(alpha) ? 1 : alpha,
+          };
+        };
+
+        const getParentElement = (node) => {
+          if (!node) return null;
+          if (node.parentElement) return node.parentElement;
+          const root = node.getRootNode && node.getRootNode();
+          if (root && root.host) return root.host;
+          return null;
+        };
+
+        const getEffectiveBackground = (node) => {
+          let current = node;
+          while (current && current !== document.documentElement) {
+            const style = window.getComputedStyle(current);
+            const color = parseColor(style.backgroundColor);
+            if (color && color.a > 0.05) return color;
+            current = getParentElement(current);
+          }
+          const fallback = parseColor(window.getComputedStyle(document.body).backgroundColor);
+          return fallback || { r: 27, g: 27, b: 27, a: 1 };
+        };
+
+        const backToTop = document.querySelector('.back-to-top');
+        if (backToTop) {
+          const revealOffset = 480;
+          const brightnessThreshold = 175;
+
+          const updateBackToTopTone = () => {
+            if (!backToTop.classList.contains('back-to-top--visible')) {
+              backToTop.classList.remove('back-to-top--inverse');
+              return;
+            }
+
+            const rect = backToTop.getBoundingClientRect();
+            const sampleX = rect.left + rect.width / 2;
+            const sampleY = rect.top + rect.height / 2;
+
+            if (sampleX < 0 || sampleX > window.innerWidth || sampleY < 0 || sampleY > window.innerHeight) {
+              return;
+            }
+
+            const target = document.elementFromPoint(sampleX, sampleY);
+            const background = target ? getEffectiveBackground(target) : getEffectiveBackground(document.body);
+            const brightness = 0.299 * background.r + 0.587 * background.g + 0.114 * background.b;
+            const useInverse = brightness >= brightnessThreshold;
+            backToTop.classList.toggle('back-to-top--inverse', useInverse);
+          };
+
+          const toggleBackToTop = () => {
+            if (window.scrollY > revealOffset) {
+              backToTop.classList.add('back-to-top--visible');
+            } else {
+              backToTop.classList.remove('back-to-top--visible');
+            }
+            updateBackToTopTone();
+          };
+
+          window.addEventListener('scroll', () => {
+            toggleBackToTop();
+          }, { passive: true });
+
+          window.addEventListener('resize', updateBackToTopTone);
+          toggleBackToTop();
+
+          backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          });
+        }
+
+        const scrollTriggers = Array.from(document.querySelectorAll('[data-scroll-target]'));
+        if (scrollTriggers.length) {
+          scrollTriggers.forEach((trigger) => {
+            trigger.addEventListener('click', () => {
+              const targetSelector = trigger.getAttribute('data-scroll-target');
+              if (!targetSelector) return;
+              const targetEl = document.querySelector(targetSelector);
+              if (!targetEl) return;
+              const top = targetEl.getBoundingClientRect().top + window.scrollY;
+              window.scrollTo({ top, behavior: 'smooth' });
+            });
+          });
+        }
+
+        const metricCounters = Array.from(document.querySelectorAll('[data-count]'));
+        if (metricCounters.length && 'IntersectionObserver' in window) {
+          const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
+
+          metricCounters.forEach((counter) => {
+            const suffix = counter.dataset.countSuffix || '';
+            counter.dataset.countSuffix = suffix;
+            counter.dataset.countCurrent = '0';
+            counter.textContent = `0${suffix}`;
+            counter.dataset.animate = 'true';
+          });
+
+          const activeAnimations = new WeakMap();
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                const counter = entry.target;
+                if (!entry.isIntersecting) {
+                  counter.dataset.countCurrent = '0';
+                  counter.textContent = `0${counter.dataset.countSuffix || ''}`;
+                  if (activeAnimations.has(counter)) {
+                    cancelAnimationFrame(activeAnimations.get(counter));
+                    activeAnimations.delete(counter);
+                  }
+                  return;
+                }
+
+                const targetValue = Number.parseFloat(counter.dataset.count || '0');
+                if (Number.isNaN(targetValue)) return;
+
+                const duration = 900;
+                const start = performance.now();
+
+                const animate = (timestamp) => {
+                  const progress = Math.min((timestamp - start) / duration, 1);
+                  const eased = easeOutCubic(progress);
+                  const currentValue = Math.floor(targetValue * eased);
+                  const suffix = counter.dataset.countSuffix || '';
+                  counter.textContent = `${currentValue}${suffix}`;
+                  if (progress < 1) {
+                    const frame = requestAnimationFrame(animate);
+                    activeAnimations.set(counter, frame);
+                  } else {
+                    counter.textContent = `${targetValue}${suffix}`;
+                    activeAnimations.delete(counter);
+                  }
+                };
+
+                const frame = requestAnimationFrame(animate);
+                activeAnimations.set(counter, frame);
+              });
+            },
+            {
+              threshold: 0.45,
+            }
+          );
+
+          metricCounters.forEach((counter) => observer.observe(counter));
+        }
+
+        const gallerySlides = Array.from(document.querySelectorAll('[data-gallery-slide]'));
+        const galleryPrev = document.querySelector('[data-gallery-prev]');
+        const galleryNext = document.querySelector('[data-gallery-next]');
+        const galleryDots = Array.from(document.querySelectorAll('[data-gallery-dot]'));
+
+        if (gallerySlides.length) {
+          let galleryIndex = 0;
+
+          const applyGalleryState = (nextIndex) => {
+            const total = gallerySlides.length;
+            const safeIndex = ((nextIndex % total) + total) % total;
+
+            gallerySlides.forEach((slide, idx) => {
+              slide.classList.toggle('is-active', idx === safeIndex);
+            });
+
+            galleryDots.forEach((dot, idx) => {
+              const isActive = idx === safeIndex;
+              dot.classList.toggle('design-gallery__dot--active', isActive);
+              dot.setAttribute('aria-selected', String(isActive));
+            });
+
+            galleryIndex = safeIndex;
+          };
+
+          const stepGallery = (delta) => {
+            applyGalleryState(galleryIndex + delta);
+          };
+
+          if (galleryPrev) {
+            galleryPrev.addEventListener('click', () => {
+              stepGallery(-1);
+            });
+          }
+
+          if (galleryNext) {
+            galleryNext.addEventListener('click', () => {
+              stepGallery(1);
+            });
+          }
+
+          galleryDots.forEach((dot) => {
+            const index = Number.parseInt(dot.dataset.galleryDot || '', 10);
+            if (Number.isNaN(index)) return;
+            dot.addEventListener('click', () => {
+              applyGalleryState(index);
+            });
+          });
+
+          applyGalleryState(0);
+        }
+
+        const siteHeader = document.querySelector('.site-header');
+        const footerEl = document.querySelector('.site-footer');
+        if (siteHeader && footerEl && 'IntersectionObserver' in window) {
+          const footerObserver = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                siteHeader.classList.toggle('site-header--hidden', entry.isIntersecting);
+              });
+            },
+            { threshold: 0.2 }
+          );
+
+          footerObserver.observe(footerEl);
+        }
+      });
+    </script>
+  </body>
+</html>

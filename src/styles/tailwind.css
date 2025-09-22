@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-lux-dark text-white font-sans antialiased;
+    background-image: radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 60%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-white;
+  }
+
+  a {
+    @apply text-lux-gold transition-colors duration-200;
+  }
+
+  a:hover {
+    @apply text-white;
+  }
+}
+
+@layer components {
+  .lux-section {
+    @apply relative py-20 lg:py-28;
+  }
+
+  .lux-container {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .lux-tag {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-sm uppercase tracking-[0.3em] text-white/80;
+  }
+
+  .lux-card {
+    @apply rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lux backdrop-blur;
+  }
+
+  .lux-grid {
+    @apply grid gap-8 sm:grid-cols-2 lg:grid-cols-4;
+  }
+
+  .lux-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-lux-gold px-8 py-3 font-semibold text-lux-dark shadow-lg shadow-lux-gold/30 transition hover:-translate-y-0.5 hover:bg-white;
+  }
+}

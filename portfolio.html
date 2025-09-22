@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuxCraft Portfolio - Interior Design Projects</title>
+    <meta
+      name="description"
+      content="Explore LuxCraft's portfolio of residential and commercial renovation projects across Singapore."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Syne:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="192x192" />
+    <link rel="stylesheet" href="./assets/styles.css" />
+  </head>
+  <body class="min-h-screen bg-lux-dark text-white">
+    <header class="site-header sticky top-0 z-50">
+      <div class="lux-container header-row">
+        <a href="index.html" class="header-logo" aria-label="LuxCraft Home">
+          <img src="assets/images/logo.png" alt="LuxCraft" />
+        </a>
+        <nav class="header-nav" aria-label="Primary">
+          <a href="about.html">Who We Are</a>
+          <a href="services.html">What We Do</a>
+          <a href="portfolio.html">Our Past Works</a>
+          <a href="contact.html">Contact Us</a>
+        </nav>
+        <div class="header-controls">
+          <button class="header-action" type="button" aria-label="Search">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="h-5 w-5">
+              <circle cx="11" cy="11" r="7" />
+              <path d="m20 20-3.2-3.2" stroke-linecap="round" />
+            </svg>
+          </button>
+          <button
+            class="header-toggle md:hidden"
+            type="button"
+            aria-label="Open navigation"
+            onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+      <div id="mobile-menu" class="hidden border-t border-white/10 bg-lux-darker/95 px-4 py-6 md:hidden">
+        <nav class="flex flex-col gap-4 text-sm uppercase tracking-[0.25em] text-white/80">
+          <a href="about.html" class="hover:text-white">Who We Are</a>
+          <a href="services.html" class="hover:text-white">What We Do</a>
+          <a href="portfolio.html" class="hover:text-white">Our Past Works</a>
+          <a href="contact.html" class="hover:text-white">Contact Us</a>
+        </nav>
+        <div class="mt-6 flex flex-col gap-2 text-white/70">
+          <a href="tel:+6583126212" class="hover:text-white">+65 8312 6212 (Shamim)</a>
+          <a href="tel:+6588991245" class="hover:text-white">+65 8899 1245 (Manfred)</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="lux-section pt-16">
+        <div class="lux-container space-y-6 text-center">
+          <span class="lux-tag mx-auto">Our Past Works</span>
+          <h1 class="mx-auto max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl">A curated portfolio across homes and commercial interiors</h1>
+          <p class="mx-auto max-w-3xl text-base text-white/70">
+            From clever space planning in compact BTO flats to statement bespoke carpentry in landed homes, LuxCraft's portfolio showcases our commitment to craftsmanship and client-first design.
+          </p>
+          <div class="flex flex-wrap justify-center gap-3 pt-4 text-xs uppercase tracking-[0.35em] text-white/60">
+            <span class="rounded-full border border-white/20 bg-white/10 px-4 py-2 text-white">All</span>
+            <span class="rounded-full border border-white/10 px-4 py-2">HDB</span>
+            <span class="rounded-full border border-white/10 px-4 py-2">Condo</span>
+            <span class="rounded-full border border-white/10 px-4 py-2">Landed</span>
+            <span class="rounded-full border border-white/10 px-4 py-2">Commercial</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="lux-section">
+        <div class="lux-container">
+          <div class="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+            <article class="lux-card overflow-hidden p-0">
+              <img src="https://placehold.co/520x360/111111/FFFFFF?text=4BR+Condo" alt="4BR Condo @ Simei Street" class="h-56 w-full object-cover" />
+              <div class="space-y-3 p-8">
+                <h2 class="text-2xl font-semibold">4BR Condo @ Simei Street</h2>
+                <p class="text-sm text-white/60">Sleek lines, muted palettes, and a glass-featured living space that balances sophistication with everyday comfort.</p>
+              </div>
+            </article>
+            <article class="lux-card overflow-hidden p-0">
+              <img src="https://placehold.co/520x360/111111/FFFFFF?text=4-Room+BTO" alt="4-Room BTO @ Towner Road" class="h-56 w-full object-cover" />
+              <div class="space-y-3 p-8">
+                <h2 class="text-2xl font-semibold">4-Room BTO @ Towner Road</h2>
+                <p class="text-sm text-white/60">Open-plan communal zones anchored by custom carpentry and warm, layered lighting for a young family.</p>
+              </div>
+            </article>
+            <article class="lux-card overflow-hidden p-0">
+              <img src="https://placehold.co/520x360/111111/FFFFFF?text=3BR+Condo" alt="3BR Condo @ Mar Thoma Rd" class="h-56 w-full object-cover" />
+              <div class="space-y-3 p-8">
+                <h2 class="text-2xl font-semibold">3BR Condo @ Mar Thoma Rd</h2>
+                <p class="text-sm text-white/60">A monochrome palette softened with textured finishes and purposeful lighting for a modern retreat.</p>
+              </div>
+            </article>
+            <article class="lux-card overflow-hidden p-0">
+              <img src="https://placehold.co/520x360/111111/FFFFFF?text=5-Room+BTO" alt="5-Room BTO @ Segar Road" class="h-56 w-full object-cover" />
+              <div class="space-y-3 p-8">
+                <h2 class="text-2xl font-semibold">5-Room BTO @ Segar Road</h2>
+                <p class="text-sm text-white/60">Efficient zonning with multi-purpose rooms, customised wardrobes, and a hospitality-inspired kitchen.</p>
+              </div>
+            </article>
+            <article class="lux-card overflow-hidden p-0">
+              <img src="https://placehold.co/520x360/111111/FFFFFF?text=4-Room+Resale" alt="4-Room Resale @ Teck Whye Lane" class="h-56 w-full object-cover" />
+              <div class="space-y-3 p-8">
+                <h2 class="text-2xl font-semibold">4-Room Resale @ Teck Whye Lane</h2>
+                <p class="text-sm text-white/60">Heritage textures paired with modern amenities and full-height storage for a multi-generational family.</p>
+              </div>
+            </article>
+            <article class="lux-card overflow-hidden p-0">
+              <img src="https://placehold.co/520x360/111111/FFFFFF?text=4-Room+Resale" alt="4-Room Resale @ Woodlands Drive" class="h-56 w-full object-cover" />
+              <div class="space-y-3 p-8">
+                <h2 class="text-2xl font-semibold">4-Room Resale @ Woodlands Drive</h2>
+                <p class="text-sm text-white/60">Layered neutrals and smooth carpentry transitions create a restful home with plenty of concealed storage.</p>
+              </div>
+            </article>
+            <article class="lux-card overflow-hidden p-0">
+              <img src="https://placehold.co/520x360/111111/FFFFFF?text=5-Room+BTO" alt="5-Room BTO @ Tengah Drive" class="h-56 w-full object-cover" />
+              <div class="space-y-3 p-8">
+                <h2 class="text-2xl font-semibold">5-Room BTO @ Tengah Drive</h2>
+                <p class="text-sm text-white/60">Biophilic-inspired touches with custom shelving, archways, and integrated lighting for a bright, welcoming space.</p>
+              </div>
+            </article>
+            <article class="lux-card overflow-hidden p-0">
+              <img src="https://placehold.co/520x360/111111/FFFFFF?text=Shophouse" alt="Shophouse @ Lavendar Street" class="h-56 w-full object-cover" />
+              <div class="space-y-3 p-8">
+                <h2 class="text-2xl font-semibold">Shophouse @ Lavendar Street</h2>
+                <p class="text-sm text-white/60">Adaptive reuse of a conservation shophouse with flexible work-live zones and brand storytelling moments.</p>
+              </div>
+            </article>
+            <article class="lux-card overflow-hidden p-0">
+              <img src="https://placehold.co/520x360/111111/FFFFFF?text=3-Room+BTO" alt="3-Room BTO @ Champions Way" class="h-56 w-full object-cover" />
+              <div class="space-y-3 p-8">
+                <h2 class="text-2xl font-semibold">3-Room BTO @ Champions Way</h2>
+                <p class="text-sm text-white/60">Compact living reimagined with space-saving carpentry, built-in study zones, and playful accents.</p>
+              </div>
+            </article>
+            <article class="lux-card overflow-hidden p-0">
+              <img src="https://placehold.co/520x360/111111/FFFFFF?text=3BR+Condo" alt="3BR Condo @ Sengkang" class="h-56 w-full object-cover" />
+              <div class="space-y-3 p-8">
+                <h2 class="text-2xl font-semibold">3BR Condo @ Sengkang</h2>
+                <p class="text-sm text-white/60">A coastal-inspired palette complemented by curved joinery and layered lighting for a serene escape.</p>
+              </div>
+            </article>
+            <article class="lux-card overflow-hidden p-0">
+              <img src="https://placehold.co/520x360/111111/FFFFFF?text=5-Room+SBF" alt="5-Room SBF @ Segar Road" class="h-56 w-full object-cover" />
+              <div class="space-y-3 p-8">
+                <h2 class="text-2xl font-semibold">5-Room SBF @ Segar Road</h2>
+                <p class="text-sm text-white/60">A gallery-like interior featuring curated art, hidden storage, and a chef-ready kitchen for avid entertainers.</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="lux-section">
+        <div class="lux-container rounded-[3rem] border border-white/10 bg-white/5 p-12 text-center shadow-lux backdrop-blur">
+          <h2 class="text-3xl font-semibold sm:text-4xl">Inspired by what you see?</h2>
+          <p class="mx-auto mt-4 max-w-2xl text-base text-white/70">
+            Let's plan a walkthrough of your space or floor plan. Share your requirements and we'll tailor a proposal that fits your goals and budget.
+          </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-4">
+            <a href="contact.html" class="lux-button">Start Your Brief</a>
+            <a href="services.html" class="inline-flex items-center gap-2 rounded-full border border-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white/80 hover:bg-white/10">
+              Explore Our Services
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-white/10 bg-lux-darker/80">
+      <div class="lux-container grid gap-8 py-12 md:grid-cols-[1.2fr_0.8fr]">
+        <div class="space-y-6">
+          <a href="index.html" class="flex items-center gap-3 text-white" aria-label="LuxCraft Home">
+            <img src="assets/images/logo.png" alt="LuxCraft" class="h-10 w-auto" />
+          </a>
+          <p class="max-w-sm text-sm text-white/60">
+            190 Woodlands Industrial Park E5<br />
+            Woodlands Bizhub, #04-05<br />
+            Singapore 757516
+          </p>
+          <div class="grid gap-2 text-sm text-white/60">
+            <a href="mailto:contact@luxcraft.sg" class="hover:text-white">contact@luxcraft.sg</a>
+            <a href="tel:+6583126212" class="hover:text-white">+65 8312 6212 (Shamim)</a>
+            <a href="tel:+6588991245" class="hover:text-white">+65 8899 1245 (Manfred)</a>
+          </div>
+        </div>
+        <div class="grid gap-6 md:justify-items-end">
+          <nav class="flex flex-wrap gap-6 text-sm uppercase tracking-[0.3em] text-white/60">
+            <a href="about.html" class="hover:text-white">Who We Are</a>
+            <a href="services.html" class="hover:text-white">What We Do</a>
+            <a href="portfolio.html" class="text-white">Our Past Works</a>
+            <a href="contact.html" class="hover:text-white">Contact Us</a>
+          </nav>
+          <div class="flex gap-4 text-white/60">
+            <a href="https://business.facebook.com/ThemeRexStudio/" target="_blank" rel="noreferrer" class="hover:text-white">Facebook</a>
+            <a href="https://twitter.com/ThemerexThemes" target="_blank" rel="noreferrer" class="hover:text-white">Twitter</a>
+            <a href="https://dribbble.com/ThemeREX" target="_blank" rel="noreferrer" class="hover:text-white">Dribbble</a>
+            <a href="https://www.instagram.com/themerex_net/" target="_blank" rel="noreferrer" class="hover:text-white">Instagram</a>
+          </div>
+          <p class="text-xs uppercase tracking-[0.3em] text-white/40">
+            LuxCraft Pte. Ltd &copy; 2025. All Rights Reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
