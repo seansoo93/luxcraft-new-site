@@ -210,11 +210,24 @@ body {
   border-bottom: 1px solid var(--lux-white-06);
 }
 
+/* Header row layout for logo left, nav right */
 .header-row {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
-  padding: 0.75rem 3;
+  justify-content: flex-start;
+  gap: 4rem;
+  padding: 0.75rem 1.5rem;
+  max-width: 90rem;
+  margin: 0 auto;
+}
+
+.header-logo {
+  flex-shrink: 0;
+}
+
+.header-nav {
+  margin-left: auto;
+  margin-right: 1rem;
 }
 
 .header-logo {
@@ -237,11 +250,12 @@ body {
 }
 
 .header-nav {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 2.8rem;
-  margin-left: 2rem;
-  margin-right: auto;
+  /* margin: 0; */
+  /* margin-left: 2rem;
+  margin-right: auto; */
   font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
   font-weight: 500;
   font-size: 1.05rem;
@@ -270,7 +284,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  margin-left: auto;
+  margin-left: 1.5rem;
 }
 
 .header-action {
@@ -1133,12 +1147,16 @@ body {
 
 @media (min-width: 768px) {
   .header-row {
-    gap: 2rem;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
+  }
+
+  .header-logo img {
+    max-height: 2.5rem;
   }
 
   .header-nav {
     display: flex;
+    gap: 2.5rem;
   }
 
   .header-action {
@@ -1148,12 +1166,17 @@ body {
 
 @media (min-width: 1024px) {
   .header-row {
-    gap: 2.75rem;
+    padding: 1.25rem 3rem;
+    gap: 6rem;
+  }
+
+  .header-logo img {
+    max-height: 3rem;
   }
 
   .header-nav {
     font-size: 1.12rem;
-    gap: 3rem;
+    gap: 3.5rem;
   }
 }
 
@@ -1189,14 +1212,14 @@ body {
 @media (min-width: 640px) {
   .site-header .lux-container {
     padding-left: 0;
-    padding-right: 1.5rem;
+    padding-right: 1rem;
   }
 }
 
 @media (min-width: 1024px) {
   .site-header .lux-container {
     padding-left: 0;
-    padding-right: 2.5rem;
+    padding-right: 1.5rem;
   }
 }
 
