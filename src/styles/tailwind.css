@@ -54,7 +54,7 @@
   .about-hero-content {
     @apply mx-auto flex flex-col items-center justify-center text-center;
     gap: clamp(2.25rem, 6vw, 3rem);
-    padding: clamp(5.5rem, 16vw, 7.1875rem) 0 clamp(2.5rem, 9vw, 3.25rem);
+    padding: clamp(3rem, 12vw, 5rem) 0 clamp(2.5rem, 9vw, 3.25rem);
   }
 
   .about-hero-title {
