@@ -3258,3 +3258,13 @@ body.about-page {
   background: #ffffff; /* flat white background */
   color: #111; /* ensure text contrast */
 }
+/* Mobile collapsible header menu: force white buttons/links */
+@media (max-width: 767px) {
+  #mobile-menu,
+  #mobile-menu a,
+  #mobile-menu .header-button,
+  #mobile-menu .header-nav__link,
+  #mobile-menu .header-nav a {
+    color: #ffffff !important;
+  }
+}
