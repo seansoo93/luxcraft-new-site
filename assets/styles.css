@@ -632,21 +632,33 @@ body {
   gap: clamp(2rem, 6vw, 4rem);
   margin: 0;
   padding: 0;
-  overflow-x: auto;
+  overflow-x: hidden;
   scrollbar-width: none;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
 
 .why-panel__brands ul::-webkit-scrollbar {
-  height: 2px;
+  display: none;
 }
 
-.why-panel__brands ul::-webkit-scrollbar-track {
-  background: transparent;
+.why-panel__brands ul {
+  -ms-overflow-style: none;
+  touch-action: none;
+  pointer-events: none;
 }
 
-.why-panel__brands ul::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.15);
-  border-radius: 999px;
+.why-panel__brands li {
+  pointer-events: auto;
 }
 
 .why-panel__brands li {
@@ -655,6 +667,7 @@ body {
   align-items: center;
   justify-content: center;
   padding: 0.5rem 0;
+  will-change: transform;
 }
 
 .why-panel__brands li img {
