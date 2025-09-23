@@ -632,30 +632,35 @@ body {
   padding: 2rem 0;
 }
 
+/* Ensure .why-panel__brands ul remains display: flex and overflow: hidden for scroll effect */
 .why-panel__brands ul {
   list-style: none;
   display: flex;
   margin: 0;
   padding: 0;
-  overflow-x: auto;
-  scrollbar-width: none;
-  white-space: nowrap;
-  cursor: grab;
-  -webkit-overflow-scrolling: touch;
+  overflow: hidden;
+  position: relative;
   width: 100%;
 }
 
-.why-panel__brands ul::-webkit-scrollbar {
-  display: none;
-}
-
-.why-panel__brands ul.scrolling {
-  cursor: grabbing;
-}
-
 .why-panel__brands .brand-scroll-content {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
+  flex: none;
+}
+
+.why-panel__brands .brand-scroll-track {
+  display: flex;
+  animation: brand-scroll 40s linear infinite;
+  will-change: transform;
+}
+
+@keyframes brand-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .why-panel__brands li {
