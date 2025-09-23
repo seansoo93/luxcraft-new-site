@@ -658,7 +658,8 @@
 
           const updateBackToTopTone = () => {
             if (!backToTop.classList.contains('back-to-top--visible')) {
-              backToTop.classList.remove('back-to-top--inverse');
+              backToTop.style.backgroundColor = '';
+              backToTop.style.color = '';
               return;
             }
 
@@ -673,8 +674,15 @@
             const target = document.elementFromPoint(sampleX, sampleY);
             const background = target ? getEffectiveBackground(target) : getEffectiveBackground(document.body);
             const brightness = 0.299 * background.r + 0.587 * background.g + 0.114 * background.b;
-            const useInverse = brightness >= brightnessThreshold;
-            backToTop.classList.toggle('back-to-top--inverse', useInverse);
+            const useDark = brightness > 175;
+
+            if (useDark) {
+              backToTop.style.backgroundColor = 'rgba(255,255,255,0.9)';
+              backToTop.style.color = '#111';
+            } else {
+              backToTop.style.backgroundColor = 'rgba(17,17,17,0.9)';
+              backToTop.style.color = '#fff';
+            }
           };
 
           const toggleBackToTop = () => {
