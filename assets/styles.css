@@ -638,9 +638,15 @@ body {
   display: flex;
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
   position: relative;
   width: 100%;
+}
+
+.why-panel__brands ul::-webkit-scrollbar {
+  display: none;
 }
 
 .why-panel__brands .brand-scroll-content {
