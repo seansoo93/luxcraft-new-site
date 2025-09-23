@@ -656,22 +656,6 @@ body {
 .why-panel__brands .brand-scroll-content {
   display: inline-flex;
   align-items: center;
-  animation: marquee 30s linear infinite;
-  animation-play-state: running;
-  padding-right: calc(clamp(2rem, 6vw, 4rem) * 8); /* Add padding for seamless loop */
-}
-
-.why-panel__brands ul:hover .brand-scroll-content {
-  animation-play-state: paused;
-}
-
-@keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-50% - clamp(1rem, 3vw, 2rem)));
-  }
 }
 
 .why-panel__brands li {

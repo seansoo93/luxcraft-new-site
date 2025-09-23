@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const brandsContainer = document.querySelector('.why-panel__logos');
-    const scrollContent = document.querySelector('.brand-scroll-content');
-    if (!brandsContainer || !scrollContent) return;
+    if (!brandsContainer) return;
 
     let isMouseDown = false;
     let startX;
@@ -46,21 +45,4 @@ document.addEventListener('DOMContentLoaded', function() {
         brandsContainer.scrollLeft = scrollLeft - walk;
     });
 
-    // Pause animation on interaction
-    brandsContainer.addEventListener('mouseenter', () => {
-        scrollContent.style.animationPlayState = 'paused';
-    });
-
-    brandsContainer.addEventListener('mouseleave', () => {
-        scrollContent.style.animationPlayState = 'running';
-    });
-
-    // Handle touch events for mobile
-    brandsContainer.addEventListener('touchstart', () => {
-        scrollContent.style.animationPlayState = 'paused';
-    });
-
-    brandsContainer.addEventListener('touchend', () => {
-        scrollContent.style.animationPlayState = 'running';
-    });
 });
