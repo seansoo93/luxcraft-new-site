@@ -1953,14 +1953,14 @@ a:hover {
 
 .lux-section {
   position: relative;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 @media (min-width: 1024px) {
   .lux-section {
-    padding-top: 7rem;
-    padding-bottom: 7rem;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 }
 
@@ -3405,7 +3405,7 @@ body.about-page {
 
 .about-reviews-section {
   background-color: #ffffff;
-  padding: clamp(4rem, 10vw, 6.5rem) 0 clamp(4rem, 10vw, 6.75rem);
+  padding: clamp(3rem, 10vw, 5rem) 0 clamp(3rem, 10vw, 5rem);
 }
 
 .about-reviews {
@@ -3644,3 +3644,43 @@ body.about-page {
     letter-spacing: 0.18em;
   }
 }
+
+/* ---------- About page: light-bg overrides ---------- */
+/* Ensure specific about-page containers render dark text even if children have utility classes that set white */
+.about-reviews-header-section .lux-container,
+.about-reviews-header-section .lux-container *,
+.about-reviews-header-section .lux-tag,
+.about-reviews-header-section h2 {
+  color: #111111 !important;
+}
+
+/* Target any lux-container that was given inline color: #111111 to cascade that color to children */
+.lux-section .lux-container[style*="color: #111111"] ,
+.lux-section .lux-container[style*="color: #111111"] * {
+  color: #111111 !important;
+}
+
+/* Specific fallback for rounded consultation card which uses a Tailwind arbitrary class name */
+/* Use attribute selector for the class fragment to avoid escaping unusual characters */
+.lux-container[class*="rounded-[3rem]"][style*="color: #111111"] ,
+.lux-container[class*="rounded-[3rem]"][style*="color: #111111"] * {
+  color: #111111 !important;
+}
+
+/* End overrides */
+/* ---------- About reviews header color override ---------- */
+/* Ensure the eyebrow and heading inside the reviews card render dark text */
+.about-reviews-section .mb-8,
+.about-reviews-section .mb-8 *,
+.about-reviews-section .lux-tag,
+.about-reviews-section .mb-8 h2 {
+  color: #111111 !important;
+}
+
+/* Extra safeguard: target the specific container with inline color if present */
+.about-reviews-section .mb-8[style*="color: #111111"] ,
+.about-reviews-section .mb-8[style*="color: #111111"] * {
+  color: #111111 !important;
+}
+
+/* End about reviews overrides */
