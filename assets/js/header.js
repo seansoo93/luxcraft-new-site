@@ -3,7 +3,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuButton = document.querySelector('.header-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const header = document.querySelector('.site-header');
-  
+
+  if (!header || !mobileMenuButton || !mobileMenu) {
+    return;
+  }
+
+  const shouldAutoHide = header.classList.contains('site-header--auto-hide');
   let isMenuOpen = false;
   let lastScrollY = window.scrollY;
 
@@ -39,6 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Handle scroll behavior
   function handleScroll() {
+    if (!shouldAutoHide) {
+      return;
+    }
     const currentScrollY = window.scrollY;
     const scrollingDown = currentScrollY > lastScrollY;
     const scrollOffset = 100; // Start hiding header after scrolling this many pixels
@@ -56,13 +64,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Throttle scroll event
   let ticking = false;
-  document.addEventListener('scroll', () => {
-    if (!ticking) {
-      window.requestAnimationFrame(() => {
-        handleScroll();
-        ticking = false;
-      });
-      ticking = true;
-    }
-  });
+  if (shouldAutoHide) {
+    document.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          handleScroll();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
+  }
 });
