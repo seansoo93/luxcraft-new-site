@@ -48,7 +48,7 @@
             class="header-toggle md:hidden"
             type="button"
             aria-label="Open navigation"
-            onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+            onclick="document.getElementById('mobile-menu').classList.toggle('open')"
           >
             <span class="sr-only">Toggle navigation</span>
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -57,7 +57,7 @@
           </button>
         </div>
       </div>
-      <div id="mobile-menu" class="hidden border-t border-white/10 bg-lux-darker/95 px-4 py-6 md:hidden">
+      <div id="mobile-menu" class="border-t border-white/10 bg-lux-darker/95 px-4 py-6 md:hidden">
         <nav class="flex flex-col gap-4 text-sm uppercase tracking-[0.25em] text-white/80">
           <a href="about.html" class="hover:text-white">Who We Are</a>
           <a href="services.html" class="hover:text-white">What We Do</a>
@@ -303,7 +303,7 @@
             </div>
             <div class="design-gallery__slide" data-gallery-slide="3">
               <img
-                src="https://placehold.co/1200x800/282828/f0f0f0?text=Gallery+04"
+                src="assets/images/design-gallery-04.jpg"
                 alt="LuxCraft gallery preview 4"
                 loading="lazy"
               />

@@ -210,13 +210,12 @@ body {
   border-bottom: 1px solid var(--lux-white-06);
 }
 
-/* Header row layout for logo left, nav right */
 .header-row {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 4rem;
-  padding: 0.75rem 1.5rem;
+  gap: clamp(1rem, 4vw, 6rem);
+  padding: clamp(0.75rem, 2vw, 1.25rem) clamp(1.25rem, 3vw, 3rem);
   max-width: 90rem;
   margin: 0 auto;
 }
@@ -238,10 +237,10 @@ body {
 }
 
 .header-logo img {
-  max-height: 2.25rem;
   width: auto;
   height: auto;
   transition: transform 180ms ease;
+  max-height: clamp(2rem, 2.5vw, 3rem);
 }
 
 .header-logo:hover img,
@@ -920,11 +919,11 @@ body {
   position: absolute;
   inset: 0;
   opacity: 0;
-  transition: opacity 380ms ease;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  transition: opacity 380ms ease;
 }
 
 .design-gallery__slide.is-active {
@@ -935,8 +934,9 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center center;
   display: block;
+  min-height: 100%; /* Ensure image always fills container height */
 }
 
 @media (max-width: 767px) {
@@ -944,16 +944,7 @@ body {
     aspect-ratio: 4/3;
     min-height: 0;
   }
-  
-  .design-gallery__slide {
-    height: 100%;
-  }
-
-  .design-gallery__slide img {
-    object-position: center 40%;
-    min-height: 100%;
-    width: 100%;
-  }
+}
 }
 
 .design-gallery__nav {
@@ -1099,27 +1090,6 @@ body {
     height: 100%;
   }
 
-  .design-gallery__slide {
-    position: absolute;
-    inset: 0;
-    opacity: 0;
-    transition: opacity 380ms ease;
-    display: flex;
-    align-items: center;      /* vertically center the image */
-    justify-content: center;  /* horizontally center the image */
-  }
-
-  .design-gallery__slide.is-active {
-    opacity: 1;
-    position: relative;
-  }
-
-  .design-gallery__slide img {
-    width: 100%;
-    height: auto;            /* keep aspect ratio, no horizontal crop */
-    display: block;
-  }
-
   .design-gallery__card {
     padding: 2.25rem 1.75rem;
   }
@@ -1182,13 +1152,12 @@ body {
 }
 
 
-/* Back to top button */
 .back-to-top {
   position: fixed;
   bottom: clamp(1.5rem, 4vw, 2.75rem);
   right: clamp(1.25rem, 3.5vw, 2.5rem);
-  width: 3.25rem;
-  height: 3.25rem;
+  width: clamp(2.75rem, 3vw, 3.25rem);
+  height: clamp(2.75rem, 3vw, 3.25rem);
   border-radius: 999px;
   background: linear-gradient(135deg, rgba(255, 255, 255, 0.12), var(--lux-white-06));
   border: 1px solid var(--lux-white-18);
@@ -1205,8 +1174,8 @@ body {
 }
 
 .back-to-top svg {
-  width: 1.35rem;
-  height: 1.35rem;
+  width: clamp(1.1rem, 1.5vw, 1.35rem);
+  height: clamp(1.1rem, 1.5vw, 1.35rem);
 }
 
 .back-to-top:hover,
@@ -3102,15 +3071,16 @@ a:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
+  gap: 0.1rem;
   border-radius: 9999px;
-  padding: 0.95rem 1rem;
-  font-size: 0.9rem;
+  padding: 0.45rem 0.3rem;
+  font-size: 0.82rem;
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
   transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
+  min-width: auto;
 }
 
 .hero-button--solid {
@@ -3272,20 +3242,27 @@ body.about-page {
     color: #ffffff !important;
   }
 }
-/* Make hero banner CTA buttons smaller on mobile */
-@media (max-width: 767px) {
-  .hero-button {
-    padding: 0.5rem 1.25rem;
-    font-size: 0.85rem;
-    border-radius: 9999px;
-  }
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border-radius: 9999px;
+  padding: 0.45rem 0.9rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease;
 }
-/* Further shrink hero banner CTA buttons only on mobile */
+
 @media (max-width: 767px) {
   .hero-button {
-    padding: 0.4rem 0.9rem; /* smaller height and narrower width */
-    font-size: 0.78rem;     /* smaller text */
-    border-radius: 9999px;
-    min-width: auto;        /* allow button to shrink */
+    width: auto;
+    max-width: none;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
   }
 }
