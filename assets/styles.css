@@ -222,8 +222,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  gap: clamp(1rem, 4vw, 6rem);
-  padding: clamp(0.75rem, 2vw, 1.25rem) clamp(1.25rem, 3vw, 3rem);
+  gap: clamp(0.75rem, 3vw, 3rem);
+  padding: clamp(0.4rem, 1vw, 0.5rem) clamp(1rem, 2vw, 2rem);
   max-width: 90rem;
   margin: 0 auto;
 }
@@ -248,7 +248,7 @@ body {
   width: auto;
   height: auto;
   transition: transform 180ms ease;
-  max-height: clamp(2rem, 2.5vw, 3rem);
+  max-height: clamp(1.75rem, 2vw, 2.25rem);
 }
 
 .header-logo:hover img,
@@ -1398,11 +1398,20 @@ body {
 }
 
 .site-header {
+  position: relative;
   transition: opacity 300ms ease, transform 300ms ease;
   background: linear-gradient(180deg, rgba(10, 10, 10, 0.97), rgba(10, 10, 10, 0.88));
   backdrop-filter: blur(14px);
   transform: translateY(0);
   opacity: 1;
+  border-bottom: 1px solid var(--lux-white-06);
+}
+
+@media (min-width: 768px) {
+  .site-header {
+    position: sticky;
+    top: 0;
+  }
 }
 
 .site-header.site-header--hidden {
@@ -1452,16 +1461,17 @@ body {
 
 @media (min-width: 768px) {
   .header-row {
-    padding: 1rem 2rem;
+    padding: 0.6rem 2rem;
   }
 
   .header-logo img {
-    max-height: 2.5rem;
+    max-height: 2rem;
   }
 
   .header-nav {
     display: flex;
-    gap: 2.5rem;
+    gap: 2rem;
+    font-size: 0.95rem;
   }
 
   .header-action {
@@ -1471,17 +1481,17 @@ body {
 
 @media (min-width: 1024px) {
   .header-row {
-    padding: 1.25rem 3rem;
-    gap: 6rem;
+    padding: 0.75rem 3rem;
+    gap: 4rem;
   }
 
   .header-logo img {
-    max-height: 3rem;
+    max-height: 2.25rem;
   }
 
   .header-nav {
-    font-size: 1.12rem;
-    gap: 3.5rem;
+    font-size: 1rem;
+    gap: 3rem;
   }
 }
 
