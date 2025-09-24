@@ -346,34 +346,5 @@
     </footer>
     <script src="./assets/js/about-reviews.js"></script>
     <script src="./assets/js/cursor-follower.js"></script>
-    <script>
-      // Make the reviews navigation loop: next from last -> first, prev from first -> last.
-      document.addEventListener('DOMContentLoaded', function () {
-        const nextBtn = document.querySelector('[data-reviews-next]');
-        const prevBtn = document.querySelector('[data-reviews-prev]');
-        const dots = Array.from(document.querySelectorAll('[data-reviews-dot]'));
-        if (!dots.length || !nextBtn || !prevBtn) return;
-
-        const getCurrentIndex = () => {
-          const currentByAria = dots.findIndex((d) => d.getAttribute('aria-current') === 'true');
-          if (currentByAria !== -1) return currentByAria;
-          const currentByClass = dots.findIndex((d) => d.classList.contains('is-active'));
-          return currentByClass !== -1 ? currentByClass : 0;
-        };
-
-        nextBtn.addEventListener('click', function (e) {
-          const idx = getCurrentIndex();
-          const next = (idx + 1) % dots.length;
-          // trigger the existing slider logic by clicking the dot
-          dots[next].click();
-        });
-
-        prevBtn.addEventListener('click', function (e) {
-          const idx = getCurrentIndex();
-          const prev = (idx - 1 + dots.length) % dots.length;
-          dots[prev].click();
-        });
-      });
-    </script>
   </body>
 </html>

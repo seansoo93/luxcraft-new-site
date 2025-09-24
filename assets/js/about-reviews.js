@@ -28,14 +28,13 @@
     track.style.transform = `translateX(-${index * 100}%)`;
 
     if (prevButton) {
-      prevButton.disabled = index === 0;
-      prevButton.setAttribute('aria-disabled', (index === 0).toString());
+      prevButton.disabled = false;
+      prevButton.setAttribute('aria-disabled', 'false');
     }
 
     if (nextButton) {
-      const isLast = index === slides.length - 1;
-      nextButton.disabled = isLast;
-      nextButton.setAttribute('aria-disabled', isLast.toString());
+      nextButton.disabled = false;
+      nextButton.setAttribute('aria-disabled', 'false');
     }
   };
 
@@ -46,11 +45,13 @@
   };
 
   prevButton?.addEventListener('click', () => {
-    if (index > 0) goTo(index - 1);
+    const targetIndex = (index - 1 + slides.length) % slides.length;
+    goTo(targetIndex);
   });
 
   nextButton?.addEventListener('click', () => {
-    if (index < slides.length - 1) goTo(index + 1);
+    const targetIndex = (index + 1) % slides.length;
+    goTo(targetIndex);
   });
 
   dots.forEach((dot) => {
@@ -63,12 +64,14 @@
   slider.addEventListener('keydown', (event) => {
     if (event.key === 'ArrowRight') {
       event.preventDefault();
-      if (index < slides.length - 1) goTo(index + 1);
+      const targetIndex = (index + 1) % slides.length;
+      goTo(targetIndex);
     }
 
     if (event.key === 'ArrowLeft') {
       event.preventDefault();
-      if (index > 0) goTo(index - 1);
+      const targetIndex = (index - 1 + slides.length) % slides.length;
+      goTo(targetIndex);
     }
   });
 
