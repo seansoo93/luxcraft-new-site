@@ -1,0 +1,254 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './_manual.css';
+
+@layer base {
+  body {
+    @apply bg-lux-dark text-white font-sans antialiased;
+    background-image: radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 60%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display tracking-tight text-white;
+  }
+
+  a {
+    @apply text-lux-gold transition-colors duration-200;
+  }
+
+  a:hover {
+    @apply text-white;
+  }
+  /* Portfolio: 2-column grid + hover dropdown info */
+  .portfolio-grid {
+    @apply grid gap-8 md:grid-cols-2;
+  }
+
+  .portfolio-card {
+    /* allow the info panel to sit outside the image without being clipped */
+    position: relative;
+    overflow: visible;
+  }
+
+  .portfolio-card__image {
+    @apply w-full object-cover rounded-xl block;
+    height: clamp(260px, 32vw, 420px);
+  }
+
+  .portfolio-card__info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%; /* place immediately below the image */
+    margin-top: 0.75rem;
+    background: #ffffff;
+    color: #111111;
+    padding: 1rem 1.25rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    transform: translateY(8px);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform 360ms cubic-bezier(.22,1,.36,1), opacity 280ms ease, visibility 0s linear 280ms;
+    z-index: 30;
+  }
+
+  /* reveal the info panel on hover */
+  .portfolio-card.group:hover .portfolio-card__info,
+  .portfolio-card:hover .portfolio-card__info {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+  }
+  /* --- Header, hero and misc components ported from styles.css --- */
+
+  /* Header */
+  .site-header {
+    @apply w-full left-0 right-0 top-0; /* keep stacking and width handled by markup */
+    background-color: transparent;
+    transition: transform 280ms ease, background-color 200ms ease;
+  }
+
+  /* used by JS to slide the header away on footer intersection */
+  .site-header--hidden {
+    transform: translateY(-100%);
+  }
+
+  .header-row {
+    @apply flex items-center justify-between gap-4; /* container padding handled by .lux-container */
+  }
+
+  .header-logo img {
+    @apply h-10 w-auto;
+  }
+
+  .header-nav {
+    @apply hidden md:flex items-center gap-6;
+  }
+
+  .header-nav a {
+    @apply text-sm uppercase tracking-[0.25em] text-white/80 transition-colors duration-150;
+  }
+
+  .header-nav a:hover {
+    @apply text-white;
+  }
+
+  .header-controls {
+    @apply flex items-center gap-3;
+  }
+
+  .header-action {
+    @apply inline-flex items-center justify-center p-2 rounded-full border border-white/10 bg-transparent text-white hover:bg-white/5;
+  }
+
+  .header-toggle {
+    @apply md:hidden inline-flex items-center justify-center p-2 rounded-md text-white;
+  }
+
+  /* Mobile menu (id-based because markup uses #mobile-menu). Toggle class 'open' will show it. */
+  #mobile-menu {
+    @apply hidden border-t border-white/10 bg-lux-darker/95 px-4 py-6 md:hidden;
+  }
+
+  #mobile-menu.open {
+    display: block; /* JS toggles this class when opening on some pages */
+  }
+
+  /* Hero */
+  .hero-slide {
+    opacity: 0;
+    transition: opacity 700ms ease;
+  }
+
+  .hero-slide--active {
+    opacity: 1;
+  }
+
+  .hero-copy {
+    @apply relative z-10 max-w-xl;
+  }
+
+  .hero-kicker {
+    @apply text-xs uppercase tracking-[0.35em] text-white/60 font-semibold;
+  }
+
+  .hero-headline {
+    @apply text-4xl font-semibold leading-tight text-white;
+  }
+
+  .hero-subcopy {
+    @apply mt-4 text-base text-white/70 max-w-lg;
+  }
+
+  .hero-button {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:bg-white/10;
+  }
+
+  /* Back-to-top, cursor fallback and small helpers previously in styles.css */
+  .back-to-top {
+    @apply fixed right-6 bottom-6 inline-flex items-center justify-center rounded-md p-3 z-50; 
+    background: rgba(17,17,17,0.9);
+    color: #fff;
+    transition: background-color 200ms ease, color 200ms ease, opacity 200ms ease;
+  }
+
+  .back-to-top--visible {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* ensure portfolio-related components keep their layering */
+  .portfolio-card { z-index: 10; }
+
+  /* --- end ported block --- */
+}
+
+@layer components {
+  .lux-section {
+    @apply relative py-20 lg:py-28;
+  }
+
+  .lux-container {
+    @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .lux-tag {
+    @apply inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1 text-sm uppercase tracking-[0.3em] text-white/80;
+  }
+
+  .portfolio-filter {
+    @apply flex flex-wrap justify-center gap-3 pt-4 text-xs uppercase tracking-[0.35em];
+  }
+
+  .portfolio-filter__button {
+    @apply rounded-full border border-black/30 bg-white px-4 py-2 text-black transition-colors duration-200;
+  }
+
+  .portfolio-filter__button.is-active,
+  .portfolio-filter__button[aria-pressed="true"] {
+    @apply border-black/40 bg-black/5 font-semibold;
+  }
+
+  .portfolio-filter__button:hover,
+  .portfolio-filter__button:focus-visible {
+    @apply border-black/40 outline-none;
+  }
+
+  .portfolio-filter__button:focus-visible {
+    @apply ring-2 ring-lux-gold/40 ring-offset-2 ring-offset-white;
+  }
+
+  [data-portfolio-item].is-hidden {
+    display: none !important;
+  }
+
+  .lux-card {
+    @apply rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lux backdrop-blur;
+  }
+
+  .lux-grid {
+    @apply grid gap-8 sm:grid-cols-2 lg:grid-cols-4;
+  }
+
+  .lux-button {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-lux-gold px-8 py-3 font-semibold text-lux-dark shadow-lg shadow-lux-gold/30 transition hover:-translate-y-0.5 hover:bg-white;
+  }
+
+  .about-hero-section {
+    @apply relative overflow-hidden;
+    background-color: #0a0a0a;
+  }
+
+  .about-hero-content {
+    @apply mx-auto flex flex-col items-center justify-center text-center;
+    gap: clamp(2.25rem, 6vw, 3rem);
+    padding: clamp(3rem, 12vw, 5rem) 0 clamp(2.5rem, 9vw, 3.25rem);
+  }
+
+  .about-hero-title {
+    @apply m-0 font-semibold text-white;
+    line-height: 1.1;
+    font-size: clamp(3rem, 8vw, 4.75rem);
+  }
+
+  .about-hero-indicator {
+    @apply inline-flex items-center justify-center;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: -0.35rem;
+    flex-shrink: 0;
+  }
+
+  .about-hero-indicator svg {
+    @apply block;
+    width: 14.626px;
+    height: 8.639px;
+    fill: currentColor;
+  }
+}
+
+/* AUTO-MIGRATION INCLUSION - inserted by script: see src/styles/_auto_migration_from_styles.css */
+@import './_auto_migration_from_styles.css';
