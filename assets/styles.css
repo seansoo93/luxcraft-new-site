@@ -3684,3 +3684,35 @@ body.about-page {
 }
 
 /* End about reviews overrides */
+/* Portfolio page overrides */
+.lux-section {
+  background: #ffffff;
+  color: #111111;
+}
+
+.lux-section .lux-card,
+.lux-section .lux-container,
+.lux-section .lux-tag {
+  background: #ffffff;
+  color: #111111;
+  border-color: rgba(0, 0, 0, 0.08);
+}
+
+.lux-section .lux-button {
+  background: #111111;
+  color: #ffffff;
+  border-color: rgba(0,0,0,0.1);
+}
+
+.lux-section .text-white\/60,
+.lux-section .text-white\/70,
+.lux-section .text-white\/72,
+.lux-section .text-white\/80,
+.lux-section .text-white\/55,
+.lux-section .text-white\/35 {
+  color: rgba(17, 17, 17, 0.72) !important;
+}
+/* Portfolio heading override */
+.lux-section h2 {
+  color: #111111;
+}
