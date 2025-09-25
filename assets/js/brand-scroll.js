@@ -45,4 +45,12 @@ document.addEventListener('DOMContentLoaded', function() {
         brandsContainer.scrollLeft = scrollLeft - walk;
     });
 
+    // Infinite manual scroll support for 3 logo sets
+    const totalWidth = brandsContainer.scrollWidth;
+    brandsContainer.addEventListener('scroll', () => {
+        const third = totalWidth / 3;
+        if (brandsContainer.scrollLeft >= 2 * third) {
+            brandsContainer.scrollLeft -= third;
+        }
+    });
 });

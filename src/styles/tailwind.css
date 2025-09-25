@@ -606,17 +606,7 @@
 
   .why-panel__brands .brand-scroll-track {
     display: flex;
-    animation: brand-scroll 40s linear infinite;
     will-change: transform;
-  }
-
-  @keyframes brand-scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-50%);
-    }
   }
 
   .why-panel__brands li {
