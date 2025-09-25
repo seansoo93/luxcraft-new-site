@@ -200,6 +200,10 @@
     @apply ring-2 ring-lux-gold/40 ring-offset-2 ring-offset-white;
   }
 
+  [data-portfolio-item].is-hidden {
+    display: none !important;
+  }
+
   .lux-card {
     @apply rounded-3xl border border-white/10 bg-white/5 p-8 shadow-lux backdrop-blur;
   }
