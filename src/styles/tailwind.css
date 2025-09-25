@@ -247,3 +247,6 @@
     fill: currentColor;
   }
 }
+
+/* AUTO-MIGRATION INCLUSION - inserted by script: see src/styles/_auto_migration_from_styles.css */
+@import './_auto_migration_from_styles.css';
