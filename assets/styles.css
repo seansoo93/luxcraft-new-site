@@ -3567,6 +3567,53 @@ body.about-page {
   outline-offset: 3px;
 }
 
+/* Portfolio filters */
+.portfolio-filter {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  padding-top: 1.5rem;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+}
+
+.portfolio-filter__button {
+  padding: 0.75rem 1.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.28);
+  background-color: #ffffff;
+  color: #111111;
+  font-weight: 500;
+  transition: background-color 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease;
+  cursor: pointer;
+}
+
+.portfolio-filter__button.is-active,
+.portfolio-filter__button[aria-pressed="true"] {
+  background-color: #111111;
+  color: #ffffff;
+  border-color: rgba(0, 0, 0, 0.6);
+  font-weight: 600;
+  transform: translateY(-1px);
+}
+
+.portfolio-filter__button:hover,
+.portfolio-filter__button:focus-visible {
+  border-color: rgba(0, 0, 0, 0.6);
+  color: #111111;
+  outline: none;
+}
+
+.portfolio-filter__button:focus-visible {
+  box-shadow: 0 0 0 3px rgba(197, 154, 92, 0.3);
+}
+
+[data-portfolio-item].is-hidden {
+  display: none !important;
+}
+
 @media (max-width: 1023px) {
   .about-reviews {
     border-radius: 32px;
