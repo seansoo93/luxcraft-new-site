@@ -426,9 +426,7 @@ body {
 .about-panel__title {
   margin: 0;
   font-size: clamp(2.2rem, 4.5vw, 3rem); /* adjusted */
-  font-weight: 600;
   letter-spacing: -0.02em;
-  color: #0f0f0f;
 }
 
 .about-panel__lede {

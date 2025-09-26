@@ -3264,6 +3264,10 @@ a:hover {
   font-weight: 600;
 }
 
+.\!font-semibold {
+  font-weight: 600 !important;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -4821,6 +4825,10 @@ a:hover {
   font-weight: 600;
 }
 
+.\!font-semibold {
+  font-weight: 600 !important;
+}
+
 .uppercase {
   text-transform: uppercase;
 }
@@ -4848,6 +4856,11 @@ a:hover {
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
+.text-lux-dark {
+  --tw-text-opacity: 1;
+  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
 
 .text-lux-gold {
@@ -4878,6 +4891,11 @@ a:hover {
 
 .text-white\/80 {
   color: rgb(255 255 255 / 0.8);
+}
+
+.\!text-lux-dark {
+  --tw-text-opacity: 1 !important;
+  color: rgb(17 17 17 / var(--tw-text-opacity)) !important;
 }
 
 .underline {
