@@ -15,19 +15,21 @@
       rel="stylesheet"
     />
     <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="192x192" />
+    <link rel="stylesheet" href="./assets/corbesier-icons.css" />
     <link rel="stylesheet" href="./assets/styles.css" />
+    <script src="./assets/js/header.js" defer></script>
   </head>
-  <body class="min-h-screen bg-lux-dark text-white">
-    <header class="site-header sticky top-0 z-50">
-      <div class="lux-container header-row">
-        <a href="index.html" class="header-logo" aria-label="LuxCraft Home">
-          <img src="assets/images/logo.png" alt="LuxCraft" />
+  <body class="min-h-screen bg-lux-dark text-white pt-24 lg:pt-28">
+    <header class="fixed top-0 left-0 right-0 z-50 bg-lux-dark/80 backdrop-blur-lg transition-transform duration-300">
+      <div class="lux-container flex items-center justify-between py-6 lg:py-8">
+        <a href="index.html" class="block py-2" aria-label="LuxCraft Home">
+          <img src="assets/images/logo.png" alt="LuxCraft" class="h-8 lg:h-10 w-auto" />
         </a>
         <nav class="header-nav" aria-label="Primary">
           <a href="about.html">Who We Are</a>
           <a href="services.html">What We Do</a>
           <a href="portfolio.html">Our Past Works</a>
-          <a href="contact.html">Contact Us</a>
+          <a href="contact.html" aria-current="page">Contact Us</a>
         </nav>
         <div class="header-controls">
           <button class="header-action" type="button" aria-label="Search">
@@ -40,7 +42,7 @@
             class="header-toggle md:hidden"
             type="button"
             aria-label="Open navigation"
-            onclick="document.getElementById('mobile-menu').classList.toggle('hidden')"
+            onclick="document.getElementById('mobile-menu').classList.toggle('open')"
           >
             <span class="sr-only">Toggle navigation</span>
             <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -49,12 +51,12 @@
           </button>
         </div>
       </div>
-      <div id="mobile-menu" class="hidden border-t border-white/10 bg-lux-darker/95 px-4 py-6 md:hidden">
-        <nav class="flex flex-col gap-4 text-sm uppercase tracking-[0.25em] text-white/80">
+      <div id="mobile-menu" class="border-t border-white/10 bg-lux-darker/95 px-4 py-6 md:hidden" aria-hidden="true" style="display: none;">
+        <nav class="flex flex-col gap-4 text-sm uppercase tracking-[0.25em] text-white/80" aria-label="Mobile navigation">
           <a href="about.html" class="hover:text-white">Who We Are</a>
           <a href="services.html" class="hover:text-white">What We Do</a>
           <a href="portfolio.html" class="hover:text-white">Our Past Works</a>
-          <a href="contact.html" class="hover:text-white">Contact Us</a>
+          <a href="contact.html" class="hover:text-white" aria-current="page">Contact Us</a>
         </nav>
         <div class="mt-6 flex flex-col gap-2 text-white/70">
           <a href="tel:+6583126212" class="hover:text-white">+65 8312 6212 (Shamim)</a>

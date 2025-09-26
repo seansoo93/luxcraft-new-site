@@ -20,12 +20,38 @@
   }
 
   body {
-    @apply bg-lux-dark text-white font-sans antialiased;
+    @apply font-sans antialiased;
+  }
+  
+  body:not(.light-theme) {
+    @apply bg-lux-dark text-white;
     background-image: radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 60%);
+  }
+  
+  .light-theme {
+    @apply bg-white text-black;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight text-white;
+    @apply font-display tracking-tight;
+  }
+  
+  :not(.light-theme) h1, 
+  :not(.light-theme) h2, 
+  :not(.light-theme) h3, 
+  :not(.light-theme) h4, 
+  :not(.light-theme) h5, 
+  :not(.light-theme) h6 {
+    @apply text-white;
+  }
+  
+  .light-theme h1,
+  .light-theme h2,
+  .light-theme h3,
+  .light-theme h4,
+  .light-theme h5,
+  .light-theme h6 {
+    @apply text-black;
   }
 
   a {
@@ -35,13 +61,50 @@
   a:hover {
     @apply text-white;
   }
-  body.about-page {
-    background: #ffffff; /* flat white background */
-    color: #111; /* ensure text contrast */
-  }
 }
 
 @layer components {
+  /* Header Components */
+  .site-header {
+    @apply fixed top-0 left-0 right-0 z-50 bg-lux-dark/80 backdrop-blur-lg transition-transform duration-300;
+  }
+
+  .site-header--hidden {
+    @apply -translate-y-full;
+  }
+
+  .header-row {
+    @apply flex items-center justify-between py-4;
+  }
+
+  .header-nav {
+    @apply hidden md:flex items-center space-x-8;
+  }
+
+  .header-nav a {
+    @apply text-white/70 hover:text-white transition-colors duration-200;
+  }
+
+  .header-nav a[aria-current="page"] {
+    @apply text-white font-medium;
+  }
+
+  .header-controls {
+    @apply flex items-center space-x-4;
+  }
+
+  .header-action {
+    @apply p-2 text-white/70 hover:text-white transition-colors duration-200;
+  }
+
+  #mobile-menu {
+    @apply fixed inset-y-0 right-0 w-64 bg-lux-dark/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 ease-in-out;
+  }
+
+  #mobile-menu.open {
+    @apply translate-x-0;
+  }
+
   .lux-section {
     @apply relative py-20 lg:py-28;
   }

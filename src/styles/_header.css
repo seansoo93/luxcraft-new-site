@@ -1,0 +1,40 @@
+/* Header Components */
+.site-header {
+  @apply fixed top-0 left-0 right-0 z-50 bg-lux-dark/80 backdrop-blur-lg transition-transform duration-300;
+}
+
+.site-header--hidden {
+  @apply -translate-y-full;
+}
+
+.header-row {
+  @apply flex items-center justify-between py-4;
+}
+
+.header-nav {
+  @apply hidden md:flex items-center space-x-8;
+}
+
+.header-nav a {
+  @apply text-white/70 hover:text-white transition-colors duration-200;
+}
+
+.header-nav a[aria-current="page"] {
+  @apply text-white font-medium;
+}
+
+.header-controls {
+  @apply flex items-center space-x-4;
+}
+
+.header-action {
+  @apply p-2 text-white/70 hover:text-white transition-colors duration-200;
+}
+
+#mobile-menu {
+  @apply fixed inset-y-0 right-0 w-64 bg-lux-dark/95 backdrop-blur-xl transform translate-x-full transition-transform duration-300 ease-in-out;
+}
+
+#mobile-menu.open {
+  @apply translate-x-0;
+}
