@@ -1145,6 +1145,10 @@ a:hover {
   color: #0f0f0f;
 }
 
+.about-panel__header .about-panel__title {
+  color: #0f0f0f;
+}
+
 .about-panel__lede {
   max-width: 36rem;
   font-size: 1.05rem;
@@ -3260,12 +3264,12 @@ a:hover {
   line-height: 1rem;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
 .\!font-semibold {
   font-weight: 600 !important;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .uppercase {
@@ -4821,12 +4825,12 @@ a:hover {
   line-height: 1rem;
 }
 
-.font-semibold {
-  font-weight: 600;
-}
-
 .\!font-semibold {
   font-weight: 600 !important;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .uppercase {
@@ -4853,14 +4857,14 @@ a:hover {
   letter-spacing: 0.4em;
 }
 
+.\!text-lux-dark {
+  --tw-text-opacity: 1 !important;
+  color: rgb(17 17 17 / var(--tw-text-opacity)) !important;
+}
+
 .text-black {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
-}
-
-.text-lux-dark {
-  --tw-text-opacity: 1;
-  color: rgb(17 17 17 / var(--tw-text-opacity));
 }
 
 .text-lux-gold {
@@ -4891,11 +4895,6 @@ a:hover {
 
 .text-white\/80 {
   color: rgb(255 255 255 / 0.8);
-}
-
-.\!text-lux-dark {
-  --tw-text-opacity: 1 !important;
-  color: rgb(17 17 17 / var(--tw-text-opacity)) !important;
 }
 
 .underline {
