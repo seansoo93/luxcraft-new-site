@@ -107,8 +107,8 @@
       display: flex;
       align-items: center;
       gap: clamp(1.75rem, 3vw, 3.5rem);
-      font-family: "Syne", ui-sans-serif, system-ui, sans-serif;
-      font-size: clamp(0.9rem, 1vw, 1.05rem);
+      font-family: "Syne", "Poppins", ui-sans-serif, system-ui, sans-serif;
+      font-size: clamp(1rem, 1.25vw, 1.2rem);
       font-weight: 600;
       letter-spacing: 0;
       text-transform: none;
@@ -190,6 +190,56 @@
 
   #mobile-menu .mt-6 a {
     @apply text-white/60 text-sm font-normal hover:text-white;
+  }
+
+  /* Contact page */
+  .contact-hero {
+    @apply bg-white;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  }
+
+  .contact-hero__content {
+    @apply flex flex-col items-center gap-6 py-16 text-center sm:py-20;
+  }
+
+  .contact-hero__eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.4em] text-lux-dark/60;
+  }
+
+  .contact-hero__title {
+    @apply text-4xl font-semibold text-lux-dark sm:text-5xl;
+  }
+
+  .contact-hero__subtitle {
+    @apply max-w-3xl text-base text-lux-dark/70;
+  }
+
+  .contact-page main,
+  .contact-page .lux-section {
+    @apply bg-white text-lux-dark;
+  }
+
+  .contact-page .lux-tag {
+    border-color: rgba(17, 17, 17, 0.12);
+    background-color: rgba(17, 17, 17, 0.06);
+    color: rgba(17, 17, 17, 0.65);
+  }
+
+  .contact-page details.group,
+  .contact-page .contact-card {
+    color: #111111;
+  }
+
+  .contact-page details.group summary {
+    @apply text-lux-dark;
+  }
+
+  .contact-page details.group p {
+    @apply text-lux-dark/65;
+  }
+
+  .contact-page details.group summary span {
+    transition: all 200ms ease;
   }
 
   /* About panel */
@@ -3549,35 +3599,35 @@
 
   /* End about reviews overrides */
   /* Portfolio page overrides */
-  .lux-section {
+  .portfolio-page .lux-section {
     background: #ffffff;
     color: #111111;
   }
 
-  .lux-section .lux-card,
-  .lux-section .lux-container,
-  .lux-section .lux-tag {
+  .portfolio-page .lux-section .lux-card,
+  .portfolio-page .lux-section .lux-container,
+  .portfolio-page .lux-section .lux-tag {
     background: #ffffff;
     color: #111111;
     border-color: rgba(0, 0, 0, 0.08);
   }
 
-  .lux-section .lux-button {
+  .portfolio-page .lux-section .lux-button {
     background: #111111;
     color: #ffffff;
     border-color: rgba(0,0,0,0.1);
   }
 
-  .lux-section .text-white\/60,
-  .lux-section .text-white\/70,
-  .lux-section .text-white\/72,
-  .lux-section .text-white\/80,
-  .lux-section .text-white\/55,
-  .lux-section .text-white\/35 {
+  .portfolio-page .lux-section .text-white\/60,
+  .portfolio-page .lux-section .text-white\/70,
+  .portfolio-page .lux-section .text-white\/72,
+  .portfolio-page .lux-section .text-white\/80,
+  .portfolio-page .lux-section .text-white\/55,
+  .portfolio-page .lux-section .text-white\/35 {
     color: rgba(17, 17, 17, 0.72) !important;
   }
   /* Portfolio heading override */
-  .lux-section h2 {
+  .portfolio-page .lux-section h2 {
     color: #111111;
   }
 }
