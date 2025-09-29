@@ -64,6 +64,12 @@
 }
 
 @layer components {
+  .lux-button--reverse {
+    @apply bg-transparent text-lux-gold border border-lux-gold;
+  }
+  .lux-button--reverse:hover {
+    @apply bg-lux-gold text-black;
+  }
   /* Header */
   .site-header {
     @apply fixed top-0 left-0 right-0 z-50 transition-transform duration-300;

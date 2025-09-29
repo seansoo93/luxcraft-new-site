@@ -629,6 +629,22 @@ a:hover {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.lux-button--reverse {
+  border-width: 1px;
+  --tw-border-opacity: 1;
+  border-color: rgb(197 154 92 / var(--tw-border-opacity));
+  background-color: transparent;
+  --tw-text-opacity: 1;
+  color: rgb(197 154 92 / var(--tw-text-opacity));
+}
+
+.lux-button--reverse:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(197 154 92 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 /* Header */
 
 .site-header {
@@ -3033,6 +3049,11 @@ a:hover {
   color: rgb(197 154 92 / var(--tw-text-opacity));
 }
 
+.\!text-white {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -4550,6 +4571,11 @@ a:hover {
 .\!text-lux-dark {
   --tw-text-opacity: 1 !important;
   color: rgb(17 17 17 / var(--tw-text-opacity)) !important;
+}
+
+.\!text-white {
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 255 255 / var(--tw-text-opacity)) !important;
 }
 
 .text-black {
