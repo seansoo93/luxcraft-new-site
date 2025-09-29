@@ -78,6 +78,10 @@
     backdrop-filter: blur(18px);
   }
 
+  .light-theme .site-header {
+    background: #000000;
+  }
+
   .site-header--hidden {
     @apply -translate-y-full;
   }
