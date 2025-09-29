@@ -193,25 +193,29 @@
   }
 
   /* Contact page */
-  .contact-hero {
-    @apply bg-white;
-    border-bottom: 1px solid rgba(17, 17, 17, 0.08);
+  .contact-hero-section {
+    background: #ffffff;
+    color: #111111;
   }
 
-  .contact-hero__content {
+  .contact-hero-content {
     @apply flex flex-col items-center gap-6 py-16 text-center sm:py-20;
   }
 
-  .contact-hero__eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.4em] text-lux-dark/60;
+  .contact-hero-title {
+    @apply text-4xl font-semibold sm:text-5xl;
   }
 
-  .contact-hero__title {
-    @apply text-4xl font-semibold text-lux-dark sm:text-5xl;
+  .contact-page .about-hero-title {
+    @apply text-white;
   }
 
-  .contact-hero__subtitle {
-    @apply max-w-3xl text-base text-lux-dark/70;
+  .contact-hero-indicator {
+    @apply inline-flex items-center justify-center text-lux-dark/70;
+  }
+
+  .contact-hero-indicator svg {
+    @apply h-4 w-6;
   }
 
   .contact-page main,

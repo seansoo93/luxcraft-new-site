@@ -584,6 +584,13 @@ body:not(.light-theme) {
   background-image: radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 60%);
 }
 
+.light-theme {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: "Syne", "Poppins", sans-serif;
   letter-spacing: -0.025em;
@@ -597,6 +604,16 @@ h1, h2, h3, h4, h5, h6 {
   :not(.light-theme) h6 {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.light-theme h1,
+  .light-theme h2,
+  .light-theme h3,
+  .light-theme h4,
+  .light-theme h5,
+  .light-theme h6 {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 a {
@@ -882,58 +899,9 @@ a:hover {
 
 /* Contact page */
 
-.contact-hero {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
-}
-
-.contact-hero__content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  text-align: center;
-}
-
-@media (min-width: 640px) {
-  .contact-hero__content {
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-  }
-}
-
-.contact-hero__eyebrow {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.4em;
-  color: rgb(17 17 17 / 0.6);
-}
-
-.contact-hero__title {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-  font-weight: 600;
+.contact-page .about-hero-title {
   --tw-text-opacity: 1;
-  color: rgb(17 17 17 / var(--tw-text-opacity));
-}
-
-@media (min-width: 640px) {
-  .contact-hero__title {
-    font-size: 3rem;
-    line-height: 1;
-  }
-}
-
-.contact-hero__subtitle {
-  max-width: 48rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: rgb(17 17 17 / 0.7);
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .contact-page main,
@@ -4493,6 +4461,10 @@ a:hover {
 
 .pb-2 {
   padding-bottom: 0.5rem;
+}
+
+.pt-12 {
+  padding-top: 3rem;
 }
 
 .pt-24 {
