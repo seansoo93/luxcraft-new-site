@@ -24,7 +24,8 @@
   }
   
   body:not(.light-theme) {
-    @apply bg-lux-dark text-white;
+    @apply bg-lux-dark;
+    color: #ffffff;
     background-image: radial-gradient(circle at top, rgba(255, 255, 255, 0.05), transparent 60%);
   }
   
@@ -36,22 +37,26 @@
     @apply font-display tracking-tight;
   }
   
-  :not(.light-theme) h1, 
-  :not(.light-theme) h2, 
-  :not(.light-theme) h3, 
-  :not(.light-theme) h4, 
-  :not(.light-theme) h5, 
+  :not(.light-theme) h1,
+  :not(.light-theme) h2,
+  :not(.light-theme) h3,
+  :not(.light-theme) h4,
+  :not(.light-theme) h5,
   :not(.light-theme) h6 {
-    @apply text-white;
+    color: #ffffff;
   }
-  
+
   .light-theme h1,
   .light-theme h2,
   .light-theme h3,
   .light-theme h4,
   .light-theme h5,
   .light-theme h6 {
-    @apply text-black;
+    color: #000000;
+  }
+
+  .light-theme .hero-headline {
+    color: #ffffff;
   }
 
   a {
@@ -59,7 +64,7 @@
   }
 
   a:hover {
-    @apply text-white;
+    color: #a08953;
   }
 }
 
@@ -79,7 +84,8 @@
   }
 
   .light-theme .site-header {
-    background: #000000;
+    background: #111111;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.2);
   }
 
   .site-header--hidden {
@@ -140,6 +146,49 @@
     color: #ffffff;
   }
 
+  .light-theme .site-header .header-nav a,
+  .light-theme .site-header .header-action {
+    color: rgba(255, 255, 255, 0.92) !important;
+  }
+
+  .light-theme .site-header .header-nav a[aria-current="page"] {
+    color: #ffffff !important;
+  }
+
+  .light-theme .site-header .header-nav a:hover,
+  .light-theme .site-header .header-nav a:focus-visible {
+    color: #a08953 !important;
+  }
+
+  .light-theme .hero-chrome,
+  .light-theme .hero-chrome button {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
+  .light-theme .hero-nav-item[aria-selected="true"],
+  .light-theme .hero-nav-item:hover,
+  .light-theme .hero-nav-item:focus-visible {
+    color: #ffffff !important;
+  }
+
+  .light-theme .hero-scroll {
+    color: rgba(255, 255, 255, 0.72) !important;
+  }
+
+  .light-theme .hero-scroll:hover,
+  .light-theme .hero-scroll:focus-visible
+  .light-theme .why-panel__eyebrow,
+  .light-theme .why-panel__title,
+  .light-theme .design-gallery__title,
+  .light-theme .why-panel__copy strong,
+  .light-theme .why-panel__brands h3 {
+    color: #ffffff !important;
+  }
+
+  .light-theme .why-panel__copy {
+    color: rgba(245, 245, 245, 0.72) !important;
+  }
+
   .header-controls {
     display: flex;
     align-items: center;
@@ -172,6 +221,10 @@
     @apply h-6 w-6;
   }
 
+  .light-theme .site-header .header-action {
+    color: rgba(255, 255, 255, 0.82) !important;
+  }
+
   .header-toggle {
     @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/80 transition md:hidden;
   }
@@ -179,6 +232,18 @@
   .header-toggle:hover,
   .header-toggle:focus-visible {
     @apply bg-white/10 text-white;
+  }
+
+  .light-theme .site-header .header-toggle {
+    border-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .light-theme .site-header .header-toggle:hover,
+  .light-theme .site-header .header-toggle:focus-visible {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
   }
 
   #mobile-menu {
@@ -202,30 +267,16 @@
     @apply text-white/60 text-sm font-normal hover:text-white;
   }
 
-  /* Contact page */
-  .contact-hero-section {
-    background: #ffffff;
-    color: #111111;
+  .light-theme #mobile-menu,
+  .light-theme #mobile-menu nav,
+  .light-theme #mobile-menu a,
+  .light-theme #mobile-menu .mt-6 a {
+    color: rgba(255, 255, 255, 0.82) !important;
   }
 
-  .contact-hero-content {
-    @apply flex flex-col items-center gap-6 py-16 text-center sm:py-20;
-  }
-
-  .contact-hero-title {
-    @apply text-4xl font-semibold sm:text-5xl;
-  }
-
-  .contact-page .about-hero-title {
-    @apply text-white;
-  }
-
-  .contact-hero-indicator {
-    @apply inline-flex items-center justify-center text-lux-dark/70;
-  }
-
-  .contact-hero-indicator svg {
-    @apply h-4 w-6;
+  .light-theme #mobile-menu a:hover,
+  .light-theme #mobile-menu a:focus-visible {
+    color: #ffffff !important;
   }
 
   .contact-page main,
@@ -254,6 +305,56 @@
 
   .contact-page details.group summary span {
     transition: all 200ms ease;
+  }
+
+  .light-theme .lux-card {
+    background: #ffffff;
+    color: #111111;
+    border-color: rgba(17, 17, 17, 0.12);
+  }
+
+  .light-theme .border-white\/10 { border-color: rgba(17, 17, 17, 0.12) !important; }
+  .light-theme .border-white\/15 { border-color: rgba(17, 17, 17, 0.18) !important; }
+  .light-theme .border-white\/20 { border-color: rgba(17, 17, 17, 0.25) !important; }
+
+  .light-theme .bg-white\/5 { background-color: rgba(17, 17, 17, 0.05) !important; }
+  .light-theme .bg-white\/10 { background-color: rgba(17, 17, 17, 0.08) !important; }
+
+  .light-theme .text-white { color: #111111 !important; }
+  .light-theme .text-white\/80 { color: rgba(17, 17, 17, 0.8) !important; }
+  .light-theme .text-white\/72 { color: rgba(17, 17, 17, 0.72) !important; }
+  .light-theme .text-white\/70 { color: rgba(17, 17, 17, 0.7) !important; }
+  .light-theme .text-white\/60 { color: rgba(17, 17, 17, 0.6) !important; }
+  .light-theme .text-white\/55 { color: rgba(17, 17, 17, 0.55) !important; }
+  .light-theme .text-white\/50 { color: rgba(17, 17, 17, 0.5) !important; }
+  .light-theme .text-white\/35 { color: rgba(17, 17, 17, 0.35) !important; }
+
+  .light-theme .lux-tag {
+    border-color: rgba(17, 17, 17, 0.12);
+    background-color: rgba(17, 17, 17, 0.05);
+    color: rgba(17, 17, 17, 0.65);
+  }
+
+  .light-theme input::placeholder,
+  .light-theme textarea::placeholder {
+    color: rgba(17, 17, 17, 0.45);
+  }
+
+  .light-theme .lux-section {
+    background: #ffffff;
+    color: #111111;
+  }
+
+  .light-theme .about-hero-section {
+    background: #000000;
+  }
+
+  .light-theme .about-hero-title {
+    @apply text-lux-offwhite;
+  }
+
+  .light-theme .about-hero-indicator {
+    color: rgba(255, 255, 255, 0.6);
   }
 
   /* About panel */
@@ -909,6 +1010,7 @@
     letter-spacing: -0.01em;
     line-height: 1.05;
     margin-bottom: 0.25rem;
+    color: #ffffff;
   }
 
   .design-gallery__card-inner p {
