@@ -25,15 +25,6 @@ module.exports = {
       backgroundImage: {
         'lux-radial': 'radial-gradient(circle at top, rgba(255,255,255,0.08), transparent 65%)',
       },
-      keyframes: {
-        'brand-scroll': {
-          '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-33.3333%)' },
-        },
-      },
-      animation: {
-        'brand-scroll': 'brand-scroll 60s linear infinite',
-      },
     },
   },
   plugins: [],
