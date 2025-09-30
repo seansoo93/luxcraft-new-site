@@ -172,11 +172,11 @@
   }
 
   .light-theme .hero-scroll {
-    color: rgba(255, 255, 255, 0.72) !important;
+    color: #ffffff !important;
   }
 
   .light-theme .hero-scroll:hover,
-  .light-theme .hero-scroll:focus-visible
+  .light-theme .hero-scroll:focus-visible,
   .light-theme .why-panel__eyebrow,
   .light-theme .why-panel__title,
   .light-theme .design-gallery__title,
@@ -247,12 +247,16 @@
   }
 
   #mobile-menu {
-    @apply fixed inset-y-0 right-0 w-72 max-w-xs bg-lux-dark/95 px-6 py-8 text-white/80 backdrop-blur-xl transition-transform duration-300 ease-in-out;
-    transform: translateX(100%);
+    @apply fixed inset-x-0 top-0 h-screen bg-lux-dark/95 px-6 py-28 text-white/80 backdrop-blur-xl transition-transform duration-300 ease-in-out;
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
   }
 
   #mobile-menu.open {
-    transform: translateX(0);
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
   #mobile-menu nav {

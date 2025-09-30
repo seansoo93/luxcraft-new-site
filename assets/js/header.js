@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     return;
   }
 
-  mobileMenu.classList.add('translate-x-full');
   mobileMenu.classList.remove('open');
 
   const shouldAutoHide = true; // Always enable auto-hide
@@ -18,16 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function toggleMenu() {
     isMenuOpen = !isMenuOpen;
 
-    // Use transform for better performance
-    if (isMenuOpen) {
-      mobileMenu.classList.remove('translate-x-full');
-      mobileMenu.classList.add('open');
-      document.body.classList.add('overflow-hidden');
-    } else {
-      mobileMenu.classList.add('translate-x-full');
-      mobileMenu.classList.remove('open');
-      document.body.classList.remove('overflow-hidden');
-    }
+    mobileMenu.classList.toggle('open', isMenuOpen);
+    document.body.classList.toggle('overflow-hidden', isMenuOpen);
     
     // Update aria-label and icon with Tailwind classes
     mobileMenuButton.setAttribute('aria-label', isMenuOpen ? 'Close navigation' : 'Open navigation');
@@ -45,9 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Handle menu button click
   mobileMenuButton.addEventListener('click', (e) => {
     e.preventDefault();
-    if (!mobileMenu.classList.contains('translate-x-full') && !mobileMenu.classList.contains('open')) {
-      mobileMenu.classList.add('translate-x-full');
-    }
     toggleMenu();
   });
 
