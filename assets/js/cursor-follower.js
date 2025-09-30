@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
   const cursorEl = document.querySelector('.cursor-follower');
-  const supportsFinePointer = window.matchMedia('(pointer: fine)').matches;
+  const supportsFinePointer = window.matchMedia('(any-pointer: fine)').matches;
 
   if (cursorEl && supportsFinePointer) {
     const offsetX = 33;

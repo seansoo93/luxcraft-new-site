@@ -767,6 +767,50 @@ a:hover {
   color: #ffffff !important;
 }
 
+.hero-nav-item {
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 200ms ease;
+}
+
+/* Make hero nav items white when selected/hovered (applies on mobile & desktop)
+   and reveal the underline as a persistent selected highlight. */
+
+.hero-nav-item[aria-selected="true"],
+  .hero-nav-item:hover,
+  .hero-nav-item:focus-visible {
+  color: #ffffff !important;
+}
+
+/* Ensure the underline transitions from scaleX(0) -> scaleX(1) when active */
+
+.hero-nav-item .hero-underline {
+  transform-origin: left;
+  transform: scaleX(0);
+  opacity: 0.6;
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1), opacity 200ms ease;
+}
+
+.hero-nav-item[aria-selected="true"] .hero-underline,
+  .hero-nav-item:hover .hero-underline,
+  .hero-nav-item:focus-visible .hero-underline {
+  transform: scaleX(1) !important;
+  opacity: 1 !important;
+}
+
+/* Ensure desktop and mobile theme overrides don't unexpectedly flip color */
+
+.light-theme .hero-nav-item[aria-selected="true"],
+  .light-theme .hero-nav-item:hover,
+  .light-theme .hero-nav-item:focus-visible {
+  color: #ffffff !important;
+}
+
+:not(.light-theme) .hero-nav-item[aria-selected="true"],
+  :not(.light-theme) .hero-nav-item:hover,
+  :not(.light-theme) .hero-nav-item:focus-visible {
+  color: #ffffff !important;
+}
+
 .light-theme .hero-scroll {
   color: #ffffff !important;
 }

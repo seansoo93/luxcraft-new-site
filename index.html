@@ -152,15 +152,15 @@
 
           <div class="hero-chrome absolute bottom-8 left-8 sm:left-[8%] lg:left-[10%]">
             <div class="flex items-center gap-5 text-xs font-semibold uppercase tracking-[0.35em] text-white/60" role="tablist" aria-label="Hero slides">
-              <button type="button" class="hero-nav-item relative pb-2 text-white/60 transition hover:text-white" data-hero-nav="0" aria-selected="true">
+              <button type="button" class="hero-nav-item relative pb-2" data-hero-nav="0" aria-selected="true">
                 01
                 <span class="hero-underline absolute bottom-0 left-0 h-[2px] w-10 origin-left scale-x-0 bg-white transition-transform duration-500"></span>
               </button>
-              <button type="button" class="hero-nav-item relative pb-2 text-white/60 transition hover:text-white" data-hero-nav="1" aria-selected="false">
+              <button type="button" class="hero-nav-item relative pb-2" data-hero-nav="1" aria-selected="false">
                 02
                 <span class="hero-underline absolute bottom-0 left-0 h-[2px] w-10 origin-left scale-x-0 bg-white transition-transform duration-500"></span>
               </button>
-              <button type="button" class="hero-nav-item relative pb-2 text-white/60 transition hover:text-white" data-hero-nav="2" aria-selected="false">
+              <button type="button" class="hero-nav-item relative pb-2" data-hero-nav="2" aria-selected="false">
                 03
                 <span class="hero-underline absolute bottom-0 left-0 h-[2px] w-10 origin-left scale-x-0 bg-white transition-transform duration-500"></span>
               </button>
@@ -542,14 +542,8 @@
           });
 
           navButtons.forEach((btn, idx) => {
-            const underline = btn.querySelector('.hero-underline');
             const selected = idx === nextIndex;
             btn.setAttribute('aria-selected', String(selected));
-            btn.classList.toggle('text-white', selected);
-            btn.classList.toggle('text-white/60', !selected);
-            if (underline) {
-              underline.style.transform = selected ? 'scaleX(1)' : 'scaleX(0)';
-            }
           });
 
           if (progressEl && !prefersReduced) {
@@ -596,7 +590,7 @@
         }
 
         const cursorEl = document.querySelector('.cursor-follower');
-        const supportsFinePointer = window.matchMedia('(pointer: fine)').matches;
+        const supportsFinePointer = window.matchMedia('(any-pointer: fine)').matches;
         if (cursorEl && supportsFinePointer) {
           const offsetX = 33;
           const offsetY = 27;
