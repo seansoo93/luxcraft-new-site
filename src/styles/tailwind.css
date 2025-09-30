@@ -184,7 +184,7 @@
     color: #ffffff !important;
   }
 
-/* Ensure the underline transitions from scaleX(0) -> scaleX(1) when active */
+  /* Ensure the underline transitions from scaleX(0) -> scaleX(1) when active */
   .hero-nav-item .hero-underline {
     transform-origin: left;
     transform: scaleX(0);
@@ -210,6 +210,66 @@
   :not(.light-theme) .hero-nav-item:hover,
   :not(.light-theme) .hero-nav-item:focus-visible {
     color: #ffffff !important;
+  }
+
+  .portfolio-card__media {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portfolio-card__media img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 320ms ease;
+  }
+
+  .portfolio-card:hover .portfolio-card__media img,
+  .portfolio-card:focus-within .portfolio-card__media img {
+    transform: scale(1.02);
+  }
+
+  .portfolio-card__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 9999px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+
+  .portfolio-card__nav svg {
+    width: 1.1rem;
+    height: 1.1rem;
+  }
+
+  .portfolio-card__nav--prev {
+    left: 0.85rem;
+  }
+
+  .portfolio-card__nav--next {
+    right: 0.85rem;
+  }
+
+  .portfolio-card:hover .portfolio-card__nav,
+  .portfolio-card:focus-within .portfolio-card__nav {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .portfolio-card__nav:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.75);
+    outline-offset: 3px;
   }
 
   .light-theme .hero-scroll {
