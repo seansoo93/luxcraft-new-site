@@ -771,6 +771,31 @@ a:hover {
   color: #ffffff !important;
 }
 
+/* Hide the hero "Scroll Down" control on small screens to remove clutter.
+     Keep the element in the DOM for accessibility on larger screens, but
+     visually remove it on mobile devices. */
+
+@media (max-width: 639px) {
+  .hero-scroll {
+    display: none !important;
+    pointer-events: none;
+  }
+}
+
+/* Center the hero nav (01/02/03) on mobile */
+
+@media (max-width: 639px) {
+  .hero-chrome {
+    left: 50% !important;
+    right: auto !important;
+    transform: translateX(-50%);
+  }
+
+  .hero-chrome [role="tablist"] {
+    justify-content: center;
+  }
+}
+
 .light-theme .hero-scroll:hover,
   .light-theme .hero-scroll:focus-visible,
   .light-theme .why-panel__eyebrow,
