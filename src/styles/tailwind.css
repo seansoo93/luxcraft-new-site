@@ -271,7 +271,8 @@
     border: 1px solid rgba(255, 255, 255, 0.12);
     opacity: 0;
     pointer-events: none;
-    transition: opacity 180ms ease, transform 180ms ease;
+    transform: translateY(-50%) scale(0.7);
+    transition: opacity 180ms ease, transform 200ms cubic-bezier(0.3, 1, 0.4, 1);
   }
 
   .portfolio-card__nav svg {
@@ -288,9 +289,11 @@
   }
 
   .portfolio-card:hover .portfolio-card__nav,
-  .portfolio-card:focus-within .portfolio-card__nav {
+  .portfolio-card:focus-within .portfolio-card__nav,
+  .portfolio-card.is-nav-visible .portfolio-card__nav {
     opacity: 1;
     pointer-events: auto;
+    transform: translateY(-50%) scale(1);
   }
 
   .portfolio-card__nav:focus-visible {
