@@ -377,11 +377,13 @@
 
   .header-toggle {
     @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/80 transition md:hidden;
+    background-color: rgba(255, 255, 255, 0.15); /* increase visibility */
   }
 
   .header-toggle:hover,
   .header-toggle:focus-visible {
     @apply bg-white/10 text-white;
+    background-color: rgba(255, 255, 255, 0.25);
   }
 
   .light-theme .site-header .header-toggle {
@@ -394,6 +396,12 @@
   .light-theme .site-header .header-toggle:focus-visible {
     background-color: rgba(255, 255, 255, 0.1);
     color: #ffffff;
+  }
+
+  /* Prevent pointer events on header-toggle SVG and its children */
+  .header-toggle svg,
+  .header-toggle svg * {
+    pointer-events: none;
   }
 
   #mobile-menu {
