@@ -21,9 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const nextBtn = block.querySelector('[data-portfolio-next]');
 
     let currentIndex = 0;
+    let isAnimating = false;
 
-    const updateImage = () => {
-      const safeIndex = ((currentIndex % images.length) + images.length) % images.length;
+    const normalizeIndex = (index) => ((index % images.length) + images.length) % images.length;
+
+    const renderImage = (index) => {
+      const safeIndex = normalizeIndex(index);
       currentIndex = safeIndex;
 
       const nextSrc = images[safeIndex];
@@ -35,12 +38,102 @@ document.addEventListener('DOMContentLoaded', () => {
       block.dataset.portfolioCurrent = String(safeIndex);
     };
 
-    const stepImage = (delta) => {
-      currentIndex += delta;
-      updateImage();
+    const waitForAnimation = (animation) => {
+      if (!animation) return Promise.resolve();
+      const { finished } = animation;
+      if (finished && typeof finished.then === 'function') {
+        return finished;
+      }
+
+      if (animation.playState === 'finished') {
+        return Promise.resolve();
+      }
+
+      return new Promise((resolve) => {
+        const handle = () => {
+          animation.removeEventListener('finish', handle);
+          animation.removeEventListener('cancel', handle);
+          resolve();
+        };
+
+        animation.addEventListener('finish', handle, { once: true });
+        animation.addEventListener('cancel', handle, { once: true });
+      });
     };
 
-    updateImage();
+    const finishAnimationState = () => {
+      imageEl.style.transform = '';
+      imageEl.style.opacity = '';
+      isAnimating = false;
+    };
+
+    const animateToIndex = async (nextIndex, direction) => {
+      if (typeof imageEl.animate !== 'function') {
+        renderImage(nextIndex);
+        finishAnimationState();
+        return;
+      }
+
+      const travel = 48;
+
+      try {
+        const exitAnimation = imageEl.animate(
+          [
+            { transform: 'translateX(0px)', opacity: 1 },
+            { transform: `translateX(${direction * travel}px)`, opacity: 0 }
+          ],
+          {
+            duration: 220,
+            easing: 'ease-out',
+            fill: 'forwards'
+          }
+        );
+
+        await waitForAnimation(exitAnimation);
+        exitAnimation.cancel();
+
+        renderImage(nextIndex);
+        imageEl.style.transform = `translateX(${-direction * travel}px)`;
+        imageEl.style.opacity = '0';
+
+        const enterAnimation = imageEl.animate(
+          [
+            { transform: `translateX(${-direction * travel}px)`, opacity: 0 },
+            { transform: 'translateX(0px)', opacity: 1 }
+          ],
+          {
+            duration: 260,
+            easing: 'ease-out',
+            fill: 'forwards'
+          }
+        );
+
+        await waitForAnimation(enterAnimation);
+        enterAnimation.cancel();
+      } catch (error) {
+        renderImage(nextIndex);
+      } finally {
+        finishAnimationState();
+      }
+    };
+
+    const stepImage = (delta) => {
+      if (isAnimating) return;
+
+      const nextIndex = normalizeIndex(currentIndex + delta);
+      if (nextIndex === currentIndex) {
+        return;
+      }
+
+      isAnimating = true;
+      const direction = delta > 0 ? -1 : 1;
+      animateToIndex(nextIndex, direction).catch(() => {
+        renderImage(nextIndex);
+        finishAnimationState();
+      });
+    };
+
+    renderImage(currentIndex);
 
     if (images.length <= 1) {
       if (prevBtn) prevBtn.classList.add('hidden');

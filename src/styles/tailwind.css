@@ -3975,3 +3975,9 @@
     color: #111111;
   }
 }
+
+  /* Portfolio Filter Button Active State */
+  .portfolio-filter__button.is-active {
+    background-color: #111111; /* black background */
+    color: #ffffff !important; /* keep text white */
+  }

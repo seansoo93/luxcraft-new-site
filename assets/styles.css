@@ -5096,6 +5096,15 @@ a:hover {
   transition-duration: 700ms;
 }
 
+/* Portfolio Filter Button Active State */
+
+.portfolio-filter__button.is-active {
+  background-color: #111111;
+  /* black background */
+  color: #ffffff !important;
+  /* keep text white */
+}
+
 .light-theme .hover\:bg-white\/10:hover {
   background-color: rgba(17, 17, 17, 0.08) !important;
 }
