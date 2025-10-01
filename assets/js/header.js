@@ -9,6 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   mobileMenu.classList.remove('open');
+  mobileMenu.style.transform = 'translateY(-12px)';
+  mobileMenu.style.opacity = '0';
+  mobileMenu.style.pointerEvents = 'none';
+  mobileMenu.setAttribute('aria-hidden', 'true');
 
   const shouldAutoHide = true; // Always enable auto-hide
   let isMenuOpen = false;
@@ -19,6 +23,18 @@ document.addEventListener('DOMContentLoaded', () => {
 
     mobileMenu.classList.toggle('open', isMenuOpen);
     document.body.classList.toggle('overflow-hidden', isMenuOpen);
+
+    if (isMenuOpen) {
+      mobileMenu.style.transform = 'translateY(0)';
+      mobileMenu.style.opacity = '1';
+      mobileMenu.style.pointerEvents = 'auto';
+      mobileMenu.setAttribute('aria-hidden', 'false');
+    } else {
+      mobileMenu.style.transform = 'translateY(-12px)';
+      mobileMenu.style.opacity = '0';
+      mobileMenu.style.pointerEvents = 'none';
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    }
     
     // Update aria-label and icon with Tailwind classes
     mobileMenuButton.setAttribute('aria-label', isMenuOpen ? 'Close navigation' : 'Open navigation');
@@ -38,6 +54,16 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     toggleMenu();
   });
+
+  const closeButton = mobileMenu.querySelector('#mobile-menu__close');
+  if (closeButton) {
+    closeButton.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (isMenuOpen) {
+        toggleMenu();
+      }
+    });
+  }
 
   // Close menu when clicking outside
   document.addEventListener('click', (e) => {

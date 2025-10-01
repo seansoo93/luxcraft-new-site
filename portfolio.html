@@ -51,7 +51,12 @@
           </button>
         </div>
       </div>
-      <div id="mobile-menu" class="translate-x-full">
+      <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <button type="button" id="mobile-menu__close" aria-label="Close navigation">
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
         <nav aria-label="Mobile navigation">
           <a href="about.html" class="hover:text-white">Who We Are</a>
           <a href="services.html" class="hover:text-white">What We Do</a>
