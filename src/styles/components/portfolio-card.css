@@ -2,14 +2,12 @@
   .portfolio-card__media {
     position: relative;
     overflow: hidden;
-    margin: 0;
-    width: 100%;
-    max-width: 630px;
+    width: min(100%, 630px);
+    aspect-ratio: 21 / 10;
+    max-height: 300px;
     margin-inline: auto;
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
-    aspect-ratio: 21 / 10;
-    max-height: 300px;
   }
 
   .portfolio-card__track {
@@ -38,11 +36,20 @@
   }
 
   .portfolio-card {
+    width: min(100%, 630px);
+    margin-inline: auto;
     padding: 0 !important;
     background: transparent;
-    border-top-left-radius: 0 !important;
-    border-top-right-radius: 0 !important;
-    overflow: hidden !important;
+    border: none !important;
+    box-shadow: none;
+  }
+
+  @media (min-width: 1024px) {
+    .portfolio-card,
+    .portfolio-card__media {
+      max-width: 630px;
+      margin-inline: auto;
+    }
   }
 
   .portfolio-card__nav {
