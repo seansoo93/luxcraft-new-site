@@ -629,6 +629,39 @@ a:hover {
   color: #a08953;
 }
 
+/* -------- Page transition (MPA) -------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  /* Cross‑Document View Transitions (Chrome/Edge/Opera) when
+       <meta name="view-transition" content="same-origin"> is present. */
+
+  ::view-transition-old(root) {
+    animation: lux-vt-fade-out 220ms ease forwards;
+  }
+
+  ::view-transition-new(root) {
+    animation: lux-vt-fade-in 260ms ease 80ms both;
+  }
+
+  @keyframes lux-vt-fade-out {
+    to {
+      opacity: 0
+    }
+  }
+
+  @keyframes lux-vt-fade-in  {
+    from {
+      opacity: 0
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+}
+
+/* Fallback for browsers without View Transitions: we add a class on <html> to fade on exit. */
+
 .lux-button--reverse {
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -746,6 +779,10 @@ a:hover {
 
 .site-header .header-nav a {
   position: relative;
+  padding-bottom: 0.4rem;
+  /* reserve space so underline never gets clipped by header border */
+  line-height: 1.15;
+  /* normalize line box to keep underline placement consistent */
 }
 
 .site-header .header-nav a[aria-current="page"]::after {
@@ -753,14 +790,21 @@ a:hover {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: -0.45rem;
-  /* sits just below text */
+  bottom: -0.25rem;
+  /* slightly closer so it won't sit below header border */
   width: 56%;
-  /* width relative to text width */
   height: 2px;
   background: #a08953;
-  /* LuxCraft gold accent to match hover */
   border-radius: 2px;
+  z-index: 1;
+  /* ensure it renders above the header bottom border */
+  pointer-events: none;
+}
+
+/* Guard against global <a> color overrides */
+
+.site-header .header-nav a[aria-current="page"] {
+  color: #ffffff !important;
 }
 
 .light-theme .site-header .header-nav a,

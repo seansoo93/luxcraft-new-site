@@ -1,6 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
   const navLinks = Array.from(document.querySelectorAll('.header-nav a, #mobile-menu nav a'));
   if (navLinks.length) {
+    const prefetched = new Set();
+
+    const prefetchLink = (url) => {
+      if (prefetched.has(url)) return;
+      prefetched.add(url);
+
+      try {
+        const linkEl = document.createElement('link');
+        linkEl.rel = 'prefetch';
+        linkEl.href = url;
+        linkEl.as = 'document';
+        document.head.appendChild(linkEl);
+      } catch (error) {
+        // Prefetch is best-effort; ignore failures silently.
+      }
+    };
+
     const currentPath = (() => {
       const { pathname } = window.location;
       const file = pathname.split('/').pop();
@@ -13,6 +30,21 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.forEach((link) => {
       const href = link.getAttribute('href') || '';
       const target = href.split('/').pop();
+
+      const absoluteHref = link.href;
+      if (absoluteHref) {
+        try {
+          const url = new URL(absoluteHref, window.location.href);
+          if (url.origin === window.location.origin) {
+            const triggerPrefetch = () => prefetchLink(url.href);
+            link.addEventListener('mouseenter', triggerPrefetch, { once: true });
+            link.addEventListener('focus', triggerPrefetch, { once: true });
+          }
+        } catch (error) {
+          // Skip invalid URLs
+        }
+      }
+
       if (target === currentPath) {
         link.setAttribute('aria-current', 'page');
       } else {
