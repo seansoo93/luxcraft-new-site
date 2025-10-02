@@ -862,40 +862,23 @@ a:hover {
   opacity: 1 !important;
 }
 
-/* Ensure desktop and mobile theme overrides don't unexpectedly flip color */
-
-.light-theme .hero-nav-item[aria-selected="true"],
-  .light-theme .hero-nav-item:hover,
-  .light-theme .hero-nav-item:focus-visible {
-  color: #ffffff !important;
-}
-
-:not(.light-theme) .hero-nav-item[aria-selected="true"],
-  :not(.light-theme) .hero-nav-item:hover,
-  :not(.light-theme) .hero-nav-item:focus-visible {
-  color: #ffffff !important;
-}
-
 .portfolio-card__media {
   position: relative;
   overflow: hidden;
-  margin: 0;
-  width: 100%;
+  width: min(100%, 630px);
+  aspect-ratio: 21 / 10;
+  max-height: 300px;
+  margin-inline: auto;
   border-top-left-radius: 0 !important;
   border-top-right-radius: 0 !important;
 }
-
-/* Images should fill the media container edge-to-edge and be center-cropped.
-     NOTE: do NOT set an explicit `height` here — allowing Tailwind's `h-xx` classes
-     (e.g. h-56, h-96) to control height prevents specificity conflicts. */
 
 .portfolio-card__media img,
   .portfolio-card img {
   display: block;
   width: 100% !important;
-  /* ensure image spans full card width */
   max-width: 100% !important;
-  height: auto;
+  height: 100% !important;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -904,7 +887,9 @@ a:hover {
   border-radius: 0 !important;
 }
 
-/* Ensure the outer card doesn't add unwanted padding so the image reaches the edge */
+.portfolio-card__track > .portfolio-card__image {
+  flex: 0 0 100%;
+}
 
 .portfolio-card {
   padding: 0 !important;
@@ -914,20 +899,11 @@ a:hover {
   overflow: hidden !important;
 }
 
-/* Keep card nav buttons visible over the image */
-
-.portfolio-card__nav {
-  z-index: 5;
-}
-
-.portfolio-card:hover .portfolio-card__media img,
-  .portfolio-card:focus-within .portfolio-card__media img {
-  transform: scale(1.02);
-}
-
 .portfolio-card__nav {
   position: absolute;
   top: 50%;
+  left: 0;
+  right: 0;
   transform: translateY(-50%);
   display: inline-flex;
   align-items: center;
@@ -941,8 +917,8 @@ a:hover {
   border: 1px solid rgba(255, 255, 255, 0.12);
   opacity: 0;
   pointer-events: none;
-  transform: translateY(-50%) scale(0.7);
   transition: opacity 180ms ease, transform 200ms cubic-bezier(0.3, 1, 0.4, 1);
+  z-index: 5;
 }
 
 .portfolio-card__nav svg {
@@ -952,10 +928,17 @@ a:hover {
 
 .portfolio-card__nav--prev {
   left: 0.85rem;
+  right: auto;
 }
 
 .portfolio-card__nav--next {
   right: 0.85rem;
+  left: auto;
+}
+
+.portfolio-card:hover .portfolio-card__media img[data-active],
+  .portfolio-card:focus-within .portfolio-card__media img[data-active] {
+  transform: scale(1.02);
 }
 
 .portfolio-card:hover .portfolio-card__nav,
@@ -963,12 +946,25 @@ a:hover {
   .portfolio-card.is-nav-visible .portfolio-card__nav {
   opacity: 1;
   pointer-events: auto;
-  transform: translateY(-50%) scale(1);
 }
 
 .portfolio-card__nav:focus-visible {
   outline: 2px solid rgba(255, 255, 255, 0.75);
   outline-offset: 3px;
+}
+
+/* Ensure desktop and mobile theme overrides don't unexpectedly flip color */
+
+.light-theme .hero-nav-item[aria-selected="true"],
+  .light-theme .hero-nav-item:hover,
+  .light-theme .hero-nav-item:focus-visible {
+  color: #ffffff !important;
+}
+
+:not(.light-theme) .hero-nav-item[aria-selected="true"],
+  :not(.light-theme) .hero-nav-item:hover,
+  :not(.light-theme) .hero-nav-item:focus-visible {
+  color: #ffffff !important;
 }
 
 .light-theme .hero-scroll {
@@ -3099,10 +3095,6 @@ a:hover {
   height: 1.25rem;
 }
 
-.h-56 {
-  height: 14rem;
-}
-
 .h-8 {
   height: 2rem;
 }
@@ -4214,24 +4206,6 @@ a:hover {
   outline-offset: 8px;
 }
 
-.portfolio-card__media {
-  position: relative;
-  overflow: hidden;
-  border-radius: 28px;
-  background: #0c0c0c;
-}
-
-.portfolio-card__image {
-  display: block;
-  width: 100%;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
-  transition: transform 420ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .portfolio-card[data-expanded="true"] .portfolio-card__image {
   transform: scale(1.02);
 }
@@ -4586,10 +4560,6 @@ a:hover {
 
 .h-5 {
   height: 1.25rem;
-}
-
-.h-56 {
-  height: 14rem;
 }
 
 .h-8 {
@@ -5329,10 +5299,6 @@ a:hover {
     right: 10%;
   }
 
-  .sm\:h-64 {
-    height: 16rem;
-  }
-
   .sm\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -5365,10 +5331,6 @@ a:hover {
 @media (min-width: 1024px) {
   .lg\:left-\[10\%\] {
     left: 10%;
-  }
-
-  .lg\:h-96 {
-    height: 24rem;
   }
 
   .lg\:grid-cols-2 {
