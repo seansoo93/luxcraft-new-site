@@ -1,0 +1,12 @@
+@layer components {
+  .light-theme .why-panel__eyebrow,
+  .light-theme .why-panel__title,
+  .light-theme .why-panel__copy strong,
+  .light-theme .why-panel__brands h3 {
+    color: #ffffff !important;
+  }
+
+  .light-theme .why-panel__copy {
+    color: rgba(245, 245, 245, 0.72) !important;
+  }
+}

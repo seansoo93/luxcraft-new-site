@@ -1,0 +1,78 @@
+@layer base {
+  :root {
+    --lux-white-04: rgba(255, 255, 255, 0.04);
+    --lux-white-05: rgba(255, 255, 255, 0.05);
+    --lux-white-06: rgba(255, 255, 255, 0.06);
+    --lux-white-08: rgba(255, 255, 255, 0.08);
+    --lux-white-14: rgba(255, 255, 255, 0.14);
+    --lux-white-18: rgba(255, 255, 255, 0.18);
+    --lux-white-35: rgba(255, 255, 255, 0.35);
+    --lux-white-55: rgba(255, 255, 255, 0.55);
+    --lux-white-70: rgba(255, 255, 255, 0.7);
+    --lux-white-72: rgba(255, 255, 255, 0.72);
+    --lux-charcoal-60: rgba(17, 17, 17, 0.6);
+    --lux-shadow-strong: rgba(0, 0, 0, 0.75);
+    --lux-backdrop-bar: rgba(0, 0, 0, 0.78);
+
+    --lux-surface-primary: #111111;
+    --lux-foreground-primary: #ffffff;
+    --lux-heading-color: #ffffff;
+    --lux-link-color: #c59a5c;
+    --lux-link-hover-color: #a08953;
+    --lux-header-nav-color: rgba(255, 255, 255, 0.92);
+    --lux-header-nav-active-color: #ffffff;
+    --lux-header-toggle-color: rgba(255, 255, 255, 0.8);
+    --lux-hero-nav-color: rgba(255, 255, 255, 0.6);
+    --lux-hero-nav-active-color: #ffffff;
+    --lux-hero-chrome-color: rgba(255, 255, 255, 0.6);
+    --lux-hero-headline-color: #ffffff;
+    --lux-hero-scroll-color: rgba(255, 255, 255, 0.75);
+    --lux-design-gallery-title-color: #ffffff;
+  }
+
+  body {
+    @apply font-sans antialiased;
+    background-color: var(--lux-surface-primary);
+    color: var(--lux-foreground-primary);
+  }
+
+  body:not(.light-theme) {
+    background-image: radial-gradient(
+      circle at top,
+      rgba(255, 255, 255, 0.05),
+      transparent 60%
+    );
+  }
+
+  .light-theme {
+    @apply bg-white text-black;
+    --lux-surface-primary: #ffffff;
+    --lux-foreground-primary: #111111;
+    --lux-heading-color: #111111;
+    --lux-hero-headline-color: #ffffff;
+    --lux-hero-scroll-color: #ffffff;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display tracking-tight;
+    color: var(--lux-heading-color);
+  }
+
+  a {
+    color: var(--lux-link-color);
+    transition: color 200ms ease;
+  }
+
+  a:hover {
+    color: var(--lux-link-hover-color);
+  }
+
+  .hero-headline {
+    color: var(--lux-hero-headline-color);
+  }
+}

@@ -742,6 +742,27 @@ a:hover {
   color: #ffffff;
 }
 
+/* --- Current-page highlight for header nav (desktop) --- */
+
+.site-header .header-nav a {
+  position: relative;
+}
+
+.site-header .header-nav a[aria-current="page"]::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -0.45rem;
+  /* sits just below text */
+  width: 56%;
+  /* width relative to text width */
+  height: 2px;
+  background: #a08953;
+  /* LuxCraft gold accent to match hover */
+  border-radius: 2px;
+}
+
 .light-theme .site-header .header-nav a,
   .light-theme .site-header .header-action {
   color: rgba(255, 255, 255, 0.92) !important;
@@ -1136,6 +1157,27 @@ a:hover {
 #mobile-menu a:hover {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+/* --- Current-page highlight for mobile menu --- */
+
+#mobile-menu nav a[aria-current="page"] {
+  display: inline-flex;
+  align-items: center;
+  color: #ffffff !important;
+  /* ensure legibility in light-theme header overrides */
+}
+
+#mobile-menu nav a[aria-current="page"]::before {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 9999px;
+  background: #a08953;
+  /* LuxCraft gold */
+  transform: translateY(1px);
 }
 
 .light-theme #mobile-menu .mt-6 a {
