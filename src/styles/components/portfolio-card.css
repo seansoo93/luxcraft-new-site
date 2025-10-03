@@ -44,6 +44,16 @@
     box-shadow: none;
   }
 
+  .portfolio-card__link {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .portfolio-card__link:hover,
+  .portfolio-card__link:focus-visible {
+    color: #c59a5c;
+  }
+
   @media (min-width: 1024px) {
     .portfolio-card,
     .portfolio-card__media {

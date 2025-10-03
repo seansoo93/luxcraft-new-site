@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
       return file;
     })();
 
+    const explicitNavTarget = document.body?.dataset?.activeNav || null;
+    const matchTarget = explicitNavTarget || currentPath;
+
     navLinks.forEach((link) => {
       const href = link.getAttribute('href') || '';
       const target = href.split('/').pop();
@@ -45,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      if (target === currentPath) {
+      if (target === matchTarget) {
         link.setAttribute('aria-current', 'page');
       } else {
         link.removeAttribute('aria-current');
