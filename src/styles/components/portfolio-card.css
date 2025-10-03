@@ -88,7 +88,7 @@
 
   .portfolio-card:hover .portfolio-card__media img[data-active],
   .portfolio-card:focus-within .portfolio-card__media img[data-active] {
-    transform: scale(1.02);
+    transform: scale(1.05);
   }
 
   .portfolio-card:hover .portfolio-card__nav,

@@ -97,13 +97,13 @@
   /* Header */
   .site-header {
     @apply fixed top-0 left-0 right-0 z-50 transition-transform duration-300;
-    background: rgba(16, 16, 16, 0.94);
+    background: #000000;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     backdrop-filter: blur(18px);
   }
 
   .light-theme .site-header {
-    background: #111111;
+    background: #000000;
     border-bottom: 1px solid rgba(17, 17, 17, 0.2);
   }
 
@@ -326,7 +326,7 @@
 
   .portfolio-card:hover .portfolio-card__media img[data-active],
   .portfolio-card:focus-within .portfolio-card__media img[data-active] {
-    transform: scale(1.02);
+    transform: scale(1.05);
   }
 
   .portfolio-card:hover .portfolio-card__nav,
@@ -3802,7 +3802,7 @@
   }
 
   .portfolio-card[data-expanded="true"] .portfolio-card__image {
-    transform: scale(1.02);
+    transform: scale(1.05);
   }
 
   .portfolio-card__info {
