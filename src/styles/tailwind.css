@@ -3810,7 +3810,7 @@
     flex-direction: column;
     gap: 0.75rem;
     margin-top: 1.15rem;
-    padding: clamp(1.35rem, 3vw, 1.75rem);
+    padding: clamp(1.1rem, 3vw, 1.35rem);
     border-radius: 22px;
     background: rgba(255, 255, 255, 0.98);
     box-shadow: 0 18px 35px rgba(17, 17, 17, 0.12);
