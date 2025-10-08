@@ -1386,6 +1386,12 @@ a:hover {
   transition: opacity 200ms ease, transform 220ms ease;
 }
 
+#mobile-menu.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 #mobile-menu nav {
   display: flex;
   flex-direction: column;
