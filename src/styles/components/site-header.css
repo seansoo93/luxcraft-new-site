@@ -40,6 +40,7 @@
 
   .header-nav {
     display: none;
+    font-family: "Syne", "Poppins", ui-sans-serif, system-ui, sans-serif;
   }
 
   @media (min-width: 768px) {
@@ -52,46 +53,62 @@
       font-weight: 600;
       letter-spacing: 0;
       text-transform: none;
-      color: var(--lux-header-nav-color);
+      color: rgba(255, 255, 255, 0.92);
       margin-left: auto;
     }
   }
 
   .header-nav a {
-    @apply inline-flex items-center justify-center transition-colors duration-200;
-    color: var(--lux-header-nav-color);
-    position: relative;
+    @apply inline-flex items-center justify-center text-white transition-colors duration-200;
   }
 
   .header-nav a:hover,
   .header-nav a:focus-visible {
-    color: var(--lux-link-hover-color);
+    color: #a08953;
   }
 
   .header-nav a[aria-current="page"] {
-    color: var(--lux-header-nav-active-color);
-    font-weight: 700;
+    color: #ffffff;
   }
 
-  .header-nav a::after {
-    content: '';
+  /* --- Current-page highlight for header nav (desktop) --- */
+  .site-header .header-nav a {
+    position: relative;
+    padding-bottom: 0.4rem;
+    line-height: 1.15;
+  }
+
+  .site-header .header-nav a[aria-current="page"]::after {
+    content: "";
     position: absolute;
-    left: 0;
-    right: 0;
-    bottom: -0.45rem;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -0.25rem;
+    width: 56%;
     height: 2px;
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 220ms cubic-bezier(0.3, 1, 0.4, 1);
-    background-color: var(--lux-header-nav-active-color);
-    opacity: 0;
+    background: #a08953;
+    border-radius: 2px;
+    z-index: 1;
+    pointer-events: none;
   }
 
-  .header-nav a:hover::after,
-  .header-nav a:focus-visible::after,
-  .header-nav a[aria-current="page"]::after {
-    transform: scaleX(1);
-    opacity: 1;
+  /* Guard against global <a> color overrides */
+  .site-header .header-nav a[aria-current="page"] {
+    color: #ffffff !important;
+  }
+
+  .light-theme .site-header .header-nav a,
+  .light-theme .site-header .header-action {
+    color: rgba(255, 255, 255, 0.92) !important;
+  }
+
+  .light-theme .site-header .header-nav a[aria-current="page"] {
+    color: #ffffff !important;
+  }
+
+  .light-theme .site-header .header-nav a:hover,
+  .light-theme .site-header .header-nav a:focus-visible {
+    color: #a08953 !important;
   }
 
   .header-controls {
@@ -108,6 +125,7 @@
     }
   }
 
+  /* Desktop header container adjustments */
   @media (min-width: 1024px) {
     .site-header .lux-container {
       padding-left: 1.5rem;
@@ -117,28 +135,42 @@
   }
 
   .header-action {
-    @apply hidden md:inline-flex items-center justify-center transition;
+    @apply hidden md:inline-flex items-center justify-center text-white transition;
     padding: 0.35rem;
-    color: var(--lux-header-nav-color);
   }
 
   .header-action svg {
     @apply h-6 w-6;
   }
 
+  .light-theme .site-header .header-action {
+    color: rgba(255, 255, 255, 0.82) !important;
+  }
+
   .header-toggle {
-    @apply inline-flex h-10 w-10 items-center justify-center rounded-full border transition md:hidden;
-    border-color: var(--lux-header-toggle-border-color);
-    background-color: var(--lux-header-toggle-bg);
-    color: var(--lux-header-toggle-color);
+    @apply inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white/80 transition md:hidden;
+    background-color: rgba(255, 255, 255, 0.15);
   }
 
   .header-toggle:hover,
   .header-toggle:focus-visible {
-    background-color: var(--lux-header-toggle-bg-hover);
-    color: var(--lux-header-toggle-hover-color);
+    @apply bg-white/10 text-white;
+    background-color: rgba(255, 255, 255, 0.25);
   }
 
+  .light-theme .site-header .header-toggle {
+    border-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .light-theme .site-header .header-toggle:hover,
+  .light-theme .site-header .header-toggle:focus-visible {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+  }
+
+  /* Prevent pointer events on header-toggle SVG and its children */
   .header-toggle svg,
   .header-toggle svg * {
     pointer-events: none;
@@ -151,7 +183,7 @@
     width: min(18rem, 80vw);
     border-radius: 1.25rem;
     background: rgba(17, 17, 17, 0.95);
-    color: var(--lux-mobile-menu-foreground);
+    color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 24px 40px rgba(0, 0, 0, 0.28);
     backdrop-filter: blur(18px);
     padding: 1.5rem 1.75rem;
@@ -175,13 +207,26 @@
     @apply hover:text-white transition-colors duration-200;
   }
 
-  #mobile-menu .mt-6 a {
-    @apply text-white/60 text-sm font-normal hover:text-white;
+  /* --- Current-page highlight for mobile menu --- */
+  #mobile-menu nav a[aria-current="page"] {
+    display: inline-flex;
+    align-items: center;
+    color: #ffffff !important;
   }
 
-  #mobile-menu a[aria-current="page"] {
-    color: #ffffff;
-    font-weight: 600;
+  #mobile-menu nav a[aria-current="page"]::before {
+    content: "";
+    display: inline-block;
+    width: 0.5rem;
+    height: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 9999px;
+    background: #a08953;
+    transform: translateY(1px);
+  }
+
+  #mobile-menu .mt-6 a {
+    @apply text-white/60 text-sm font-normal hover:text-white;
   }
 
   #mobile-menu__close {
@@ -198,5 +243,23 @@
   #mobile-menu__close:focus-visible {
     background-color: rgba(255, 255, 255, 0.12);
     color: #ffffff;
+  }
+
+  .light-theme #mobile-menu,
+  .light-theme #mobile-menu nav,
+  .light-theme #mobile-menu a,
+  .light-theme #mobile-menu .mt-6 a {
+    color: rgba(255, 255, 255, 0.82) !important;
+  }
+
+  .light-theme #mobile-menu a:hover,
+  .light-theme #mobile-menu a:focus-visible {
+    color: #ffffff !important;
+  }
+
+  .site-header.site-header--hidden {
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
   }
 }

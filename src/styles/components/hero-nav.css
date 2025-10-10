@@ -1,13 +1,27 @@
 @layer components {
+  .light-theme .hero-chrome,
+  .light-theme .hero-chrome button {
+    color: rgba(255, 255, 255, 0.6) !important;
+  }
+
   .hero-nav-item {
-    color: var(--lux-hero-nav-color);
+    color: rgba(255, 255, 255, 0.6);
     transition: color 200ms ease;
   }
 
   .hero-nav-item[aria-selected="true"],
   .hero-nav-item:hover,
   .hero-nav-item:focus-visible {
-    color: var(--lux-hero-nav-active-color);
+    color: #ffffff !important;
+  }
+
+  .light-theme .hero-nav-item[aria-selected="true"],
+  .light-theme .hero-nav-item:hover,
+  .light-theme .hero-nav-item:focus-visible,
+  :not(.light-theme) .hero-nav-item[aria-selected="true"],
+  :not(.light-theme) .hero-nav-item:hover,
+  :not(.light-theme) .hero-nav-item:focus-visible {
+    color: #ffffff !important;
   }
 
   .hero-nav-item .hero-underline {
@@ -22,6 +36,15 @@
   .hero-nav-item:focus-visible .hero-underline {
     transform: scaleX(1) !important;
     opacity: 1 !important;
+  }
+
+  .light-theme .hero-scroll {
+    color: #ffffff !important;
+  }
+
+  .light-theme .hero-scroll:hover,
+  .light-theme .hero-scroll:focus-visible {
+    color: #ffffff !important;
   }
 
   /* Hide the hero "Scroll Down" control on small screens to remove clutter. */

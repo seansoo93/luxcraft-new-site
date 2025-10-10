@@ -1,6 +1,7 @@
 @layer components {
   .light-theme .why-panel__eyebrow,
   .light-theme .why-panel__title,
+  .light-theme .design-gallery__title,
   .light-theme .why-panel__copy strong,
   .light-theme .why-panel__brands h3 {
     color: #ffffff !important;
