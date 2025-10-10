@@ -1610,6 +1610,12 @@
     transform: translate(-50%, -50%) scale(0.65);
   }
 
+  @media (max-width: 640px) {
+    .cursor-follower {
+      display: none;
+    }
+  }
+
   /*
   1. Add the correct height in Firefox.
   2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
@@ -3959,3 +3965,19 @@
     background-color: #111111; /* black background */
     color: #ffffff !important; /* keep text white */
   }
+
+@layer components {
+  @media (max-width: 640px) {
+    .cursor-follower {
+      display: none;
+    }
+  }
+}
+
+@layer utilities {
+  @media (max-width: 640px) {
+    .cursor-follower {
+      display: none !important;
+    }
+  }
+}

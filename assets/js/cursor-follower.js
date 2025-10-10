@@ -1,8 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const cursorEl = document.querySelector('.cursor-follower');
   const supportsFinePointer = window.matchMedia('(any-pointer: fine)').matches;
+  const prefersCoarseOrMobile = window.matchMedia('(max-width: 640px)').matches;
+  const isMobileDisabled = cursorEl?.dataset.mobileDisabled === 'true' && prefersCoarseOrMobile;
 
-  if (cursorEl && supportsFinePointer) {
+  if (cursorEl && supportsFinePointer && !isMobileDisabled) {
     const offsetX = 33;
     const offsetY = 27;
     let targetX = window.innerWidth / 2 + offsetX;

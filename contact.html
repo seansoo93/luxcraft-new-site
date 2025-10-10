@@ -1,280 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact LuxCraft - Book a Consultation</title>
-    <meta
-      name="description"
-      content="Have questions about your renovation or interior design project? Reach LuxCraft via phone, email, or our consultation request form."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Syne:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="assets/images/favicon.png" sizes="192x192" />
-    <link rel="stylesheet" href="./assets/corbesier-icons.css" />
-    <link rel="stylesheet" href="./assets/styles.css" />
-    <script src="./assets/js/header.js" defer></script>
-    <script src="./assets/js/brand-scroll.js" defer></script>
-  </head>
-  <body class="contact-page light-theme min-h-screen bg-white text-lux-dark pt-24 lg:pt-28">
-    <header class="site-header">
-      <div class="lux-container header-row">
-        <a href="index.html" class="header-logo" aria-label="LuxCraft Home">
-          <img src="assets/images/logo.png" alt="LuxCraft" />
-        </a>
-        <nav class="header-nav" aria-label="Primary">
-          <a href="about.html">Who We Are</a>
-          <a href="services.html">What We Do</a>
-          <a href="portfolio.html">Our Past Works</a>
-          <a href="contact.html" aria-current="page">Contact Us</a>
-        </nav>
-        <div class="header-controls">
-          <button class="header-action" type="button" aria-label="Search">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="11" cy="11" r="7" />
-              <path d="m20 20-3.2-3.2" stroke-linecap="round" />
-            </svg>
-          </button>
-          <button
-            class="header-toggle md:hidden"
-            type="button"
-            aria-label="Open navigation"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-        <button type="button" id="mobile-menu__close" aria-label="Close navigation">
-          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        </button>
-        <nav aria-label="Mobile navigation">
-          <a href="about.html" class="hover:text-white">Who We Are</a>
-          <a href="services.html" class="hover:text-white">What We Do</a>
-          <a href="portfolio.html" class="hover:text-white">Our Past Works</a>
-          <a href="contact.html" class="hover:text-white" aria-current="page">Contact Us</a>
-        </nav>
-        <div class="mt-6 flex flex-col gap-2 text-white/60">
-          <a href="tel:+6583126212" class="hover:text-white">+65 8312 6212 (Shamim)</a>
-          <a href="tel:+6588991245" class="hover:text-white">+65 8899 1245 (Manfred)</a>
-        </div>
-      </div>
-    </header>
 
-    <main>
-    <section class="about-hero-section">
-        <div class="lux-container">
-          <div class="about-hero-content">
-            <h1 class="about-hero-title">Contact Us</h1>
-            <div class="about-hero-indicator" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14.626" height="8.639" viewBox="0 0 14.626 8.639">
-                <g transform="translate(0 -70.698)">
-                  <g transform="translate(0 100.698)">
-                    <path
-                      d="M14.392,101.42l-.479-.482a.8.8,0,0,0-1.132,0L7.316,106.4l-5.472-5.472a.8.8,0,0,0-1.132,0l-.479.479a.8.8,0,0,0,0,1.131l6.515,6.538a.818.818,0,0,0,.567.257h0a.818.818,0,0,0,.566-.257l6.508-6.52a.808.808,0,0,0,.234-.571A.8.8,0,0,0,14.392,101.42Z"
-                      transform="translate(0 -130.698)"
-                      fill="currentColor"
-                    />
-                  </g>
-                </g>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="lux-section pt-12">
-        <div class="lux-container grid gap-12 lg:grid-cols-[1.05fr_0.95fr]">
-          <div class="space-y-6">
-            <span class="lux-tag">Contact Us</span>
-            <h2 class="text-4xl font-semibold leading-tight text-lux-dark sm:text-5xl">Have Questions? Get in touch!</h2>
-            <p class="text-base text-lux-dark/70">
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contact LuxCraft - Book a Consultation</title>
+<meta content="Have questions about your renovation or interior design project? Reach LuxCraft via phone, email, or our consultation request form." name="description"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Syne:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="assets/images/favicon.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="./assets/corbesier-icons.css" rel="stylesheet"/>
+<link href="./assets/styles.css" rel="stylesheet"/>
+<script defer="" src="./assets/js/header.js"></script>
+<script defer="" src="./assets/js/brand-scroll.js"></script>
+</head>
+<body class="contact-page light-theme min-h-screen bg-white text-lux-dark pt-24 lg:pt-28">
+<header class="site-header">
+<div class="lux-container header-row">
+<a aria-label="LuxCraft Home" class="header-logo" href="index.html">
+<img alt="LuxCraft" src="assets/images/logo.png"/>
+</a>
+<nav aria-label="Primary" class="header-nav">
+<a href="about.html">Who We Are</a>
+<a href="services.html">What We Do</a>
+<a href="portfolio.html">Our Past Works</a>
+<a aria-current="page" href="contact.html">Contact Us</a>
+</nav>
+<div class="header-controls">
+<button aria-label="Search" class="header-action" type="button">
+<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<circle cx="11" cy="11" r="7"></circle>
+<path d="m20 20-3.2-3.2" stroke-linecap="round"></path>
+</svg>
+</button>
+<button aria-label="Open navigation" class="header-toggle md:hidden" type="button">
+<span class="sr-only">Toggle navigation</span>
+<svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+</div>
+</div>
+<div aria-label="Mobile navigation" aria-modal="true" id="mobile-menu" role="dialog">
+<button aria-label="Close navigation" id="mobile-menu__close" type="button">
+<svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</button>
+<nav aria-label="Mobile navigation">
+<a class="hover:text-white" href="about.html">Who We Are</a>
+<a class="hover:text-white" href="services.html">What We Do</a>
+<a class="hover:text-white" href="portfolio.html">Our Past Works</a>
+<a aria-current="page" class="hover:text-white" href="contact.html">Contact Us</a>
+</nav>
+<div class="mt-6 flex flex-col gap-2 text-white/60">
+<a class="hover:text-white" href="tel:+6583126212">+65 8312 6212 (Shamim)</a>
+<a class="hover:text-white" href="tel:+6588991245">+65 8899 1245 (Manfred)</a>
+</div>
+</div>
+</header>
+<main>
+<section class="about-hero-section">
+<div class="lux-container">
+<div class="about-hero-content">
+<h1 class="about-hero-title">Contact Us</h1>
+<div aria-hidden="true" class="about-hero-indicator">
+<svg height="8.639" viewbox="0 0 14.626 8.639" width="14.626" xmlns="http://www.w3.org/2000/svg">
+<g transform="translate(0 -70.698)">
+<g transform="translate(0 100.698)">
+<path d="M14.392,101.42l-.479-.482a.8.8,0,0,0-1.132,0L7.316,106.4l-5.472-5.472a.8.8,0,0,0-1.132,0l-.479.479a.8.8,0,0,0,0,1.131l6.515,6.538a.818.818,0,0,0,.567.257h0a.818.818,0,0,0,.566-.257l6.508-6.52a.808.808,0,0,0,.234-.571A.8.8,0,0,0,14.392,101.42Z" fill="currentColor" transform="translate(0 -130.698)"></path>
+</g>
+</g>
+</svg>
+</div>
+</div>
+</div>
+</section>
+<section class="lux-section pt-12">
+<div class="lux-container grid gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+<div class="space-y-6">
+<span class="lux-tag">Contact Us</span>
+<h2 class="text-4xl font-semibold leading-tight text-lux-dark sm:text-5xl">Have Questions? Get in touch!</h2>
+<p class="text-base text-lux-dark/70">
               We'd love to hear from you. Whether you need a consultation, want to discuss your renovation project, or have questions about our services, the LuxCraft team is ready to assist.
             </p>
-            <div class="grid gap-6 sm:grid-cols-2">
-              <div class="space-y-2 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-                <h3 class="text-xs uppercase tracking-[0.4em] text-black">Call us</h3>
-                <a href="tel:+6583126212" class="block text-lg font-semibold text-lux-dark hover:text-lux-gold">+65 8312 6212 (Shamim)</a>
-                <a href="tel:+6588991245" class="block text-lg font-semibold text-lux-dark hover:text-lux-gold">+65 8899 1245 (Manfred)</a>
-              </div>
-              <div class="space-y-2 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-                <h3 class="text-xs uppercase tracking-[0.4em] text-black">Email</h3>
-                <a href="mailto:contact@luxcraft.sg" class="block text-lg font-semibold text-lux-dark hover:text-lux-gold">contact@luxcraft.sg</a>
-                <p class="text-sm text-lux-dark/60">Meetings by appointment only.</p>
-              </div>
-            </div>
-            <div class="space-y-3 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-              <h3 class="text-xs uppercase tracking-[0.4em] text-lux-dark/60">Studio</h3>
-              <p class="text-sm text-lux-dark/60">
-                190 Woodlands Industrial Park E5<br />
-                Woodlands Bizhub, #04-05<br />
+<div class="grid gap-6 sm:grid-cols-2">
+<div class="space-y-2 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+<h3 class="text-xs uppercase tracking-[0.4em] text-black">Call us</h3>
+<a class="block text-lg font-semibold text-lux-dark hover:text-lux-gold" href="tel:+6583126212">+65 8312 6212 (Shamim)</a>
+<a class="block text-lg font-semibold text-lux-dark hover:text-lux-gold" href="tel:+6588991245">+65 8899 1245 (Manfred)</a>
+</div>
+<div class="space-y-2 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+<h3 class="text-xs uppercase tracking-[0.4em] text-black">Email</h3>
+<a class="block text-lg font-semibold text-lux-dark hover:text-lux-gold" href="mailto:contact@luxcraft.sg">contact@luxcraft.sg</a>
+<p class="text-sm text-lux-dark/60">Meetings by appointment only.</p>
+</div>
+</div>
+<div class="space-y-3 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+<h3 class="text-xs uppercase tracking-[0.4em] text-lux-dark/60">Studio</h3>
+<p class="text-sm text-lux-dark/60">
+                190 Woodlands Industrial Park E5<br/>
+                Woodlands Bizhub, #04-05<br/>
                 Singapore 757516
               </p>
-              <p class="text-xs uppercase tracking-[0.3em] text-lux-dark/55">Meetings by appointment only</p>
-            </div>
-          </div>
-          <div class="rounded-3xl border border-neutral-200 bg-white p-8 shadow-sm lg:p-10">
-            <h2 class="text-2xl font-semibold text-lux-dark">Request a consultation</h2>
-            <p class="mt-3 text-sm text-lux-dark/65">Share a few details and we'll get back to you within one business day.</p>
-            <form class="mt-8 space-y-4" action="#" method="post">
-              <div class="grid gap-4 sm:grid-cols-2">
-                <label class="text-sm font-medium text-lux-dark/80">
+<p class="text-xs uppercase tracking-[0.3em] text-lux-dark/55">Meetings by appointment only</p>
+</div>
+</div>
+<div class="rounded-3xl border border-neutral-200 bg-white p-8 shadow-sm lg:p-10">
+<h2 class="text-2xl font-semibold text-lux-dark">Request a consultation</h2>
+<p class="mt-3 text-sm text-lux-dark/65">Share a few details and we'll get back to you within one business day.</p>
+<form action="#" class="mt-8 space-y-4" method="post">
+<div class="grid gap-4 sm:grid-cols-2">
+<label class="text-sm font-medium text-lux-dark/80">
                   Full Name
-                  <input type="text" name="name" required class="mt-2 w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0" placeholder="Jane Doe" />
-                </label>
-                <label class="text-sm font-medium text-lux-dark/80">
+                  <input class="mt-2 w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0" name="name" placeholder="Jane Doe" required="" type="text"/>
+</label>
+<label class="text-sm font-medium text-lux-dark/80">
                   Email
-                  <input type="email" name="email" required class="mt-2 w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0" placeholder="hello@example.com" />
-                </label>
-              </div>
-              <div class="grid gap-4 sm:grid-cols-2">
-                <label class="text-sm font-medium text-lux-dark/80">
+                  <input class="mt-2 w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0" name="email" placeholder="hello@example.com" required="" type="email"/>
+</label>
+</div>
+<div class="grid gap-4 sm:grid-cols-2">
+<label class="text-sm font-medium text-lux-dark/80">
                   Contact Number
-                  <input type="tel" name="phone" class="mt-2 w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0" placeholder="+65 8XXX XXXX" />
-                </label>
-                <label class="text-sm font-medium text-lux-dark/80">
+                  <input class="mt-2 w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0" name="phone" placeholder="+65 8XXX XXXX" type="tel"/>
+</label>
+<label class="text-sm font-medium text-lux-dark/80">
                   Project Type
-                  <select name="project" class="mt-2 w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark focus:border-lux-gold focus:outline-none focus:ring-0">
-                    <option class="bg-white text-lux-dark">HDB BTO / SBF</option>
-                    <option class="bg-white text-lux-dark">HDB Resale</option>
-                    <option class="bg-white text-lux-dark">Condominium</option>
-                    <option class="bg-white text-lux-dark">Landed</option>
-                    <option class="bg-white text-lux-dark">Commercial</option>
-                    <option class="bg-white text-lux-dark">Partial Renovation</option>
-                  </select>
-                </label>
-              </div>
-              <label class="text-sm font-medium text-lux-dark/80">
+                  <select class="mt-2 w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark focus:border-lux-gold focus:outline-none focus:ring-0" name="project">
+<option class="bg-white text-lux-dark">HDB BTO / SBF</option>
+<option class="bg-white text-lux-dark">HDB Resale</option>
+<option class="bg-white text-lux-dark">Condominium</option>
+<option class="bg-white text-lux-dark">Landed</option>
+<option class="bg-white text-lux-dark">Commercial</option>
+<option class="bg-white text-lux-dark">Partial Renovation</option>
+</select>
+</label>
+</div>
+<label class="text-sm font-medium text-lux-dark/80">
                 Project Details
-                <textarea name="message" rows="4" class="mt-2 w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0" placeholder="Tell us about your space, timeline, and vision"></textarea>
-              </label>
-              <label class="flex items-start gap-3 text-xs text-lux-dark/60">
-                <input type="checkbox" name="privacy" class="mt-1 h-4 w-4 rounded border border-neutral-300 text-lux-gold focus:ring-lux-gold" required />
-                <span>I have read and accept the Privacy Policy.</span>
-              </label>
-              <button type="submit" class="lux-button w-full justify-center">Submit Request</button>
-            </form>
-          </div>
-        </div>
-      </section>
-
-      <section class="lux-section">
-        <div class="lux-container space-y-10">
-          <div class="flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <span class="lux-tag">FAQ</span>
-              <h2 class="mt-6 text-3xl font-semibold text-lux-dark sm:text-4xl">Answers to common questions</h2>
-            </div>
-            <a href="mailto:contact@luxcraft.sg" class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-lux-dark/70 hover:text-lux-dark">
+                <textarea class="mt-2 w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0" name="message" placeholder="Tell us about your space, timeline, and vision" rows="4"></textarea>
+</label>
+<label class="flex items-start gap-3 text-xs text-lux-dark/60">
+<input class="mt-1 h-4 w-4 rounded border border-neutral-300 text-lux-gold focus:ring-lux-gold" name="privacy" required="" type="checkbox"/>
+<span>I have read and accept the Privacy Policy.</span>
+</label>
+<button class="lux-button w-full justify-center" type="submit">Submit Request</button>
+</form>
+</div>
+</div>
+</section>
+<section class="lux-section">
+<div class="lux-container space-y-10">
+<div class="flex flex-wrap items-end justify-between gap-6">
+<div>
+<span class="lux-tag">FAQ</span>
+<h2 class="mt-6 text-3xl font-semibold text-lux-dark sm:text-4xl">Answers to common questions</h2>
+</div>
+<a class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-lux-dark/70 hover:text-lux-dark" href="mailto:contact@luxcraft.sg">
               Email our team
-              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </a>
-          </div>
-          <div class="space-y-4">
-            <details class="group rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-              <summary class="flex cursor-pointer items-center justify-between text-lg font-semibold text-lux-dark">
-                <span>What renovation services do you offer?</span>
-                <span class="ml-6 inline-flex h-8 w-8 items-center justify-center rounded-full border border-neutral-300 text-sm text-lux-dark/60 transition group-open:rotate-45 group-open:border-lux-gold group-open:text-lux-gold">+</span>
-              </summary>
-              <p class="mt-4 text-sm text-lux-dark/65">
+              <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+<path d="M17 8l4 4m0 0l-4 4m4-4H3" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</a>
+</div>
+<div class="space-y-4">
+<details class="group rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+<summary class="flex cursor-pointer items-center justify-between text-lg font-semibold text-lux-dark">
+<span>What renovation services do you offer?</span>
+<span class="ml-6 inline-flex h-8 w-8 items-center justify-center rounded-full border border-neutral-300 text-sm text-lux-dark/60 transition group-open:rotate-45 group-open:border-lux-gold group-open:text-lux-gold">+</span>
+</summary>
+<p class="mt-4 text-sm text-lux-dark/65">
                 LuxCraft provides a comprehensive range of renovation services including hacking and demolition, carpentry, painting, glass and metal work, masonry and tiling, electrical work, and plumbing. We handle every aspect of your renovation project with expertise and precision.
               </p>
-            </details>
-            <details class="group rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-              <summary class="flex cursor-pointer items-center justify-between text-lg font-semibold text-lux-dark">
-                <span>Do you provide 3D renderings before work begins?</span>
-                <span class="ml-6 inline-flex h-8 w-8 items-center justify-center rounded-full border border-neutral-300 text-sm text-lux-dark/60 transition group-open:rotate-45 group-open:border-lux-gold group-open:text-lux-gold">+</span>
-              </summary>
-              <p class="mt-4 text-sm text-lux-dark/65">
+</details>
+<details class="group rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+<summary class="flex cursor-pointer items-center justify-between text-lg font-semibold text-lux-dark">
+<span>Do you provide 3D renderings before work begins?</span>
+<span class="ml-6 inline-flex h-8 w-8 items-center justify-center rounded-full border border-neutral-300 text-sm text-lux-dark/60 transition group-open:rotate-45 group-open:border-lux-gold group-open:text-lux-gold">+</span>
+</summary>
+<p class="mt-4 text-sm text-lux-dark/65">
                 Yes, we offer complimentary 3D renderings of your design concept before starting any project. This ensures your vision is accurately captured and brought to life.
               </p>
-            </details>
-            <details class="group rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-              <summary class="flex cursor-pointer items-center justify-between text-lg font-semibold text-lux-dark">
-                <span>How do I schedule a meeting?</span>
-                <span class="ml-6 inline-flex h-8 w-8 items-center justify-center rounded-full border border-neutral-300 text-sm text-lux-dark/60 transition group-open:rotate-45 group-open:border-lux-gold group-open:text-lux-gold">+</span>
-              </summary>
-              <p class="mt-4 text-sm text-lux-dark/65">
+</details>
+<details class="group rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+<summary class="flex cursor-pointer items-center justify-between text-lg font-semibold text-lux-dark">
+<span>How do I schedule a meeting?</span>
+<span class="ml-6 inline-flex h-8 w-8 items-center justify-center rounded-full border border-neutral-300 text-sm text-lux-dark/60 transition group-open:rotate-45 group-open:border-lux-gold group-open:text-lux-gold">+</span>
+</summary>
+<p class="mt-4 text-sm text-lux-dark/65">
                 Schedule a meeting by contacting us via WhatsApp or phone at +65 8312 6212 (Shamim) or +65 8899 1245 (Manfred). Meetings are strictly by appointment due to our frequent on-site engagements.
               </p>
-            </details>
-            <details class="group rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
-              <summary class="flex cursor-pointer items-center justify-between text-lg font-semibold text-lux-dark">
-                <span>Are your subcontractors certified?</span>
-                <span class="ml-6 inline-flex h-8 w-8 items-center justify-center rounded-full border border-neutral-300 text-sm text-lux-dark/60 transition group-open:rotate-45 group-open:border-lux-gold group-open:text-lux-gold">+</span>
-              </summary>
-              <p class="mt-4 text-sm text-lux-dark/65">
+</details>
+<details class="group rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+<summary class="flex cursor-pointer items-center justify-between text-lg font-semibold text-lux-dark">
+<span>Are your subcontractors certified?</span>
+<span class="ml-6 inline-flex h-8 w-8 items-center justify-center rounded-full border border-neutral-300 text-sm text-lux-dark/60 transition group-open:rotate-45 group-open:border-lux-gold group-open:text-lux-gold">+</span>
+</summary>
+<p class="mt-4 text-sm text-lux-dark/65">
                 Yes, all our subcontractors are certified and registered in their respective domains, such as hacking, tiling, carpentry, plumbing, and electrical works. We prioritise compliance with industry standards and regulations.
               </p>
-            </details>
-          </div>
-        </div>
-      </section>
-
-      <section class="lux-section">
-        <div class="lux-container rounded-[3rem] border border-neutral-200 bg-white p-12 text-center shadow-sm">
-          <h2 class="text-3xl font-semibold text-lux-dark sm:text-4xl">Ready to renovate?</h2>
-          <p class="mx-auto mt-4 max-w-2xl text-base text-lux-dark/70">
+</details>
+</div>
+</div>
+</section>
+<section class="lux-section">
+<div class="lux-container rounded-[3rem] border border-neutral-200 bg-white p-12 text-center shadow-sm">
+<h2 class="text-3xl font-semibold text-lux-dark sm:text-4xl">Ready to renovate?</h2>
+<p class="mx-auto mt-4 max-w-2xl text-base text-lux-dark/70">
             Share your floor plan and inspiration boards—we'll prepare a customised proposal with timelines and investment details.
           </p>
-          <div class="mt-8 flex flex-wrap justify-center gap-4">
-            <a href="tel:+6583126212" class="lux-button">Speak with Shamim</a>
-            <a href="services.html" class="inline-flex items-center gap-2 rounded-full border border-neutral-200 px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-lux-dark/70 transition hover:bg-neutral-100">
+<div class="mt-8 flex flex-wrap justify-center gap-4">
+<a class="lux-button" href="tel:+6583126212">Speak with Shamim</a>
+<a class="inline-flex items-center gap-2 rounded-full border border-neutral-200 px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-lux-dark/70 transition hover:bg-neutral-100" href="services.html">
               Explore Services
             </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <div class="cursor-follower" aria-hidden="true"></div>
-
-    <footer class="border-t border-white/10 bg-lux-darker/80">
-      <div class="lux-container grid gap-8 py-12 md:grid-cols-[1.2fr_0.8fr]">
-        <div class="space-y-6">
-          <a href="index.html" class="flex items-center gap-3 text-white" aria-label="LuxCraft Home">
-            <img src="assets/images/logo.png" alt="LuxCraft" class="h-10 w-auto" />
-          </a>
-          <p class="max-w-sm text-sm text-white/60">
-            190 Woodlands Industrial Park E5<br />
-            Woodlands Bizhub, #04-05<br />
+</div>
+</div>
+</section>
+</main>
+<div aria-hidden="true" class="cursor-follower" data-mobile-disabled="true"></div>
+<footer class="border-t border-white/10 bg-lux-darker/80">
+<div class="lux-container grid gap-8 py-12 md:grid-cols-[1.2fr_0.8fr]">
+<div class="space-y-6">
+<a aria-label="LuxCraft Home" class="flex items-center gap-3 text-white" href="index.html">
+<img alt="LuxCraft" class="h-10 w-auto" src="assets/images/logo.png"/>
+</a>
+<p class="max-w-sm text-sm text-white/60">
+            190 Woodlands Industrial Park E5<br/>
+            Woodlands Bizhub, #04-05<br/>
             Singapore 757516
           </p>
-          <div class="grid gap-2 text-sm text-white/60">
-            <a href="mailto:contact@luxcraft.sg" class="hover:text-white">contact@luxcraft.sg</a>
-            <a href="tel:+6583126212" class="hover:text-white">+65 8312 6212 (Shamim)</a>
-            <a href="tel:+6588991245" class="hover:text-white">+65 8899 1245 (Manfred)</a>
-          </div>
-        </div>
-        <div class="grid gap-6 md:justify-items-end">
-          <nav class="flex flex-wrap gap-6 text-sm uppercase tracking-[0.3em] text-white/60">
-            <a href="about.html" class="hover:text-white">Who We Are</a>
-            <a href="services.html" class="hover:text-white">What We Do</a>
-            <a href="portfolio.html" class="hover:text-white">Our Past Works</a>
-            <a href="contact.html" class="text-white">Contact Us</a>
-          </nav>
-          <div class="flex gap-4 text-white/60">
-            <a href="https://www.facebook.com/luxcraft.studio" target="_blank" rel="noreferrer" class="hover:text-white">Facebook</a>
-            <a href="https://twitter.com/ThemerexThemes" target="_blank" rel="noreferrer" class="hover:text-white">Twitter</a>
-            <a href="https://dribbble.com/ThemeREX" target="_blank" rel="noreferrer" class="hover:text-white">Dribbble</a>
-            <a href="https://www.instagram.com/luxcraft.studio/" target="_blank" rel="noreferrer" class="hover:text-white">Instagram</a>
-          </div>
-          <p class="text-xs uppercase tracking-[0.3em] text-white/40">
-            LuxCraft Pte. Ltd &copy; 2025. All Rights Reserved.
+<div class="grid gap-2 text-sm text-white/60">
+<a class="hover:text-white" href="mailto:contact@luxcraft.sg">contact@luxcraft.sg</a>
+<a class="hover:text-white" href="tel:+6583126212">+65 8312 6212 (Shamim)</a>
+<a class="hover:text-white" href="tel:+6588991245">+65 8899 1245 (Manfred)</a>
+</div>
+</div>
+<div class="grid gap-6 md:justify-items-end">
+<nav class="flex flex-wrap gap-6 text-sm uppercase tracking-[0.3em] text-white/60">
+<a class="hover:text-white" href="about.html">Who We Are</a>
+<a class="hover:text-white" href="services.html">What We Do</a>
+<a class="hover:text-white" href="portfolio.html">Our Past Works</a>
+<a class="text-white" href="contact.html">Contact Us</a>
+</nav>
+<div class="flex gap-4 text-white/60">
+<a class="hover:text-white" href="https://www.facebook.com/luxcraft.studio" rel="noreferrer" target="_blank">Facebook</a>
+<a class="hover:text-white" href="https://twitter.com/ThemerexThemes" rel="noreferrer" target="_blank">Twitter</a>
+<a class="hover:text-white" href="https://dribbble.com/ThemeREX" rel="noreferrer" target="_blank">Dribbble</a>
+<a class="hover:text-white" href="https://www.instagram.com/luxcraft.studio/" rel="noreferrer" target="_blank">Instagram</a>
+</div>
+<p class="text-xs uppercase tracking-[0.3em] text-white/40">
+            LuxCraft Pte. Ltd © 2025. All Rights Reserved.
           </p>
-        </div>
-      </div>
-    </footer>
-    <script src="./assets/js/cursor-follower.js"></script>
-  </body>
+</div>
+</div>
+</footer>
+<script src="./assets/js/cursor-follower.js"></script>
+</body>
 </html>
