@@ -45,13 +45,14 @@
   }
 
   .portfolio-card__link {
-    color: inherit;
+    color: #000000;
     text-decoration: none;
+    transition: color 0.2s ease;
   }
 
   .portfolio-card__link:hover,
   .portfolio-card__link:focus-visible {
-    color: #c59a5c;
+    color: #bf9c65;
   }
 
   @media (min-width: 1024px) {
