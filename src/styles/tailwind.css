@@ -3981,3 +3981,21 @@
     }
   }
 }
+
+@layer components {
+  .services-card__image {
+    width: min(100%, 630px);
+    aspect-ratio: 630 / 470;
+    height: auto;
+    display: block;
+    margin-inline: auto;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 320ms ease;
+  }
+
+  .services-card__image:hover,
+  .services-card__image:focus-visible {
+    transform: scale(1.05);
+  }
+}
