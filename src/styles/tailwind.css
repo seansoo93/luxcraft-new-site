@@ -3329,6 +3329,10 @@
     color: #fff;
   }
 
+  .about-hero-lede {
+    color: rgba(255, 255, 255, 0.92);
+  }
+
   .about-hero-indicator {
     display: inline-flex;
     align-items: center;
@@ -3997,6 +4001,25 @@
     padding: clamp(2rem, 4vw, 2.5rem);
   }
 
+  .services-card__title-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: inherit;
+    text-decoration: none;
+    transition: color 200ms ease;
+  }
+
+  .services-card__title-link:hover,
+  .services-card__title-link:focus-visible {
+    color: #c59a5c;
+  }
+
+  .services-card__title-link:focus-visible {
+    outline: none;
+    text-decoration: none;
+  }
+
   .services-card__image {
     width: 100%;
     aspect-ratio: 630 / 470;
@@ -4010,6 +4033,44 @@
   .services-card__image:hover,
   .services-card__image:focus-visible {
     transform: scale(1.05);
+  }
+
+  .project-highlight-section {
+    width: 100%;
+    padding: clamp(3rem, 10vw, 5rem) 0;
+  }
+
+  .project-highlight-card {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    border-radius: 0;
+    border: none;
+    box-shadow: none;
+    background: rgba(255, 255, 255, 0.05);
+  }
+
+  .project-highlight-card__content {
+    padding: clamp(3rem, 6vw, 4rem);
+  }
+
+  .project-highlight-card__image {
+    aspect-ratio: unset;
+    max-height: 540px;
+    object-fit: cover;
+  }
+
+  .project-highlight-card .lux-button {
+    border-color: rgba(255, 255, 255, 0.3);
+    background-color: #000000;
+    color: #ffffff;
+  }
+
+  .project-highlight-card .lux-button:hover,
+  .project-highlight-card .lux-button:focus-visible {
+    background-color: #bf9c65;
+    border-color: #bf9c65;
+    color: #111111;
   }
 }
 
