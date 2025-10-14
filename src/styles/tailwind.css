@@ -3983,12 +3983,25 @@
 }
 
 @layer components {
+  .services-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .services-card__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    padding: clamp(2rem, 4vw, 2.5rem);
+  }
+
   .services-card__image {
-    width: min(100%, 630px);
+    width: 100%;
     aspect-ratio: 630 / 470;
     height: auto;
     display: block;
-    margin-inline: auto;
     object-fit: cover;
     object-position: center;
     transition: transform 320ms ease;
