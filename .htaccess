@@ -1,0 +1,26 @@
+# ----------------------------------------------------------------------
+# Core rewrite engine setup
+# ----------------------------------------------------------------------
+RewriteEngine On
+RewriteBase /
+
+# ----------------------------------------------------------------------
+# Redirect legacy .html URLs to their clean counterparts
+# ----------------------------------------------------------------------
+RewriteCond %{THE_REQUEST} \s/+([^\s?]+?)\.html[\s?] [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# ----------------------------------------------------------------------
+# Internally map extensionless URLs to matching .html files
+# ----------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)$ $1.html [L]
+
+# ----------------------------------------------------------------------
+# Allow directory-style requests to resolve to index.html when present
+# ----------------------------------------------------------------------
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.+?)/?$ $1/index.html [L]
