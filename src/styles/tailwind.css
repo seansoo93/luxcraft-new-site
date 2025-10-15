@@ -2,6 +2,7 @@
 @import "./components/hero-nav.css";
 @import "./components/portfolio-card.css";
 @import "./components/light-theme-overrides.css";
+@import "./_contact-overrides.css";
 
 @tailwind base;
 @tailwind components;

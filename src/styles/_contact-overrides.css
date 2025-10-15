@@ -1,0 +1,12 @@
+.contact-page .lux-button {
+  background-color: #000000;
+  color: #ffffff;
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.contact-page .lux-button:hover,
+.contact-page .lux-button:focus-visible {
+  background-color: #bf9c65;
+  color: #111111;
+  border-color: #bf9c65;
+}
