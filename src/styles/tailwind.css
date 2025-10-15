@@ -4051,7 +4051,8 @@
   }
 
   .project-highlight-card__content {
-    padding: clamp(3rem, 6vw, 4rem);
+    padding: clamp(2.25rem, 4.5vw, 3rem);
+    gap: 1rem;
   }
 
   .project-highlight-card__image {
@@ -4071,6 +4072,40 @@
     background-color: #bf9c65;
     border-color: #bf9c65;
     color: #111111;
+  }
+
+  .project-why-list {
+    counter-reset: why-list;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .project-why-list > li {
+    counter-increment: why-list;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1.25rem;
+    align-items: flex-start;
+  }
+
+  .project-why-list > li::before {
+    content: counter(why-list, decimal-leading-zero);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(255, 255, 255, 0.08);
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.82);
+  }
+
+  .project-why-list p {
+    margin: 0;
   }
 }
 
