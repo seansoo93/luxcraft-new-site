@@ -10,3 +10,14 @@
   color: #111111;
   border-color: #bf9c65;
 }
+
+.contact-page .contact-secondary-button {
+  transition: transform 220ms ease;
+  color: rgba(17, 17, 17, 0.7);
+}
+
+.contact-page .contact-secondary-button:hover,
+.contact-page .contact-secondary-button:focus-visible {
+  transform: scale(1.04);
+  color: rgba(17, 17, 17, 0.7);
+}
