@@ -4075,23 +4075,20 @@
   }
 
   .project-why-list {
-    counter-reset: why-list;
     list-style: none;
     margin: 0;
     padding: 0;
   }
 
   .project-why-list > li {
-    counter-increment: why-list;
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
     gap: 1.25rem;
     align-items: flex-start;
   }
 
-  .project-why-list > li::before {
-    content: counter(why-list, decimal-leading-zero);
+  .project-why-list__index {
     display: inline-flex;
+    flex: none;
     align-items: center;
     justify-content: center;
     width: 2.5rem;
