@@ -2605,6 +2605,14 @@ a:hover {
 }
 
 @media (max-width: 640px) {
+  .site-footer {
+    padding-top: 2.5rem;
+  }
+
+  .site-footer__inner {
+    gap: 1.75rem;
+  }
+
   .site-footer__top {
     justify-content: center;
     text-align: center;
@@ -2632,6 +2640,10 @@ a:hover {
   .site-footer__social {
     width: 2.4rem;
     height: 2.4rem;
+  }
+
+  .site-footer__legal {
+    text-align: center;
   }
 
   .back-to-top {
@@ -3375,10 +3387,6 @@ a:hover {
   max-width: 48rem;
 }
 
-.max-w-sm {
-  max-width: 24rem;
-}
-
 .origin-left {
   transform-origin: left;
 }
@@ -3528,10 +3536,6 @@ a:hover {
   border-width: 1px;
 }
 
-.border-t {
-  border-top-width: 1px;
-}
-
 .border-white\/10 {
   border-color: rgb(255 255 255 / 0.1);
 }
@@ -3539,10 +3543,6 @@ a:hover {
 .bg-lux-darker {
   --tw-bg-opacity: 1;
   background-color: rgb(10 10 10 / var(--tw-bg-opacity));
-}
-
-.bg-lux-darker\/80 {
-  background-color: rgb(10 10 10 / 0.8);
 }
 
 .bg-lux-gold {
@@ -3629,11 +3629,6 @@ a:hover {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .py-3 {
@@ -3725,10 +3720,6 @@ a:hover {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-white\/40 {
-  color: rgb(255 255 255 / 0.4);
 }
 
 .text-white\/50 {
@@ -5028,10 +5019,6 @@ a:hover {
   width: 2rem;
 }
 
-.w-auto {
-  width: auto;
-}
-
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -5059,10 +5046,6 @@ a:hover {
 
 .max-w-\[1400px\] {
   max-width: 1400px;
-}
-
-.max-w-sm {
-  max-width: 24rem;
 }
 
 .flex-none {
@@ -5248,10 +5231,6 @@ a:hover {
   border-width: 0px;
 }
 
-.border-t {
-  border-top-width: 1px;
-}
-
 .border-neutral-200 {
   --tw-border-opacity: 1;
   border-color: rgb(229 229 229 / var(--tw-border-opacity));
@@ -5269,10 +5248,6 @@ a:hover {
 .bg-lux-darker {
   --tw-bg-opacity: 1;
   background-color: rgb(10 10 10 / var(--tw-bg-opacity));
-}
-
-.bg-lux-darker\/80 {
-  background-color: rgb(10 10 10 / 0.8);
 }
 
 .bg-lux-gold {
@@ -5374,11 +5349,6 @@ a:hover {
 .px-6 {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
-}
-
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
 }
 
 .py-3 {
@@ -5521,10 +5491,6 @@ a:hover {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-
-.text-white\/40 {
-  color: rgb(255 255 255 / 0.4);
 }
 
 .text-white\/50 {
@@ -5784,14 +5750,6 @@ a:hover {
 
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .md\:grid-cols-\[1\.2fr_0\.8fr\] {
-    grid-template-columns: 1.2fr 0.8fr;
-  }
-
-  .md\:justify-items-end {
-    justify-items: end;
   }
 }
 

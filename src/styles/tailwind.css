@@ -1534,6 +1534,14 @@
   }
 
   @media (max-width: 640px) {
+    .site-footer {
+      padding-top: 2.5rem;
+    }
+
+    .site-footer__inner {
+      gap: 1.75rem;
+    }
+
     .site-footer__top {
       justify-content: center;
       text-align: center;
@@ -1561,6 +1569,10 @@
     .site-footer__social {
       width: 2.4rem;
       height: 2.4rem;
+    }
+
+    .site-footer__legal {
+      text-align: center;
     }
   }
 
