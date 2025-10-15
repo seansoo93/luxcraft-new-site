@@ -221,40 +221,52 @@
 </section>
 </main>
 <div aria-hidden="true" class="cursor-follower" data-mobile-disabled="true"></div>
-<footer class="border-t border-white/10 bg-lux-darker/80">
-<div class="lux-container grid gap-8 py-12 md:grid-cols-[1.2fr_0.8fr]">
-<div class="space-y-6">
-<a aria-label="LuxCraft Home" class="flex items-center gap-3 text-white" href="index.html">
-<img alt="LuxCraft" class="h-10 w-auto" src="assets/images/logo.png"/>
+<footer class="site-footer">
+<div class="site-footer__inner">
+<div class="site-footer__top">
+<a aria-label="LuxCraft Home" class="site-footer__brand" href="index.html">
+<img alt="LuxCraft" src="assets/images/logo.png"/>
 </a>
-<p class="max-w-sm text-sm text-white/60">
-            190 Woodlands Industrial Park E5<br/>
-            Woodlands Bizhub, #04-05<br/>
-            Singapore 757516
-          </p>
-<div class="grid gap-2 text-sm text-white/60">
-<a class="hover:text-white" href="mailto:contact@luxcraft.sg">contact@luxcraft.sg</a>
-<a class="hover:text-white" href="tel:+6583126212">+65 8312 6212 (Shamim)</a>
-<a class="hover:text-white" href="tel:+6588991245">+65 8899 1245 (Manfred)</a>
-</div>
-</div>
-<div class="grid gap-6 md:justify-items-end">
-<nav class="flex flex-wrap gap-6 text-sm uppercase tracking-[0.3em] text-white/60">
-<a class="hover:text-white" href="about.html">Who We Are</a>
-<a class="hover:text-white" href="services.html">What We Do</a>
-<a class="hover:text-white" href="portfolio.html">Our Past Works</a>
-<a class="text-white" href="contact.html">Contact Us</a>
+<nav aria-label="Footer navigation" class="site-footer__nav">
+<a href="about.html">Who We Are</a>
+<a href="services.html">What We Do</a>
+<a href="portfolio.html">Our Past Works</a>
+<a aria-current="page" href="contact.html">Contact Us</a>
 </nav>
-<div class="flex gap-4 text-white/60">
-<a class="hover:text-white" href="https://www.facebook.com/luxcraft.studio" rel="noreferrer" target="_blank">Facebook</a>
-<a class="hover:text-white" href="https://twitter.com/ThemerexThemes" rel="noreferrer" target="_blank">Twitter</a>
-<a class="hover:text-white" href="https://dribbble.com/ThemeREX" rel="noreferrer" target="_blank">Dribbble</a>
-<a class="hover:text-white" href="https://www.instagram.com/luxcraft.studio/" rel="noreferrer" target="_blank">Instagram</a>
 </div>
-<p class="text-xs uppercase tracking-[0.3em] text-white/40">
-            LuxCraft Pte. Ltd © 2025. All Rights Reserved.
-          </p>
+<div aria-hidden="true" class="site-footer__divider"></div>
+<div class="site-footer__content">
+<div class="site-footer__column">
+<p>190 Woodlands Industrial Park E5</p>
+<p>Woodlands Bizhub, #04-05</p>
+<p>Singapore 757516</p>
 </div>
+<div class="site-footer__column site-footer__column--contact">
+<a href="tel:+6583126212">+65 8312 6212 <span>(Shamim)</span></a>
+<a href="tel:+6588991245">+65 8899 1245 <span>(Manfred)</span></a>
+<a class="site-footer__email" href="mailto:contact@luxcraft.sg">contact@luxcraft.sg</a>
+</div>
+<div aria-label="Social media" class="site-footer__socials">
+<a aria-label="Instagram" class="site-footer__social" href="https://www.instagram.com/luxcraft.studio/" rel="noreferrer" target="_blank">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" viewbox="0 0 24 24">
+<rect height="18" rx="5" ry="5" width="18" x="3" y="3"></rect>
+<circle cx="12" cy="12" r="3.5"></circle>
+<circle cx="17.5" cy="6.5" fill="currentColor" r="0.9" stroke="none"></circle>
+</svg>
+</a>
+<a aria-label="Facebook" class="site-footer__social" href="https://www.facebook.com/luxcraft.studio" rel="noreferrer" target="_blank">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" viewbox="0 0 24 24">
+<path d="M15 7h-2.2c-.6 0-.8.3-.8.8V11h3l-.4 3h-2.6v8h-3.1v-8H7v-3h2.9V7.5C9.9 5.6 11 4 13.6 4H15v3z"></path>
+</svg>
+</a>
+<a aria-label="TikTok" class="site-footer__social" href="https://www.tiktok.com/@luxcraft.studio" rel="noreferrer" target="_blank">
+<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" viewbox="0 0 24 24">
+<path d="M16.5 3.5C16.9 5.1 18.2 6.3 19.8 6.6v2.6c-1.5-.1-2.9-.6-4.1-1.4v6.5a5.1 5.1 0 1 1-5.1-5.1c.3 0 .7 0 1 .1v2.8a2.2 2.2 0 1 0 1.5 2.1V3.5h2.7z"></path>
+</svg>
+</a>
+</div>
+</div>
+<p class="site-footer__legal">LuxCraft Pte. Ltd © 2025. All Rights Reserved.</p>
 </div>
 </footer>
 <script src="./assets/js/cursor-follower.js"></script>
