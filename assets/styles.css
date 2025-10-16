@@ -1296,6 +1296,22 @@ a:hover {
   color: rgba(245, 245, 245, 0.72) !important;
 }
 
+/* Increase gap between footer email and its underline pseudo-element */
+
+.site-footer__email {
+  /* ensure the anchor behaves predictably when the pseudo-element is rendered */
+  display: inline-block;
+}
+
+.site-footer__email::after {
+  /* push the generated line further away from the email text */
+  display: block !important;
+  /* margin-top: 7rem !important; */
+  margin-bottom: -0.3rem !important;
+  transform: translateY(0.3rem);
+  /* small nudge that also helps if the pseudo-element is absolutely positioned */
+}
+
 .lux-button--reverse {
   border-width: 1px;
   --tw-border-opacity: 1;
@@ -2590,6 +2606,8 @@ a:hover {
   bottom: 0;
   height: 1px;
   background: var(--lux-white-35);
+  /* height: 1px;
+    background: linear-gradient(90deg, var(--lux-white-04), var(--lux-white-18), var(--lux-white-04)); */
 }
 
 .site-footer__socials {
@@ -4728,7 +4746,7 @@ a:hover {
 
 .project-highlight-section {
   width: 100%;
-  padding: clamp(3rem, 10vw, 5rem) 0;
+  padding: clamp(1.5rem, 8vw, 3rem) 0;
 }
 
 .project-highlight-card {
@@ -4742,10 +4760,14 @@ a:hover {
 }
 
 .project-highlight-card__content {
-  padding: clamp(2.25rem, 4.5vw, 3rem);
+  padding: clamp(1.75rem, 4vw, 2.75rem) clamp(1rem, 4vw, 2rem);
   gap: 1rem;
   max-width: min(1200px, 90vw);
   margin-inline: auto;
+}
+
+.project-highlight-section + .lux-section {
+  padding-top: clamp(1.5rem, 6vw, 2.75rem);
 }
 
 .project-highlight-card__image {
