@@ -1301,6 +1301,7 @@ a:hover {
 .site-footer__email {
   /* ensure the anchor behaves predictably when the pseudo-element is rendered */
   display: inline-block;
+  padding-bottom: 1rem;
 }
 
 .site-footer__email::after {
@@ -2509,7 +2510,7 @@ a:hover {
   max-width: min(1220px, 96vw);
   margin: 0 auto;
   display: grid;
-  gap: clamp(2.5rem, 6vw, 3.5rem);
+  gap: clamp(1.5rem, 3vw, 2rem);
 }
 
 .site-footer__top {
@@ -2605,9 +2606,7 @@ a:hover {
   right: 0;
   bottom: 0;
   height: 1px;
-  background: var(--lux-white-35);
-  /* height: 1px;
-    background: linear-gradient(90deg, var(--lux-white-04), var(--lux-white-18), var(--lux-white-04)); */
+  background: linear-gradient(90deg, var(--lux-white-04), var(--lux-white-18), var(--lux-white-04));
 }
 
 .site-footer__socials {
@@ -2652,7 +2651,7 @@ a:hover {
   }
 
   .site-footer__inner {
-    gap: 1.75rem;
+    gap: 1rem;
   }
 
   .site-footer__top {
