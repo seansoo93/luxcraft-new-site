@@ -592,12 +592,24 @@ video {
   --lux-charcoal-60: rgba(17, 17, 17, 0.6);
   --lux-shadow-strong: rgba(0, 0, 0, 0.75);
   --lux-backdrop-bar: rgba(0, 0, 0, 0.78);
+  --header-offset-mobile: 6rem;
+  --header-offset-desktop: 7rem;
 }
 
 body {
   font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body.has-fixed-header {
+  padding-top: var(--header-offset-mobile);
+}
+
+@media (min-width: 1024px) {
+  body.has-fixed-header {
+    padding-top: var(--header-offset-desktop);
+  }
 }
 
 body:not(.light-theme) {
@@ -4090,7 +4102,7 @@ a:hover {
   align-items: center;
   justify-content: center;
   gap: clamp(2.25rem, 6vw, 3rem);
-  padding: clamp(5.5rem, 16vw, 7.1875rem) 0 clamp(2.5rem, 9vw, 3.25rem);
+  padding: clamp(3.5rem, 12vw, 5.5rem) 0 clamp(2.5rem, 9vw, 3.25rem);
   text-align: center;
 }
 

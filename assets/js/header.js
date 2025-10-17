@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if (document.body) {
+    document.body.classList.add('has-fixed-header');
+  }
+
   const navLinks = Array.from(document.querySelectorAll('.header-nav a, #mobile-menu nav a'));
   if (navLinks.length) {
     const prefetched = new Set();
@@ -60,6 +64,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenuButton = document.querySelector('.header-toggle');
   const mobileMenu = document.getElementById('mobile-menu');
   const header = document.querySelector('header');
+
+  const updateHeaderOffsets = () => {
+    if (!header) return;
+    const offset = header.offsetHeight;
+    document.body.style.setProperty('--header-offset-mobile', `${offset}px`);
+    document.body.style.setProperty('--header-offset-desktop', `${offset}px`);
+  };
+
+  updateHeaderOffsets();
+  window.addEventListener('resize', () => {
+    window.requestAnimationFrame(updateHeaderOffsets);
+  });
 
   if (!header || !mobileMenuButton || !mobileMenu) {
     return;
