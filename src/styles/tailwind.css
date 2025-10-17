@@ -3654,6 +3654,7 @@
     margin: -0.5rem 0 0;
     font-size: 0.9rem;
     color: #8d8d8d;
+    margin-top: calc(var(--review-gap, 1rem) * -1.5);
   }
 
   .about-reviews__nav {
