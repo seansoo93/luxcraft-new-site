@@ -6,24 +6,21 @@
   const slides = Array.from(track.querySelectorAll('[data-reviews-slide]'));
   const prevButton = slider.querySelector('[data-reviews-prev]');
   const nextButton = slider.querySelector('[data-reviews-next]');
-  const dotsContainer = slider.parentElement.querySelector('[data-reviews-dots]');
-  const dots = [];
+  const dotsContainer = document.querySelector('[data-reviews-dots]');
+  if (!dotsContainer) return;
 
-  if (dotsContainer) {
-    dotsContainer.innerHTML = '';
+  dotsContainer.innerHTML = '';
 
-    slides.forEach((_, idx) => {
-      const dot = document.createElement('button');
-      dot.type = 'button';
-      dot.className = 'about-reviews__dot';
-      dot.setAttribute('aria-label', `Show review ${idx + 1}`);
-      dot.setAttribute('aria-current', 'false');
-      dot.dataset.reviewsDot = String(idx);
-
-      dotsContainer.appendChild(dot);
-      dots.push(dot);
-    });
-  }
+  const dots = slides.map((_, idx) => {
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = 'about-reviews__dot';
+    dot.setAttribute('aria-label', `Show review ${idx + 1}`);
+    dot.setAttribute('aria-current', 'false');
+    dot.dataset.reviewsDot = String(idx);
+    dotsContainer.appendChild(dot);
+    return dot;
+  });
 
   if (!slides.length) return;
 
