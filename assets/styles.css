@@ -592,8 +592,8 @@ video {
   --lux-charcoal-60: rgba(17, 17, 17, 0.6);
   --lux-shadow-strong: rgba(0, 0, 0, 0.75);
   --lux-backdrop-bar: rgba(0, 0, 0, 0.78);
-  --header-offset-mobile: 6rem;
-  --header-offset-desktop: 7rem;
+  --header-height-mobile: clamp(4.5rem, 12vw, 5.75rem);
+  --header-height-desktop: clamp(4.75rem, 6vw, 6rem);
 }
 
 body {
@@ -603,12 +603,13 @@ body {
 }
 
 body.has-fixed-header {
-  padding-top: var(--header-offset-mobile);
+  padding-top: 0;
+  scroll-padding-top: var(--header-height-mobile);
 }
 
 @media (min-width: 1024px) {
   body.has-fixed-header {
-    padding-top: var(--header-offset-desktop);
+    scroll-padding-top: var(--header-height-desktop);
   }
 }
 
@@ -701,10 +702,8 @@ a:hover {
 /* Header */
 
 .site-header {
-  position: fixed;
+  position: sticky;
   top: 0px;
-  left: 0px;
-  right: 0px;
   z-index: 50;
   transition-property: transform;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);

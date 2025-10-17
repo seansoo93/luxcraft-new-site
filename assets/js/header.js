@@ -65,18 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const mobileMenu = document.getElementById('mobile-menu');
   const header = document.querySelector('header');
 
-  const updateHeaderOffsets = () => {
-    if (!header) return;
-    const offset = header.offsetHeight;
-    document.body.style.setProperty('--header-offset-mobile', `${offset}px`);
-    document.body.style.setProperty('--header-offset-desktop', `${offset}px`);
-  };
-
-  updateHeaderOffsets();
-  window.addEventListener('resize', () => {
-    window.requestAnimationFrame(updateHeaderOffsets);
-  });
-
   if (!header || !mobileMenuButton || !mobileMenu) {
     return;
   }
