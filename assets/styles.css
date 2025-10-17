@@ -1340,6 +1340,58 @@ a:hover {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
+/* Reviews clamp (About page) */
+
+.about-reviews__quote {
+  /* 3-line clamp */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  position: relative;
+  text-justify: inter-word;
+  /* Soft fade without color dependency (works in light/dark) */
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+}
+
+/* Expanded state: remove clamp + fade */
+
+.about-reviews__quote[data-expanded="true"] {
+  -webkit-line-clamp: initial;
+  overflow: visible;
+  -webkit-mask-image: none;
+  mask-image: none;
+}
+
+/* Toggle button: styled like a link, theme-safe */
+
+.review-toggle {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 0.5rem;
+  padding: 0;
+  background: none;
+  border: 0;
+  font: inherit;
+  font-size: 1.35rem;
+  line-height: 1;
+  cursor: pointer;
+  color: inherit;
+  /* light/dark compatible */
+  transition: transform 0.2s ease;
+}
+
+.review-toggle:hover {
+  transform: scale(1.2);
+}
+
+.review-toggle:focus-visible {
+  outline: 6px solid currentColor;
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
 /* Portfolio detail page */
 
 .portfolio-detail-hero .lux-container {
@@ -4149,7 +4201,7 @@ a:hover {
 .about-intro-section {
   background-color: #fdfdfd;
   color: #111111;
-  padding: clamp(4rem, 10vw, 6rem) 0 clamp(3.5rem, 9vw, 5rem);
+  padding: clamp(3rem, 7vw, 5rem) 0 clamp(3.5rem, 9vw, 5rem);
 }
 
 .about-intro {
@@ -4168,9 +4220,11 @@ a:hover {
 .about-intro__eyebrow {
   margin: 0;
   font-size: 0.75rem;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
   color: #888;
+  padding-inline: 0.75rem;
+  align-self: flex-start;
 }
 
 .about-intro__title {
@@ -4244,7 +4298,7 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: clamp(2.5rem, 7vw, 4rem) clamp(1.75rem, 7vw, 3.5rem);
+  padding: clamp(1rem, 3vw, 2rem) clamp(1.75rem, 7vw, 3.5rem);
   border-radius: 40px;
   background-color: #ffffff;
   box-shadow: 0 30px 65px rgba(15, 15, 15, 0.06);
@@ -4379,25 +4433,10 @@ a:hover {
   gap: 0.85rem;
 }
 
-.about-reviews__dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 999px;
-  border: none;
-  background-color: #d8d8d8;
-  cursor: pointer;
-  transition: background-color 180ms ease, transform 180ms ease;
-}
-
 .about-reviews__dot.is-active,
   .about-reviews__dot[aria-current="true"] {
   background-color: #c59a5c;
   transform: scale(1.1);
-}
-
-.about-reviews__dot:focus-visible {
-  outline: 2px solid #c59a5c;
-  outline-offset: 3px;
 }
 
 /* Portfolio filters */

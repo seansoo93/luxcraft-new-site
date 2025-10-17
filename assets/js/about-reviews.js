@@ -6,7 +6,24 @@
   const slides = Array.from(track.querySelectorAll('[data-reviews-slide]'));
   const prevButton = slider.querySelector('[data-reviews-prev]');
   const nextButton = slider.querySelector('[data-reviews-next]');
-  const dots = Array.from(slider.parentElement.querySelectorAll('[data-reviews-dot]'));
+  const dotsContainer = slider.parentElement.querySelector('[data-reviews-dots]');
+  const dots = [];
+
+  if (dotsContainer) {
+    dotsContainer.innerHTML = '';
+
+    slides.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'about-reviews__dot';
+      dot.setAttribute('aria-label', `Show review ${idx + 1}`);
+      dot.setAttribute('aria-current', 'false');
+      dot.dataset.reviewsDot = String(idx);
+
+      dotsContainer.appendChild(dot);
+      dots.push(dot);
+    });
+  }
 
   if (!slides.length) return;
 
@@ -19,11 +36,13 @@
       slide.tabIndex = isActive ? 0 : -1;
     });
 
-    dots.forEach((dot, idx) => {
-      const isActive = idx === index;
-      dot.classList.toggle('is-active', isActive);
-      dot.setAttribute('aria-current', isActive ? 'true' : 'false');
-    });
+    if (dots.length) {
+      dots.forEach((dot, idx) => {
+        const isActive = idx === index;
+        dot.classList.toggle('is-active', isActive);
+        dot.setAttribute('aria-current', isActive ? 'true' : 'false');
+      });
+    }
 
     track.style.transform = `translateX(-${index * 100}%)`;
 
