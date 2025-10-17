@@ -1665,6 +1665,15 @@
       text-align: center;
     }
 
+    .site-footer__column--contact {
+      justify-items: center;
+    }
+
+    .site-footer__column--contact .site-footer__contact-link,
+    .site-footer__column--contact .site-footer__email {
+      justify-content: center;
+    }
+
     .site-footer__socials {
       justify-content: center;
     }

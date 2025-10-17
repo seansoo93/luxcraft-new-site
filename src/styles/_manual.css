@@ -1379,6 +1379,17 @@ body {
   gap: 0.75rem;
 }
 
+@media (max-width: 640px) {
+  .site-footer__column--contact {
+    justify-items: center;
+  }
+
+  .site-footer__column--contact .site-footer__contact-link,
+  .site-footer__column--contact .site-footer__email {
+    justify-content: center;
+  }
+}
+
 .site-footer__social {
   display: inline-flex;
   align-items: center;
