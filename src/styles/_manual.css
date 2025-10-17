@@ -1301,8 +1301,10 @@ body {
   color: var(--lux-white-72);
 }
 
-.site-footer__column--contact a {
-  display: inline-block;
+.site-footer__contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
   font-weight: 600;
   font-size: 0.98rem;
   letter-spacing: 0.04em;
@@ -1311,21 +1313,41 @@ body {
   transition: color 150ms ease;
 }
 
-.site-footer__column--contact a span {
+.site-footer__contact-link span {
   font-weight: 400;
   font-size: 0.9em;
   color: rgba(255, 255, 255, 0.65);
   margin-left: 0.25em;
 }
 
-.site-footer__column--contact a:hover,
-.site-footer__column--contact a:focus-visible {
+.site-footer__contact-link:hover,
+.site-footer__contact-link:focus-visible {
   color: #f5d48c;
+}
+
+.site-footer__contact-icon {
+  width: 1.15rem;
+  height: 1.15rem;
+  color: #25d366;
+  flex-shrink: 0;
+  transition: transform 150ms ease;
+}
+
+.site-footer__contact-link:hover .site-footer__contact-icon,
+.site-footer__contact-link:focus-visible .site-footer__contact-icon {
+  transform: scale(1.05);
 }
 
 .site-footer__email {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
   padding-bottom: 0.35rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fdfdfd;
+  text-decoration: none;
 }
 
 .site-footer__email::after {
@@ -1336,6 +1358,19 @@ body {
   bottom: 0;
   height: 1px;
   background: var(--lux-white-35);
+}
+
+.site-footer__email-icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  color: #f5d48c;
+  flex-shrink: 0;
+  transition: transform 150ms ease;
+}
+
+.site-footer__email:hover .site-footer__email-icon,
+.site-footer__email:focus-visible .site-footer__email-icon {
+  transform: translateY(-1px);
 }
 
 .site-footer__socials {
