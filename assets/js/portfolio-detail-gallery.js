@@ -79,6 +79,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     let currentIndex = -1;
+    let scrollUpdateFrame = null;
+
+    const updateScrollableState = () => {
+      if (!buttons.length) return;
+
+      const rowOffsets = new Set();
+      buttons.forEach((button) => {
+        rowOffsets.add(button.offsetTop);
+      });
+
+      const isScrollable = rowOffsets.size > 2;
+      if (isScrollable) {
+        thumbnailsHost.setAttribute('data-scrollable', 'true');
+      } else {
+        thumbnailsHost.removeAttribute('data-scrollable');
+        if (thumbnailsHost.scrollTop !== 0) {
+          thumbnailsHost.scrollTop = 0;
+        }
+      }
+    };
+
+    const scheduleScrollableUpdate = () => {
+      if (scrollUpdateFrame !== null) return;
+      scrollUpdateFrame = window.requestAnimationFrame(() => {
+        scrollUpdateFrame = null;
+        updateScrollableState();
+      });
+    };
 
     const updateActiveButton = (nextIndex, { focus = false } = {}) => {
       const normalizedIndex = normalizeIndex(nextIndex, buttons.length);
@@ -132,8 +160,33 @@ document.addEventListener('DOMContentLoaded', () => {
           stepGallery(-1);
         }
       });
+
+      const thumbImage = button.querySelector('img');
+      if (thumbImage) {
+        if (thumbImage.complete) {
+          scheduleScrollableUpdate();
+        } else {
+          thumbImage.addEventListener('load', scheduleScrollableUpdate, { once: true });
+          thumbImage.addEventListener('error', scheduleScrollableUpdate, { once: true });
+        }
+      }
     });
 
+    if (typeof ResizeObserver === 'function') {
+      const resizeObserver = new ResizeObserver(() => {
+        scheduleScrollableUpdate();
+      });
+      resizeObserver.observe(thumbnailsHost);
+    }
+
+    const handleResize = () => {
+      scheduleScrollableUpdate();
+    };
+
+    window.addEventListener('resize', handleResize, { passive: true });
+    window.addEventListener('orientationchange', handleResize, { passive: true });
+
     updateActiveButton(0);
+    scheduleScrollableUpdate();
   });
 });
