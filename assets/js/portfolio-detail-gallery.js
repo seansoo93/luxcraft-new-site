@@ -80,6 +80,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentIndex = -1;
     let scrollUpdateFrame = null;
+    const displayFrame = displayImage.closest('.portfolio-detail-gallery__display') || displayImage;
+
+    const scrollDisplayIntoView = () => {
+      if (!(displayFrame instanceof HTMLElement)) return;
+
+      const rect = displayFrame.getBoundingClientRect();
+      const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+      const isAbove = rect.top < 0;
+      const isBelow = rect.bottom > viewportHeight;
+
+      if (isAbove || isBelow) {
+        displayFrame.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    };
 
     const updateScrollableState = () => {
       if (!buttons.length) return;
@@ -149,6 +164,7 @@ document.addEventListener('DOMContentLoaded', () => {
     buttons.forEach((button, index) => {
       button.addEventListener('click', () => {
         updateActiveButton(index);
+        scrollDisplayIntoView();
       });
 
       button.addEventListener('keydown', (event) => {
