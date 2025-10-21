@@ -1421,6 +1421,51 @@ body {
   color: rgba(255, 255, 255, 0.45);
 }
 
+.contact-page details.group summary .faq-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 1.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(17, 17, 17, 0.18);
+  color: rgba(17, 17, 17, 0.6);
+  transition: color 200ms ease, border-color 200ms ease, transform 200ms ease;
+}
+
+.contact-page details.group summary .faq-toggle::before,
+.contact-page details.group summary .faq-toggle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44%;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  transition: transform 200ms ease;
+}
+
+.contact-page details.group summary .faq-toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.contact-page details.group[open] summary .faq-toggle {
+  border-color: #bf9c65;
+  color: #bf9c65;
+}
+
+.contact-page details.group[open] summary .faq-toggle::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.contact-page details.group[open] summary .faq-toggle::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 @media (max-width: 640px) {
   .site-footer__top {
     justify-content: center;

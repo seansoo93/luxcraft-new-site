@@ -1634,6 +1634,51 @@ a:hover {
   transition: all 200ms ease;
 }
 
+.contact-page details.group summary .faq-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-left: 1.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(17, 17, 17, 0.18);
+  color: rgba(17, 17, 17, 0.6);
+  transition: color 200ms ease, border-color 200ms ease, transform 200ms ease;
+}
+
+.contact-page details.group summary .faq-toggle::before,
+  .contact-page details.group summary .faq-toggle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44%;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  transition: transform 200ms ease;
+}
+
+.contact-page details.group summary .faq-toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+.contact-page details.group[open] summary .faq-toggle {
+  border-color: #bf9c65;
+  color: #bf9c65;
+}
+
+.contact-page details.group[open] summary .faq-toggle::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.contact-page details.group[open] summary .faq-toggle::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
 .light-theme .lux-card {
   background: #ffffff;
   color: #111111;
@@ -3408,10 +3453,6 @@ a:hover {
   margin-right: auto;
 }
 
-.ml-6 {
-  margin-left: 1.5rem;
-}
-
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -5040,10 +5081,6 @@ a:hover {
   margin-bottom: 2rem;
 }
 
-.ml-6 {
-  margin-left: 1.5rem;
-}
-
 .mt-1 {
   margin-top: 0.25rem;
 }
@@ -5766,11 +5803,6 @@ a:hover {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
-.group[open] .group-open\:text-lux-gold {
-  --tw-text-opacity: 1;
-  color: rgb(197 154 92 / var(--tw-text-opacity));
-}
-
 .group:hover .group-hover\:bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -5846,21 +5878,6 @@ a:hover {
 .focus\:ring-lux-gold:focus {
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(197 154 92 / var(--tw-ring-opacity));
-}
-
-.group[open] .group-open\:rotate-45 {
-  --tw-rotate: 45deg;
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
-
-.group[open] .group-open\:border-lux-gold {
-  --tw-border-opacity: 1;
-  border-color: rgb(197 154 92 / var(--tw-border-opacity));
-}
-
-.group[open] .group-open\:text-lux-gold {
-  --tw-text-opacity: 1;
-  color: rgb(197 154 92 / var(--tw-text-opacity));
 }
 
 .group:hover .group-hover\:bg-white {
