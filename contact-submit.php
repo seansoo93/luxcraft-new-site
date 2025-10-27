@@ -41,8 +41,12 @@ if ($name === '') {
     $errors[] = 'Please provide your full name.';
 }
 
-if ($email === '' || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors[] = 'Please enter a valid email address.';
+if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    $errors[] = 'Please enter a valid email address or leave the field blank.';
+}
+
+if ($phone === '') {
+    $errors[] = 'Please provide your contact number.';
 }
 
 if (!$privacyAccepted) {
@@ -52,16 +56,18 @@ if (!$privacyAccepted) {
 $mailSent = false;
 $errorDetails = null;
 if (!$errors) {
-    $recipient = 'contact@luxcraft.sg';
+    $recipient = 'sean.soo@luxcraft.sg';
     $subject = 'LuxCraft Consultation Request';
 
     $lines = [
         "Full Name: {$name}",
-        "Email: {$email}",
+        "Contact Number: {$phone}",
     ];
 
-    if ($phone !== '') {
-        $lines[] = "Contact Number: {$phone}";
+    if ($email !== '') {
+        $lines[] = "Email: {$email}";
+    } else {
+        $lines[] = 'Email: (not provided)';
     }
 
     if ($project !== '') {
@@ -78,11 +84,16 @@ if (!$errors) {
 
     $headers = [
         'From: LuxCraft Website <no-reply@luxcraft.sg>',
-        "Reply-To: {$email}",
         'Content-Type: text/plain; charset=utf-8',
         'Return-Path: no-reply@luxcraft.sg',
         'X-Mailer: PHP/' . PHP_VERSION,
     ];
+
+    if ($email !== '') {
+        $headers[] = "Reply-To: {$email}";
+    } else {
+        $headers[] = 'Reply-To: no-reply@luxcraft.sg';
+    }
 
     error_clear_last();
     $compiledHeaders = implode("\r\n", $headers);
@@ -123,7 +134,7 @@ $statusClass = $errors ? 'error' : 'success';
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $pageTitle ?> – LuxCraft</title>
-    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="/assets/styles.css">
     <style>
         .contact-response {
             min-height: 100vh;
@@ -246,8 +257,8 @@ $statusClass = $errors ? 'error' : 'success';
         <?php endif; ?>
 
         <div class="contact-response__actions">
-            <a class="primary" href="contact.html">Back to Contact Page</a>
-            <a class="secondary" href="index.html">Return Home</a>
+            <a class="primary" href="/contact.html">Back to Contact Page</a>
+            <a class="secondary" href="/index.html">Return Home</a>
         </div>
     </div>
 </main>
