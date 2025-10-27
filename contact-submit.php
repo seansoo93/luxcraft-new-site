@@ -52,7 +52,7 @@ if (!$privacyAccepted) {
 $mailSent = false;
 $errorDetails = null;
 if (!$errors) {
-    $recipient = 'sean.soo@luxcraft.sg';
+    $recipient = 'contact@luxcraft.sg';
     $subject = 'LuxCraft Consultation Request';
 
     $lines = [
@@ -80,10 +80,19 @@ if (!$errors) {
         'From: LuxCraft Website <no-reply@luxcraft.sg>',
         "Reply-To: {$email}",
         'Content-Type: text/plain; charset=utf-8',
+        'Return-Path: no-reply@luxcraft.sg',
+        'X-Mailer: PHP/' . PHP_VERSION,
     ];
 
     error_clear_last();
-    $mailSent = @mail($recipient, $subject, $body, implode("\r\n", $headers));
+    $compiledHeaders = implode("\r\n", $headers);
+    $envelopeSender = '-fno-reply@luxcraft.sg';
+
+    if (!ini_get('safe_mode')) {
+        $mailSent = @mail($recipient, $subject, $body, $compiledHeaders, $envelopeSender);
+    } else {
+        $mailSent = @mail($recipient, $subject, $body, $compiledHeaders);
+    }
     $mailError = error_get_last();
 
     if (!$mailSent) {
@@ -101,6 +110,7 @@ $logEvent([
         'project' => $project,
     ],
     'transport' => 'mail()',
+    'envelope' => $envelopeSender ?? null,
     'error' => $errorDetails,
 ]);
 
@@ -231,7 +241,7 @@ $statusClass = $errors ? 'error' : 'success';
         <?php else: ?>
             <p>Your consultation request has been sent successfully. A member of the LuxCraft team will get back to you within one business day.</p>
             <?php if ($mailSent): ?>
-                <p>We've emailed the details to our team at <strong>sean.soo@luxcraft.sg</strong>.</p>
+                <p>We've emailed the details to our team at <strong>contact@luxcraft.sg</strong>.</p>
             <?php endif; ?>
         <?php endif; ?>
 
