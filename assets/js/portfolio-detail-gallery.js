@@ -99,18 +99,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateScrollableState = () => {
       if (!buttons.length) return;
 
-      const rowOffsets = new Set();
-      buttons.forEach((button) => {
-        rowOffsets.add(button.offsetTop);
-      });
+      const overflowWidth = thumbnailsHost.scrollWidth - thumbnailsHost.clientWidth;
+      const isScrollable = overflowWidth > 1;
 
-      const isScrollable = rowOffsets.size > 2;
       if (isScrollable) {
         thumbnailsHost.setAttribute('data-scrollable', 'true');
       } else {
         thumbnailsHost.removeAttribute('data-scrollable');
-        if (thumbnailsHost.scrollTop !== 0) {
-          thumbnailsHost.scrollTop = 0;
+        if (thumbnailsHost.scrollLeft !== 0) {
+          thumbnailsHost.scrollLeft = 0;
         }
       }
     };
@@ -120,6 +117,23 @@ document.addEventListener('DOMContentLoaded', () => {
       scrollUpdateFrame = window.requestAnimationFrame(() => {
         scrollUpdateFrame = null;
         updateScrollableState();
+      });
+    };
+
+    const scrollThumbnailIntoView = (button) => {
+      if (!(button instanceof HTMLElement)) {
+        return;
+      }
+
+      const requiresScroll = thumbnailsHost.scrollWidth - thumbnailsHost.clientWidth > 1;
+      if (!requiresScroll) {
+        return;
+      }
+
+      button.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center',
       });
     };
 
@@ -151,6 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
       displayImage.dataset.galleryIndex = String(normalizedIndex);
 
       currentIndex = normalizedIndex;
+      scrollThumbnailIntoView(nextButton);
 
       if (focus) {
         nextButton.focus();
