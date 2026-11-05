@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LuxCraft Renovation - Interior Design Services</title>
+    <meta name="description"
+        content="Professional interior design and renovation services for HDB, Condo, Landed, and Commercial spaces in Singapore." />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.luxcraft.sg/reno" />
+  <meta property="og:title" content="LuxCraft Renovation - Interior Design Services" />
+  <meta property="og:description" content="Professional interior design and renovation services for HDB, Condo, Landed, and Commercial spaces in Singapore." />
+  <meta property="og:image" content="https://www.luxcraft.sg/assets/images/logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.luxcraft.sg/reno" />
+  <meta property="twitter:title" content="LuxCraft Renovation - Interior Design Services" />
+  <meta property="twitter:description" content="Professional interior design and renovation services for HDB, Condo, Landed, and Commercial spaces in Singapore." />
+  <meta property="twitter:image" content="https://www.luxcraft.sg/assets/images/logo.png" />
+    <link rel="canonical" href="https://www.luxcraft.sg/reno" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Syne:wght@500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="192x192" />
+    <link rel="stylesheet" href="/assets/corbesier-icons.css" />
+    <link rel="stylesheet" href="/assets/styles.css?v=1.1.1" />
+    <style>
+        .contact-page .contact-phone-error {
+            border-color: #b42318 !important;
+            box-shadow: 0 0 0 2px rgba(180, 35, 24, 0.15);
+        }
+
+        .contact-page .contact-error-text {
+            display: none;
+            font-size: 0.75rem;
+            color: #b42318;
+            margin-top: 0.5rem;
+        }
+
+        .contact-page .contact-error-text.is-visible {
+            display: block;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .cta-button-white {
+            background-color: #ffffff !important;
+            color: #111111 !important;
+            border-color: #ffffff !important;
+        }
+
+        .cta-button-white:hover {
+            background-color: #B5935E !important;
+            color: #111111 !important;
+            border-color: #B5935E !important;
+        }
+
+        .portfolio-grid .portfolio-card {
+            overflow: hidden !important;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .portfolio-grid .portfolio-card__info {
+            margin-top: 0 !important;
+            background: transparent !important;
+            box-shadow: none !important;
+            border-radius: 0 !important;
+            flex: 1 1 auto;
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+    <script src="/assets/js/header.js?v=1.1.1" defer></script>
+    <script src="/assets/js/brand-scroll.js" defer></script>
+    <script src="/assets/js/contact-validation.js?v=1.1.0" defer></script>
+    <script src="/assets/js/analytics.js" defer></script>
+</head>
+
+<body class="contact-page light-theme min-h-screen bg-white text-lux-dark pt-24 lg:pt-28">
+    <header class="site-header">
+        <div class="lux-container header-row">
+            <a href="/" class="header-logo" aria-label="LuxCraft Home">
+                <img src="/assets/images/logo.png" alt="LuxCraft" />
+            </a>
+            <nav class="header-nav" aria-label="Primary">
+                <a href="/about">Who We Are</a>
+                <a href="/services">What We Do</a>
+                <a href="/portfolio">Our Past Works</a>
+                <a href="/contact">Contact Us</a>
+            </nav>
+            <div class="header-controls">
+                <button class="header-action" type="button" aria-label="Search">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="11" cy="11" r="7" />
+                        <path d="m20 20-3.2-3.2" stroke-linecap="round" />
+                    </svg>
+                </button>
+                <button class="header-toggle md:hidden" type="button" aria-label="Open navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+            <button type="button" id="mobile-menu__close" aria-label="Close navigation">
+                <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+            <nav aria-label="Mobile navigation">
+                <a href="/about" class="hover:text-white">Who We Are</a>
+                <a href="/services" class="hover:text-white">What We Do</a>
+                <a href="/portfolio" class="hover:text-white">Our Past Works</a>
+                <a href="/contact" class="hover:text-white">Contact Us</a>
+            </nav>
+            <div class="mt-6 flex flex-col gap-2 text-white/60">
+                <a href="tel:+6583126212" class="hover:text-white">+65 8312 6212 (Shamim)</a>
+                <a href="tel:+6588991245" class="hover:text-white">+65 8899 1245 (Manfred)</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <style>
+            @keyframes scrollLeft {
+                from {
+                    transform: translateX(0);
+                }
+
+                to {
+                    transform: translateX(calc(-50% - 1rem));
+                }
+            }
+
+            .hero-carousel-wrapper {
+                width: 100%;
+                overflow: hidden;
+                padding-bottom: 3rem;
+                padding-top: 1rem;
+                display: flex;
+                /* Gradient fade edges for seamless look */
+                mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+                -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            }
+
+            .hero-carousel-track {
+                display: flex;
+                gap: 2rem;
+                width: max-content;
+                animation: scrollLeft 30s linear infinite;
+            }
+
+            .hero-carousel-track:hover {
+                animation-play-state: paused;
+            }
+
+            .hero-img {
+                height: 250px;
+                width: 350px;
+                object-fit: cover;
+                border-radius: 1.5rem;
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+            }
+        </style>
+        <section class="about-hero-section">
+            <div class="hero-carousel-wrapper" aria-hidden="true">
+                <div class="hero-carousel-track">
+                    <!-- Original Images -->
+                    <img class="hero-img" src="/assets/images/portfolio/pf12-choa-chu-kang/choa-chu-kang-1.jpg"
+                        alt="Portfolio 1">
+                    <img class="hero-img" src="/assets/images/portfolio/pf1-simei-street/simei-street-1.jpg"
+                        alt="Portfolio 2">
+                    <img class="hero-img" src="/assets/images/portfolio/pf11-toa-payoh-east/toa-payoh-east-01.jpg"
+                        alt="Portfolio 3">
+                    <img class="hero-img" src="/assets/images/portfolio/pf2-tower-road/towner-road-1.jpg"
+                        alt="Portfolio 4">
+                    <img class="hero-img" src="/assets/images/portfolio/pf4-mar-thoma/mar-thoma-1.jpg"
+                        alt="Portfolio 5">
+
+                    <!-- Duplicated for infinite scroll illusion -->
+                    <img class="hero-img" src="/assets/images/portfolio/pf12-choa-chu-kang/choa-chu-kang-1.jpg"
+                        alt="Portfolio 1">
+                    <img class="hero-img" src="/assets/images/portfolio/pf1-simei-street/simei-street-1.jpg"
+                        alt="Portfolio 2">
+                    <img class="hero-img" src="/assets/images/portfolio/pf11-toa-payoh-east/toa-payoh-east-01.jpg"
+                        alt="Portfolio 3">
+                    <img class="hero-img" src="/assets/images/portfolio/pf2-tower-road/towner-road-1.jpg"
+                        alt="Portfolio 4">
+                    <img class="hero-img" src="/assets/images/portfolio/pf4-mar-thoma/mar-thoma-1.jpg"
+                        alt="Portfolio 5">
+                </div>
+            </div>
+            <div class="lux-container">
+                <div class="about-hero-content text-center">
+                    <h1 class="about-hero-title mb-6">Transform Your Space</h1>
+                    <p class="mx-auto max-w-2xl text-lg mb-8" style="color: white !important;">
+                        Singapore's premier interior design firm specializing in HDB BTO, Resale, Condominium, Landed,
+                        and Commercial renovations. Let's bring your vision to life.
+                    </p>
+                    <a href="#consultation" class="lux-button lux-button--reverse cta-button-white">Get a Free
+                        Consultation</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Intro/Why Us Section -->
+        <section class="about-intro-section pt-16">
+            <div class="lux-container">
+                <div class="about-intro">
+                    <div class="about-intro__copy">
+                        <span class="about-intro__eyebrow lux-tag">Why Choose LuxCraft</span>
+                        <h2 class="about-intro__title !text-lux-dark !font-semibold">Bespoke Design & Seamless Execution
+                        </h2>
+                        <p class="about-intro__body" style="text-align: justify;">
+                            At LuxCraft, we believe your space should be a reflection of your lifestyle. From concept to
+                            completion, our dedicated team ensures every project is handled with precision,
+                            transparency, and top-tier craftsmanship.
+                        </p>
+                        <p class="about-intro__body" style="text-align: justify;">
+                            We offer complimentary 3D renderings of your design concept before starting any project,
+                            ensuring your vision is perfectly realized.
+                        </p>
+                        <div class="mt-8 grid grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="font-bold text-lux-dark text-lg">Transparent Pricing</h4>
+                                <p class="text-sm text-lux-dark/70 mt-1">No hidden costs—ever.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lux-dark text-lg">Timely Delivery</h4>
+                                <p class="text-sm text-lux-dark/70 mt-1">We stick to our schedules strictly.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lux-dark text-lg">Quality Craftsmanship</h4>
+                                <p class="text-sm text-lux-dark/70 mt-1">Certified sub-contractors and premium
+                                    materials.</p>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lux-dark text-lg">Dedicated Managers</h4>
+                                <p class="text-sm text-lux-dark/70 mt-1">A single point of contact for your whole
+                                    project.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-intro__media">
+                        <div class="about-intro__gallery">
+                            <img src="/assets/images/design-livingroom.jpg"
+                                alt="Neutral contemporary living room designed by LuxCraft" class="about-intro__image"
+                                loading="lazy" />
+                            <img src="/assets/images/design-gallery-02.jpg"
+                                alt="Open concept dining area styled by LuxCraft" class="about-intro__image"
+                                loading="lazy" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section class="lux-section bg-neutral-50 rounded-[3rem] mx-4 lg:mx-12 my-12 px-6 py-16">
+            <div class="lux-container space-y-10">
+                <div class="text-center">
+                    <span class="lux-tag">Our Services</span>
+                    <h2 class="mt-4 text-3xl font-semibold text-lux-dark sm:text-4xl">Everything you need under one roof
+                    </h2>
+                </div>
+                <div class="grid gap-6 md:grid-cols-3">
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100 text-center">
+                        <h3 class="text-xl font-bold text-lux-dark mb-3">Residential Renovation</h3>
+                        <p class="text-sm text-lux-dark/70">From cozy HDB BTOs to sprawling landed properties, we tailor
+                            our designs to maximize comfort and utility in your home.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100 text-center">
+                        <h3 class="text-xl font-bold text-lux-dark mb-3">Commercial Spaces</h3>
+                        <p class="text-sm text-lux-dark/70">Elevate your brand with a stunning retail store, office, or
+                            F&B outlet designed for both aesthetics and functionality.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-2xl shadow-sm border border-neutral-100 text-center">
+                        <h3 class="text-xl font-bold text-lux-dark mb-3">Bespoke Carpentry</h3>
+                        <p class="text-sm text-lux-dark/70">Custom-built storage, wardrobes, and distinctive cabinetry
+                            crafted perfectly to fit your space.</p>
+                    </div>
+                </div>
+                <div class="text-center mt-8">
+                    <a href="/services" class="lux-button">View All Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Preview -->
+        <section class="lux-section">
+            <div class="lux-container space-y-10">
+                <div class="flex flex-wrap items-end justify-between gap-6">
+                    <div>
+                        <span class="lux-tag">Featured Projects</span>
+                        <h2 class="mt-4 text-3xl font-semibold text-lux-dark sm:text-4xl">A glimpse into our crafted
+                            spaces</h2>
+                    </div>
+                    <a href="/portfolio"
+                        class="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.3em] text-lux-dark/70 hover:text-lux-dark">
+                        View Full Portfolio
+                        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="portfolio-grid grid gap-8 grid-cols-1 sm:grid-cols-2" data-portfolio-grid>
+                    <article class="lux-card p-0 group portfolio-card overflow-hidden flex flex-col">
+                        <div class="portfolio-card__media rounded-none overflow-hidden">
+                            <a href="/portfolio-pages/choa-chu-kang" class="portfolio-card__image-link">
+                                <img alt="5-Room BTO @ 858D Choa Chu Kang Ave 1"
+                                    class="portfolio-card__image w-full object-cover object-center rounded-none"
+                                    loading="lazy"
+                                    src="/assets/images/portfolio/pf12-choa-chu-kang/choa-chu-kang-1.jpg" />
+                            </a>
+                        </div>
+                        <div class="portfolio-card__info p-6 flex-1 flex flex-col">
+                            <h2 class="text-2xl font-semibold text-black">
+                                <a class="portfolio-card__link" href="/portfolio-pages/choa-chu-kang">5-Room BTO @
+                                    Choa Chu Kang</a>
+                            </h2>
+                            <p class="text-sm text-white/60">A modern BTO project featuring bespoke carpentry and
+                                efficient space planning.</p>
+                        </div>
+                    </article>
+                    <article class="lux-card p-0 group portfolio-card overflow-hidden flex flex-col">
+                        <div class="portfolio-card__media rounded-none overflow-hidden">
+                            <a href="/portfolio-pages/simei-street" class="portfolio-card__image-link">
+                                <img alt="4BR Condo @ Simei Street"
+                                    class="portfolio-card__image w-full object-cover object-center rounded-none"
+                                    loading="lazy" src="/assets/images/portfolio/pf1-simei-street/simei-street-1.jpg" />
+                            </a>
+                        </div>
+                        <div class="portfolio-card__info p-6 flex-1 flex flex-col">
+                            <h2 class="text-2xl font-semibold text-black">
+                                <a class="portfolio-card__link" href="/portfolio-pages/simei-street">4BR Condo @
+                                    Simei Street</a>
+                            </h2>
+                            <p class="text-sm text-white/60">Sleek lines, muted palettes, and a glass-featured living
+                                space.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="about-reviews-section mt-12 mb-12">
+            <div class="lux-container">
+                <div class="mb-8 text-center" style="color: #111111;">
+                    <span class="lux-tag">WORDS FROM OUR CLIENTS</span>
+                    <h2 class="mt-4 text-3xl font-semibold sm:text-4xl">Stories that keep us inspired</h2>
+                </div>
+                <div class="about-reviews" data-reviews-slider>
+                    <button class="about-reviews__nav about-reviews__nav--prev" type="button"
+                        aria-label="Previous review" data-reviews-prev>
+                        <span class="sr-only">Previous</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m14.5 6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <div class="about-reviews__viewport">
+                        <ul class="about-reviews__track" data-reviews-track>
+                            <li class="about-reviews__slide" data-reviews-slide>
+                                <figure class="about-reviews__content">
+                                    <div class="about-reviews__avatar">
+                                        <img src="/assets/images/review-image-Raul II Romo.webp"
+                                            alt="Warm living room project detail" loading="lazy" />
+                                    </div>
+                                    <blockquote class="about-reviews__quote">
+                                        We recently completed a full renovation with LuxCraft, and we couldn’t be
+                                        happier with the results!
+                                        From the initial consultation to the final walk-through, the team was
+                                        professional, communicative,
+                                        and truly attentive to our vision.
+                                    </blockquote>
+                                    <div class="about-reviews__mark" aria-hidden="true">
+                                        <svg viewBox="0 0 48 48">
+                                            <path
+                                                d="M19.07 21.94c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Zm21.36 0c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </div>
+                                    <figcaption class="about-reviews__author">Raul II Romo</figcaption>
+                                    <p class="about-reviews__meta">5-room Resale</p>
+                                </figure>
+                            </li>
+                            <li class="about-reviews__slide" data-reviews-slide>
+                                <figure class="about-reviews__content">
+                                    <div class="about-reviews__avatar">
+                                        <img src="/assets/images/review-image-kentc.webp"
+                                            alt="Warm living room project detail" loading="lazy" />
+                                    </div>
+                                    <blockquote class="about-reviews__quote">
+                                        A big shout-out to the LuxCraft's team - Christopher, Manfred & Shamim for
+                                        walking through our
+                                        renovation for the past few months & had delivered their professionalism
+                                        dutifully.
+                                    </blockquote>
+                                    <div class="about-reviews__mark" aria-hidden="true">
+                                        <svg viewBox="0 0 48 48">
+                                            <path
+                                                d="M19.07 21.94c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Zm21.36 0c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </div>
+                                    <figcaption class="about-reviews__author">Kent C</figcaption>
+                                </figure>
+                            </li>
+                            <li class="about-reviews__slide" data-reviews-slide>
+                                <figure class="about-reviews__content">
+                                    <div class="about-reviews__avatar">
+                                        <img src="/assets/images/fengkai-elsie-review.png" alt="Anna & Edwin"
+                                            loading="lazy" />
+                                    </div>
+                                    <blockquote class="about-reviews__quote">
+                                        The team guided us from planning to handover with total transparency.
+                                        Craftsmanship is excellent and
+                                        they were patient with every change request.
+                                    </blockquote>
+                                    <div class="about-reviews__mark" aria-hidden="true">
+                                        <svg viewBox="0 0 48 48">
+                                            <path
+                                                d="M19.07 21.94c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Zm21.36 0c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Z"
+                                                fill="currentColor" />
+                                        </svg>
+                                    </div>
+                                    <figcaption class="about-reviews__author">Feng Kai & Elsie</figcaption>
+                                    <p class="about-reviews__meta">5-room SBF</p>
+                                </figure>
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="about-reviews__nav about-reviews__nav--next" type="button" aria-label="Next review"
+                        data-reviews-next>
+                        <span class="sr-only">Next</span>
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="m9.5 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="about-reviews__dots" role="tablist" aria-label="Client reviews" data-reviews-dots></div>
+            </div>
+        </section>
+
+        <!-- Lead Generation Form -->
+        <section id="consultation"
+            class="lux-section bg-neutral-50 px-4 py-16 lg:px-12 my-12 rounded-[3rem] mx-4 lg:mx-12">
+            <div class="lux-container grid gap-12 lg:grid-cols-[1.05fr_0.95fr] items-start">
+                <div class="space-y-6">
+                    <span class="lux-tag">Contact Us</span>
+                    <h2 class="text-4xl font-semibold leading-tight text-lux-dark sm:text-5xl">Take the First Step</h2>
+                    <p class="text-base text-lux-dark/70">
+                        Share a few details about your upcoming renovation project and our design consultants will get
+                        in touch with you to schedule a no-obligation consultation.
+                    </p>
+                    <div class="grid gap-6 sm:grid-cols-2 mt-6">
+                        <div class="space-y-2 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+                            <h3 class="flex items-center gap-2 text-xs uppercase tracking-[0.4em] text-black">
+                                WhatsApp us
+                                <svg aria-hidden="true" class="h-4 w-4 text-[#25D366]" focusable="false"
+                                    viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.05a9.94 9.94 0 0 0-8.48 15.3L2 22l4.8-1.51A9.95 9.95 0 1 0 12 2.05zm5.14 14.35c-.22.61-1.27 1.16-1.79 1.2-.46.04-1.02.06-1.64-.1-.38-.1-.86-.28-1.49-.54-2.63-1.14-4.3-3.8-4.43-3.98-.13-.18-1.06-1.41-1.06-2.69 0-1.28.67-1.9.9-2.16.22-.26.57-.38.9-.38h.64c.2 0 .45-.07.7.53.27.64.57 1.55.62 1.66.05.11.08.24.01.38-.07.14-.11.24-.21.37-.11.12-.23.27-.33.36-.11.1-.22.21-.09.41.13.2.57.93 1.23 1.5.85.76 1.57 1 1.77 1.11.2.1.32.09.44-.05.12-.14.5-.59.63-.79.13-.2.27-.16.45-.1.18.06 1.17.55 1.37.65.2.1.33.15.38.23.05.08.05.64-.17 1.25z"
+                                        fill="currentColor" />
+                                </svg>
+                            </h3>
+                            <a class="block text-lg font-semibold text-lux-dark hover:text-lux-gold"
+                                href="https://wa.me/6583126212">+65 8312 6212 (Shamim)</a>
+                            <a class="block text-lg font-semibold text-lux-dark hover:text-lux-gold"
+                                href="https://wa.me/6588991245">+65 8899 1245 (Manfred)</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="rounded-3xl border border-neutral-200 bg-white p-8 shadow-sm lg:p-10">
+                    <h2 class="text-2xl font-semibold text-lux-dark">Request a consultation</h2>
+                    <p class="mt-3 text-sm text-lux-dark/65">We'll get back to you within one business day.</p>
+                    <form action="/contact-submit.php" class="mt-8 space-y-4" data-contact-form="true" method="post">
+                        <!-- Anti-spam Honeypot -->
+                        <div style="position: absolute; left: -9999px;" aria-hidden="true">
+                            <label for="company_website">Website</label>
+                            <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off" />
+                        </div>
+                        
+                        
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <label class="block text-sm font-medium text-lux-dark/80">
+                                Full Name
+                                <input
+                                    class="mt-2 block w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0"
+                                    name="name" placeholder="Jane Doe" required="" type="text" />
+                            </label>
+                            <label class="block text-sm font-medium text-lux-dark/80">
+                                Email <span class="text-xs font-normal text-lux-dark/60">(optional)</span>
+                                <input
+                                    class="mt-2 block w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0"
+                                    name="email" placeholder="hello@example.com" type="email" />
+                            </label>
+                        </div>
+                        <div class="grid gap-4 sm:grid-cols-2">
+                            <label class="block text-sm font-medium text-lux-dark/80">
+                                Contact Number
+                                <input
+                                    class="mt-2 block w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0"
+                                    name="phone" placeholder="+65 8XXX XXXX" required="" type="tel" />
+                                <p class="contact-error-text" data-phone-error="">Contact number is required.</p>
+                            </label>
+                            <label class="block text-sm font-medium text-lux-dark/80">
+                                Project Type
+                                <select
+                                    class="mt-2 block w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark focus:border-lux-gold focus:outline-none focus:ring-0"
+                                    name="project">
+                                    <option class="bg-white text-lux-dark">HDB BTO / SBF</option>
+                                    <option class="bg-white text-lux-dark">HDB Resale</option>
+                                    <option class="bg-white text-lux-dark">Condominium</option>
+                                    <option class="bg-white text-lux-dark">Landed</option>
+                                    <option class="bg-white text-lux-dark">Commercial</option>
+                                    <option class="bg-white text-lux-dark">Partial Renovation</option>
+                                    <option class="bg-white text-lux-dark">Others</option>
+                                </select>
+                            </label>
+                        </div>
+                        <label class="block text-sm font-medium text-lux-dark/80">
+                            Where did you hear about us?
+                            <select
+                                class="mt-2 block w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark focus:border-lux-gold focus:outline-none focus:ring-0"
+                                name="source">
+                                <option class="bg-white text-lux-dark" value="" disabled selected>Please select</option>
+                                <option class="bg-white text-lux-dark" value="Google Search">Google Search</option>
+                                <option class="bg-white text-lux-dark" value="Social Media (Facebook/Instagram/TikTok)">Social Media (Facebook/Instagram/TikTok)</option>
+                                <option class="bg-white text-lux-dark" value="Word of Mouth">Word of Mouth</option>
+                                <option class="bg-white text-lux-dark" value="Qanvast">Qanvast</option>
+                                <option class="bg-white text-lux-dark" value="Other">Other</option>
+                            </select>
+                        </label>
+                        <label class="block text-sm font-medium text-lux-dark/80">
+                            Project Details <span class="text-xs font-normal text-lux-dark/60">(optional)</span>
+                            <textarea
+                                class="mt-2 block w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0"
+                                name="message" placeholder="Tell us about your space, timeline, and vision"
+                                rows="4"></textarea>
+                        </label>
+                        <label class="flex items-center gap-3 text-xs text-lux-dark/60">
+                            <input class="h-4 w-4 rounded border border-neutral-300 text-lux-gold focus:ring-lux-gold"
+                                name="privacy" type="checkbox" />
+                            <span>I have read and accept the <a href="/privacy-policy"
+                                    class="underline hover:text-lux-gold transition-colors text-lux-dark/80">Privacy
+                                    Policy</a>.</span>
+                        </label>
+                        <button class="lux-button w-full justify-center" type="submit">Submit Request</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="cursor-follower" aria-hidden="true"></div>
+
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <div class="site-footer__top">
+                <a href="/" class="site-footer__brand" aria-label="LuxCraft Home">
+                    <img src="/assets/images/logo.png" alt="LuxCraft" />
+                </a>
+                <nav class="site-footer__nav" aria-label="Footer navigation">
+                    <a href="/about">Who We Are</a>
+                    <a href="/services">What We Do</a>
+                    <a href="/portfolio">Our Past Works</a>
+                    <a href="/contact">Contact Us</a>
+                </nav>
+            </div>
+
+            <div class="site-footer__divider" aria-hidden="true"></div>
+
+            <div class="site-footer__content">
+                <div class="site-footer__column">
+                    <p>190 Woodlands Industrial Park E5</p>
+                    <p>Woodlands Bizhub, #04-05</p>
+                    <p>Singapore 757516</p>
+                </div>
+                <div class="site-footer__column site-footer__column--contact">
+                    <a class="site-footer__contact-link" href="https://wa.me/6583126212">
+                        <svg aria-hidden="true" class="site-footer__contact-icon" focusable="false" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.05a9.94 9.94 0 0 0-8.48 15.3L2 22l4.8-1.51A9.95 9.95 0 1 0 12 2.05zm5.14 14.35c-.22.61-1.27 1.16-1.79 1.2-.46.04-1.02.06-1.64-.1-.38-.1-.86-.28-1.49-.54-2.63-1.14-4.3-3.8-4.43-3.98-.13-.18-1.06-1.41-1.06-2.69 0-1.28.67-1.9.9-2.16.22-.26.57-.38.9-.38h.64c.2 0 .45-.07.7.53.27.64.57 1.55.62 1.66.05.11.08.24.01.38-.07.14-.11.24-.21.37-.11.12-.23.27-.33.36-.11.1-.22.21-.09.41.13.2.57.93 1.23 1.5.85.76 1.57 1 1.77 1.11.2.1.32.09.44-.05.12-.14.5-.59.63-.79.13-.2.27-.16.45-.1.18.06 1.17.55 1.37.65.2.1.33.15.38.23.05.08.05.64-.17 1.25z"
+                                fill="currentColor" />
+                        </svg>
+                        +65 8312 6212 <span>(Shamim)</span>
+                    </a>
+                    <a class="site-footer__contact-link" href="https://wa.me/6588991245">
+                        <svg aria-hidden="true" class="site-footer__contact-icon" focusable="false" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.05a9.94 9.94 0 0 0-8.48 15.3L2 22l4.8-1.51A9.95 9.95 0 1 0 12 2.05zm5.14 14.35c-.22.61-1.27 1.16-1.79 1.2-.46.04-1.02.06-1.64-.1-.38-.1-.86-.28-1.49-.54-2.63-1.14-4.3-3.8-4.43-3.98-.13-.18-1.06-1.41-1.06-2.69 0-1.28.67-1.9.9-2.16.22-.26.57-.38.9-.38h.64c.2 0 .45-.07.7.53.27.64.57 1.55.62 1.66.05.11.08.24.01.38-.07.14-.11.24-.21.37-.11.12-.23.27-.33.36-.11.1-.22.21-.09.41.13.2.57.93 1.23 1.5.85.76 1.57 1 1.77 1.11.2.1.32.09.44-.05.12-.14.5-.59.63-.79.13-.2.27-.16.45-.1.18.06 1.17.55 1.37.65.2.1.33.15.38.23.05.08.05.64-.17 1.25z"
+                                fill="currentColor" />
+                        </svg>
+                        +65 8899 1245 <span>(Manfred)</span>
+                    </a>
+                    <a class="site-footer__email" href="mailto:contact@luxcraft.sg">
+                        <svg aria-hidden="true" class="site-footer__email-icon" focusable="false" viewBox="0 0 24 24">
+                            <path
+                                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"
+                                fill="currentColor" />
+                        </svg>
+                        contact@luxcraft.sg
+                    </a>
+                </div>
+                <div class="site-footer__socials" aria-label="Social media">
+                    <a href="https://www.instagram.com/luxcraft.studio/" target="_blank" rel="noreferrer"
+                        aria-label="Instagram" class="site-footer__social">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+                            <circle cx="12" cy="12" r="3.5" />
+                            <circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none" />
+                        </svg>
+                    </a>
+                    <a href="https://www.facebook.com/luxcraft.studio" target="_blank" rel="noreferrer"
+                        aria-label="Facebook" class="site-footer__social">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path
+                                d="M15 7h-2.2c-.6 0-.8.3-.8.8V11h3l-.4 3h-2.6v8h-3.1v-8H7v-3h2.9V7.5C9.9 5.6 11 4 13.6 4H15v3z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@luxcraft.studio" target="_blank" rel="noreferrer" aria-label="TikTok"
+                        class="site-footer__social">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"
+                            stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path
+                                d="M16.5 3.5C16.9 5.1 18.2 6.3 19.8 6.6v2.6c-1.5-.1-2.9-.6-4.1-1.4v6.5a5.1 5.1 0 1 1-5.1-5.1c.3 0 .7 0 1 .1v2.8a2.2 2.2 0 1 0 1.5 2.1V3.5h2.7z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="site-footer__legal">
+                <p>LuxCraft Pte. Ltd. (UEN: 202343751W) © 2026. All Rights Reserved. <span class="mx-2">|</span> <a href="/privacy-policy"
+                        class="hover:text-white transition-colors">Privacy Policy</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script defer src="/assets/js/about-utils.js"></script>
+    <script src="/assets/js/about-reviews.js"></script>
+    <script src="/assets/js/cursor-follower.js"></script>
+</body>
+
+</html>

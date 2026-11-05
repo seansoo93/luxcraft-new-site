@@ -1,0 +1,213 @@
+/* ─────────────────────────────────────────────────────────────────────────────
+   Floating Consultation Button — iOS 26 Liquid Glass Effect
+   ───────────────────────────────────────────────────────────────────────────── */
+.floating-consultation-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  left: auto;
+  transform: translateY(100px);
+  opacity: 0;
+  pointer-events: none;
+  z-index: 99;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  padding: 0.85rem 2rem;
+  border-radius: 9999px;
+  overflow: hidden; /* clips the ::before refraction layer */
+
+  font-family: "Poppins", ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  white-space: nowrap;
+
+  /* ── Liquid Glass core ──────────────────────────────────────────────────── */
+  /* Dark-tinted glass: subtle transparency over a dark base                 */
+  background: rgba(12, 10, 8, 0.42);
+
+  /* Moderate blur — visible but not overly frosted                          */
+  -webkit-backdrop-filter: blur(16px) saturate(180%) brightness(0.95);
+          backdrop-filter: blur(16px) saturate(180%) brightness(0.95);
+
+  /* Glass edge: bright top rim = specular light on curved glass surface     */
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-top-color: rgba(255, 255, 255, 0.72);
+
+  /* Layered shadows for physical glass depth                                */
+  box-shadow:
+    /* top-edge specular inside the glass */
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.55),
+    /* bottom inner shadow — thickness illusion */
+    inset 0 -1.5px 0 rgba(0, 0, 0, 0.08),
+    /* left/right inner shadow — curved lens refraction */
+    inset 1px 0 0 rgba(255, 255, 255, 0.10),
+    inset -1px 0 0 rgba(255, 255, 255, 0.10),
+    /* primary drop shadow */
+    0 10px 40px rgba(0, 0, 0, 0.28),
+    /* near contact shadow */
+    0 2px 10px rgba(0, 0, 0, 0.16),
+    /* ultra-thin outer ring — glass edge gleam */
+    0 0 0 0.5px rgba(255, 255, 255, 0.14);
+
+  color: #ffffff !important;
+  /* subtle text shadow for legibility over bright backgrounds */
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.45), 0 0 12px rgba(0, 0, 0, 0.2);
+
+  transition:
+    transform  0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity    0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    background 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* ── Lens / refraction gradient overlay ────────────────────────────────────── */
+/* Simulates light bending through curved glass: bright top-left corner,     */
+/* fading to near-transparent at centre, with a faint bottom sheen.          */
+.floating-consultation-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0.10) 30%,
+    rgba(255, 255, 255, 0.00) 58%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Push text & icon above the refraction overlay */
+.floating-consultation-btn .btn-text,
+.floating-consultation-btn .btn-icon {
+  position: relative;
+  z-index: 2;
+}
+
+/* ── Hover — intensify glass, add brand warmth glow ────────────────────────── */
+.floating-consultation-btn:hover {
+  transform: translateY(-5px) scale(1.03);
+  background: rgba(18, 14, 10, 0.52);
+  border-top-color: rgba(255, 255, 255, 0.80);
+
+  box-shadow:
+    inset 0 1.5px 0 rgba(255, 255, 255, 0.60),
+    inset 0 -1.5px 0 rgba(0, 0, 0, 0.12),
+    inset 1px 0 0 rgba(255, 255, 255, 0.10),
+    inset -1px 0 0 rgba(255, 255, 255, 0.10),
+    0 18px 56px rgba(0, 0, 0, 0.38),
+    0 4px 14px rgba(0, 0, 0, 0.22),
+    0 0 0 0.5px rgba(255, 255, 255, 0.16),
+    /* brand-gold ambient glow */
+    0 0 28px rgba(197, 154, 92, 0.22);
+}
+
+.floating-consultation-btn:active {
+  transform: translateY(-2px) scale(0.98);
+}
+
+/* ── Icon micro-animation ───────────────────────────────────────────────────── */
+.floating-consultation-btn .btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.floating-consultation-btn:hover .btn-icon {
+  transform: translateX(4px) scale(1.1);
+}
+
+/* ── Visibility toggle ──────────────────────────────────────────────────────── */
+.floating-consultation-btn.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* ── Mobile ─────────────────────────────────────────────────────────────────── */
+@media (max-width: 640px) {
+  .floating-consultation-btn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    width: max-content;
+    max-width: calc(100vw - 3rem);
+  }
+
+  .back-to-top {
+    display: none !important;
+  }
+}
+
+/* ── Homepage: shift back-to-top to the left ────────────────────────────────── */
+.homepage .back-to-top {
+  right: auto;
+  left: clamp(1.25rem, 3.5vw, 2.5rem);
+}
+
+/* ── Futuristic Traveling Border Beam & Glow ────────────────────────────────── */
+.floating-consultation-btn .border-beam,
+.floating-consultation-btn .border-glow {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-consultation-btn .border-beam {
+  padding: 1.5px; /* Border thickness */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box exclude, linear-gradient(#fff 0 0);
+  z-index: 4;
+}
+
+.floating-consultation-btn .border-glow {
+  padding: 6px; /* Glow thickness */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask: linear-gradient(#fff 0 0) content-box exclude, linear-gradient(#fff 0 0);
+  filter: blur(4px);
+  opacity: 0.8;
+  z-index: 3;
+}
+
+.floating-consultation-btn .border-beam::before,
+.floating-consultation-btn .border-glow::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 150%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 0deg,
+    transparent 60%,
+    #BF9C65 85%,
+    #ffffff 95%,
+    #BF9C65 98%,
+    transparent 100%
+  );
+  transform: translate(-50%, -50%) rotate(0deg);
+  animation: border-beam-spin 4s linear infinite;
+}
+
+@keyframes border-beam-spin {
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}

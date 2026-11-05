@@ -1,289 +1,371 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About LuxCraft - Interior Designer Singapore</title>
-    <meta
-      name="description"
-      content="Discover the LuxCraft team, our renovation expertise, and how we bring Singapore homes and commercial spaces to life."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Syne:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="192x192" />
-    <meta name="view-transition" content="same-origin" />
-    <link rel="stylesheet" href="/assets/corbesier-icons.css" />
-    <link rel="stylesheet" href="/assets/styles.css" />
-    <script src="/assets/js/header.js" defer></script>
-    <script src="/assets/js/brand-scroll.js" defer></script>
-  </head>
-  <body class="light-theme min-h-screen bg-white text-lux-dark pt-24 lg:pt-28">
-    <header class="site-header">
-      <div class="lux-container header-row">
-        <a href="/index.html" class="header-logo" aria-label="LuxCraft Home">
-          <img src="/assets/images/logo.png" alt="LuxCraft" />
-        </a>
-        <nav class="header-nav" aria-label="Primary">
-          <a href="/about.html" aria-current="page">Who We Are</a>
-          <a href="/services.html">What We Do</a>
-          <a href="/portfolio.html">Our Past Works</a>
-          <a href="/contact.html">Contact Us</a>
-        </nav>
-        <div class="header-controls">
-          <button class="header-action" type="button" aria-label="Search">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <circle cx="11" cy="11" r="7" />
-              <path d="m20 20-3.2-3.2" stroke-linecap="round" />
-            </svg>
-          </button>
-          <button
-            class="header-toggle md:hidden"
-            type="button"
-            aria-label="Open navigation"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          </button>
-        </div>
-      </div>
-      <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
-        <button type="button" id="mobile-menu__close" aria-label="Close navigation">
-          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About LuxCraft | Top Interior Design Firm in Singapore</title>
+  <meta name="description"
+    content="Discover LuxCraft, an expert interior design team in Singapore offering full-suite renovation services, free 3D rendering, and meticulous project management." />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.luxcraft.sg/about" />
+  <meta property="og:title" content="About LuxCraft | Top Interior Design Firm in Singapore" />
+  <meta property="og:description" content="Discover LuxCraft, an expert interior design team in Singapore offering full-suite renovation services, free 3D rendering, and meticulous project management." />
+  <meta property="og:image" content="https://www.luxcraft.sg/assets/images/logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.luxcraft.sg/about" />
+  <meta property="twitter:title" content="About LuxCraft | Top Interior Design Firm in Singapore" />
+  <meta property="twitter:description" content="Discover LuxCraft, an expert interior design team in Singapore offering full-suite renovation services, free 3D rendering, and meticulous project management." />
+  <meta property="twitter:image" content="https://www.luxcraft.sg/assets/images/logo.png" />
+  <link rel="canonical" href="https://www.luxcraft.sg/about" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Syne:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png" sizes="192x192" />
+  <meta name="view-transition" content="same-origin" />
+  <link rel="stylesheet" href="/assets/corbesier-icons.css" />
+  <link rel="stylesheet" href="/assets/styles.css?v=1.1.1" />
+  <script src="/assets/js/header.js?v=1.1.1" defer></script>
+  <script src="/assets/js/brand-scroll.js" defer></script>
+  <script src="/assets/js/analytics.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": ["HomeAndConstructionBusiness", "GeneralContractor"],
+        "@id": "https://www.luxcraft.sg/#business",
+        "name": "LuxCraft",
+        "alternateName": "LuxCraft Singapore",
+        "image": "https://www.luxcraft.sg/assets/images/logo.png",
+        "url": "https://www.luxcraft.sg/",
+        "telephone": "+65 8312 6212",
+        "priceRange": "$$ - $$$",
+        "sameAs": [
+          "https://www.instagram.com/luxcraft.studio/",
+          "https://www.facebook.com/luxcraft.studio",
+          "https://www.tiktok.com/@luxcraft.studio"
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5.0",
+          "bestRating": "5",
+          "reviewCount": "48"
+        }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.luxcraft.sg/#person-manfred",
+        "name": "Manfred",
+        "jobTitle": "Lead Interior Designer",
+        "url": "https://www.luxcraft.sg/about",
+        "worksFor": {"@id": "https://www.luxcraft.sg/#business"}
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.luxcraft.sg/#person-shamim",
+        "name": "Shamim",
+        "jobTitle": "Project Manager",
+        "url": "https://www.luxcraft.sg/about",
+        "worksFor": {"@id": "https://www.luxcraft.sg/#business"}
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.luxcraft.sg/#person-christopher",
+        "name": "Christopher",
+        "jobTitle": "Design Consultant",
+        "url": "https://www.luxcraft.sg/about",
+        "worksFor": {"@id": "https://www.luxcraft.sg/#business"}
+      }
+    ]
+  }
+  </script>
+  <style>
+    .about-intro__body a {
+      color: black !important;
+      font-weight: 700;
+      text-decoration: underline;
+      transition: color 0.2s ease;
+    }
+
+    .about-intro__body a:hover {
+      color: #BD8E5A !important;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body class="light-theme min-h-screen bg-white text-lux-dark pt-24 lg:pt-28">
+  <header class="site-header">
+    <div class="lux-container header-row">
+      <a href="/" class="header-logo" aria-label="LuxCraft Home">
+        <img src="/assets/images/logo.png" alt="LuxCraft" />
+      </a>
+      <nav class="header-nav" aria-label="Primary">
+        <a href="/about" aria-current="page">Who We Are</a>
+        <a href="/services">What We Do</a>
+        <a href="/portfolio">Our Past Works</a>
+
+        <a href="/contact">Contact Us</a>
+      </nav>
+      <div class="header-controls">
+        <button class="header-action" type="button" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <circle cx="11" cy="11" r="7" />
+            <path d="m20 20-3.2-3.2" stroke-linecap="round" />
           </svg>
         </button>
-        <nav aria-label="Mobile navigation">
-          <a href="/about.html" class="hover:text-white" aria-current="page">Who We Are</a>
-          <a href="/services.html" class="hover:text-white">What We Do</a>
-          <a href="/portfolio.html" class="hover:text-white">Our Past Works</a>
-          <a href="/contact.html" class="hover:text-white">Contact Us</a>
-        </nav>
-        <div class="mt-6 flex flex-col gap-2 text-white/60">
-          <a href="tel:+6583126212" class="hover:text-white">+65 8312 6212 (Shamim)</a>
-          <a href="tel:+6588991245" class="hover:text-white">+65 8899 1245 (Manfred)</a>
+        <button class="header-toggle md:hidden" type="button" aria-label="Open navigation">
+          <span class="sr-only">Toggle navigation</span>
+          <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+      <button type="button" id="mobile-menu__close" aria-label="Close navigation">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <nav aria-label="Mobile navigation">
+        <a href="/about" class="hover:text-white" aria-current="page">Who We Are</a>
+        <a href="/services" class="hover:text-white">What We Do</a>
+        <a href="/portfolio" class="hover:text-white">Our Past Works</a>
+
+        <a href="/contact" class="hover:text-white">Contact Us</a>
+      </nav>
+      <div class="mt-6 flex flex-col gap-2 text-white/60">
+        <a href="tel:+6583126212" class="hover:text-white">+65 8312 6212 (Shamim)</a>
+        <a href="tel:+6588991245" class="hover:text-white">+65 8899 1245 (Manfred)</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-hero-section">
+      <div class="lux-container">
+        <div class="about-hero-content">
+          <h1 class="about-hero-title">Interior Designers &amp; Builders in Singapore</h1>
+          <div class="about-hero-indicator" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14.626" height="8.639" viewBox="0 0 14.626 8.639">
+              <g transform="translate(0 -70.698)">
+                <g transform="translate(0 100.698)">
+                  <path
+                    d="M14.392,101.42l-.479-.482a.8.8,0,0,0-1.132,0L7.316,106.4l-5.472-5.472a.8.8,0,0,0-1.132,0l-.479.479a.8.8,0,0,0,0,1.131l6.515,6.538a.818.818,0,0,0,.567.257h0a.818.818,0,0,0,.566-.257l6.508-6.52a.808.808,0,0,0,.234-.571A.8.8,0,0,0,14.392,101.42Z"
+                    transform="translate(0 -130.698)" fill="currentColor" />
+                </g>
+              </g>
+            </svg>
+          </div>
         </div>
       </div>
-    </header>
+    </section>
+    <section class="about-intro-section">
+      <div class="lux-container">
+        <div class="about-intro">
+          <div class="about-intro__copy">
+            <span class="about-intro__eyebrow lux-tag">Who We Are</span>
+            <h2 class="about-intro__title !text-lux-dark !font-semibold">Your go-to interior designer in Singapore</h2>
+            <p class="about-intro__body">
+              Welcome to LuxCraft, your trusted, HDB-approved interior designer in Singapore. We specialize in a wide range of <a href="/services">services</a>
+              including hacking, bespoke carpentry, painting, glass and metal work, masonry, tiling, electrical work, and plumbing for both residential and commercial spaces.
+            </p>
+            </p>
+            <p class="about-intro__body">
+              We offer complimentary 3D renderings of your design concept before starting any project, ensuring your
+              vision is perfectly realized without surprises.
+            </p>
+            <p class="about-intro__body">
+              Whether you are looking for expert <a href="/services-pages/landed-renovation">landed property</a> contractors or a reliable team for your <a href="/services-pages/hdb-bto-sbf-renovation">BTO flat</a>, at LuxCraft, we bring your renovation dreams to life with precision and excellence.
+            </p>
+          </div>
+          <div class="about-intro__media">
+            <div class="about-intro__gallery">
+              <img src="/assets/images/design-livingroom.jpg"
+                alt="Neutral contemporary living room designed by LuxCraft" class="about-intro__image" loading="lazy" />
+              <img src="/assets/images/design-gallery-02.jpg" alt="Open concept dining area styled by LuxCraft"
+                class="about-intro__image" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <main>
-      <section class="about-hero-section">
-        <div class="lux-container">
-          <div class="about-hero-content">
-            <h1 class="about-hero-title">About Us</h1>
-            <div class="about-hero-indicator" aria-hidden="true">
-              <svg xmlns="http://www.w3.org/2000/svg" width="14.626" height="8.639" viewBox="0 0 14.626 8.639">
-                <g transform="translate(0 -70.698)">
-                  <g transform="translate(0 100.698)">
-                    <path
-                      d="M14.392,101.42l-.479-.482a.8.8,0,0,0-1.132,0L7.316,106.4l-5.472-5.472a.8.8,0,0,0-1.132,0l-.479.479a.8.8,0,0,0,0,1.131l6.515,6.538a.818.818,0,0,0,.567.257h0a.818.818,0,0,0,.566-.257l6.508-6.52a.808.808,0,0,0,.234-.571A.8.8,0,0,0,14.392,101.42Z"
-                      transform="translate(0 -130.698)"
-                      fill="currentColor"
-                    />
-                  </g>
-                </g>
-              </svg>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="about-intro-section">
-        <div class="lux-container">
-          <div class="about-intro">
-            <div class="about-intro__copy">
-              <span class="about-intro__eyebrow lux-tag">Who We Are</span>
-              <h2 class="about-intro__title !text-lux-dark !font-semibold">Your go-to interior designer in Singapore</h2>
-              <p class="about-intro__body">
-                Welcome to LuxCraft, your go-to interior designer in Singapore. We specialize in a wide range of services including hacking,
-                carpentry, painting, glass and metal work, masonry, tiling, electrical work, and plumbing.
-              </p>
-              <p class="about-intro__body">
-                We offer complimentary 3D renderings of your design concept before starting any project, ensuring your vision is perfectly
-                realized.
-              </p>
-              <p class="about-intro__body">
-                At LuxCraft, we bring your renovation dreams to life with precision and excellence.
-              </p>
-            </div>
-            <div class="about-intro__media">
-              <div class="about-intro__gallery">
-                <img
-                  src="/assets/images/design-livingroom.jpg"
-                  alt="Neutral contemporary living room designed by LuxCraft"
-                  class="about-intro__image"
-                  loading="lazy"
-                />
-                <img
-                  src="/assets/images/design-gallery-02.jpg"
-                  alt="Open concept dining area styled by LuxCraft"
-                  class="about-intro__image"
-                  loading="lazy"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      
-      <section class="about-reviews-section">
-        <div class="lux-container">
-          <div class="mb-8 text-center" style="color: #111111;">
-            <span class="lux-tag">WORDS FROM OUR CLIENTS</span>
-            <h2 class="mt-4 text-3xl font-semibold sm:text-4xl">Stories that keep us inspired</h2>
-          </div>
-          <div class="about-reviews" data-reviews-slider>
-            <button class="about-reviews__nav about-reviews__nav--prev" type="button" aria-label="Previous review" data-reviews-prev>
-              <span class="sr-only">Previous</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="m14.5 6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </button>
-            <div class="about-reviews__viewport">
-              <ul class="about-reviews__track" data-reviews-track>
-                                <li class="about-reviews__slide" data-reviews-slide>
-                  <figure class="about-reviews__content">
-                    <div class="about-reviews__avatar">
-                      <img src="/assets/images/review-image-Raul II Romo.webp" alt="Warm living room project detail" loading="lazy" />
-                    </div>
-                    <blockquote class="about-reviews__quote">
-                      We recently completed a full renovation with LuxCraft, and we couldn’t be happier with the results! From the initial consultation to the final walk-through, the team was professional, communicative, and truly attentive to our vision.
-They delivered high-quality workmanship, stayed on schedule, and respected our home every step of the way. Every detail — from the flooring to the fixtures — was done with care and precision. The transformation is stunning, and it honestly feels like we’re living in a brand-new home.
-Special thanks to Shamim and Christopher for being so responsive and always keeping us in the loop. We highly recommend LuxCraft to anyone looking to renovate with confidence. This was a stress-free, smooth experience from start to finish!
-                    </blockquote>
-                    <div class="about-reviews__mark" aria-hidden="true">
-                      <svg viewBox="0 0 48 48">
-                        <path
-                          d="M19.07 21.94c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Zm21.36 0c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                    <figcaption class="about-reviews__author">Raul II Romo</figcaption>
-                    <p class="about-reviews__meta">5-room Resale</p>
-                  </figure>
-                </li>
-                <li class="about-reviews__slide" data-reviews-slide>
-                  <figure class="about-reviews__content">
-                    <div class="about-reviews__avatar">
-                      <img src="/assets/images/review-image-kentc.webp" alt="Warm living room project detail" loading="lazy" />
-                    </div>
-                    <blockquote class="about-reviews__quote">
-                     A big shout-out to the LuxCraft's team - Christopher, Manfred & Shamim for walking through our renovation for the past few months & had delivered their professionalism dutifully.
-The level of responsibility and commitment to deliver is well communicated with cost flexibility.
-Even though there’s minor issues & challenges along the way of renovation, their attitude & services are above expectations. When promised, will deliver and flexible with our timeline.
-We are truly happy of our home-making especially the kitchen make-over! Sleek, Organised for a cozy starter home!
-                    </blockquote>
-                    <div class="about-reviews__mark" aria-hidden="true">
-                      <svg viewBox="0 0 48 48">
-                        <path
-                          d="M19.07 21.94c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Zm21.36 0c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                    <figcaption class="about-reviews__author">Kent C （Kerzsyt）</figcaption>
-                    <p class="about-reviews__meta"></p>
-                  </figure>
-                </li>
-                                <li class="about-reviews__slide" data-reviews-slide>
-                  <figure class="about-reviews__content">
-                    <div class="about-reviews__avatar">
-                      <img src="/assets/images/review-image-Nuz.webp" alt="Warm living room project detail" loading="lazy" />
-                    </div>
-                    <blockquote class="about-reviews__quote">
-                    I always hear from friends how stressful renovation projects can be, but working with Manfred, Christopher, and the rest of the LuxCraft team made my renovation experience an absolute pleasure. From start to finish, they were professional, responsive, and attentive to every detail. The project was completed even earlier than expected, and their commitment didn’t stop there—any issues or concerns that cropped up after completion were promptly and efficiently rectified.
-                    Thanks to the LuxCraft team, I LOVE my home! I can’t recommend them highly enough. If you’re looking for a Reno team that combines creativity, reliability, and exceptional service, LuxCraft Interiors is the one to call.
-                    </blockquote>
-                    <div class="about-reviews__mark" aria-hidden="true">
-                      <svg viewBox="0 0 48 48">
-                        <path
-                          d="M19.07 21.94c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Zm21.36 0c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                    <figcaption class="about-reviews__author">Nuz</figcaption>
-                    <p class="about-reviews__meta"></p>
-                  </figure>
-                </li>
-                <li class="about-reviews__slide" data-reviews-slide>
-                  <figure class="about-reviews__content">
-                    <div class="about-reviews__avatar">
-                      <img src="/assets/images/review-image-leia.png" alt="Warm living room project detail" loading="lazy" />
-                    </div>
-                    <blockquote class="about-reviews__quote">
-                      Excellent service, highly professional painters, prompt reply to the message, friendly co-operative team, definite
-                      recommendation.
-                    </blockquote>
-                    <div class="about-reviews__mark" aria-hidden="true">
-                      <svg viewBox="0 0 48 48">
-                        <path
-                          d="M19.07 21.94c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Zm21.36 0c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                    <figcaption class="about-reviews__author">Leia</figcaption>
-                    <p class="about-reviews__meta">5-room Resale</p>
-                  </figure>
-                </li>
-                <li class="about-reviews__slide" data-reviews-slide>
-                  <figure class="about-reviews__content">
-                    <div class="about-reviews__avatar">
-                      <img src="/assets/images/fengkai-elsie-review.png" alt="Modern kitchen renovation detail" loading="lazy" />
-                    </div>
-                    <blockquote class="about-reviews__quote">
-                      The team guided us from planning to handover with total transparency. Craftsmanship is excellent and they were patient with
-                      every change request.
-                    </blockquote>
-                    <div class="about-reviews__mark" aria-hidden="true">
-                      <svg viewBox="0 0 48 48">
-                        <path
-                          d="M19.07 21.94c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Zm21.36 0c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Z"
-                          fill="currentColor"
-                        />
-                      </svg>
-                    </div>
-                    <figcaption class="about-reviews__author">Feng Kai &amp; Elsie</figcaption>
-                    <p class="about-reviews__meta">5-room SBF</p>
-                  </figure>
-                </li>
-                <li class="about-reviews__slide" data-reviews-slide>
-                  <figure class="about-reviews__content">
-                    <div class="about-reviews__avatar">
-                      <img src="/assets/images/anna-edwin-review.png" alt="Anna &amp; Edwin" loading="lazy" />
-                    </div>
-                    <blockquote class="about-reviews__quote">
-                      Manfred offers great advice and help as the project lead and person liaising all parties. Thanks to Manfred, the renovation process is smooth and was completed on time. Highly recommend this team from LuxCraft!
-                    </blockquote>
-                    <div class="about-reviews__mark" aria-hidden="true">
-                      <svg viewBox="0 0 48 48">
-                        <path d="M19.07 21.94c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Zm21.36 0c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Z" fill="currentColor"/>
-                      </svg>
-                    </div>
-                    <figcaption class="about-reviews__author">Anna &amp; Edwin</figcaption>
-                    <p class="about-reviews__meta">3BR Condo</p>
-                  </figure>
-                </li>
-              </ul>
-            </div>
-            <button class="about-reviews__nav about-reviews__nav--next" type="button" aria-label="Next review" data-reviews-next>
-              <span class="sr-only">Next</span>
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="m9.5 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </button>
-          </div>
-          <div class="about-reviews__dots" role="tablist" aria-label="Client reviews" data-reviews-dots></div>
+    <section class="about-reviews-section">
+      <div class="lux-container">
+        <div class="mb-12 text-center">
+          <span class="lux-tag">WORDS FROM OUR CLIENTS</span>
+          <h2 class="mt-4 text-3xl font-semibold sm:text-4xl text-lux-dark">Stories that keep us inspired</h2>
         </div>
-      </section>
-<!-- 
+        <div class="about-reviews" data-reviews-slider>
+          <button class="about-reviews__nav about-reviews__nav--prev" type="button" aria-label="Previous review"
+            data-reviews-prev>
+            <span class="sr-only">Previous</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m14.5 6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="about-reviews__viewport">
+            <ul class="about-reviews__track" data-reviews-track>
+              <li class="about-reviews__slide" data-reviews-slide>
+                <figure class="about-reviews__content">
+                  <div class="about-reviews__avatar">
+                    <img src="/assets/images/review-image-Jermain Seah.png" alt="Jermain Seah" loading="lazy" />
+                  </div>
+                  <blockquote data-review-text class="about-reviews__quote transition-all duration-300">
+                    Christopher and his team managed to deliver everything within our tight timeline (~1.5months) and were always responsive to our questions. Christopher was also very patient in addressing my (many!) queries — truly appreciate his professionalism and dedication.
+                  </blockquote>
+                  <button data-review-btn class="text-lux-dark hover:text-[#BF9C65] text-sm mt-2 mb-4 mx-auto font-semibold transition-colors w-fit block relative z-10" onclick="toggleAllReviews(this)">...see more</button>
+                  <div class="about-reviews__mark" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path
+                        d="M19.07 21.94c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Zm21.36 0c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Z"
+                        fill="currentColor" />
+                    </svg>
+                  </div>
+                  <figcaption class="about-reviews__author">Jermain Seah</figcaption>
+                  <p class="about-reviews__meta">5-room Resale</p>
+                </figure>
+              </li>
+              <li class="about-reviews__slide" data-reviews-slide>
+                <figure class="about-reviews__content">
+                  <div class="about-reviews__avatar">
+                    <img src="/assets/images/review-image-kentc.webp" alt="Warm living room project detail"
+                      loading="lazy" />
+                  </div>
+                  <blockquote data-review-text class="about-reviews__quote transition-all duration-300">
+                    A big shout-out to the LuxCraft's team - Christopher, Manfred & Shamim for walking through our
+                    renovation for the past few months & had delivered their professionalism dutifully.
+                    The level of responsibility and commitment to deliver is well communicated with cost flexibility.
+                    Even though there’s minor issues & challenges along the way of renovation, their attitude & services
+                    are above expectations. When promised, will deliver and flexible with our timeline.
+                    We are truly happy of our home-making especially the kitchen make-over! Sleek, Organised for a cozy
+                    starter home!
+                  </blockquote>
+                  <button data-review-btn class="text-lux-dark hover:text-[#BF9C65] text-sm mt-2 mb-4 mx-auto font-semibold transition-colors w-fit block relative z-10" onclick="toggleAllReviews(this)">...see more</button>
+                  <div class="about-reviews__mark" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path
+                        d="M19.07 21.94c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Zm21.36 0c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Z"
+                        fill="currentColor" />
+                    </svg>
+                  </div>
+                  <figcaption class="about-reviews__author">Kent C （Kerzsyt）</figcaption>
+                  <p class="about-reviews__meta"></p>
+                </figure>
+              </li>
+              <li class="about-reviews__slide" data-reviews-slide>
+                <figure class="about-reviews__content">
+                  <div class="about-reviews__avatar">
+                    <img src="/assets/images/review-image-Phyllis Tan.png" alt="Phyllis Tan" loading="lazy" />
+                  </div>
+                  <blockquote data-review-text class="about-reviews__quote transition-all duration-300">
+                    I’m extremely happy with the renovation of my new flat. The entire process was smooth, well-managed, and completed on time. The designer and contractors were professional, responsive, and always willing to accommodate my requests. The workmanship is excellent, especially the carpentry and finishes — everything was done with attention to detail. Communication was clear throughout, and any issues were quickly resolved. The final result turned out even better than I expected. I highly recommend this company to anyone looking for a reliable and high-quality renovation team. Thank you for transforming my flat into a beautiful home!
+                  </blockquote>
+                  <button data-review-btn class="text-lux-dark hover:text-[#BF9C65] text-sm mt-2 mb-4 mx-auto font-semibold transition-colors w-fit block relative z-10" onclick="toggleAllReviews(this)">...see more</button>
+                  <div class="about-reviews__mark" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path
+                        d="M19.07 21.94c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Zm21.36 0c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Z"
+                        fill="currentColor" />
+                    </svg>
+                  </div>
+                  <figcaption class="about-reviews__author">Phyllis Tan</figcaption>
+                  <p class="about-reviews__meta"></p>
+                </figure>
+              </li>
+              <li class="about-reviews__slide" data-reviews-slide>
+                <figure class="about-reviews__content">
+                  <div class="about-reviews__avatar">
+                    <img src="/assets/images/review-image-leia.png" alt="Warm living room project detail"
+                      loading="lazy" />
+                  </div>
+                  <blockquote data-review-text class="about-reviews__quote transition-all duration-300">
+                    Excellent service, highly professional painters, prompt reply to the message, friendly co-operative
+                    team, definite
+                    recommendation.
+                  </blockquote>
+                  <button data-review-btn class="text-lux-dark hover:text-[#BF9C65] text-sm mt-2 mb-4 mx-auto font-semibold transition-colors w-fit block relative z-10" onclick="toggleAllReviews(this)">...see more</button>
+                  <div class="about-reviews__mark" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path
+                        d="M19.07 21.94c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Zm21.36 0c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Z"
+                        fill="currentColor" />
+                    </svg>
+                  </div>
+                  <figcaption class="about-reviews__author">Leia</figcaption>
+                  <p class="about-reviews__meta">5-room Resale</p>
+                </figure>
+              </li>
+              <li class="about-reviews__slide" data-reviews-slide>
+                <figure class="about-reviews__content">
+                  <div class="about-reviews__avatar">
+                    <img src="/assets/images/fengkai-elsie-review.png" alt="Modern kitchen renovation detail"
+                      loading="lazy" />
+                  </div>
+                  <blockquote data-review-text class="about-reviews__quote transition-all duration-300">
+                    The team guided us from planning to handover with total transparency. Craftsmanship is excellent and
+                    they were patient with
+                    every change request.
+                  </blockquote>
+                  <button data-review-btn class="text-lux-dark hover:text-[#BF9C65] text-sm mt-2 mb-4 mx-auto font-semibold transition-colors w-fit block relative z-10" onclick="toggleAllReviews(this)">...see more</button>
+                  <div class="about-reviews__mark" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path
+                        d="M19.07 21.94c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Zm21.36 0c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Z"
+                        fill="currentColor" />
+                    </svg>
+                  </div>
+                  <figcaption class="about-reviews__author">Feng Kai &amp; Elsie</figcaption>
+                  <p class="about-reviews__meta">5-room SBF</p>
+                </figure>
+              </li>
+              <li class="about-reviews__slide" data-reviews-slide>
+                <figure class="about-reviews__content">
+                  <div class="about-reviews__avatar">
+                    <img src="/assets/images/anna-edwin-review.png" alt="Anna &amp; Edwin" loading="lazy" />
+                  </div>
+                  <blockquote data-review-text class="about-reviews__quote transition-all duration-300">
+                    Manfred offers great advice and help as the project lead and person liaising all parties. Thanks to
+                    Manfred, the renovation process is smooth and was completed on time. Highly recommend this team from
+                    LuxCraft!
+                  </blockquote>
+                  <button data-review-btn class="text-lux-dark hover:text-[#BF9C65] text-sm mt-2 mb-4 mx-auto font-semibold transition-colors w-fit block relative z-10" onclick="toggleAllReviews(this)">...see more</button>
+                  <div class="about-reviews__mark" aria-hidden="true">
+                    <svg viewBox="0 0 48 48">
+                      <path
+                        d="M19.07 21.94c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Zm21.36 0c0 4.16-3.2 7.54-7.26 7.54-3.45 0-6.27-2.64-6.27-5.9 0-7.92 6.66-14.75 14.64-15.25a1.27 1.27 0 0 1 1.35 1.26c0 3.45-1.56 6.68-4.5 8.58 1.5.84 2.04 2.4 2.04 3.77Z"
+                        fill="currentColor" />
+                    </svg>
+                  </div>
+                  <figcaption class="about-reviews__author">Anna &amp; Edwin</figcaption>
+                  <p class="about-reviews__meta">3BR Condo</p>
+                </figure>
+              </li>
+            </ul>
+          </div>
+          <button class="about-reviews__nav about-reviews__nav--next" type="button" aria-label="Next review"
+            data-reviews-next>
+            <span class="sr-only">Next</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="m9.5 6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+        <div class="about-reviews__dots" role="tablist" aria-label="Client reviews" data-reviews-dots></div>
+      </div>
+    </section>
+    <!-- 
       <section class="lux-section">
         <div class="lux-container grid gap-14 lg:grid-cols-2 lg:items-start">
           <div class="space-y-6">
@@ -364,138 +446,133 @@ We are truly happy of our home-making especially the kitchen make-over! Sleek, O
         </div>
       </section> -->
 
-      <section class="lux-section">
-        <div class="lux-container rounded-[3rem] border border-white/10 bg-white/5 p-12 text-center shadow-lux backdrop-blur">
-          <h2 class="text-3xl font-semibold sm:text-4xl text-white">Meet us for a consultation</h2>
-          <p class="mx-auto mt-4 max-w-2xl text-base text-white/70">
-            Arrange a visit to our Woodlands Bizhub studio or schedule a virtual session. We'll walk through your floor plan, budget, and aspirations step by step.
-          </p>
-          <div class="mt-8 flex flex-wrap justify-center gap-4">
-            <a href="/contact.html" class="lux-button lux-button--reverse">Book an Appointment</a>
-            <a href="/portfolio.html" class="inline-flex items-center gap-2 rounded-full border border-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white/80 hover:bg-white/10">
-              View Past Works
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <div class="cursor-follower" aria-hidden="true"></div>
-
-    <footer class="site-footer">
-      <div class="site-footer__inner">
-        <div class="site-footer__top">
-          <a href="/index.html" class="site-footer__brand" aria-label="LuxCraft Home">
-            <img src="/assets/images/logo.png" alt="LuxCraft" />
+    <section class="lux-section">
+      <div
+        class="lux-container rounded-[3rem] border border-white/10 bg-white/5 p-12 text-center shadow-lux backdrop-blur">
+        <h2 class="text-3xl font-semibold sm:text-4xl text-white">Meet us for a consultation</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-base text-white/70">
+          Arrange a visit to our Woodlands Bizhub studio or schedule a virtual session. We'll walk through your floor
+          plan, budget, and aspirations step by step.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a href="/contact" class="lux-button lux-button--reverse">Book an Appointment</a>
+          <a href="/portfolio"
+            class="inline-flex items-center gap-2 rounded-full border border-white/10 px-6 py-3 text-sm font-semibold uppercase tracking-[0.3em] text-white/80 hover:bg-white/10">
+            View Past Works
           </a>
-          <nav class="site-footer__nav" aria-label="Footer navigation">
-            <a href="/about.html" aria-current="page">Who We Are</a>
-            <a href="/services.html">What We Do</a>
-            <a href="/portfolio.html">Our Past Works</a>
-            <a href="/contact.html">Contact Us</a>
-          </nav>
         </div>
-
-        <div class="site-footer__divider" aria-hidden="true"></div>
-
-        <div class="site-footer__content">
-          <div class="site-footer__column">
-            <p>190 Woodlands Industrial Park E5</p>
-            <p>Woodlands Bizhub, #04-05</p>
-            <p>Singapore 757516</p>
-          </div>
-          <div class="site-footer__column site-footer__column--contact">
-            <a class="site-footer__contact-link" href="https://wa.me/6583126212">
-              <svg aria-hidden="true" class="site-footer__contact-icon" focusable="false" viewBox="0 0 24 24"><path d="M12 2.05a9.94 9.94 0 0 0-8.48 15.3L2 22l4.8-1.51A9.95 9.95 0 1 0 12 2.05zm5.14 14.35c-.22.61-1.27 1.16-1.79 1.2-.46.04-1.02.06-1.64-.1-.38-.1-.86-.28-1.49-.54-2.63-1.14-4.3-3.8-4.43-3.98-.13-.18-1.06-1.41-1.06-2.69 0-1.28.67-1.9.9-2.16.22-.26.57-.38.9-.38h.64c.2 0 .45-.07.7.53.27.64.57 1.55.62 1.66.05.11.08.24.01.38-.07.14-.11.24-.21.37-.11.12-.23.27-.33.36-.11.1-.22.21-.09.41.13.2.57.93 1.23 1.5.85.76 1.57 1 1.77 1.11.2.1.32.09.44-.05.12-.14.5-.59.63-.79.13-.2.27-.16.45-.1.18.06 1.17.55 1.37.65.2.1.33.15.38.23.05.08.05.64-.17 1.25z" fill="currentColor"/></svg>
-              +65 8312 6212 <span>(Shamim)</span>
-            </a>
-            <a class="site-footer__contact-link" href="https://wa.me/6588991245">
-              <svg aria-hidden="true" class="site-footer__contact-icon" focusable="false" viewBox="0 0 24 24"><path d="M12 2.05a9.94 9.94 0 0 0-8.48 15.3L2 22l4.8-1.51A9.95 9.95 0 1 0 12 2.05zm5.14 14.35c-.22.61-1.27 1.16-1.79 1.2-.46.04-1.02.06-1.64-.1-.38-.1-.86-.28-1.49-.54-2.63-1.14-4.3-3.8-4.43-3.98-.13-.18-1.06-1.41-1.06-2.69 0-1.28.67-1.9.9-2.16.22-.26.57-.38.9-.38h.64c.2 0 .45-.07.7.53.27.64.57 1.55.62 1.66.05.11.08.24.01.38-.07.14-.11.24-.21.37-.11.12-.23.27-.33.36-.11.1-.22.21-.09.41.13.2.57.93 1.23 1.5.85.76 1.57 1 1.77 1.11.2.1.32.09.44-.05.12-.14.5-.59.63-.79.13-.2.27-.16.45-.1.18.06 1.17.55 1.37.65.2.1.33.15.38.23.05.08.05.64-.17 1.25z" fill="currentColor"/></svg>
-              +65 8899 1245 <span>(Manfred)</span>
-            </a>
-            <a class="site-footer__email" href="mailto:contact@luxcraft.sg">
-              <svg aria-hidden="true" class="site-footer__email-icon" focusable="false" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" fill="currentColor"/></svg>
-              contact@luxcraft.sg
-            </a>
-          </div>
-          <div class="site-footer__socials" aria-label="Social media">
-            <a href="https://www.instagram.com/themerex_net/" target="_blank" rel="noreferrer" aria-label="Instagram" class="site-footer__social">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
-                <circle cx="12" cy="12" r="3.5" />
-                <circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none" />
-              </svg>
-            </a>
-            <a href="https://business.facebook.com/ThemeRexStudio/" target="_blank" rel="noreferrer" aria-label="Facebook" class="site-footer__social">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M15 7h-2.2c-.6 0-.8.3-.8.8V11h3l-.4 3h-2.6v8h-3.1v-8H7v-3h2.9V7.5C9.9 5.6 11 4 13.6 4H15v3z" />
-              </svg>
-            </a>
-            <a href="https://www.tiktok.com/" target="_blank" rel="noreferrer" aria-label="TikTok" class="site-footer__social">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <path d="M16.5 3.5C16.9 5.1 18.2 6.3 19.8 6.6v2.6c-1.5-.1-2.9-.6-4.1-1.4v6.5a5.1 5.1 0 1 1-5.1-5.1c.3 0 .7 0 1 .1v2.8a2.2 2.2 0 1 0 1.5 2.1V3.5h2.7z" />
-              </svg>
-            </a>
-          </div>
-        </div>
-
-        <p class="site-footer__legal">LuxCraft Pte. Ltd © 2025. All Rights Reserved.</p>
       </div>
-    </footer>
-    <!-- Reviews clamp (About page) -->
-    <script>
-      (() => {
-        // Clamp each review to 3 lines and add a "See more…" toggle only when needed.
-        const quotes = document.querySelectorAll('.about-reviews__quote');
-        if (!quotes.length) return;
+    </section>
+  </main>
 
-        quotes.forEach((q) => {
-          // Temporarily expand to measure real height (avoid measuring the clamped height)
-          const wasExpanded = q.getAttribute('data-expanded') === 'true';
-          q.setAttribute('data-expanded', 'true');
+  <div class="cursor-follower" aria-hidden="true"></div>
 
-          const computed = getComputedStyle(q);
-          const lineHeight = parseFloat(computed.lineHeight) || 24;
-          const totalLines = Math.round(q.scrollHeight / lineHeight);
-          const needsToggle = totalLines > 3;
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <a href="/" class="site-footer__brand" aria-label="LuxCraft Home">
+          <img src="/assets/images/logo.png" alt="LuxCraft" />
+        </a>
+        <nav class="site-footer__nav" aria-label="Footer navigation">
+          <a href="/about" aria-current="page">Who We Are</a>
+          <a href="/services">What We Do</a>
+          <a href="/portfolio">Our Past Works</a>
+          <a href="/contact">Contact Us</a>
+        </nav>
+      </div>
 
-          // Restore collapsed by default unless it was already expanded
-          if (!wasExpanded) q.removeAttribute('data-expanded');
+      <div class="site-footer__divider" aria-hidden="true"></div>
 
-          if (!needsToggle) return;
+      <div class="site-footer__content">
+        <div class="site-footer__column">
+          <p>190 Woodlands Industrial Park E5</p>
+          <p>Woodlands Bizhub, #04-05</p>
+          <p>Singapore 757516</p>
+          <a class="site-footer__google-link mt-2" href="https://www.google.com/maps/place/LuxCraft/@1.452132,103.7921948,17z/data=!3m1!4b1!4m6!3m5!1s0x31da13becafcde95:0x3c58c9744796012f!8m2!3d1.452132!4d103.7921948!16s%2Fg%2F11w2b1q8np" target="_blank" rel="noopener">
+            <span>📍 Find us on Google Maps</span>
+          </a>
+        </div>
+        <div class="site-footer__column site-footer__column--contact">
+          <a class="site-footer__contact-link" href="https://wa.me/6583126212">
+            <svg aria-hidden="true" class="site-footer__contact-icon" focusable="false" viewBox="0 0 24 24">
+              <path
+                d="M12 2.05a9.94 9.94 0 0 0-8.48 15.3L2 22l4.8-1.51A9.95 9.95 0 1 0 12 2.05zm5.14 14.35c-.22.61-1.27 1.16-1.79 1.2-.46.04-1.02.06-1.64-.1-.38-.1-.86-.28-1.49-.54-2.63-1.14-4.3-3.8-4.43-3.98-.13-.18-1.06-1.41-1.06-2.69 0-1.28.67-1.9.9-2.16.22-.26.57-.38.9-.38h.64c.2 0 .45-.07.7.53.27.64.57 1.55.62 1.66.05.11.08.24.01.38-.07.14-.11.24-.21.37-.11.12-.23.27-.33.36-.11.1-.22.21-.09.41.13.2.57.93 1.23 1.5.85.76 1.57 1 1.77 1.11.2.1.32.09.44-.05.12-.14.5-.59.63-.79.13-.2.27-.16.45-.1.18.06 1.17.55 1.37.65.2.1.33.15.38.23.05.08.05.64-.17 1.25z"
+                fill="currentColor" />
+            </svg>
+            +65 8312 6212 <span>(Shamim)</span>
+          </a>
+          <a class="site-footer__contact-link" href="https://wa.me/6588991245">
+            <svg aria-hidden="true" class="site-footer__contact-icon" focusable="false" viewBox="0 0 24 24">
+              <path
+                d="M12 2.05a9.94 9.94 0 0 0-8.48 15.3L2 22l4.8-1.51A9.95 9.95 0 1 0 12 2.05zm5.14 14.35c-.22.61-1.27 1.16-1.79 1.2-.46.04-1.02.06-1.64-.1-.38-.1-.86-.28-1.49-.54-2.63-1.14-4.3-3.8-4.43-3.98-.13-.18-1.06-1.41-1.06-2.69 0-1.28.67-1.9.9-2.16.22-.26.57-.38.9-.38h.64c.2 0 .45-.07.7.53.27.64.57 1.55.62 1.66.05.11.08.24.01.38-.07.14-.11.24-.21.37-.11.12-.23.27-.33.36-.11.1-.22.21-.09.41.13.2.57.93 1.23 1.5.85.76 1.57 1 1.77 1.11.2.1.32.09.44-.05.12-.14.5-.59.63-.79.13-.2.27-.16.45-.1.18.06 1.17.55 1.37.65.2.1.33.15.38.23.05.08.05.64-.17 1.25z"
+                fill="currentColor" />
+            </svg>
+            +65 8899 1245 <span>(Manfred)</span>
+          </a>
+          <a class="site-footer__email" href="mailto:contact@luxcraft.sg">
+            <svg aria-hidden="true" class="site-footer__email-icon" focusable="false" viewBox="0 0 24 24">
+              <path
+                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"
+                fill="currentColor" />
+            </svg>
+            contact@luxcraft.sg
+          </a>
+        </div>
+        <div class="site-footer__socials" aria-label="Social media">
+          <a href="https://www.instagram.com/luxcraft.studio/" target="_blank" rel="noreferrer" aria-label="Instagram"
+            class="site-footer__social">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="3" width="18" height="18" rx="5" ry="5" />
+              <circle cx="12" cy="12" r="3.5" />
+              <circle cx="17.5" cy="6.5" r="0.9" fill="currentColor" stroke="none" />
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/luxcraft.studio" target="_blank" rel="noreferrer" aria-label="Facebook"
+            class="site-footer__social">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 7h-2.2c-.6 0-.8.3-.8.8V11h3l-.4 3h-2.6v8h-3.1v-8H7v-3h2.9V7.5C9.9 5.6 11 4 13.6 4H15v3z" />
+            </svg>
+          </a>
+          <a href="https://www.tiktok.com/@luxcraft.studio" target="_blank" rel="noreferrer" aria-label="TikTok"
+            class="site-footer__social">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M16.5 3.5C16.9 5.1 18.2 6.3 19.8 6.6v2.6c-1.5-.1-2.9-.6-4.1-1.4v6.5a5.1 5.1 0 1 1-5.1-5.1c.3 0 .7 0 1 .1v2.8a2.2 2.2 0 1 0 1.5 2.1V3.5h2.7z" />
+            </svg>
+          </a>
+        </div>
+      </div>
 
-          // Ensure collapsed state initially
-          q.removeAttribute('data-expanded');
+      <p class="site-footer__legal">LuxCraft Pte. Ltd. (UEN: 202343751W) © 2026. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <!-- Reviews clamp (About page) -->
+  <script defer src="/assets/js/about-utils.js"></script>
+  <script src="/assets/js/about-reviews.js"></script>
+  <script src="/assets/js/cursor-follower.js"></script>
 
-          // Build the toggle button
-          const btn = document.createElement('button');
-          btn.type = 'button';
-          btn.className = 'review-toggle';
-          btn.setAttribute('aria-expanded', 'false');
-          btn.setAttribute('aria-label', 'Expand full review');
-          btn.textContent = '▼';
+  <script>
+    function toggleAllReviews(btn) {
+      const isExpanding = btn.innerText.includes('see more');
+      
+      document.querySelectorAll('[data-review-text]').forEach(bq => {
+        if (isExpanding) {
+          bq.classList.remove('line-clamp-4');
+          bq.setAttribute('data-expanded', 'true');
+        } else {
+          bq.classList.add('line-clamp-4');
+          bq.setAttribute('data-expanded', 'false');
+        }
+      });
 
-          btn.addEventListener('click', () => {
-            const expanded = q.getAttribute('data-expanded') === 'true';
-            if (expanded) {
-              q.removeAttribute('data-expanded');
-              btn.setAttribute('aria-expanded', 'false');
-              btn.setAttribute('aria-label', 'Expand full review');
-              btn.textContent = '▼';
-            } else {
-              q.setAttribute('data-expanded', 'true');
-              btn.setAttribute('aria-expanded', 'true');
-              btn.setAttribute('aria-label', 'Collapse review');
-              btn.textContent = '▲';
-            }
-          });
+      document.querySelectorAll('[data-review-btn]').forEach(b => {
+        b.innerText = isExpanding ? 'see less' : '...see more';
+      });
+    }
+  </script>
+</body>
 
-          // Insert right after the <blockquote> (inside the same <figure>)
-          q.insertAdjacentElement('afterend', btn);
-        });
-      })();
-    </script>
-    <script src="/assets/js/about-reviews.js"></script>
-    <script src="/assets/js/cursor-follower.js"></script>
-  </body>
 </html>

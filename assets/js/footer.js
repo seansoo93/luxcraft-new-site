@@ -52,6 +52,7 @@ const buildFooter = () => {
         <p>190 Woodlands Industrial Park E5</p>
         <p>Woodlands Bizhub, #04-05</p>
         <p>Singapore 757516</p>
+        <a class="site-footer__google-link mt-2" href="https://www.google.com/maps/place/LuxCraft/@1.452132,103.7921948,17z/data=!3m1!4b1!4m6!3m5!1s0x31da13becafcde95:0x3c58c9744796012f!8m2!3d1.452132!4d103.7921948!16s%2Fg%2F11w2b1q8np" target="_blank" rel="noopener"><span>📍 Find us on Google Maps</span></a>
       </div>
       <div class="site-footer__column site-footer__column--contact">
         <a href="https://wa.me/6583126212">+65 8312 6212 <span>(Shamim)</span></a>
@@ -60,7 +61,9 @@ const buildFooter = () => {
       </div>
 ${socialMarkup}
     </div>
-    <p class="site-footer__legal">LuxCraft Pte. Ltd © 2025. All Rights Reserved.</p>
+    <div class="site-footer__legal">
+      <p>LuxCraft Pte. Ltd. (UEN: 202343751W) © 2026. All Rights Reserved. <span class="mx-2">|</span> <a href="/privacy-policy" class="hover:text-white transition-colors">Privacy Policy</a></p>
+    </div>
   </div>
 </footer>`;
 };

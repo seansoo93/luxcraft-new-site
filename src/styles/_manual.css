@@ -843,6 +843,8 @@ body {
   position: relative;
   overflow: hidden;
   border-radius: 0;
+  border-top-left-radius: 2.5rem;
+  border-bottom-left-radius: 2.5rem;
   box-shadow: none;
   min-height: clamp(300px, 55vw, 520px);
 }
@@ -1386,6 +1388,7 @@ body {
   justify-content: center;
   width: 2.5rem;
   height: 2.5rem;
+  flex-shrink: 0;
   margin-left: 1.5rem;
   border-radius: 999px;
   border: 1px solid rgba(17, 17, 17, 0.18);
@@ -3096,7 +3099,12 @@ a:hover {
 
 .hero-slide .hero-actions {
   opacity: 0;
-  transform: translateY(3.5rem);
+  transform: translateY(2rem);
+  transition: opacity 350ms ease, transform 350ms ease;
+  transition-delay: 0ms;
+}
+
+.hero-slide.hero-slide--copy-visible .hero-actions {
   transition: opacity 880ms cubic-bezier(0.29, 0.84, 0.49, 1.17), transform 880ms cubic-bezier(0.29, 0.84, 0.49, 1.17);
   transition-delay: 990ms;
 }
@@ -3867,6 +3875,18 @@ body.about-page {
   }
 }
 
+.hero-button--project {
+  transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.hero-button--project:hover,
+.hero-button--project:focus-visible {
+  background-color: #bf9c65 !important;
+  border-color: #bf9c65 !important;
+  color: #111111 !important;
+  box-shadow: 0 8px 24px -4px rgba(191, 156, 101, 0.45);
+}
+
 /* ---------- About page: light-bg overrides ---------- */
 /* Ensure specific about-page containers render dark text even if children have utility classes that set white */
 .about-reviews-header-section .lux-container,
@@ -3937,4 +3957,114 @@ body.about-page {
 /* Portfolio heading override */
 .lux-section h2 {
   color: #111111;
+}
+
+/* FAQ Styles for Services */
+details.group summary .faq-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  margin-left: 1.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 200ms ease, border-color 200ms ease, transform 200ms ease;
+}
+
+details.group summary .faq-toggle::before,
+details.group summary .faq-toggle::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 44%;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 999px;
+  transform: translate(-50%, -50%);
+  transition: transform 200ms ease;
+}
+
+details.group summary .faq-toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+details.group[open] summary .faq-toggle {
+  border-color: #bf9c65;
+  color: #bf9c65;
+}
+
+details.group[open] summary .faq-toggle::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+details.group[open] summary .faq-toggle::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+details.group[open] p {
+  animation: faqSlideDown 0.3s ease-out forwards;
+}
+
+@keyframes faqSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Google Reviews Homepage Slider */
+.google-reviews-section {
+  position: relative;
+  z-index: 10;
+}
+
+.google-reviews-track {
+  display: flex;
+  will-change: transform;
+}
+
+.google-reviews-slide {
+  transition: opacity 0.3s ease;
+}
+
+@media (max-width: 767px) {
+  .google-reviews-slide {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+
+/* Google Reviews Homepage Fix */
+.google-reviews-section {
+  position: relative;
+  z-index: 10;
+  background-color: #111111 !important;
+}
+
+.google-reviews-section h2,
+.google-reviews-section .text-\[\#BF9C65\] {
+  color: #BF9C65 !important;
+}
+
+.google-reviews-section h3,
+.google-reviews-section .text-white,
+.google-reviews-section blockquote,
+.google-reviews-section p {
+  color: #ffffff !important;
+}
+
+.google-reviews-section .text-white\/60,
+.google-reviews-section .text-white\/80,
+.google-reviews-section .text-white\/90 {
+  color: rgba(255, 255, 255, 0.8) !important;
 }

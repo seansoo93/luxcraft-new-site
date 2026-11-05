@@ -36,6 +36,9 @@
   }
 
   .portfolio-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     width: min(100%, 630px);
     margin-inline: auto;
     padding: 0 !important;
@@ -43,6 +46,12 @@
     border: none !important;
     box-shadow: none;
     overflow: hidden !important;
+  }
+
+  .portfolio-card__info {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
   }
 
   .portfolio-card__link {

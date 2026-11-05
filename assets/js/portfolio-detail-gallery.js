@@ -59,6 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
       button.className = 'portfolio-detail-gallery__thumb';
       button.dataset.gallerySrc = src;
       button.dataset.galleryIndex = String(index);
+      
+      let cleanedPath = src;
+      if (!cleanedPath.startsWith('/')) cleanedPath = '/' + cleanedPath;
+      const tag = (typeof window.galleryTags !== 'undefined' && window.galleryTags[cleanedPath]) ? window.galleryTags[cleanedPath] : 'Others';
+      button.dataset.galleryTag = tag;
+      
       button.setAttribute('aria-label', `${baseAlt} — Image ${index + 1}`);
 
       const thumbImage = document.createElement('img');
@@ -76,6 +82,47 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!buttons.length) {
       gallery.setAttribute('hidden', '');
       return;
+    }
+
+    const filterContainer = gallery.querySelector('.portfolio-detail-gallery__filters');
+    if (filterContainer && typeof window.galleryTags !== 'undefined') {
+      const uniqueTags = new Set();
+      buttons.forEach(btn => uniqueTags.add(btn.dataset.galleryTag));
+      
+      if (uniqueTags.size > 1) {
+        const tagsArray = ['All', ...Array.from(uniqueTags)];
+        tagsArray.forEach(tag => {
+          const btn = document.createElement('button');
+          const isActive = tag === 'All';
+          btn.className = 'px-4 py-2 text-[10px] sm:text-xs font-bold uppercase tracking-widest rounded-full border transition-colors ' + 
+            (isActive ? 'bg-white text-lux-dark border-lux-dark' : 'bg-white text-lux-dark border-lux-dark/20 hover:bg-lux-dark/5');
+          btn.textContent = tag;
+          
+          btn.addEventListener('click', () => {
+             Array.from(filterContainer.children).forEach(b => {
+                 b.className = 'px-4 py-2 text-[10px] sm:text-xs font-bold uppercase tracking-widest rounded-full border transition-colors bg-white text-lux-dark border-lux-dark/20 hover:bg-lux-dark/5';
+             });
+             btn.className = 'px-4 py-2 text-[10px] sm:text-xs font-bold uppercase tracking-widest rounded-full border transition-colors bg-white text-lux-dark border-lux-dark';
+             
+             let firstVisibleIndex = -1;
+             buttons.forEach((b, idx) => {
+                 if (tag === 'All' || b.dataset.galleryTag === tag) {
+                     b.style.display = '';
+                     if (firstVisibleIndex === -1) firstVisibleIndex = idx;
+                 } else {
+                     b.style.display = 'none';
+                 }
+             });
+             
+             thumbnailsHost.scrollLeft = 0;
+             scheduleScrollableUpdate();
+             if (firstVisibleIndex !== -1) {
+                 updateActiveButton(firstVisibleIndex);
+             }
+          });
+          filterContainer.appendChild(btn);
+        });
+      }
     }
 
     let currentIndex = -1;
@@ -102,10 +149,26 @@ document.addEventListener('DOMContentLoaded', () => {
       const overflowWidth = thumbnailsHost.scrollWidth - thumbnailsHost.clientWidth;
       const isScrollable = overflowWidth > 1;
 
+      const leftBtn = gallery.querySelector('[data-gallery-scroll="left"]');
+      const rightBtn = gallery.querySelector('[data-gallery-scroll="right"]');
+
       if (isScrollable) {
         thumbnailsHost.setAttribute('data-scrollable', 'true');
+        thumbnailsHost.parentElement?.setAttribute('data-scrollable', 'true');
+
+        // Update button disabled states based on scroll position
+        if (leftBtn) {
+          leftBtn.disabled = thumbnailsHost.scrollLeft <= 2;
+        }
+        if (rightBtn) {
+          rightBtn.disabled = thumbnailsHost.scrollLeft >= overflowWidth - 2;
+        }
       } else {
         thumbnailsHost.removeAttribute('data-scrollable');
+        thumbnailsHost.parentElement?.removeAttribute('data-scrollable');
+        if (leftBtn) leftBtn.disabled = true;
+        if (rightBtn) rightBtn.disabled = true;
+
         if (thumbnailsHost.scrollLeft !== 0) {
           thumbnailsHost.scrollLeft = 0;
         }
@@ -173,7 +236,16 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const stepGallery = (delta) => {
-      updateActiveButton(currentIndex + delta, { focus: true });
+      let nextIndex = currentIndex;
+      let iterations = 0;
+      do {
+        nextIndex = normalizeIndex(nextIndex + delta, buttons.length);
+        iterations++;
+      } while (buttons[nextIndex].style.display === 'none' && iterations < buttons.length);
+      
+      if (buttons[nextIndex].style.display !== 'none') {
+        updateActiveButton(nextIndex, { focus: true });
+      }
     };
 
     buttons.forEach((button, index) => {
@@ -213,6 +285,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const handleResize = () => {
       scheduleScrollableUpdate();
     };
+
+    thumbnailsHost.addEventListener('scroll', scheduleScrollableUpdate, { passive: true });
+
+    const scrollButtons = gallery.querySelectorAll('[data-gallery-scroll]');
+    scrollButtons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const direction = btn.dataset.galleryScroll;
+        const scrollAmount = thumbnailsHost.clientWidth * 0.75;
+        thumbnailsHost.scrollBy({
+          left: direction === 'left' ? -scrollAmount : scrollAmount,
+          behavior: 'smooth',
+        });
+      });
+    });
 
     window.addEventListener('resize', handleResize, { passive: true });
     window.addEventListener('orientationchange', handleResize, { passive: true });

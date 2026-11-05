@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Project Gallery | LuxCraft Interior Design Singapore</title>
+  <meta
+    content="Browse through our full collection of interior design project photos. A consolidated view of all our HDB, Condo, and Landed renovation works."
+    name="description" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.luxcraft.sg/gallery" />
+  <meta property="og:title" content="Project Gallery | LuxCraft Interior Design Singapore" />
+  <meta property="og:description" content="Browse through our full collection of interior design project photos. A consolidated view of all our HDB, Condo, and Landed renovation works." />
+  <meta property="og:image" content="https://www.luxcraft.sg/assets/images/logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.luxcraft.sg/gallery" />
+  <meta property="twitter:title" content="Project Gallery | LuxCraft Interior Design Singapore" />
+  <meta property="twitter:description" content="Browse through our full collection of interior design project photos. A consolidated view of all our HDB, Condo, and Landed renovation works." />
+  <meta property="twitter:image" content="https://www.luxcraft.sg/assets/images/logo.png" />
+  <link rel="canonical" href="https://www.luxcraft.sg/gallery" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Syne:wght@500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="/assets/images/favicon.png" rel="icon" sizes="192x192" type="image/png" />
+  <link href="/assets/corbesier-icons.css" rel="stylesheet" />
+  <link href="/assets/styles.css?v=1.1.1" rel="stylesheet" />
+  <script defer="" src="/assets/js/header.js?v=1.1.1"></script>
+  <script src="/assets/js/analytics.js" defer></script>
+  <style>
+    /* Mobile First - Modal Preview */
+    .gallery-sticky-column {
+      display: none !important;
+      /* hidden until active */
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      z-index: 1000 !important;
+      background: rgba(17, 17, 17, 0.95) !important;
+      margin: 0 !important;
+      border-radius: 0 !important;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem;
+      border: none !important;
+    }
+
+    .gallery-sticky-column.is-modal-open {
+      display: flex !important;
+    }
+
+    #sticky-preview-img {
+      width: 100% !important;
+      height: auto !important;
+      display: block !important;
+      object-fit: contain !important;
+      max-height: 80vh !important;
+      transition: opacity 0.3s ease;
+    }
+
+    #preview-caption {
+      background: transparent !important;
+      color: white !important;
+      border: none !important;
+    }
+
+    #modal-close-btn {
+      display: flex;
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      cursor: pointer;
+      z-index: 1010;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+
+    #modal-close-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    @media (min-width: 1080px) {
+      .gallery-split-layout {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 3rem !important;
+        align-items: flex-start !important;
+      }
+
+      .gallery-sticky-column {
+        display: block !important;
+        position: sticky !important;
+        top: 140px !important;
+        left: auto !important;
+        width: 60% !important;
+        height: auto !important;
+        background: white !important;
+        margin-bottom: 0 !important;
+        border-radius: 1.5rem !important;
+        padding: 0 !important;
+        z-index: 40 !important;
+        border: 1px solid rgba(17, 17, 17, 0.05) !important;
+      }
+
+      .gallery-scroll-column {
+        width: 40% !important;
+      }
+
+      #gallery-thumbnails {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 0.75rem !important;
+      }
+
+      #sticky-preview-img {
+        max-height: 65vh !important;
+      }
+
+      #preview-caption {
+        background: white !important;
+        color: #111 !important;
+        border-top: 1px solid rgba(17, 17, 17, 0.05) !important;
+      }
+
+      #modal-close-btn {
+        display: none !important;
+      }
+    }
+
+    @media (min-width: 1280px) {
+      #gallery-thumbnails {
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+      }
+    }
+
+    /* Remove letterboxing gaps */
+    .preview-image-wrapper {
+      background: transparent !important;
+      line-height: 0;
+    }
+
+    /* Filter Minimization on Scroll */
+    @media (max-width: 1023px) {
+      .gallery-filter-container {
+        transition: top 400ms cubic-bezier(0.4, 0, 0.2, 1), transform 400ms cubic-bezier(0.4, 0, 0.2, 1), opacity 400ms ease;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        top: 90px;
+        z-index: 45;
+      }
+
+      .has-shrunk-header .gallery-filter-container {
+        top: 65px !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transform: translateY(-10px) !important;
+      }
+    }
+
+    /* Desktop Sidebar Filters (Hidden by default) */
+    @media (min-width: 1024px) {
+      .sidebar-filter-container {
+        display: flex !important;
+        flex-direction: row !important;
+        gap: 0.5rem !important;
+        padding: 1.25rem !important;
+        background: white !important;
+        border-bottom: 1px solid rgba(17, 17, 17, 0.05) !important;
+        margin: 0 !important;
+        position: relative !important;
+        width: 100% !important;
+        z-index: 10 !important;
+        box-sizing: border-box !important;
+        
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s;
+      }
+      
+      .show-sidebar-filters .sidebar-filter-container {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      /* Main Filters (Fade out on scroll, but keep height to prevent layout loops) */
+      .main-filter-container {
+        transition: opacity 0.4s ease, visibility 0.4s;
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .show-sidebar-filters .main-filter-container {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+      
+      .sidebar-filter-container > div {
+        width: 50% !important;
+        flex: 1 !important;
+      }
+      
+      .sidebar-filter-container label {
+        display: block !important;
+        margin-bottom: 0.5rem !important;
+        font-size: 10px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="portfolio-page light-theme min-h-screen bg-white text-lux-dark has-fixed-header">
+  <header class="site-header">
+    <div class="lux-container header-row">
+      <a aria-label="LuxCraft Home" class="header-logo" href="/">
+        <img alt="LuxCraft" src="/assets/images/logo.png" />
+      </a>
+      <nav aria-label="Primary" class="header-nav">
+        <a href="/about">Who We Are</a>
+        <a href="/services">What We Do</a>
+        <a href="/portfolio">Our Past Works</a>
+        <a aria-current="page" href="/gallery">Gallery</a>
+        <a href="/contact">Contact Us</a>
+      </nav>
+      <div class="header-controls">
+        <button aria-label="Search" class="header-action" type="button">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-3.2-3.2" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <button aria-label="Open navigation" class="header-toggle md:hidden" type="button">
+          <span class="sr-only">Toggle navigation</span>
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div aria-label="Mobile navigation" aria-modal="true" id="mobile-menu" role="dialog">
+      <button aria-label="Close navigation" id="mobile-menu__close" type="button">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+          <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <nav aria-label="Mobile navigation">
+        <a class="hover:text-white" href="/about">Who We Are</a>
+        <a class="hover:text-white" href="/services">What We Do</a>
+        <a class="hover:text-white" href="/portfolio">Our Past Works</a>
+        <a aria-current="page" class="hover:text-white" href="/gallery">Gallery</a>
+        <a class="hover:text-white" href="/contact">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="lux-section pb-0">
+      <div class="lux-container text-center pt-8">
+        <span class="lux-tag mx-auto mb-4">Visual Journey</span>
+        <h1 class="text-4xl sm:text-5xl font-bold mb-4">Project Gallery</h1>
+        <p class="text-lux-dark/60 max-w-2xl mx-auto">
+          A consolidated collection of our renovation works. Click any thumbnail to view a larger version.
+        </p>
+      </div>
+    </section>
+
+    <!-- Gallery Layout -->
+    <section class="lux-section pt-12">
+      <div class="lux-container px-6 lg:px-12 max-w-[1700px] mx-auto">
+        <div class="gallery-split-layout flex flex-col gap-12 items-start">
+
+          <!-- Sticky Preview (Left Column / Modal on Mobile) -->
+          <div id="gallery-modal"
+            class="gallery-sticky-column shadow-2xl border border-lux-dark/5 rounded-2xl md:rounded-3xl overflow-hidden relative">
+            
+            <!-- Sidebar Filters (Desktop Only, Cross-fades on scroll) -->
+            <div class="sidebar-filter-container hidden lg:flex">
+              <div class="flex-1">
+                <label class="block text-xs font-bold uppercase tracking-[0.2em] text-lux-dark/40 mb-3">Project</label>
+                <div class="relative">
+                  <select class="sidebar-project-filter w-full appearance-none p-4 text-sm rounded-xl border border-lux-dark/10 bg-white text-lux-dark font-medium outline-none shadow-sm">
+                    <option value="all">All Projects</option>
+                  </select>
+                </div>
+              </div>
+              <div class="flex-1">
+                <label class="block text-xs font-bold uppercase tracking-[0.2em] text-lux-dark/40 mb-3">Room</label>
+                <div class="relative">
+                  <select class="sidebar-room-filter w-full appearance-none p-4 text-sm rounded-xl border border-lux-dark/10 bg-white text-lux-dark font-medium outline-none shadow-sm">
+                    <option value="all">All Room Types</option>
+                    <option value="Living Room">Living Room</option>
+                    <option value="Kitchen">Kitchen</option>
+                    <option value="Bedroom">Bedroom</option>
+                    <option value="Bathroom">Bathroom</option>
+                    <option value="Others">Others</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <button id="modal-close-btn" aria-label="Close image preview">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M18 6L6 18M6 6l12 12"></path>
+              </svg>
+            </button>
+            <div class="preview-image-wrapper">
+              <img id="sticky-preview-img" src="" alt="Preview" class="opacity-0 transition-opacity duration-300">
+            </div>
+            <div id="preview-caption"
+              class="p-4 md:p-5 bg-white text-center font-medium text-lux-dark border-t border-lux-dark/5 text-base md:text-lg w-full">
+              Loading images...
+            </div>
+          </div>
+
+          <!-- Filter & Thumbnails (Right Column) -->
+          <div class="gallery-scroll-column w-full">
+            <div
+              class="gallery-filter-container main-filter-container flex flex-col sm:flex-row gap-4 mb-10 sticky top-[90px] lg:top-[140px] z-20 bg-white py-4 lg:static lg:bg-transparent lg:py-0">
+              <div class="flex-1">
+                <label for="project-filter"
+                  class="block text-xs font-bold uppercase tracking-[0.2em] text-lux-dark/40 mb-3">Sort by
+                  Project</label>
+                <div class="relative">
+                  <select id="project-filter"
+                    class="w-full appearance-none p-4 text-sm rounded-xl border border-lux-dark/10 bg-white text-lux-dark font-medium focus:ring-2 focus:ring-lux-gold focus:border-lux-gold outline-none transition-all shadow-sm">
+                    <option value="all">All Projects</option>
+                  </select>
+                  <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-lux-dark/40">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex-1">
+                <label for="room-filter"
+                  class="block text-xs font-bold uppercase tracking-[0.2em] text-lux-dark/40 mb-3">Sort by Room
+                  Type</label>
+                <div class="relative">
+                  <select id="room-filter"
+                    class="w-full appearance-none p-4 text-sm rounded-xl border border-lux-dark/10 bg-white text-lux-dark font-medium focus:ring-2 focus:ring-lux-gold focus:border-lux-gold outline-none transition-all shadow-sm">
+                    <option value="all">All Room Types</option>
+                    <option value="Living Room">Living Room</option>
+                    <option value="Kitchen">Kitchen</option>
+                    <option value="Bedroom">Bedroom</option>
+                    <option value="Bathroom">Bathroom</option>
+                    <option value="Others">Others</option>
+                  </select>
+                  <div class="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-lux-dark/40">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path d="M19 9l-7 7-7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+
+            <div id="gallery-thumbnails" class="grid grid-cols-2 sm:grid-cols-3 gap-3">
+              <!-- Populate via JS -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="lux-section">
+      <div
+        class="lux-container rounded-[3rem] border border-white/10 bg-white/5 p-12 text-center shadow-lux backdrop-blur">
+        <h2 class="text-3xl font-semibold sm:text-4xl text-black">Like our style?</h2>
+        <p class="mx-auto mt-4 max-w-2xl text-base text-white/70">
+          Get in touch with our designers to discuss how we can transform your space.
+        </p>
+        <div class="mt-8 flex flex-wrap justify-center gap-4">
+          <a class="lux-button" href="/contact">Get Started</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <a aria-label="LuxCraft Home" class="site-footer__brand" href="/">
+          <img alt="LuxCraft" src="/assets/images/logo.png" />
+        </a>
+        <nav aria-label="Footer navigation" class="site-footer__nav">
+          <a href="/about">Who We Are</a>
+          <a href="/services">What We Do</a>
+          <a href="/portfolio">Our Past Works</a>
+          <a href="/gallery">Gallery</a>
+          <a href="/contact">Contact Us</a>
+        </nav>
+      </div>
+      <div aria-hidden="true" class="site-footer__divider"></div>
+      <p class="site-footer__legal">LuxCraft Pte. Ltd. (UEN: 202343751W) © 2026. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/assets/js/gallery-tags.js"></script>
+  <script src="/assets/js/gallery.js"></script>
+  <script src="/assets/js/cursor-follower.js"></script>
+</body>
+
+</html>

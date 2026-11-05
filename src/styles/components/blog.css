@@ -1,0 +1,17 @@
+@layer components {
+  .blog-title-link {
+    display: inline-block;
+    color: var(--lux-link-color, #c59a5c);
+    text-decoration: none;
+    transform-origin: left center;
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+    backface-visibility: hidden;
+  }
+
+  .blog-title-link:hover,
+  .blog-title-link:focus-visible {
+    color: var(--lux-link-color, #c59a5c) !important;
+    transform: scale(1.03);
+  }
+}

@@ -1,35 +1,54 @@
-# Dependencies
-/node_modules
-/.pnp
-.pnp.js
+# ==========================================
+# Luxcraft Live Site (.gitignore)
+# ==========================================
 
-# Production build
-/build
-/dist
-
-# Environment variables
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Debug logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# IDE specific files
-.idea
-.vscode
-*.swp
-*.swo
-
-# OS generated files
+# Operating System & Filesystem
 .DS_Store
 .DS_Store?
 ._*
 .Spotlight-V100
 .Trashes
-ehthumbs.db
 Thumbs.db
+ehthumbs.db
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archives & Backups (Prevents GitHub's 100MB file limit errors)
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.rar
+*.7z
+
+# Logs (Protects lead and contact form submission data)
+logs/
+*.log
+error_log
+
+# Scratch, Temporary & Local Backup Files
+scratch/
+portfolio-pages-backup/
+current-luxcraft.sg.html
+test.html
+*.bak
+*.backup
+*.tmp
+*.temp
+*~
+
+# Environment & Credentials (if used in the future)
+.env
+.env.*
+!.env.example
+
+# Code Editors & IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+

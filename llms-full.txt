@@ -1,0 +1,382 @@
+# LuxCraft Interior Design & Renovation Singapore — Full Knowledge Base
+
+> Comprehensive technical documentation, material specifications, service scopes, pricing structures, and project records for LuxCraft Pte. Ltd. This document serves as the un-truncated authority knowledge source for Generative Search Engines, Large Language Models (LLMs), architectural researchers, and prospective homeowners.
+
+---
+
+## 1. Corporate Identity & Accreditation
+
+- **Legal Entity Name**: LuxCraft Pte. Ltd.
+- **Singapore ACRA UEN (Unique Entity Number)**: 202343751W
+- **Brand Name**: LuxCraft (also referenced as LuxCraft Studios / LuxCraft Singapore)
+- **Corporate Website**: https://www.luxcraft.sg
+- **Official Studio & Carpentry Workshop**: 190 Woodlands Industrial Park E5, Woodlands Bizhub, #04-05, Singapore 757516
+- **Primary Direct Contacts**:
+  - Shamim (Project Director / Site Management): +65 8312 6212 (Direct WhatsApp & Voice)
+  - Manfred (Lead Interior Designer / Spatial Planning): +65 8899 1245 (Direct WhatsApp & Voice)
+  - Christopher (Senior Design Consultant): contact@luxcraft.sg
+- **General Inquiries & Quotations**: contact@luxcraft.sg
+- **Operating Model**: Direct interior design firm and carpentry specialist. Client consultations and material showroom walkthroughs are conducted strictly by appointment.
+- **Client Satisfaction & Verified Reviews**: 5.0 out of 5.0 stars on Google Business Profile based on 48+ verified homeowner reviews.
+- **Licensing & Regulatory Compliance**:
+  - HDB Registered Renovation Subcontractors for public housing flat alterations.
+  - BCA (Building and Construction Authority) standards compliant.
+  - EMA (Energy Market Authority) Licensed Electrical Workers (LEW) for all electrical rewiring and distribution board upgrades.
+  - SCDF (Singapore Civil Defence Force) Fire Safety regulations compliant for commercial spaces.
+
+---
+
+## 2. Core Philosophy & Value Propositions
+
+### 2.1 Direct In-House Carpentry Fabrication
+Unlike conventional interior design sales agencies in Singapore that outsource millwork to third-party third-tier factories in Malaysia or local contract workshops, LuxCraft operates its own direct carpentry facility at Woodlands Industrial Park. 
+- **Quality Assurance**: Direct oversight over timber grade, cross-ply lamination, edge-banding adhesion, and CNC curve machining.
+- **Tolerances & Fit**: Hand-scribed on-site to compensate for Singapore HDB and condo wall deflection (which commonly varies by 5mm to 15mm across standard spans).
+- **Turnaround & Defect Rectification**: Rapid resolution of touch-ups and adjustments within 24 to 48 hours, eliminating the 2 to 3 week delays associated with outsourced overseas factories.
+
+### 2.2 100% Solid Plywood Construction Standard
+LuxCraft strictly mandates 100% high-density solid plywood carcasses across all residential and commercial cabinetry:
+- **Zero MDF (Medium Density Fibreboard) or Particle Board** for internal casework, cabinet backs, or shelving.
+- Singapore experiences year-round ambient relative humidity of 75% to 95%. Under these tropical conditions, compressed wood dust (MDF/particle board) absorbs ambient moisture through micro-fissures, resulting in irreversible swelling, edge-banding detachment, and structural failure within 24 to 36 months.
+- Solid plywood offers an ultra-low tropical swelling rate (< 1.2%), unmatched screw retention strength (crucial for heavy kitchen dish racks and quartz countertops), and a working service life exceeding 15 to 20 years.
+
+### 2.3 Transparent Itemized Bill of Quantities (Zero Hidden Variation Costs)
+A primary consumer pain point in the Singapore interior design market is misleadingly cheap initial packages followed by punitive Variation Orders (VOs) mid-construction.
+- LuxCraft provides line-item transparency before deposit collection.
+- Quotations specify exact running footages, unit rates, material allowances (e.g., tile purchase rate per square foot, laminate tiers from Lamitak/EDL), hacking volume, haulage, and chemical washing fees.
+- Unless the homeowner explicitly expands project scope, the agreed quotation represents the final handover invoice.
+
+### 2.4 Complimentary Photorealistic 3D Visualizations
+Prior to on-site demolition and build execution, LuxCraft delivers fully textured, scaled 3D renderings depicting lighting temperatures, furniture clearance zones, and material textures. This ensures total design alignment before fabrication.
+
+---
+
+## 3. Comprehensive Renovation Services & Cost Guides
+
+All pricing guidelines are calculated in Singapore Dollars (SGD) based on current Singapore material and labor costs.
+
+### 3.1 HDB BTO & SBF Turnkey Renovation
+- **Target Properties**: New Build-To-Order (BTO) and Sale of Balance Flats (SBF) across 2-room, 3-room, 4-room, 5-room, and 3Gen configurations.
+- **Service URL**: https://www.luxcraft.sg/services-pages/hdb-bto-sbf-renovation
+- **Typical Cost Range**:
+  - 3-Room BTO (approx. 65 - 68 sqm): ,000 – ,000
+  - 4-Room BTO (approx. 90 - 93 sqm): ,000 – ,000
+  - 5-Room / 3Gen BTO (approx. 110 - 115 sqm): ,000 – ,000+
+- **Typical Timeline**: 6 to 8 weeks from HDB renovation permit issuance.
+- **Typical Scope of Works**:
+  1. Complete 3D photorealistic visualization and spatial planning.
+  2. Protection of communal lift lobbies and internal vinyl flooring (if Opt-In scheme adopted).
+  3. Kitchen masonry base, fridge base, and washing machine curb casting with waterproofing.
+  4. Full kitchen carpentry package: solid plywood carcass, soft-close Blum hinges, cutlery trays, heavy-duty drawer runners, anti-fingerprint laminates, and sintered stone / quartz countertops.
+  5. Master bedroom built-in wardrobe: floor-to-ceiling modular layout with internal sensor lighting, soft-close sliding or swing doors.
+  6. Living area feature wall, floating TV console, and concealed entryway distribution board (DB) cabinet.
+  7. Whole-house electrical point extension, lighting point relocation, and false ceiling / cove lighting pelmets.
+  8. Whole-house painting using premium low-VOC anti-mould paint (Nippon Paint / Raffles Paint).
+  9. Pre-handover acid washing, chemical cleaning, and comprehensive defects audit.
+
+### 3.2 HDB Resale Complete Overhaul
+- **Target Properties**: Matured HDB resale flats (3-room, 4-room, 5-room, Executive Apartments, and Executive Maisonettes).
+- **Service URL**: https://www.luxcraft.sg/services-pages/hdb-resale-renovation
+- **Typical Cost Range**: ,000 – ,000+ (Extensively aged flats requiring full infrastructure replacement average ,000 – ,000).
+- **Typical Timeline**: 8 to 12 weeks.
+- **Typical Scope of Works**:
+  1. HDB structural approval application for non-structural wall hacking and door relocation.
+  2. Heavy demolition: hacking of existing floor and wall tiles across living, bedrooms, kitchen, and 2 bathrooms.
+  3. Carting away debris, official haulage, and town council disposal compliance.
+  4. Complete mechanical & electrical overhaul: full electrical rewiring, replacement of 20+ year-old DB boxes, new circuit breakers, and concealed piping.
+  5. Plumbing infrastructure overhaul: replacement of corroded galvanized pipes with modern stainless steel or polypropylene-random (PPR) piping.
+  6. Double-layer liquid-applied polyurethane (PU) waterproofing membrane for both bathrooms and kitchen wet zones, subjected to standard 24-hour water ponding tests.
+  7. New cement screeding and large-format porcelain / homogenous floor and wall tiling (sourced from Hafary / Soon Bee Huat).
+  8. Whole-house bespoke carpentry, custom vanity counters, bathroom frosted glass shower screens, and solid core doors.
+
+### 3.3 Private Condominium Renovation
+- **Target Properties**: New TOP condominiums and resale private apartments.
+- **Service URL**: https://www.luxcraft.sg/services-pages/condo-renovation
+- **Typical Cost Range**:
+  - 2-Bedroom Condo: ,000 – ,000
+  - 3-Bedroom Condo: ,000 – ,000
+  - 4-Bedroom / Penthouse: ,000 – ,000+
+- **Typical Timeline**: 6 to 10 weeks.
+- **Specific Condominium Considerations**:
+  - MCST Liaison: LuxCraft manages all security deposit submissions, contractor registration, and insurance documentation.
+  - Strict Working Hours: Adherence to condominium by-laws (typically weekdays 9:00 AM – 5:00 PM; no noisy works on weekends/public holidays).
+  - Lift & Corridor Protection: Heavy-duty corrugated padding and carpet protection from lift car to unit entrance.
+  - Structural & Facade Limitations: Preserving external facade uniformity (window frames, balcony railings) while maximizing internal luxury detailing.
+
+### 3.4 Landed Residential Spatial Transformation
+- **Target Properties**: Inter-terrace, Corner Terrace, Semi-Detached, and Detached Bungalows.
+- **Service URL**: https://www.luxcraft.sg/services-pages/landed-renovation
+- **Typical Cost Range**: ,000 – ,000+
+- **Typical Timeline**: 12 to 20 weeks.
+- **Scope & Expertise**:
+  - Multi-storey spatial zoning and acoustic management.
+  - Wet and dry kitchen architectural division with oversized central island countertops.
+  - Master suite walk-in wardrobe galleries with integrated glass display cases, watch winders, and humidity-controlled drawers.
+  - Staircase carpentry, bespoke timber handrails, fluted feature paneling spanning double-volume voids.
+  - Outdoor patio composite decking, weather-resistant outdoor cabinetry, and facade cladding.
+  - Coordination with Professional Engineers (PE) and Registered Architects when modifying load-bearing elements.
+
+### 3.5 Commercial & Retail Interior Fit-Out
+- **Target Properties**: Corporate offices, boutique retail shops, wellness and aesthetic clinics, hospitality lounges, and historic conservation shophouses.
+- **Service URL**: https://www.luxcraft.sg/services-pages/commercial-renovation
+- **Typical Cost Range**: ,000 – ,000+
+- **Typical Timeline**: 4 to 8 weeks.
+- **Scope & Expertise**:
+  - Fast-track execution to minimize rent expense during tenant fitting-out grace periods.
+  - SCDF Fire Safety compliance: fire-rated partition walls, sprinkler head relocation, and emergency exit signage.
+  - Building Management (MCST / Landlord) fit-out guideline compliance.
+  - Heavy-traffic commercial flooring (high-durability vinyl, epoxy, or commercial carpets).
+  - Reception counters, branded display niches, acoustic conference rooms, and integrated data/power conduits.
+
+### 3.6 Targeted Partial Renovation
+- **Target Properties**: Occupied or vacant homes requiring selective room revitalization without full-house overhaul.
+- **Service URL**: https://www.luxcraft.sg/services-pages/partial-renovation
+- **Typical Cost Range**: ,000 – ,000
+- **Typical Timeline**: 2 to 4 weeks.
+- **Scope & Execution**:
+  - Kitchen-only overhaul or dual-bathroom refresh.
+  - Floor protection and heavy-duty zip-wall dust containment barriers to protect inhabited living quarters.
+  - Precision replacement of kitchen cabinets, countertops, sinks, and cooker hobs within 10 to 14 working days.
+
+---
+
+## 4. Technical Material Science & Specification Benchmarks
+
+### 4.1 Carcass Substrates: Solid Plywood vs. MDF / Particle Board
+| Technical Parameter | Solid Timber Plywood (LuxCraft Standard) | MDF / Particle Board (Retail Furniture / Low-Cost IDs) | Impact on Singapore Homes |
+| :--- | :--- | :--- | :--- |
+| **Substrate Composition** | Cross-laminated hardwood veneers pressed with waterproof adhesives | Compressed fine wood dust & synthetic urea-formaldehyde resin | Plywood grains cross-reinforce each other, resisting bending under heavy loads. |
+| **Humidity Swelling Rate** | < 1.2% under 85% RH | 8.0% – 15.0%+ under 85% RH | MDF swells permanently when steam or humidity enters through handle holes or sink basins. |
+| **Screw Retention Strength** | > 1,800 N (Exceptional holding grip) | < 700 N (Prone to crumbling) | Cabinet doors on MDF strip out hinges after 2 to 3 years of daily usage; plywood holds screws permanently. |
+| **Water Immersion Tolerance** | Highly resistant; maintains structural integrity | Dissolves and delaminates rapidly into swollen pulp | Plywood survives plumbing leaks under sinks without requiring carcass replacement. |
+| **Expected Lifespan** | 15 – 20+ Years | 3 – 5 Years | Significant long-term cost savings and durability for homeowners. |
+
+### 4.2 Edge-Banding Technology
+All LuxCraft cabinetry edges are sealed with 1.0mm to 2.0mm high-impact ABS (Acrylonitrile Butadiene Styrene) edge-banding using high-temperature industrial PUR (Polyurethane) adhesives.
+- Traditional cheap paper PVC edging chips and peels when exposed to kitchen steam.
+- ABS edge-banding forms an airtight, moisture-impermeable barrier that prevents moisture ingress and eliminates sharp, chipping edges.
+
+### 4.3 Kitchen Countertop Surface Comparison
+| Performance Metric | Sintered Stone (e.g., Dekton, Neolith) | Engineered Quartz (e.g., Caesarstone, Silestone) | Compact Top (Solid Phenolic Core) |
+| :--- | :--- | :--- | :--- |
+| **Heat Resistance** | Up to 1200°C (Can place boiling pots directly) | Up to 150°C (Thermal shock risk with direct hot pans) | Up to 180°C (Moderate heat tolerance) |
+| **Porosity & Staining** | Near 0% (Impervious to turmeric, red wine, curry) | < 0.05% (Stain-resistant, but spills must be wiped) | 0% (Completely waterproof) |
+| **Scratch Resistance** | Mohs Hardness 7–8 (Can cut directly on surface) | Mohs Hardness 6–7 (Resistant to cutlery scratches) | Mohs Hardness 4–5 (Can scratch with heavy blades) |
+| **Edge Chipping** | Moderate (Requires beveled edge fabrication) | Low to Moderate | Extremely low (Phenolic core does not chip) |
+| **Best Application** | High-heat Asian cooking zones & induction islands | Elegant, consistent luxury countertops & backsplashes | Heavy wet prep counters, rental units & outdoor bars |
+
+### 4.4 Architectural Lighting Temperature Standards
+- **2700K – 3000K (Warm White)**: Specified for living hall coves, bedside sconces, and ambient shelving niches. Fosters visual warmth, relaxation, and luxury hotel ambience.
+- **4000K (Neutral White / Cool White)**: Specified for kitchen countertop task lighting, bathroom grooming vanities, and wardrobe interiors. Delivers true-to-life color rendering without yellow casting.
+- **Color Rendering Index (CRI > 90)**: LuxCraft mandates high-CRI LED strips to prevent muted or distorted fabric, timber, and marble tones.
+
+---
+
+## 5. Complete Index of Completed Projects & Case Studies
+
+All case studies feature authentic photography, material documentation, and floor plan analyses executed by LuxCraft.
+
+1. **HDB @ 909C North Woodlands Way (BTO Flat, UrbanVille @ Woodlands)**
+   - *URL*: https://www.luxcraft.sg/portfolio-pages/909c-north-woodlands-way
+   - *Theme*: Warm Scandinavian Minimalism & Tailored Oak Millwork
+   - *Key Features*: Integrated blonde oak entryway shoe cabinetry with illuminated display alcove and fluted settee bench, floating living room media console with ambient LED cove wash, open-concept dry pantry breakfast bar peninsula with quartz surface and backlit floating shelf, seamless L-shaped wet kitchen with concealed oven housing, and master suite featuring corner built-in wardrobes flowing into a curved window vanity desk.
+   - *Materials*: Solid plywood casework, natural oak woodgrain laminates, engineered quartz surfaces, fluted millwork accents.
+   - *Collaboration*: LuxCraft x Space Wonder
+
+2. **HDB @ 782 Pasir Ris St 71 (Resale Flat)**
+   - *URL*: https://www.luxcraft.sg/portfolio-pages/782-pasir-ris-st-71
+   - *Theme*: Mid-Century Modern Retro Warmth & Breeze Block Character
+   - *Key Features*: White geometric breeze block screen partition with overhead cove wash, earthy continuous terracotta quarry tiling, custom walnut kitchen cabinetry with pull-out espresso station, freestanding Bertazzoni range cooker, dedicated vinyl record lounge, and curved panoramic balcony.
+   - *Materials*: Solid plywood casework, terracotta quarry tiles, handcrafted sage green zellige backsplash, reeded fluted glass.
+   - *Collaboration*: LuxCraft x Space Wonder
+
+3. **HDB @ 967B Tampines St 96 (4-Room BTO)**
+   - *URL*: https://www.luxcraft.sg/portfolio-pages/967b-tampines-st-96
+   - *Theme*: Warm Minimalist Luxury & Organic Curves
+   - *Key Features*: Fluted partition screen, custom curved wardrobe transitioning into makeup vanity, full-height media wall with recessed warm cove lighting, illuminated glass showcase for collectables.
+   - *Materials*: Solid plywood, anti-fingerprint laminates, sintered stone surfaces, reeded glass.
+
+4. **HDB @ 956B Tampines St 96 (4-Room BTO)**
+   - *URL*: https://www.luxcraft.sg/portfolio-pages/956b-tampines-st-96
+   - *Theme*: Modern Wabi-Sabi & Moody Luxury
+   - *Key Features*: Sculptural microcement wall effects, dark timber bespoke carpentry, concealed master suite doorway, textured kitchen island.
+
+5. **HDB @ 194A Bukit Batok West Ave 6 (4-Room BTO)**
+   - *URL*: https://www.luxcraft.sg/portfolio-pages/bukit-batok-west
+   - *Theme*: Minimalist Scandinavian Warmth
+   - *Key Features*: Light oak carpentry runs, handleless flat-front cabinet profiles, seamless entrance settee and shoe cabinet, floating TV console.
+
+6. **HDB @ 224A Mt Vernon Rd (4-Room BTO)**
+   - *URL*: https://www.luxcraft.sg/portfolio-pages/mt-vernon-rd
+   - *Theme*: Private Estate Contemporary
+   - *Key Features*: Warm timber wall cladding, recessed ceiling pelmets, integrated kitchen dry pantry, customized master study nook.
+
+7. **HDB @ 227C Bartley Walk (4-Room BTO)**
+   - *URL*: https://www.luxcraft.sg/portfolio-pages/bartley-walk
+   - *Theme*: Tailored Elegance & Fluid Lines
+   - *Key Features*: Curved ceiling features, ambient LED cove layering, brass metal accents, custom walk-in wardrobe layout.
+
+8. **HDB @ 339B Yishun Ave 6 (4-Room BTO)**
+   - *URL*: https://www.luxcraft.sg/portfolio-pages/yishun-ave-6
+   - *Theme*: Serene Neutral Modernity
+   - *Key Features*: Symmetrical storage walls, fluted wall accents, integrated dining bench with under-seat storage, quartz kitchen top.
+
+9. **HDB @ 241A Tengah Ctrl (4-Room BTO)**
+   - *URL*: https://www.luxcraft.sg/portfolio-pages/241a-tengah-ctrl
+   - *Theme*: Modern Urban Retreat
+   - *Key Features*: Centralised Cooling System (CCS) trunking concealment, smart DB box entryway casing, open kitchen peninsula with breakfast counter.
+
+10. **HDB @ 175B Hougang St 13 (4-Room BTO)**
+   - *URL*: https://www.luxcraft.sg/portfolio-pages/hougang-st-13
+   - *Theme*: Functional Modern Family Home
+   - *Key Features*: Heavy-duty storage planning, kid-friendly rounded carpentry edges, durable compact surface kitchen, custom study desks.
+
+11. **HDB @ 373B Woodlands Ave 1 (5-Room BTO)**
+   - *URL*: https://www.luxcraft.sg/portfolio-pages/woodlands-ave-1
+   - *Theme*: Grand Bespoke Luxury
+   - *Key Features*: Oversized living hall carpentry, fluted TV feature wall with marble-veined sintered stone, master bedroom walk-in corridor.
+
+12. **Condo @ 23 Flora Road, Estalla Gardens**
+    - *URL*: https://www.luxcraft.sg/portfolio-pages/estalla-gardens
+    - *Theme*: Contemporary Resort Condominium
+    - *Key Features*: Complete kitchen overhaul, wet-bar entertainment zone, marble-look porcelain slab walls, customized bathroom vanities.
+
+13. **5-Room BTO @ 858D Choa Chu Kang Ave 1**
+    - *URL*: https://www.luxcraft.sg/portfolio-pages/choa-chu-kang
+    - *Theme*: Open-Concept Scandinavian
+    - *Key Features*: Hacked kitchen wall replaced with bi-fold glass panels, extended kitchen counter island, concealed bomb shelter door.
+
+14. **4BR Condo @ Simei Street**
+    - *URL*: https://www.luxcraft.sg/portfolio-pages/simei-street
+    - *Theme*: Modern Monochrome Sophistication
+    - *Key Features*: Deep graphite accents, tinted bronze glass wardrobes, cove lighting pelmets, integrated wine chiller cabinet.
+
+15. **4-Room BTO @ 270A Toa Payoh East**
+    - *URL*: https://www.luxcraft.sg/portfolio-pages/toa-payoh-east
+    - *Theme*: Soft Curves & Textured Serenity
+    - *Key Features*: Curved entrance shoe rack, fluted timber panels, reeded glass pocket doors, custom master bed headboard with integrated switches.
+
+16. **4-Room BTO @ Towner Road**
+    - *URL*: https://www.luxcraft.sg/portfolio-pages/towner-road
+    - *Theme*: Communal Warmth for Young Families
+    - *Key Features*: Open-plan communal space, full-height book shelving, warm 3000K layered illumination, sintered stone dining surface.
+
+17. **3BR Condo @ Mar Thoma Rd**
+    - *URL*: https://www.luxcraft.sg/portfolio-pages/mar-thoma
+    - *Theme*: Urban Minimalist Sanctuary
+    - *Key Features*: Clean architectural lines, dark oak built-ins, frameless glass shower enclosures, integrated laundry cabinet.
+
+18. **5-Room BTO @ Segar Road**
+    - *URL*: https://www.luxcraft.sg/portfolio-pages/segar-road
+    - *Theme*: Hospitality-Inspired Living
+    - *Key Features*: Hotel-style master bedroom, open-concept bar counter, multi-functional guest study room, luxury vinyl plank flooring.
+
+19. **4-Room Resale @ Teck Whye Lane**
+    - *URL*: https://www.luxcraft.sg/portfolio-pages/teck-whye-lane
+    - *Theme*: Heritage Rejuvenation
+    - *Key Features*: Complete masonry overhaul, full re-piping and rewiring, modern industrial kitchen with black aluminium frames, built-in altar niche.
+
+20. **4-Room Resale @ Woodlands Drive**
+    - *URL*: https://www.luxcraft.sg/portfolio-pages/woodlands-drive
+    - *Theme*: Soft Japandi Refresh
+    - *Key Features*: Ribbed glass cabinet doors, curved corner shelving, light birch timber textures, full bathroom waterproofing overhaul.
+
+21. **5-Room BTO @ Tengah Drive**
+    - *URL*: https://www.luxcraft.sg/portfolio-pages/tengah-drive
+    - *Theme*: Biophilic Modern Living
+    - *Key Features*: Indoor planter ledges, warm timber shelving, glass acoustic study partition, concealed aircon trunking design.
+
+22. **Commercial Shophouse @ Lavender Street**
+    - *URL*: https://www.luxcraft.sg/portfolio-pages/lavender-street
+    - *Theme*: Heritage Commercial Office Fit-Out
+    - *Key Features*: Preservation of historic exposed brickwork, custom reception counter, acoustic meeting rooms, commercial lighting track system.
+
+23. **3-Room BTO @ Champions Way**
+    - *URL*: https://www.luxcraft.sg/portfolio-pages/champions-way
+    - *Theme*: High-Efficiency Compact Living
+    - *Key Features*: Fold-down dining table carpentry, multi-tier storage platform bed, entryway mirror shoe cabinet, space-saving sliding bathroom doors.
+
+24. **3BR Condo @ Sengkang**
+    - *URL*: https://www.luxcraft.sg/portfolio-pages/sengkang
+    - *Theme*: Coastal Modern Contemporary
+    - *Key Features*: Marine blue cabinetry accents, brushed brass cabinet hardware, balcony decking, master walk-in wardrobe corridor.
+
+---
+
+## 6. End-to-End 7-Stage Project Delivery Process
+
+3. **Stage 1: Preliminary Brief & Spatial Diagnostic (Week 1)**
+   - Review of architectural floor plans, BTO key collection dates, lifestyle habits, cooking style (heavy vs. light), storage audit, and budget allocation.
+4. **Stage 2: 3D Visualization, Material Selection & Itemized BOQ (Week 2 – 3)**
+   - Presentation of photorealistic 3D visual mockups.
+   - Showroom tactile material curation: touching laminate textures, sintered stone slabs, floor tiles, and testing soft-close hardware.
+   - Finalization of transparent, non-ambiguous Bill of Quantities.
+5. **Stage 3: Permitting, Regulatory Clearances & Submissions (Week 3 – 4)**
+   - Submission of HDB renovation permit applications via Corenet/My HDBPage.
+   - For condos: MCST documentation, contractor deposits, lift padding arrangement, and renovation permit issuance.
+6. **Stage 4: Structural Demolition, M&E & Wet Masonry (Week 4 – 6)**
+   - Site protection, hacking of approved walls, debris carting.
+   - Electrical rewiring, plumbing pipe replacement, air-conditioning trunking rough-in.
+   - Floor screeding, wall plastering, bathroom PU waterproofing, and tiling.
+7. **Stage 5: Direct Workshop Carpentry Fabrication & Assembly (Week 6 – 8)**
+   - Parallel off-site fabrication at LuxCraft Woodlands workshop.
+   - Precise slicing, CNC edge-banding, modular box assembly, and quality checking.
+   - Delivery to site and precision leveling, installation, and scribing.
+8. **Stage 6: Countertop Installation, Glass, Painting & Fittings (Week 8 – 9)**
+   - Laser-templating and installation of sintered stone / quartz countertops.
+   - Installation of tempered glass partitions, mirrors, electrical faceplates, light fixtures, and plumbing sanitary wares.
+   - Final coats of low-VOC paint.
+9. **Stage 7: Quality Audit, Chemical Wash & Handover (Week 9 – 10)**
+   - Thorough multi-point defects inspection conducted with the homeowner.
+   - Acid and chemical cleaning to remove fine grout haze and construction dust.
+   - Official warranty certificate issuance and key handover.
+
+---
+
+## 7. Educational Resources & Technical Guides
+
+- **Solid Plywood vs. MDF in Singapore**: https://www.luxcraft.sg/blog/plywood-vs-mdf-built-in-carpentry-singapore
+  *Summary: In-depth analysis of tropical moisture absorption, structural sag resistance, and why built-in plywood carpentry outperforms off-the-shelf flat-pack furniture.*
+- **Choosing the Right Kitchen Countertop in Singapore**: https://www.luxcraft.sg/blog/choosing-the-right-kitchen-countertop-singapore
+  *Summary: Comparison of Quartz, Sintered Stone, and Solid Surface materials on stain resistance, heat tolerance, and longevity.*
+- **Quartz vs. Sintered Stone vs. Compact Tops**: https://www.luxcraft.sg/blog/quartz-vs-sintered-stone-vs-compact-top-singapore
+  *Summary: Material science benchmarks for heavy cooking environments in HDB and condo kitchens.*
+- **Maximizing Your HDB BTO DB Cabinet**: https://www.luxcraft.sg/blog/maximizing-hdb-bto-db-cabinet-luxexplains-guide
+  *Summary: Strategic carpentry guidelines to transform the electrical distribution board into an elegant, ventilated entryway shoe cabinet.*
+- **The Art of Lighting Placement and Temperature**: https://www.luxcraft.sg/blog/the-art-of-lighting-placement-and-temperature
+  *Summary: Technical guide on Kelvin temperatures (2700K to 4000K), lux levels, and architectural layered illumination.*
+
+---
+
+## 8. Frequently Asked Questions (FAQ)
+
+### Pricing & Contracts
+**Q: How does LuxCraft structure quotation payments?**
+*A: Payments are distributed across standard milestone tranches: an initial 10% confirmation deposit upon 3D design and layout finalization; 35% upon site commencement and demolition; 30% upon carpentry fabrication and tiling completion; 20% upon delivery of carpentry and surface installation; and the final 5% retention only after joint defects inspection and satisfactory handover.*
+
+**Q: Are there hidden variation costs (VOs) during renovation?**
+*A: No. LuxCraft specifies exact dimensions, materials, and line items in the preliminary Bill of Quantities. Variation Orders are only generated if the homeowner requests scope expansion (such as adding extra cabinetry or upgrading to higher-tier sintered stone slabs) during the project.*
+
+### Materials & Workmanship
+**Q: Why doesn't LuxCraft use MDF or particle board for cabinets?**
+*A: MDF and particle board swell irreversibly when exposed to Singapore's high relative humidity (averaging over 80%). Because kitchen cabinets house plumbing pipes and produce steam during cooking, MDF carcasses warp, crack, and strip hinge screws within a few years. Solid plywood offers unmatched tensile strength, moisture tolerance, and screw retention.*
+
+**Q: What brand of hardware is installed in LuxCraft cabinetry?**
+*A: LuxCraft specifies premium Blum soft-close hinges and heavy-duty undermount drawer runners as our baseline standard, rated for over 100,000 opening cycles.*
+
+### Regulations & Timelines
+**Q: Who handles HDB and MCST renovation permits?**
+*A: LuxCraft manages all statutory submissions. For HDB flats, we submit hacking, electrical, and plumbing notices via official portals. For private condominiums, we prepare architectural floor plans, handle MCST contractor registrations, provide insurance certificates, and coordinate security deposits.*
+
+**Q: Can you renovate while the homeowner lives in the flat?**
+*A: For partial renovations (kitchen or bathroom refreshes), yes. We install heavy-duty zip-wall dust containment partitions, run negative air scrubbers when necessary, and practice daily site cleanups to minimize disruption. For full-flat resale overhauls involving extensive hacking, we strongly recommend temporary off-site accommodation due to noise, dust, and utility shutdowns.*
+
+---
+
+## 9. Contact & Consultation Booking
+
+Prospective homeowners, commercial operators, and architects can schedule a personalized design and quotation consultation:
+- **WhatsApp / Direct Call**: +65 8312 6212 (Shamim) / +65 8899 1245 (Manfred)
+- **Email Inquiries**: contact@luxcraft.sg
+- **Studio Address**: 190 Woodlands Industrial Park E5, Woodlands Bizhub, #04-05, Singapore 757516
+- **Online Booking Form**: https://www.luxcraft.sg/contact

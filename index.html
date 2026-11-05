@@ -1,846 +1,1175 @@
 <!DOCTYPE html>
 
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>LuxCraft - Interior Designer Singapore</title>
-<meta content="LuxCraft is a Singapore interior design studio delivering concept development, tailored renovations, and complimentary 3D renderings for homes and commercial spaces." name="description"/>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Syne:wght@500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="/assets/images/favicon.png" rel="icon" sizes="192x192" type="image/png"/>
-<link href="/assets/corbesier-icons.css" rel="stylesheet"/>
-<link href="/assets/styles.css" rel="stylesheet"/>
-<script defer="" src="/assets/js/header.js"></script>
-<script defer="" src="/assets/js/brand-scroll.js"></script>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Interior Design & Renovation Singapore | LuxCraft</title>
+  <meta
+    content="LuxCraft is Singapore's premier interior design firm. We specialize in BTO, resale, condo, landed, and commercial renovations. Request a free 3D design consultation!"
+    name="description" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.luxcraft.sg/" />
+  <meta property="og:title" content="Interior Design & Renovation Singapore | LuxCraft" />
+  <meta property="og:description" content="LuxCraft is Singapore's premier interior design firm. We specialize in BTO, resale, condo, landed, and commercial renovations. Request a free 3D design consultation!" />
+  <meta property="og:image" content="https://www.luxcraft.sg/assets/images/logo.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://www.luxcraft.sg/" />
+  <meta property="twitter:title" content="Interior Design & Renovation Singapore | LuxCraft" />
+  <meta property="twitter:description" content="LuxCraft is Singapore's premier interior design firm. We specialize in BTO, resale, condo, landed, and commercial renovations. Request a free 3D design consultation!" />
+  <meta property="twitter:image" content="https://www.luxcraft.sg/assets/images/logo.png" />
+  <link rel="canonical" href="https://www.luxcraft.sg/" />
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;family=Syne:wght@500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link href="/assets/images/favicon.png" rel="icon" sizes="192x192" type="image/png" />
+  <link href="/assets/corbesier-icons.css" rel="stylesheet" />
+  <link href="/assets/styles.css?v=1.1.2" rel="stylesheet" />
+  <link rel="preload" as="image" href="/assets/images/Hero-1.webp?v=1" type="image/webp" fetchpriority="high" />
+  <style>
+    .contact-phone-error {
+      border-color: #b42318 !important;
+      box-shadow: 0 0 0 2px rgba(180, 35, 24, 0.15);
+    }
+
+    .contact-error-text {
+      display: none;
+      font-size: 0.75rem;
+      color: #b42318;
+      margin-top: 0.5rem;
+    }
+
+    .contact-error-text.is-visible {
+      display: block;
+    }
+
+    /* Ensure hero links are legible in light theme */
+    .light-theme .hero-subcopy a {
+      color: white !important;
+      text-decoration-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .light-theme .hero-subcopy a:hover {
+      color: #BF9C65 !important;
+      text-decoration-color: #BF9C65;
+    }
+
+    .hero-button--project {
+      transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+    }
+
+    .hero-button--project:hover,
+    .hero-button--project:focus-visible {
+      background-color: #bf9c65 !important;
+      border-color: #bf9c65 !important;
+      color: #111111 !important;
+      box-shadow: 0 8px 24px -4px rgba(191, 156, 101, 0.45);
+    }
+  </style>
+  <script defer="" src="/assets/js/header.js?v=1.1.1"></script>
+  <script defer="" src="/assets/js/brand-scroll.js"></script>
+  <script defer="" src="/assets/js/contact-validation.js?v=1.1.0"></script>
+  <script src="/assets/js/analytics.js?v=1.0.1" defer></script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": [
+    "HomeAndConstructionBusiness",
+    "GeneralContractor"
+  ],
+  "@id": "https://www.luxcraft.sg/#business",
+  "name": "LuxCraft",
+  "alternateName": "LuxCraft Singapore",
+  "legalName": "LuxCraft Pte. Ltd.",
+  "taxID": "202343751W",
+  "image": "https://www.luxcraft.sg/assets/images/logo.png",
+  "url": "https://www.luxcraft.sg/",
+  "telephone": "+65 8312 6212",
+  "email": "contact@luxcraft.sg",
+  "priceRange": "$$ - $$$",
+  "currenciesAccepted": "SGD",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "190 Woodlands Industrial Park E5, Woodlands Bizhub, #04-05",
+    "addressLocality": "Singapore",
+    "postalCode": "757516",
+    "addressCountry": "SG"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 1.4521,
+    "longitude": 103.7921
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "Singapore"
+  },
+  "sameAs": [
+    "https://www.instagram.com/luxcraft.studio/",
+    "https://www.facebook.com/luxcraft.studio",
+    "https://www.tiktok.com/@luxcraft.studio"
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "bestRating": "5",
+    "reviewCount": "48",
+    "itemReviewed": {
+      "@type": "HomeAndConstructionBusiness",
+      "@id": "https://www.luxcraft.sg/#business",
+      "name": "LuxCraft"
+    }
+  },
+  "review": [
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Jermain Seah"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Christopher and his team managed to deliver everything within our tight timeline (~1.5months) and were always responsive to our questions. Christopher was also very patient in addressing my (many!) queries \u2014 truly appreciate his professionalism and dedication.",
+      "itemReviewed": {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://www.luxcraft.sg/#business",
+        "name": "LuxCraft"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Clarisse Ang"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "I was recommended to Luxcraft by a friend, and I\u2019m so glad I chose them, Manfred, Christopher. Their pricing was realistic and transparent, with no hidden costs. The renovation process was smooth, well-managed, and completed on a pretty tight timeline. The team was professional, responsive, and paid great attention to detail. The final result exceeded my expectations, and I\u2019d highly recommend them to anyone looking for a reliable renovation team. Thank you for transforming my flat into a beautiful home!",
+      "itemReviewed": {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://www.luxcraft.sg/#business",
+        "name": "LuxCraft"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Raul II Romo"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "We recently completed a full renovation with LuxCraft, and we couldn\u2019t be happier with the results! From the initial consultation to the final walk-through, the team was professional, communicative, and truly attentive to our vision. They delivered high-quality workmanship, stayed on schedule, and respected our home every step of the way. Every detail \u2014 from the flooring to the fixtures \u2014 was done with care and precision. The transformation is stunning, and it honestly feels like we\u2019re living in a brand-new home. Special thanks to Shamim and Christopher for being so responsive and always keeping us in the loop.",
+      "itemReviewed": {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://www.luxcraft.sg/#business",
+        "name": "LuxCraft"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Kent C"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "A big shout-out to the LuxCraft's team - Christopher, Manfred & Shamim for walking through our renovation for the past few months & had delivered their professionalism dutifully. The level of responsibility and commitment to deliver is well communicated with cost flexibility. Even though there\u2019s minor issues & challenges along the way of renovation, their attitude & services are above expectations. When promised, will deliver and flexible with our timeline. We are truly happy of our home-making especially the kitchen make-over! Sleek, Organised for a cozy starter home!",
+      "itemReviewed": {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://www.luxcraft.sg/#business",
+        "name": "LuxCraft"
+      }
+    },
+    {
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": "Phyllis Tan"
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": "5",
+        "bestRating": "5"
+      },
+      "reviewBody": "Prompt, professional, and reliable renovation contractor in Singapore. Transparent quotation and high quality carpentry workmanship.",
+      "itemReviewed": {
+        "@type": "HomeAndConstructionBusiness",
+        "@id": "https://www.luxcraft.sg/#business",
+        "name": "LuxCraft"
+      }
+    }
+  ]
+}
+</script>
 </head>
+
 <body class="light-theme min-h-screen bg-white text-lux-dark has-fixed-header">
-<header class="site-header">
-<div class="lux-container header-row">
-<a aria-label="LuxCraft Home" class="header-logo" href="/index.html">
-<img alt="LuxCraft" src="/assets/images/logo.png"/>
-</a>
-<nav aria-label="Primary" class="header-nav">
-<a href="/about.html">Who We Are</a>
-<a href="/services.html">What We Do</a>
-<a href="/portfolio.html">Our Past Works</a>
-<a href="/contact.html">Contact Us</a>
-</nav>
-<div class="header-controls">
-<button aria-label="Search" class="header-action" type="button">
-<svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
-<circle cx="11" cy="11" r="7"></circle>
-<path d="m20 20-3.2-3.2" stroke-linecap="round"></path>
-</svg>
-</button>
-<button aria-label="Open navigation" class="header-toggle md:hidden" type="button">
-<span class="sr-only">Toggle navigation</span>
-<svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
-<path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg>
-</button>
-</div>
-</div>
-<div aria-label="Mobile navigation" aria-modal="true" id="mobile-menu" role="dialog">
-<button aria-label="Close navigation" id="mobile-menu__close" type="button">
-<svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
-<path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg>
-</button>
-<nav aria-label="Mobile navigation">
-<a class="hover:text-white" href="/about.html">Who We Are</a>
-<a class="hover:text-white" href="/services.html">What We Do</a>
-<a class="hover:text-white" href="/portfolio.html">Our Past Works</a>
-<a class="hover:text-white" href="/contact.html">Contact Us</a>
-</nav>
-<div class="mt-6 flex flex-col gap-2 text-white/60">
-<a class="hover:text-white" href="https://wa.me/6583126212">+65 8312 6212 (Shamim)</a>
-<a class="hover:text-white" href="https://wa.me/6588991245">+65 8899 1245 (Manfred)</a>
-</div>
-</div>
-</header>
-<main>
-<section aria-label="Featured projects" class="relative overflow-hidden bg-lux-darker">
-<div class="hero-shell relative w-full">
-<div class="absolute inset-0" role="list">
-<article aria-hidden="false" class="hero-slide hero-slide--active hero-slide--copy-visible absolute inset-0 flex h-full w-full flex-col justify-center overflow-hidden opacity-0 transition-opacity duration-700" data-hero-slide="0">
-<img alt="LuxCraft kitchen renovation with pendant lights" class="absolute inset-0 h-full w-full object-cover" src="/assets/images/Hero-1.jpg"/>
-<div class="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/60 to-transparent"></div>
-<div class="hero-copy">
-<span class="hero-kicker">Interior Trends</span>
-<h1 class="hero-headline">All the best trends for your house</h1>
-<p class="hero-subcopy">
-                  Choose your interior style provided by LuxCraft—from concept to completion with meticulous project management.
-                </p>
-<div class="hero-actions">
-<a class="hero-button hero-button--ghost" href="/contact.html">Book a Consultation</a>
-</div>
-</div>
-</article>
-<article aria-hidden="true" class="hero-slide absolute inset-0 flex h-full w-full flex-col justify-center overflow-hidden opacity-0 transition-opacity duration-700" data-hero-slide="1">
-<img alt="LuxCraft living room with warm lighting" class="absolute inset-0 h-full w-full object-cover" src="/assets/images/Hero-2.jpg"/>
-<div class="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/62 to-transparent"></div>
-<div class="hero-copy">
-<span class="hero-kicker">Curated Spaces</span>
-<h1 class="hero-headline">Tailored interiors for everyday comfort</h1>
-<p class="hero-subcopy">
-                  From bespoke carpentry to lighting plans, every LuxCraft home is engineered around the way you live.
-                </p>
-<div class="hero-actions">
-<a class="hero-button hero-button--ghost" href="/about.html">Meet the Team</a>
-</div>
-</div>
-</article>
-<article aria-hidden="true" class="hero-slide absolute inset-0 flex h-full w-full flex-col justify-center overflow-hidden opacity-0 transition-opacity duration-700" data-hero-slide="2">
-<img alt="LuxCraft entertainment area with natural light" class="absolute inset-0 h-full w-full object-cover" src="/assets/images/Hero-3.jpg"/>
-<div class="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/62 to-transparent"></div>
-<div class="hero-copy">
-<span class="hero-kicker">Project Delivery</span>
-<h1 class="hero-headline">Renovations managed with precision</h1>
-<p class="hero-subcopy">
-                  Dedicated project leads coordinate every trade, timeline, and inspection so your dream space is turnkey-ready.
-                </p>
-<div class="hero-actions">
-<a class="hero-button hero-button--ghost" href="#why-luxcraft">Why LuxCraft</a>
-</div>
-</div>
-</article>
-</div>
-<div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
-<div aria-hidden="true" class="hero-chrome-bar"></div>
-<div class="hero-chrome absolute bottom-8 left-8 sm:left-[8%] lg:left-[10%]">
-<div aria-label="Hero slides" class="flex items-center gap-5 text-xs font-semibold uppercase tracking-[0.35em] text-white/60" role="tablist">
-<button aria-selected="true" class="hero-nav-item relative pb-2" data-hero-nav="0" type="button">
-                01
-                <span class="hero-underline absolute bottom-0 left-0 h-[2px] w-10 origin-left scale-x-0 bg-white transition-transform duration-500"></span>
-</button>
-<button aria-selected="false" class="hero-nav-item relative pb-2" data-hero-nav="1" type="button">
-                02
-                <span class="hero-underline absolute bottom-0 left-0 h-[2px] w-10 origin-left scale-x-0 bg-white transition-transform duration-500"></span>
-</button>
-<button aria-selected="false" class="hero-nav-item relative pb-2" data-hero-nav="2" type="button">
-                03
-                <span class="hero-underline absolute bottom-0 left-0 h-[2px] w-10 origin-left scale-x-0 bg-white transition-transform duration-500"></span>
-</button>
-</div>
-<div class="h-px w-full overflow-hidden bg-white/20">
-<div class="h-full w-full origin-left scale-x-0 bg-white" data-hero-progress=""></div>
-</div>
-</div>
-<button class="hero-scroll group absolute right-8 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] transition sm:right-[10%]" data-scroll-target="#about-preview" type="button">
-<span class="inline-flex h-px w-10 bg-white/40 transition group-hover:bg-white"></span>
-<span>Scroll Down</span>
-</button>
-</div>
-</section>
-<section class="about-panel" id="about-preview">
-<div class="about-panel__shell">
-<header class="about-panel__header">
-<span class="about-panel__eyebrow">About Us</span>
-<h2 class="about-panel__title !text-lux-dark !font-semibold">We go beyond the ordinary.</h2>
-<p class="about-panel__lede">
-              Concept development, complimentary renderings, bespoke space planning, and renovation services that translate your vision into a refined reality.
-            </p>
-</header>
-<div class="about-features">
-<article class="about-feature">
-<span aria-hidden="true" class="about-feature__icon icon-corbesier-6"></span>
-<span class="about-feature__label">Concept<br/>Development</span>
-</article>
-<article class="about-feature">
-<span aria-hidden="true" class="about-feature__icon icon-corbesier-7"></span>
-<span class="about-feature__label">Free<br/>Rendering</span>
-</article>
-<article class="about-feature">
-<span aria-hidden="true" class="about-feature__icon icon-corbesier-8"></span>
-<span class="about-feature__label">Space<br/>Planning</span>
-</article>
-<article class="about-feature">
-<span aria-hidden="true" class="about-feature__icon icon-corbesier-9"></span>
-<span class="about-feature__label">Renovation<br/>Services</span>
-</article>
-</div>
-</div>
-</section>
-<section class="why-panel" id="why-luxcraft">
-<div aria-hidden="true" class="why-panel__overlay"></div>
-<div class="lux-container why-panel__inner">
-<div class="why-panel__grid">
-<div class="why-panel__intro">
-<span class="why-panel__eyebrow">You Must Be Asking</span>
-<h2 class="why-panel__title">Why Choose LuxCraft?</h2>
-</div>
-<div class="why-panel__copy">
-<p>
-                At <strong>LuxCraft</strong>, our certified team offers comprehensive services from <strong>design to execution</strong>, including <strong>complimentary 3D renderings</strong> to ensure your vision is perfectly realized.
+  <header class="site-header">
+    <div class="lux-container header-row">
+      <a aria-label="LuxCraft Home" class="header-logo" href="/">
+        <img alt="LuxCraft" src="/assets/images/logo.png" />
+      </a>
+      <nav aria-label="Primary" class="header-nav">
+        <a href="/about">Who We Are</a>
+        <a href="/services">What We Do</a>
+        <a href="/portfolio">Our Past Works</a>
+
+        <a href="/contact">Contact Us</a>
+      </nav>
+      <div class="header-controls">
+        <button aria-label="Search" class="header-action" type="button">
+          <svg fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+            <circle cx="11" cy="11" r="7"></circle>
+            <path d="m20 20-3.2-3.2" stroke-linecap="round"></path>
+          </svg>
+        </button>
+        <button aria-label="Open navigation" class="header-toggle md:hidden" type="button">
+          <span class="sr-only">Toggle navigation</span>
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div aria-label="Mobile navigation" aria-modal="true" id="mobile-menu" role="dialog">
+      <button aria-label="Close navigation" id="mobile-menu__close" type="button">
+        <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="1.5" viewbox="0 0 24 24">
+          <path d="M6 18L18 6M6 6l12 12" stroke-linecap="round" stroke-linejoin="round"></path>
+        </svg>
+      </button>
+      <nav aria-label="Mobile navigation">
+        <a class="hover:text-white" href="/about">Who We Are</a>
+        <a class="hover:text-white" href="/services">What We Do</a>
+        <a class="hover:text-white" href="/portfolio">Our Past Works</a>
+
+        <a class="hover:text-white" href="/contact">Contact Us</a>
+      </nav>
+      <div class="mt-6 flex flex-col gap-2 text-white/60">
+        <a class="hover:text-white" href="https://wa.me/6583126212">+65 8312 6212 (Shamim)</a>
+        <a class="hover:text-white" href="https://wa.me/6588991245">+65 8899 1245 (Manfred)</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section aria-label="Featured projects" class="relative overflow-hidden bg-lux-darker">
+      <div class="hero-shell relative w-full">
+        <div class="absolute inset-0" role="list">
+          <!-- Slide 0: 967B Tampines St 96 (Previous Champions Way kitchen banner archived in /assets/HERO_BANNER_BACKUPS.md) -->
+          <article aria-hidden="false"
+            class="hero-slide hero-slide--active hero-slide--copy-visible absolute inset-0 flex h-full w-full flex-col justify-center overflow-hidden opacity-0 transition-opacity duration-700"
+            data-hero-slide="0">
+            <picture class="absolute inset-0 block h-full w-full">
+              <source srcset="/assets/images/Hero-1.webp?v=1 1x, /assets/images/Hero-1@2x.webp?v=1 2x" type="image/webp" />
+              <img alt="LuxCraft modern living room renovation at 967B Tampines St 96 with built-in TV console and ambient lighting"
+                class="absolute inset-0 h-full w-full object-cover" src="/assets/images/Hero-1.jpg?v=1" width="1920"
+                height="1280" fetchpriority="high" decoding="async" />
+            </picture>
+            <div class="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/60 to-transparent"></div>
+            <div class="hero-copy">
+              <span class="hero-kicker">Interior Trends</span>
+              <h1 class="hero-headline">
+                Interior Design &amp; Renovation
+                <span class="block text-2xl sm:text-3xl font-light text-[#BF9C65] tracking-wide mt-2">Crafted for Singapore Homes</span>
+              </h1>
+              <p class="hero-subcopy">
+                Discover stylish, functional interior design in Singapore. From <a
+                  href="/services-pages/hdb-bto-sbf-renovation"
+                  class="!text-white font-bold underline hover:text-[#BF9C65] transition-colors">BTO</a> and <a
+                  href="/services-pages/hdb-resale-renovation"
+                  class="!text-white font-bold underline hover:text-[#BF9C65] transition-colors">resale HDBs</a> to <a
+                  href="/services-pages/condo-renovation"
+                  class="!text-white font-bold underline hover:text-[#BF9C65] transition-colors">luxury condo
+                  renovations</a>, LuxCraft delivers concept to completion with meticulous project management.
               </p>
-<p>
-                We prioritize a customer-centric approach, ensuring seamless communication and meticulous attention to detail throughout the renovation process. With <strong>LuxCraft</strong>, experience peace of mind and satisfaction as we transform your space to match your exact needs.
+              <div class="hero-actions">
+                <a class="hero-button hero-button--ghost" href="/contact">Book a Consultation</a>
+                <a class="hero-button hero-button--ghost hero-button--project group" href="/portfolio-pages/967b-tampines-st-96" aria-label="Check out 967B Tampines St 96 project">
+                  <span>Check out this project</span>
+                  <svg class="h-4 w-4 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article aria-hidden="true"
+            class="hero-slide absolute inset-0 flex h-full w-full flex-col justify-center overflow-hidden opacity-0 transition-opacity duration-700"
+            data-hero-slide="1">
+            <img alt="LuxCraft dining space with warm ambient lighting and curved archway"
+              class="absolute inset-0 h-full w-full object-cover" src="/assets/images/Hero-2.jpg" />
+            <div class="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/62 to-transparent"></div>
+            <div class="hero-copy">
+              <span class="hero-kicker">Curated Spaces</span>
+              <h2 class="hero-headline">Tailored interiors for everyday comfort</h2>
+              <p class="hero-subcopy">
+                From bespoke carpentry to lighting plans, every LuxCraft home is engineered around the way you live.
               </p>
-</div>
-</div>
-<div class="why-panel__brands">
-<h3>We work with the best brands</h3>
-<ul class="why-panel__logos">
-<div class="brand-scroll-track flex">
-<!-- Logos set A -->
-<li class="flex-none px-6">
-<img alt="Nippon Paint logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/nippon-paint.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Hafary logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/hafary.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Excel Hardware logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/excel.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="EDL logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/EDL.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Lamitak logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/lamitak.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Evorich logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/evorich.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Raffles Paint logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/rafflespaint.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Blum logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/blum.png"/>
-</li>
-<!-- Logos set B (duplicate for seamless scroll) -->
-<li class="flex-none px-6">
-<img alt="Nippon Paint logo duplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/nippon-paint.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Hafary logo duplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/hafary.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Excel Hardware logo duplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/excel.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="EDL logo duplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/EDL.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Lamitak logo duplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/lamitak.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Evorich logo duplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/evorich.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Raffles Paint logo duplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/rafflespaint.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Blum logo duplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/blum.png"/>
-</li>
-<!-- Logos set C (third duplicate for seamless scroll) -->
-<li class="flex-none px-6">
-<img alt="Nippon Paint logo triplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/nippon-paint.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Hafary logo triplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/hafary.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Excel Hardware logo triplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/excel.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="EDL logo triplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/EDL.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Lamitak logo triplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/lamitak.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Evorich logo triplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/evorich.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Raffles Paint logo triplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/rafflespaint.png"/>
-</li>
-<li class="flex-none px-6">
-<img alt="Blum logo triplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy" src="/assets/images/brands/blum.png"/>
-</li>
-</div>
-</ul>
-</div>
-</div>
-</section>
-<section class="design-services">
-<div class="design-services__inner">
-<div class="design-services__lead">
-<span class="design-services__eyebrow">Design Services</span>
-<h2 class="design-services__title !text-lux-dark !font-semibold">Turning dreams into reality.</h2>
-<p>
-              At LuxCraft, we specialise in transforming your vision into a tangible design with our expert 3D renderings. Our design team <strong>collaborates closely with you</strong> from the initial consultation to the final details, ensuring every aspect of the renovation meets your specific needs and preferences. Whether it's a minor room refresh or a major renovation, we guarantee a <strong>seamless and satisfying design experience</strong>, with a focus on quality and client satisfaction.
+              <div class="hero-actions">
+                <a class="hero-button hero-button--ghost" href="/about">Meet the Team</a>
+                <a class="hero-button hero-button--ghost hero-button--project group" href="/portfolio-pages/hougang-st-13">
+                  <span>Check out this project</span>
+                  <svg class="h-4 w-4 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+          <article aria-hidden="true"
+            class="hero-slide absolute inset-0 flex h-full w-full flex-col justify-center overflow-hidden opacity-0 transition-opacity duration-700"
+            data-hero-slide="2">
+            <img alt="LuxCraft entertainment area with natural light"
+              class="absolute inset-0 h-full w-full object-cover" src="/assets/images/Hero-3.jpg" />
+            <div class="absolute inset-0 bg-gradient-to-tr from-black/80 via-black/62 to-transparent"></div>
+            <div class="hero-copy">
+              <span class="hero-kicker">Project Delivery</span>
+              <h2 class="hero-headline">Renovations managed with precision</h2>
+              <p class="hero-subcopy">
+                Dedicated project leads coordinate every trade, timeline, and inspection so your dream space is
+                turnkey-ready.
+              </p>
+              <div class="hero-actions">
+                <a class="hero-button hero-button--ghost" href="#why-luxcraft">Why LuxCraft</a>
+                <a class="hero-button hero-button--ghost hero-button--project group" href="/portfolio-pages/simei-street">
+                  <span>Check out this project</span>
+                  <svg class="h-4 w-4 shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M7 17L17 7M7 7h10v10" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="pointer-events-none absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/40"></div>
+        <div aria-hidden="true" class="hero-chrome-bar"></div>
+        <div class="hero-chrome absolute bottom-8 left-8 sm:left-[8%] lg:left-[10%]">
+          <div aria-label="Hero slides"
+            class="flex items-center gap-5 text-xs font-semibold uppercase tracking-[0.35em] text-white/60"
+            role="tablist">
+            <button aria-selected="true" class="hero-nav-item relative pb-2" data-hero-nav="0" type="button">
+              01
+              <span
+                class="hero-underline absolute bottom-0 left-0 h-[2px] w-10 origin-left scale-x-0 bg-white transition-transform duration-500"></span>
+            </button>
+            <button aria-selected="false" class="hero-nav-item relative pb-2" data-hero-nav="1" type="button">
+              02
+              <span
+                class="hero-underline absolute bottom-0 left-0 h-[2px] w-10 origin-left scale-x-0 bg-white transition-transform duration-500"></span>
+            </button>
+            <button aria-selected="false" class="hero-nav-item relative pb-2" data-hero-nav="2" type="button">
+              03
+              <span
+                class="hero-underline absolute bottom-0 left-0 h-[2px] w-10 origin-left scale-x-0 bg-white transition-transform duration-500"></span>
+            </button>
+          </div>
+          <div class="h-px w-full overflow-hidden bg-white/20">
+            <div class="h-full w-full origin-left scale-x-0 bg-white" data-hero-progress=""></div>
+          </div>
+        </div>
+        <button
+          class="hero-scroll group absolute right-8 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] transition sm:right-[10%]"
+          data-scroll-target="#about-preview" type="button">
+          <span class="inline-flex h-px w-10 bg-white/40 transition group-hover:bg-white"></span>
+          <span>Scroll Down</span>
+        </button>
+      </div>
+    </section>
+    <section class="about-panel" id="about-preview">
+      <div class="about-panel__shell">
+        <header class="about-panel__header">
+          <span class="about-panel__eyebrow">About Us</span>
+          <h2 class="about-panel__title !text-lux-dark !font-semibold">We go beyond the ordinary.</h2>
+          <p class="about-panel__lede">
+            Concept development, complimentary renderings, bespoke space planning, and renovation services that
+            translate your vision into a refined reality.
+          </p>
+        </header>
+        <div class="about-features">
+          <article class="about-feature">
+            <span aria-hidden="true" class="about-feature__icon icon-corbesier-6"></span>
+            <span class="about-feature__label">Concept<br />Development</span>
+          </article>
+          <article class="about-feature">
+            <span aria-hidden="true" class="about-feature__icon icon-corbesier-7"></span>
+            <span class="about-feature__label">Free<br />Rendering</span>
+          </article>
+          <article class="about-feature">
+            <span aria-hidden="true" class="about-feature__icon icon-corbesier-8"></span>
+            <span class="about-feature__label">Space<br />Planning</span>
+          </article>
+          <article class="about-feature">
+            <span aria-hidden="true" class="about-feature__icon icon-corbesier-9"></span>
+            <span class="about-feature__label">Renovation<br />Services</span>
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="why-panel" id="why-luxcraft">
+      <div aria-hidden="true" class="why-panel__overlay"></div>
+      <div class="lux-container why-panel__inner">
+        <div class="why-panel__grid">
+          <div class="why-panel__intro">
+            <span class="why-panel__eyebrow">You Must Be Asking</span>
+            <h2 class="why-panel__title">Why Choose LuxCraft?</h2>
+          </div>
+          <div class="why-panel__copy">
+            <p>
+              At <strong>LuxCraft</strong>, our certified team is recognized as one of <a href="/about"
+                class="underline decoration-white/30 hover:decoration-white transition-colors">Singapore's top interior
+                styling experts</a>. We offer comprehensive services from <strong>design to
+                execution</strong>, including <strong>complimentary 3D renderings</strong> and turnkey <a
+                href="/services"
+                class="underline decoration-white/30 hover:decoration-white transition-colors">renovation packages</a>
+              to ensure your vision is
+              perfectly realized.
             </p>
-<div class="design-services__metrics">
-<div>
-<span class="design-services__metric-value" data-count="154" data-count-suffix="+">0</span>
-<span class="design-services__metric-label">Satisfied Customers</span>
-</div>
-<div>
-<span class="design-services__metric-value" data-count="1283" data-count-suffix="+">0</span>
-<span class="design-services__metric-label">3D Renders</span>
-</div>
-</div>
-</div>
-<div class="design-services__media">
-<img alt="LuxCraft living room concept" loading="lazy" src="/assets/images/design-livingroom.jpg"/>
-</div>
-</div>
-</section>
-<section class="design-gallery">
-<div class="design-gallery__media">
-<div class="design-gallery__slides">
-<div class="design-gallery__slide is-active" data-gallery-slide="0">
-<img alt="LuxCraft gallery preview 1" loading="lazy" src="/assets/images/design-gallery-01.jpg"/>
-</div>
-<div class="design-gallery__slide" data-gallery-slide="1">
-<img alt="LuxCraft gallery preview 2" loading="lazy" src="/assets/images/design-gallery-02.jpg"/>
-</div>
-<div class="design-gallery__slide" data-gallery-slide="2">
-<img alt="LuxCraft gallery preview 3" loading="lazy" src="/assets/images/design-gallery-03.jpg"/>
-</div>
-<div class="design-gallery__slide" data-gallery-slide="3">
-<img alt="LuxCraft gallery preview 4" loading="lazy" src="/assets/images/design-gallery-04.jpg"/>
-</div>
-</div>
-</div>
-<div class="design-gallery__card">
-<div class="design-gallery__card-inner">
-<div class="design-gallery__controls" style="display:flex; flex-direction:column; align-items:flex-start; gap:12px; margin-bottom:24px;">
-<div aria-label="Select gallery slide" class="design-gallery__dots" role="tablist">
-<button aria-selected="true" class="design-gallery__dot design-gallery__dot--active" data-gallery-dot="0" type="button">
-<span class="sr-only">Slide 1</span>
-</button>
-<button aria-selected="false" class="design-gallery__dot" data-gallery-dot="1" type="button">
-<span class="sr-only">Slide 2</span>
-</button>
-<button aria-selected="false" class="design-gallery__dot" data-gallery-dot="2" type="button">
-<span class="sr-only">Slide 3</span>
-</button>
-<button aria-selected="false" class="design-gallery__dot" data-gallery-dot="3" type="button">
-<span class="sr-only">Slide 4</span>
-</button>
-</div>
-<div aria-label="Gallery navigation" class="design-gallery__nav" style="position:relative; display:flex; gap:12px;">
-<button aria-label="Previous slide" class="design-gallery__nav-btn" data-gallery-prev="" style="background:none;" type="button">
-<span class="sr-only">Previous slide</span>
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24">
-<path d="M15 6 9 12l6 6"></path>
-</svg>
-</button>
-<button aria-label="Next slide" class="design-gallery__nav-btn" data-gallery-next="" style="background:none;" type="button">
-<span class="sr-only">Next slide</span>
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6" viewbox="0 0 24 24">
-<path d="m9 6 6 6-6 6"></path>
-</svg>
-</button>
-</div>
-</div>
-<span class="design-gallery__eyebrow">Dream comes alive</span>
-<h3 class="design-gallery__title">Your personal inspiration.</h3>
-<p>
-              We immerse ourselves in our clients' dreams and desires, ensuring every detail aligns perfectly before any work begins.
+            <p>
+              We prioritize a customer-centric approach for every <a href="/services-pages/hdb-resale-renovation"
+                class="underline decoration-white/30 hover:decoration-white transition-colors">HDB</a>, <a
+                href="/services-pages/condo-renovation"
+                class="underline decoration-white/30 hover:decoration-white transition-colors">condo</a>, or <a
+                href="/services-pages/landed-renovation"
+                class="underline decoration-white/30 hover:decoration-white transition-colors">landed property</a>
+              project, ensuring seamless communication and meticulous attention to
+              detail throughout the renovation process. With <strong>LuxCraft</strong>, experience peace of mind and
+              exceptional craftsmanship in your newly transformed space.
             </p>
-</div>
-</div>
-</section>
-</main>
-<footer class="site-footer">
-<div class="site-footer__inner">
-<div class="site-footer__top">
-<a aria-label="LuxCraft Home" class="site-footer__brand" href="/index.html">
-<img alt="LuxCraft" src="/assets/images/logo.png"/>
-</a>
-<nav aria-label="Footer navigation" class="site-footer__nav">
-<a href="/about.html">Who We Are</a>
-<a href="/services.html">What We Do</a>
-<a href="/portfolio.html">Our Past Works</a>
-<a href="/contact.html">Contact Us</a>
-</nav>
-</div>
-<div aria-hidden="true" class="site-footer__divider"></div>
-<div class="site-footer__content">
-<div class="site-footer__column">
-<p>190 Woodlands Industrial Park E5</p>
-<p>Woodlands Bizhub, #04-05</p>
-<p>Singapore 757516</p>
-</div>
-<div class="site-footer__column site-footer__column--contact">
-<a class="site-footer__contact-link" href="https://wa.me/6583126212">
-  <svg aria-hidden="true" class="site-footer__contact-icon" focusable="false" viewBox="0 0 24 24"><path d="M12 2.05a9.94 9.94 0 0 0-8.48 15.3L2 22l4.8-1.51A9.95 9.95 0 1 0 12 2.05zm5.14 14.35c-.22.61-1.27 1.16-1.79 1.2-.46.04-1.02.06-1.64-.1-.38-.1-.86-.28-1.49-.54-2.63-1.14-4.3-3.8-4.43-3.98-.13-.18-1.06-1.41-1.06-2.69 0-1.28.67-1.9.9-2.16.22-.26.57-.38.9-.38h.64c.2 0 .45-.07.7.53.27.64.57 1.55.62 1.66.05.11.08.24.01.38-.07.14-.11.24-.21.37-.11.12-.23.27-.33.36-.11.1-.22.21-.09.41.13.2.57.93 1.23 1.5.85.76 1.57 1 1.77 1.11.2.1.32.09.44-.05.12-.14.5-.59.63-.79.13-.2.27-.16.45-.1.18.06 1.17.55 1.37.65.2.1.33.15.38.23.05.08.05.64-.17 1.25z" fill="currentColor"/></svg>
-  +65 8312 6212 <span>(Shamim)</span>
-</a>
-<a class="site-footer__contact-link" href="https://wa.me/6588991245">
-  <svg aria-hidden="true" class="site-footer__contact-icon" focusable="false" viewBox="0 0 24 24"><path d="M12 2.05a9.94 9.94 0 0 0-8.48 15.3L2 22l4.8-1.51A9.95 9.95 0 1 0 12 2.05zm5.14 14.35c-.22.61-1.27 1.16-1.79 1.2-.46.04-1.02.06-1.64-.1-.38-.1-.86-.28-1.49-.54-2.63-1.14-4.3-3.8-4.43-3.98-.13-.18-1.06-1.41-1.06-2.69 0-1.28.67-1.9.9-2.16.22-.26.57-.38.9-.38h.64c.2 0 .45-.07.7.53.27.64.57 1.55.62 1.66.05.11.08.24.01.38-.07.14-.11.24-.21.37-.11.12-.23.27-.33.36-.11.1-.22.21-.09.41.13.2.57.93 1.23 1.5.85.76 1.57 1 1.77 1.11.2.1.32.09.44-.05.12-.14.5-.59.63-.79.13-.2.27-.16.45-.1.18.06 1.17.55 1.37.65.2.1.33.15.38.23.05.08.05.64-.17 1.25z" fill="currentColor"/></svg>
-  +65 8899 1245 <span>(Manfred)</span>
-</a>
-<a class="site-footer__email" href="mailto:contact@luxcraft.sg">
-  <svg aria-hidden="true" class="site-footer__email-icon" focusable="false" viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z" fill="currentColor"/></svg>
-  contact@luxcraft.sg
-</a>
-</div>
-<div aria-label="Social media" class="site-footer__socials">
-<a aria-label="Instagram" class="site-footer__social" href="https://www.instagram.com/luxcraft.studio/" rel="noreferrer" target="_blank">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" viewbox="0 0 24 24">
-<rect height="18" rx="5" ry="5" width="18" x="3" y="3"></rect>
-<circle cx="12" cy="12" r="3.5"></circle>
-<circle cx="17.5" cy="6.5" fill="currentColor" r="0.9" stroke="none"></circle>
-</svg>
-</a>
-<a aria-label="Facebook" class="site-footer__social" href="https://www.facebook.com/luxcraft.studio" rel="noreferrer" target="_blank">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" viewbox="0 0 24 24">
-<path d="M15 7h-2.2c-.6 0-.8.3-.8.8V11h3l-.4 3h-2.6v8h-3.1v-8H7v-3h2.9V7.5C9.9 5.6 11 4 13.6 4H15v3z"></path>
-</svg>
-</a>
-<a aria-label="TikTok" class="site-footer__social" href="https://www.tiktok.com/@luxcraft.studio" rel="noreferrer" target="_blank">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4" viewbox="0 0 24 24">
-<path d="M16.5 3.5C16.9 5.1 18.2 6.3 19.8 6.6v2.6c-1.5-.1-2.9-.6-4.1-1.4v6.5a5.1 5.1 0 1 1-5.1-5.1c.3 0 .7 0 1 .1v2.8a2.2 2.2 0 1 0 1.5 2.1V3.5h2.7z"></path>
-</svg>
-</a>
-</div>
-</div>
-<p class="site-footer__legal">LuxCraft Pte. Ltd © 2025. All Rights Reserved.</p>
-</div>
-</footer>
-<button aria-label="Back to top" class="back-to-top" type="button">
-<svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24">
-<path d="M12 19V5m0 0-5 5m5-5 5 5" stroke-linecap="round" stroke-linejoin="round"></path>
-</svg>
-</button>
-<div aria-hidden="true" class="cursor-follower" data-mobile-disabled="true"></div>
-<script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const slides = Array.from(document.querySelectorAll('[data-hero-slide]'));
-        const navButtons = Array.from(document.querySelectorAll('[data-hero-nav]'));
-        const progressEl = document.querySelector('[data-hero-progress]');
-        const transitionMs = 6000;
-        const wipeDurationMs = 1000;
-        const copySafetyBufferMs = 150;
-        const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        let activeIndex = 0;
-        let timerId;
-        const copyTransitions = new WeakMap();
+          </div>
+        </div>
+        <div class="why-panel__brands">
+          <h3>We work with the best brands</h3>
+          <ul class="why-panel__logos">
+            <div class="brand-scroll-track flex">
+              <!-- Logos set A -->
+              <li class="flex-none px-6">
+                <img alt="Nippon Paint logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/nippon-paint.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Hafary logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/hafary.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Excel Hardware logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/excel.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="EDL logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy"
+                  src="/assets/images/brands/EDL.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Lamitak logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/lamitak.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Evorich logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/evorich.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Raffles Paint logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/rafflespaint.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Blum logo" class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy"
+                  src="/assets/images/brands/blum.png" />
+              </li>
+              <!-- Logos set B (duplicate for seamless scroll) -->
+              <li class="flex-none px-6">
+                <img alt="Nippon Paint logo duplicate"
+                  class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy"
+                  src="/assets/images/brands/nippon-paint.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Hafary logo duplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/hafary.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Excel Hardware logo duplicate"
+                  class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy"
+                  src="/assets/images/brands/excel.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="EDL logo duplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/EDL.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Lamitak logo duplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/lamitak.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Evorich logo duplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/evorich.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Raffles Paint logo duplicate"
+                  class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy"
+                  src="/assets/images/brands/rafflespaint.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Blum logo duplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/blum.png" />
+              </li>
+              <!-- Logos set C (third duplicate for seamless scroll) -->
+              <li class="flex-none px-6">
+                <img alt="Nippon Paint logo triplicate"
+                  class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy"
+                  src="/assets/images/brands/nippon-paint.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Hafary logo triplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/hafary.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Excel Hardware logo triplicate"
+                  class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy"
+                  src="/assets/images/brands/excel.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="EDL logo triplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/EDL.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Lamitak logo triplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/lamitak.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Evorich logo triplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/evorich.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Raffles Paint logo triplicate"
+                  class="h-14 object-contain opacity-90 hover:opacity-100 transition" loading="lazy"
+                  src="/assets/images/brands/rafflespaint.png" />
+              </li>
+              <li class="flex-none px-6">
+                <img alt="Blum logo triplicate" class="h-14 object-contain opacity-90 hover:opacity-100 transition"
+                  loading="lazy" src="/assets/images/brands/blum.png" />
+              </li>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="design-services">
+      <div class="design-services__inner">
+        <div class="design-services__lead">
+          <span class="design-services__eyebrow">Design Services</span>
+          <h2 class="design-services__title !text-lux-dark !font-semibold">Turning dreams into reality.</h2>
+          <p>
+            At LuxCraft, we specialise in transforming your vision into a tangible design with our expert 3D renderings.
+            Our design team <strong>collaborates closely with you</strong> from the initial consultation to the final
+            details, ensuring every aspect of the renovation meets your specific needs and preferences. Whether it's a
+            minor room refresh or a major renovation, we guarantee a <strong>seamless and satisfying design
+              experience</strong>, with a focus on quality and client satisfaction.
+          </p>
+          <div class="design-services__metrics">
+            <div>
+              <span class="design-services__metric-value" data-count="167" data-count-suffix="+">0</span>
+              <span class="design-services__metric-label">Satisfied Customers</span>
+            </div>
+            <div>
+              <span class="design-services__metric-value" data-count="1296" data-count-suffix="+">0</span>
+              <span class="design-services__metric-label">3D Renders</span>
+            </div>
+          </div>
+        </div>
+        <div class="design-services__media before-after-slider" id="designBeforeAfter" data-position="50">
+          <div class="before-after__layer before-after__layer--after">
+            <img alt="LuxCraft interior design after" src="/assets/images/design-services-after.jpg" />
+          </div>
+          <div class="before-after__layer before-after__layer--before">
+            <img alt="LuxCraft interior design before" src="/assets/images/design-services-before.jpg" />
+          </div>
+          <div class="before-after__divider" aria-hidden="true">
+            <div class="before-after__line"></div>
+          </div>
+          <button type="button" class="before-after__eye-btn" aria-label="Hold to preview full before image" title="Hold or click to preview full before/after">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="design-gallery">
+      <div class="design-gallery__media">
+        <div class="design-gallery__slides">
+          <div class="design-gallery__slide is-active" data-gallery-slide="0">
+            <img alt="LuxCraft gallery preview 1" loading="lazy" src="/assets/images/design-gallery-01.jpg" />
+          </div>
+          <div class="design-gallery__slide" data-gallery-slide="1">
+            <img alt="LuxCraft gallery preview 2" loading="lazy" src="/assets/images/design-gallery-02.jpg" />
+          </div>
+          <div class="design-gallery__slide" data-gallery-slide="2">
+            <img alt="LuxCraft gallery preview 3" loading="lazy" src="/assets/images/design-gallery-03.jpg" />
+          </div>
+          <div class="design-gallery__slide" data-gallery-slide="3">
+            <img alt="LuxCraft gallery preview 4" loading="lazy" src="/assets/images/design-gallery-04.jpg" />
+          </div>
+        </div>
+      </div>
+      <div class="design-gallery__card">
+        <div class="design-gallery__card-inner">
+          <div class="design-gallery__controls"
+            style="display:flex; flex-direction:column; align-items:flex-start; gap:12px; margin-bottom:24px;">
+            <div aria-label="Select gallery slide" class="design-gallery__dots" role="tablist">
+              <button aria-selected="true" class="design-gallery__dot design-gallery__dot--active" data-gallery-dot="0"
+                type="button">
+                <span class="sr-only">Slide 1</span>
+              </button>
+              <button aria-selected="false" class="design-gallery__dot" data-gallery-dot="1" type="button">
+                <span class="sr-only">Slide 2</span>
+              </button>
+              <button aria-selected="false" class="design-gallery__dot" data-gallery-dot="2" type="button">
+                <span class="sr-only">Slide 3</span>
+              </button>
+              <button aria-selected="false" class="design-gallery__dot" data-gallery-dot="3" type="button">
+                <span class="sr-only">Slide 4</span>
+              </button>
+            </div>
+            <div aria-label="Gallery navigation" class="design-gallery__nav"
+              style="position:relative; display:flex; gap:12px;">
+              <button aria-label="Previous slide" class="design-gallery__nav-btn" data-gallery-prev=""
+                style="background:none;" type="button">
+                <span class="sr-only">Previous slide</span>
+                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.6" viewbox="0 0 24 24">
+                  <path d="M15 6 9 12l6 6"></path>
+                </svg>
+              </button>
+              <button aria-label="Next slide" class="design-gallery__nav-btn" data-gallery-next=""
+                style="background:none;" type="button">
+                <span class="sr-only">Next slide</span>
+                <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                  stroke-width="1.6" viewbox="0 0 24 24">
+                  <path d="m9 6 6 6-6 6"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <span class="design-gallery__eyebrow">Dream comes alive</span>
+          <h3 class="design-gallery__title">Your personal inspiration.</h3>
+          <p>
+            We immerse ourselves in our clients' dreams and desires, ensuring every detail aligns perfectly before any
+            work begins.
+          </p>
+        </div>
+      </div>
+    </section>
+    <style>
+      .google-reviews-section {
+        background-color: #0a0a0a !important;
+        color: #ffffff !important;
+        position: relative;
+        z-index: 10;
+      }
 
-        const detachCopyListener = (slide) => {
-          const record = copyTransitions.get(slide);
-          if (!record) return;
-          slide.removeEventListener('transitionend', record.listener);
-          if (record.fallbackId) {
-            window.clearTimeout(record.fallbackId);
-          }
-          copyTransitions.delete(slide);
-        };
+      .light-theme .google-reviews-section h2 {
+        color: #BF9C65 !important;
+        font-weight: 700 !important;
+      }
 
-        const queueCopyReveal = (slide) => {
-          if (!slide) return;
-          const reveal = () => {
-            detachCopyListener(slide);
-            if (!slide.classList.contains('hero-slide--active')) {
-              return;
-            }
-            slide.classList.add('hero-slide--copy-visible');
-          };
-          const listener = (event) => {
-            const property = event.propertyName || '';
-            if (property !== 'clip-path' && property !== 'clipPath') {
-              return;
-            }
-            reveal();
-          };
-          const fallbackId = window.setTimeout(reveal, wipeDurationMs + copySafetyBufferMs);
-          copyTransitions.set(slide, { listener, fallbackId });
-          slide.addEventListener('transitionend', listener);
-        };
+      .light-theme .google-reviews-section h3 {
+        color: #ffffff !important;
+        font-weight: 600 !important;
+      }
 
-        const applyState = (nextIndex, userInitiated = false) => {
-          if (!slides.length) return;
+      .light-theme .google-reviews-section p {
+        color: rgba(255, 255, 255, 0.9) !important;
+      }
 
-          slides.forEach((slide, idx) => {
-            const isActive = idx === nextIndex;
-            detachCopyListener(slide);
-            if (!prefersReduced) {
-              slide.classList.remove('hero-slide--copy-visible');
-            } else if (!isActive) {
-              slide.classList.remove('hero-slide--copy-visible');
-            }
+      .light-theme .google-reviews-section blockquote {
+        color: rgba(255, 255, 255, 1) !important;
+        font-style: italic !important;
+      }
 
-            slide.classList.remove('hero-slide--active');
-            if (isActive) {
-              if (!prefersReduced) {
-                void slide.offsetWidth;
-              }
-              slide.classList.add('hero-slide--active');
-            }
+      .google-reviews-section .lux-container {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+    </style>
+    <section class="google-reviews-section py-24 bg-[#0a0a0a] text-white overflow-hidden">
+      <div class="lux-container">
+        <div class="flex flex-col items-center text-center mb-16">
+          <h2 class="text-4xl font-semibold sm:text-5xl mb-6 text-[#BF9C65]">What our clients say about us</h2>
+          <p class="text-lg text-white/90 max-w-2xl">
+            We take pride in our commitment to excellence and client satisfaction.
+            Read about the experiences of those who have trusted us with their homes.
+          </p>
+        </div>
 
-            if (isActive) {
-              if (prefersReduced) {
-                slide.classList.add('hero-slide--copy-visible');
-              } else {
-                queueCopyReveal(slide);
-              }
-            }
-            slide.setAttribute('aria-hidden', String(!isActive));
-          });
+        <div class="google-reviews-slider relative" data-google-slider>
+          <div class="google-reviews-viewport overflow-hidden">
+            <div class="google-reviews-track flex transition-transform duration-500 ease-out" data-google-track>
+              <!-- Review 1 -->
+              <div class="google-reviews-slide flex-none w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="bg-white/10 border border-white/20 rounded-3xl p-8 h-full flex flex-col">
+                  <div class="flex items-center gap-4 mb-6">
+                    <img src="/assets/images/review-image-Jermain Seah.png" alt="Jermain Seah"
+                      class="w-12 h-12 rounded-full object-cover">
+                    <div>
+                      <h3 class="font-semibold text-white">Jermain Seah</h3>
+                      <div class="flex gap-1 text-[#FBBC05]">
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <blockquote data-review-text
+                    class="review-text-anim text-white leading-relaxed italic mb-auto line-clamp-4">
+                    "Christopher and his team managed to deliver everything within our tight timeline (~1.5months) and
+                    were always responsive to our questions. Christopher was also very patient in addressing my (many!)
+                    queries — truly appreciate his professionalism and dedication."
+                  </blockquote>
+                  <button data-review-btn
+                    class="text-[#BF9C65] hover:text-white text-sm mt-2 text-left font-semibold transition-colors w-fit"
+                    onclick="toggleAllReviews(this)">...see more</button>
+                </div>
+              </div>
+              <!-- Review 2 -->
+              <div class="google-reviews-slide flex-none w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="bg-white/10 border border-white/20 rounded-3xl p-8 h-full flex flex-col">
+                  <div class="flex items-center gap-4 mb-6">
+                    <div
+                      class="w-12 h-12 rounded-full bg-[#BF9C65] flex items-center justify-center text-white font-bold text-lg">
+                      C</div>
+                    <div>
+                      <h3 class="font-semibold text-white">Clarisse Ang</h3>
+                      <div class="flex gap-1 text-[#FBBC05]">
+                        <!-- Stars... -->
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <blockquote data-review-text
+                    class="review-text-anim text-white leading-relaxed italic mb-auto line-clamp-4">
+                    "I was recommended to Luxcraft by a friend, and I’m so glad I chose them, Manfred, Christopher.
+                    Their pricing was realistic and transparent, with no hidden costs.
+                    The renovation process was smooth, well-managed, and completed on a pretty tight timeline. The team
+                    was professional, responsive, and paid great attention to detail. The final result exceeded my
+                    expectations, and I’d highly recommend them to anyone looking for a reliable renovation team.
+                    Thank you for transforming my flat into a beautiful home!
+                  </blockquote>
+                  <button data-review-btn
+                    class="text-[#BF9C65] hover:text-white text-sm mt-2 text-left font-semibold transition-colors w-fit"
+                    onclick="toggleAllReviews(this)">...see more</button>
+                </div>
+              </div>
+              <!-- Review 4 -->
+              <div class="google-reviews-slide flex-none w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="bg-white/10 border border-white/20 rounded-3xl p-8 h-full flex flex-col">
+                  <div class="flex items-center gap-4 mb-6">
+                    <img src="/assets/images/review-image-raul.png" alt="Raul II Romo"
+                      class="w-12 h-12 rounded-full object-cover">
+                    <div>
+                      <h3 class="font-semibold text-white">Raul II Romo</h3>
+                      <div class="flex gap-1 text-[#FBBC05]">
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                      </div>
+                    </div>
+                  </div>
+                  <blockquote data-review-text
+                    class="review-text-anim text-white leading-relaxed italic mb-auto line-clamp-4">
+                    "We recently completed a full renovation with LuxCraft, and we couldn’t be happier with the results! From the initial consultation to the final walk-through, the team was professional, communicative, and truly attentive to our vision.<br><br>They delivered high-quality workmanship, stayed on schedule, and respected our home every step of the way. Every detail — from the flooring to the fixtures — was done with care and precision. The transformation is stunning, and it honestly feels like we’re living in a brand-new home.<br><br>Special thanks to Shamim and Christopher for being so responsive and always keeping us in the loop. We highly recommend LuxCraft to anyone looking to renovate with confidence. This was a stress-free, smooth experience from start to finish!"
+                  </blockquote>
+                  <button data-review-btn
+                    class="text-[#BF9C65] hover:text-white text-sm mt-2 text-left font-semibold transition-colors w-fit"
+                    onclick="toggleAllReviews(this)">...see more</button>
+                </div>
+              </div>
+              <!-- Review 5 -->
+              <div class="google-reviews-slide flex-none w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="bg-white/10 border border-white/20 rounded-3xl p-8 h-full flex flex-col">
+                  <div class="flex items-center gap-4 mb-6">
+                    <img src="/assets/images/review-image-kentc.webp" alt="Kent C"
+                      class="w-12 h-12 rounded-full object-cover">
+                    <div>
+                      <h3 class="font-semibold text-white">Kent C</h3>
+                      <div class="flex gap-1 text-[#FBBC05]">
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                      </div>
+                    </div>
+                  </div>
+                  <blockquote data-review-text
+                    class="review-text-anim text-white leading-relaxed italic mb-auto line-clamp-4">
+                    "A big shout-out to the LuxCraft's team - Christopher, Manfred & Shamim for walking through our renovation for the past few months & had delivered their professionalism dutifully. The level of responsibility and commitment to deliver is well communicated with cost flexibility. Even though there’s minor issues & challenges along the way of renovation, their attitude & services are above expectations. When promised, will deliver and flexible with our timeline. We are truly happy of our home-making especially the kitchen make-over! Sleek, Organised for a cozy starter home!"
+                  </blockquote>
+                  <button data-review-btn
+                    class="text-[#BF9C65] hover:text-white text-sm mt-2 text-left font-semibold transition-colors w-fit"
+                    onclick="toggleAllReviews(this)">...see more</button>
+                </div>
+              </div>
+              <!-- Review 3 -->
+              <div class="google-reviews-slide flex-none w-full md:w-1/2 lg:w-1/3 px-4">
+                <div class="bg-white/10 border border-white/20 rounded-3xl p-8 h-full flex flex-col">
+                  <div class="flex items-center gap-4 mb-6">
+                    <img src="/assets/images/review-image-Phyllis Tan.png" alt="Phyllis Tan"
+                      class="w-12 h-12 rounded-full object-cover">
+                    <div>
+                      <h3 class="font-semibold text-white">Phyllis Tan</h3>
+                      <div class="flex gap-1 text-[#FBBC05]">
+                        <!-- Stars... -->
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        <svg class="w-3 h-3 fill-current" viewBox="0 0 20 20">
+                          <path
+                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      </div>
+                    </div>
+                  </div>
+                  <blockquote data-review-text
+                    class="review-text-anim text-white leading-relaxed italic mb-auto line-clamp-4">
+                    "I’m extremely happy with the renovation of my new flat. The entire process was smooth,
+                    well-managed, and completed on time. The designer and contractors were professional, responsive, and
+                    always willing to accommodate my requests. The workmanship is excellent, especially the carpentry
+                    and finishes — everything was done with attention to detail. Communication was clear throughout, and
+                    any issues were quickly resolved. The final result turned out even better than I expected. I highly
+                    recommend this company to anyone looking for a reliable and high-quality renovation team. Thank you
+                    for transforming my flat into a beautiful home!"
+                  </blockquote>
+                  <button data-review-btn
+                    class="text-[#BF9C65] hover:text-white text-sm mt-2 text-left font-semibold transition-colors w-fit"
+                    onclick="toggleAllReviews(this)">...see more</button>
+                </div>
+              </div>
+            </div>
+            <!-- Navigation Arrows -->
+            <button
+              class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-2 z-20 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center hover:bg-[#BF9C65] transition-all"
+              data-google-prev aria-label="Previous review">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 z-20 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md border border-white/30 flex items-center justify-center hover:bg-[#BF9C65] transition-all"
+              data-google-next aria-label="Next review">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
 
-          navButtons.forEach((btn, idx) => {
-            const selected = idx === nextIndex;
-            btn.setAttribute('aria-selected', String(selected));
-          });
+          <div class="mt-16 text-center">
+            <a href="https://www.google.com/maps/place/LuxCraft/@1.452132,103.7921948,17z/data=!3m1!4b1!4m6!3m5!1s0x31da13becafcde95:0x3c58c9744796012f!8m2!3d1.452132!4d103.7921948!16s%2Fg%2F11w2b1q8np"
+              target="_blank"
+              class="inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-lux-darker font-semibold hover:bg-[#BF9C65] hover:text-white transition-all">
+              <span>Read all reviews on Google</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7-7 7M3 12h18" />
+              </svg>
+            </a>
+          </div>
+        </div>
+    </section>
 
-          if (progressEl && !prefersReduced) {
-            progressEl.style.transition = 'none';
-            progressEl.style.transform = 'scaleX(0)';
-            // Force reflow before animating so the bar restarts cleanly.
-            void progressEl.offsetWidth;
-            progressEl.style.transition = `transform ${transitionMs}ms linear`;
-            progressEl.style.transform = 'scaleX(1)';
-          }
+    <section class="lux-section pt-12 pb-24">
 
-          activeIndex = nextIndex;
+      <div class="lux-container grid gap-12 lg:grid-cols-[1.05fr_0.95fr]">
+        <div class="space-y-6">
+          <span class="lux-tag">Contact Us</span>
+          <h2 class="text-4xl font-semibold leading-tight text-lux-dark sm:text-5xl">Have Questions? Get in touch!</h2>
+          <p class="text-base text-lux-dark/70">
+            We'd love to hear from you. Whether you need a consultation, want to discuss your renovation project, or
+            have questions about our services, the LuxCraft team is ready to assist.
+          </p>
+          <div class="grid gap-6 sm:grid-cols-2">
+            <div class="space-y-2 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+              <h3 class="text-xs uppercase tracking-[0.4em] text-black">WhatsApp us</h3>
+              <a class="block text-lg font-semibold text-lux-dark hover:text-lux-gold"
+                href="https://wa.me/6583126212">+65 8312 6212 (Shamim)</a>
+              <a class="block text-lg font-semibold text-lux-dark hover:text-lux-gold"
+                href="https://wa.me/6588991245">+65 8899 1245 (Manfred)</a>
+            </div>
+            <div class="space-y-2 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+              <h3 class="text-xs uppercase tracking-[0.4em] text-black">Email</h3>
+              <a class="block text-lg font-semibold text-lux-dark hover:text-lux-gold"
+                href="mailto:contact@luxcraft.sg">contact@luxcraft.sg</a>
+              <p class="text-sm text-lux-dark/60">Meetings by appointment only.</p>
+            </div>
+          </div>
+          <div class="space-y-3 rounded-2xl border border-neutral-200 bg-white p-6 shadow-sm">
+            <h3 class="text-xs uppercase tracking-[0.4em] text-lux-dark/60">Studio</h3>
+            <p class="text-sm text-lux-dark/60">
+              190 Woodlands Industrial Park E5<br />
+              Woodlands Bizhub, #04-05<br />
+              Singapore 757516
+            </p>
+            <p class="text-xs uppercase tracking-[0.3em] text-lux-dark/55">Meetings by appointment only</p>
+          </div>
+        </div>
+        <div class="rounded-3xl border border-neutral-200 bg-white p-8 shadow-sm lg:p-10">
+          <h2 class="text-2xl font-semibold text-lux-dark">Request a consultation</h2>
+          <p class="mt-3 text-sm text-lux-dark/65">Share a few details and we'll get back to you within one business
+            day.</p>
+          <form action="/contact-submit.php" class="mt-8 space-y-4" data-contact-form="true" method="post">
+            <!-- Anti-spam Honeypot -->
+            <div style="position: absolute; left: -9999px;" aria-hidden="true">
+              <label for="company_website">Website</label>
+              <input type="text" id="company_website" name="company_website" tabindex="-1" autocomplete="off" />
+            </div>
 
-          if (timerId) {
-            clearTimeout(timerId);
-          }
-          if (!prefersReduced) {
-            timerId = setTimeout(() => {
-              const following = (activeIndex + 1) % slides.length;
-              applyState(following);
-            }, transitionMs);
-          }
-        };
 
-        navButtons.forEach((button) => {
-          button.addEventListener('click', () => {
-            const target = Number(button.dataset.heroNav);
-            if (!Number.isNaN(target)) {
-              applyState(target, true);
-            }
-          });
-        });
+            <div class="grid gap-4 sm:grid-cols-2">
+              <label class="block text-sm font-medium text-lux-dark/80">
+                Full Name
+                <input
+                  class="mt-2 block w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0"
+                  name="name" placeholder="Jane Doe" required="" type="text" />
+              </label>
+              <label class="block text-sm font-medium text-lux-dark/80">
+                Email <span class="text-xs font-normal text-lux-dark/60">(optional)</span>
+                <input
+                  class="mt-2 block w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0"
+                  name="email" placeholder="hello@example.com" type="email" />
+              </label>
+            </div>
+            <div class="grid gap-4 sm:grid-cols-2">
+              <label class="block text-sm font-medium text-lux-dark/80">
+                Contact Number
+                <input
+                  class="mt-2 block w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0"
+                  name="phone" placeholder="+65 8XXX XXXX" required="" type="tel" />
+                <p class="contact-error-text" data-phone-error="">Contact number is required.</p>
+              </label>
+              <label class="block text-sm font-medium text-lux-dark/80">
+                Project Type
+                <select
+                  class="mt-2 block w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark focus:border-lux-gold focus:outline-none focus:ring-0"
+                  name="project">
+                  <option class="bg-white text-lux-dark">HDB BTO / SBF</option>
+                  <option class="bg-white text-lux-dark">HDB Resale</option>
+                  <option class="bg-white text-lux-dark">Condominium</option>
+                  <option class="bg-white text-lux-dark">Landed</option>
+                  <option class="bg-white text-lux-dark">Commercial</option>
+                  <option class="bg-white text-lux-dark">Partial Renovation</option>
+                  <option class="bg-white text-lux-dark">Others</option>
+                </select>
+              </label>
+            </div>
+            <label class="block text-sm font-medium text-lux-dark/80">
+              Where did you hear about us?
+              <select
+                class="mt-2 block w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark focus:border-lux-gold focus:outline-none focus:ring-0"
+                name="source">
+                <option class="bg-white text-lux-dark" value="" disabled selected>Please select</option>
+                <option class="bg-white text-lux-dark" value="Google Search">Google Search</option>
+                <option class="bg-white text-lux-dark" value="Social Media (Facebook/Instagram/TikTok)">Social Media
+                  (Facebook/Instagram/TikTok)</option>
+                <option class="bg-white text-lux-dark" value="Word of Mouth">Word of Mouth</option>
+                <option class="bg-white text-lux-dark" value="Qanvast">Qanvast</option>
+                <option class="bg-white text-lux-dark" value="Other">Other</option>
+              </select>
+            </label>
+            <label class="block text-sm font-medium text-lux-dark/80">
+              Project Details <span class="text-xs font-normal text-lux-dark/60">(optional)</span>
+              <textarea
+                class="mt-2 block w-full rounded-xl border border-neutral-200 bg-white px-4 py-3 text-sm text-lux-dark placeholder-gray-400 focus:border-lux-gold focus:outline-none focus:ring-0"
+                name="message" placeholder="Tell us about your space, timeline, and vision" rows="4"></textarea>
+            </label>
+            <label class="flex items-center gap-3 text-xs text-lux-dark/60">
+              <input class="h-4 w-4 rounded border border-neutral-300 text-lux-gold focus:ring-lux-gold" name="privacy"
+                type="checkbox" />
+              <span>I have read and accept the <a href="/privacy-policy"
+                  class="underline hover:text-lux-gold transition-colors text-lux-dark/80">Privacy Policy</a>.</span>
+            </label>
+            <button class="lux-button w-full justify-center" type="submit">Submit Request</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-footer__inner">
+      <div class="site-footer__top">
+        <a aria-label="LuxCraft Home" class="site-footer__brand" href="/">
+          <img alt="LuxCraft" src="/assets/images/logo.png" />
+        </a>
+        <nav aria-label="Footer navigation" class="site-footer__nav">
+          <a href="/about">Who We Are</a>
+          <a href="/services">What We Do</a>
+          <a href="/portfolio">Our Past Works</a>
+          <a href="/contact">Contact Us</a>
+        </nav>
+      </div>
+      <div aria-hidden="true" class="site-footer__divider"></div>
+      <div class="site-footer__content">
+        <div class="site-footer__column">
+          <p>190 Woodlands Industrial Park E5</p>
+          <p>Woodlands Bizhub, #04-05</p>
+          <p>Singapore 757516</p>
+          <a class="site-footer__google-link mt-2" href="https://www.google.com/maps/place/LuxCraft/@1.452132,103.7921948,17z/data=!3m1!4b1!4m6!3m5!1s0x31da13becafcde95:0x3c58c9744796012f!8m2!3d1.452132!4d103.7921948!16s%2Fg%2F11w2b1q8np" target="_blank" rel="noopener">
+            <span>📍 Find us on Google Maps</span>
+          </a>
+        </div>
+        <div class="site-footer__column site-footer__column--contact">
+          <a class="site-footer__contact-link" href="https://wa.me/6583126212">
+            <svg aria-hidden="true" class="site-footer__contact-icon" focusable="false" viewBox="0 0 24 24">
+              <path
+                d="M12 2.05a9.94 9.94 0 0 0-8.48 15.3L2 22l4.8-1.51A9.95 9.95 0 1 0 12 2.05zm5.14 14.35c-.22.61-1.27 1.16-1.79 1.2-.46.04-1.02.06-1.64-.1-.38-.1-.86-.28-1.49-.54-2.63-1.14-4.3-3.8-4.43-3.98-.13-.18-1.06-1.41-1.06-2.69 0-1.28.67-1.9.9-2.16.22-.26.57-.38.9-.38h.64c.2 0 .45-.07.7.53.27.64.57 1.55.62 1.66.05.11.08.24.01.38-.07.14-.11.24-.21.37-.11.12-.23.27-.33.36-.11.1-.22.21-.09.41.13.2.57.93 1.23 1.5.85.76 1.57 1 1.77 1.11.2.1.32.09.44-.05.12-.14.5-.59.63-.79.13-.2.27-.16.45-.1.18.06 1.17.55 1.37.65.2.1.33.15.38.23.05.08.05.64-.17 1.25z"
+                fill="currentColor" />
+            </svg>
+            +65 8312 6212 <span>(Shamim)</span>
+          </a>
+          <a class="site-footer__contact-link" href="https://wa.me/6588991245">
+            <svg aria-hidden="true" class="site-footer__contact-icon" focusable="false" viewBox="0 0 24 24">
+              <path
+                d="M12 2.05a9.94 9.94 0 0 0-8.48 15.3L2 22l4.8-1.51A9.95 9.95 0 1 0 12 2.05zm5.14 14.35c-.22.61-1.27 1.16-1.79 1.2-.46.04-1.02.06-1.64-.1-.38-.1-.86-.28-1.49-.54-2.63-1.14-4.3-3.8-4.43-3.98-.13-.18-1.06-1.41-1.06-2.69 0-1.28.67-1.9.9-2.16.22-.26.57-.38.9-.38h.64c.2 0 .45-.07.7.53.27.64.57 1.55.62 1.66.05.11.08.24.01.38-.07.14-.11.24-.21.37-.11.12-.23.27-.33.36-.11.1-.22.21-.09.41.13.2.57.93 1.23 1.5.85.76 1.57 1 1.77 1.11.2.1.32.09.44-.05.12-.14.5-.59.63-.79.13-.2.27-.16.45-.1.18.06 1.17.55 1.37.65.2.1.33.15.38.23.05.08.05.64-.17 1.25z"
+                fill="currentColor" />
+            </svg>
+            +65 8899 1245 <span>(Manfred)</span>
+          </a>
+          <a class="site-footer__email" href="mailto:contact@luxcraft.sg">
+            <svg aria-hidden="true" class="site-footer__email-icon" focusable="false" viewBox="0 0 24 24">
+              <path
+                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 2-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"
+                fill="currentColor" />
+            </svg>
+            contact@luxcraft.sg
+          </a>
+        </div>
+        <div aria-label="Social media" class="site-footer__socials">
+          <a aria-label="Instagram" class="site-footer__social" href="https://www.instagram.com/luxcraft.studio/"
+            rel="noreferrer" target="_blank">
+            <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="1.4" viewbox="0 0 24 24">
+              <rect height="18" rx="5" ry="5" width="18" x="3" y="3"></rect>
+              <circle cx="12" cy="12" r="3.5"></circle>
+              <circle cx="17.5" cy="6.5" fill="currentColor" r="0.9" stroke="none"></circle>
+            </svg>
+          </a>
+          <a aria-label="Facebook" class="site-footer__social" href="https://www.facebook.com/luxcraft.studio"
+            rel="noreferrer" target="_blank">
+            <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="1.4" viewbox="0 0 24 24">
+              <path d="M15 7h-2.2c-.6 0-.8.3-.8.8V11h3l-.4 3h-2.6v8h-3.1v-8H7v-3h2.9V7.5C9.9 5.6 11 4 13.6 4H15v3z">
+              </path>
+            </svg>
+          </a>
+          <a aria-label="TikTok" class="site-footer__social" href="https://www.tiktok.com/@luxcraft.studio"
+            rel="noreferrer" target="_blank">
+            <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+              stroke-width="1.4" viewbox="0 0 24 24">
+              <path
+                d="M16.5 3.5C16.9 5.1 18.2 6.3 19.8 6.6v2.6c-1.5-.1-2.9-.6-4.1-1.4v6.5a5.1 5.1 0 1 1-5.1-5.1c.3 0 .7 0 1 .1v2.8a2.2 2.2 0 1 0 1.5 2.1V3.5h2.7z">
+              </path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <p class="site-footer__legal">LuxCraft Pte. Ltd. (UEN: 202343751W) © 2026. All Rights Reserved.</p>
+    </div>
+  </footer>
+  <button aria-label="Back to top" class="back-to-top" type="button">
+    <svg aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" viewbox="0 0 24 24">
+      <path d="M12 19V5m0 0-5 5m5-5 5 5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+  <div aria-hidden="true" class="cursor-follower" data-mobile-disabled="true"></div>
+  <script defer src="/assets/js/home-hero.js?v=1.1.0"></script>
+  <script defer src="/assets/js/google-reviews.js"></script>
+  <script defer src="/assets/js/before-after.js"></script>
 
-        if (!prefersReduced) {
-          slides.forEach((slide) => {
-            slide.classList.remove('hero-slide--copy-visible');
-            slide.classList.remove('hero-slide--active');
-          });
-          requestAnimationFrame(() => {
-            applyState(0);
-          });
+
+  <script>
+    function toggleAllReviews(btn) {
+      const isExpanding = btn.innerText.includes('see more');
+
+      document.querySelectorAll('[data-review-text]').forEach(bq => {
+        if (isExpanding) {
+          bq.classList.remove('line-clamp-4');
+          bq.setAttribute('data-expanded', 'true');
         } else {
-          applyState(0);
-        }
-
-        const cursorEl = document.querySelector('.cursor-follower');
-        const supportsFinePointer = window.matchMedia('(any-pointer: fine)').matches;
-        if (cursorEl && supportsFinePointer) {
-          const offsetX = 33;
-          const offsetY = 27;
-          let targetX = window.innerWidth / 2 + offsetX;
-          let targetY = window.innerHeight / 2 + offsetY;
-          let currentX = targetX;
-          let currentY = targetY;
-          let rafId = null;
-
-          const render = () => {
-            const ease = 0.18;
-            currentX += (targetX - currentX) * ease;
-            currentY += (targetY - currentY) * ease;
-            cursorEl.style.left = `${currentX}px`;
-            cursorEl.style.top = `${currentY}px`;
-
-            if (Math.abs(targetX - currentX) > 0.1 || Math.abs(targetY - currentY) > 0.1) {
-              rafId = requestAnimationFrame(render);
-            } else {
-              rafId = null;
-            }
-          };
-
-          const startRendering = () => {
-            if (!rafId) {
-              rafId = requestAnimationFrame(render);
-            }
-          };
-
-          const showFollower = (event) => {
-            targetX = event.clientX + offsetX;
-            targetY = event.clientY + offsetY;
-
-            if (!cursorEl.classList.contains('is-visible')) {
-              cursorEl.classList.add('is-visible');
-              currentX = targetX;
-              currentY = targetY;
-              cursorEl.style.left = `${currentX}px`;
-              cursorEl.style.top = `${currentY}px`;
-            }
-
-            startRendering();
-          };
-
-          const hideFollower = () => {
-            cursorEl.classList.remove('is-visible');
-            cursorEl.classList.remove('is-active');
-            if (rafId) {
-              cancelAnimationFrame(rafId);
-              rafId = null;
-            }
-          };
-
-          window.addEventListener('pointermove', showFollower);
-          window.addEventListener('pointerdown', () => cursorEl.classList.add('is-active'));
-          window.addEventListener('pointerup', () => cursorEl.classList.remove('is-active'));
-          window.addEventListener('pointerleave', hideFollower);
-          window.addEventListener('blur', hideFollower);
-        } else if (cursorEl) {
-          cursorEl.remove();
-        }
-
-
-
-        const colorProbe = document.createElement('span');
-        colorProbe.style.position = 'absolute';
-        colorProbe.style.opacity = '0';
-        colorProbe.style.pointerEvents = 'none';
-        colorProbe.style.zIndex = '-1';
-        document.body.appendChild(colorProbe);
-
-        const parseColor = (value) => {
-          if (!value || value === 'transparent') return null;
-          colorProbe.style.color = value;
-          const computed = window.getComputedStyle(colorProbe).color;
-          const matches = computed.match(/[\d.]+/g);
-          if (!matches || matches.length < 3) return null;
-          const [r, g, b, a = '1'] = matches;
-          const red = Number.parseFloat(r);
-          const green = Number.parseFloat(g);
-          const blue = Number.parseFloat(b);
-          const alpha = Number.parseFloat(a);
-          if ([red, green, blue].some(Number.isNaN)) return null;
-          return {
-            r: red,
-            g: green,
-            b: blue,
-            a: Number.isNaN(alpha) ? 1 : alpha,
-          };
-        };
-
-        const getParentElement = (node) => {
-          if (!node) return null;
-          if (node.parentElement) return node.parentElement;
-          const root = node.getRootNode && node.getRootNode();
-          if (root && root.host) return root.host;
-          return null;
-        };
-
-        const getEffectiveBackground = (node) => {
-          let current = node;
-          while (current && current !== document.documentElement) {
-            const style = window.getComputedStyle(current);
-            const color = parseColor(style.backgroundColor);
-            if (color && color.a > 0.05) return color;
-            current = getParentElement(current);
-          }
-          const fallback = parseColor(window.getComputedStyle(document.body).backgroundColor);
-          return fallback || { r: 27, g: 27, b: 27, a: 1 };
-        };
-
-        const backToTop = document.querySelector('.back-to-top');
-        if (backToTop) {
-          const revealOffset = 480;
-          const brightnessThreshold = 175;
-
-          const updateBackToTopTone = () => {
-            if (!backToTop.classList.contains('back-to-top--visible')) {
-              backToTop.style.backgroundColor = '';
-              backToTop.style.color = '';
-              return;
-            }
-
-            const rect = backToTop.getBoundingClientRect();
-            const sampleX = rect.left + rect.width / 2;
-            const sampleY = rect.top + rect.height / 2;
-
-            if (sampleX < 0 || sampleX > window.innerWidth || sampleY < 0 || sampleY > window.innerHeight) {
-              return;
-            }
-
-            const target = document.elementFromPoint(sampleX, sampleY);
-            const background = target ? getEffectiveBackground(target) : getEffectiveBackground(document.body);
-            const brightness = 0.299 * background.r + 0.587 * background.g + 0.114 * background.b;
-            const useDark = brightness > 175;
-
-            if (useDark) {
-              backToTop.style.backgroundColor = 'rgba(255,255,255,0.9)';
-              backToTop.style.color = '#111';
-            } else {
-              backToTop.style.backgroundColor = 'rgba(17,17,17,0.9)';
-              backToTop.style.color = '#fff';
-            }
-          };
-
-          const toggleBackToTop = () => {
-            if (window.scrollY > revealOffset) {
-              backToTop.classList.add('back-to-top--visible');
-            } else {
-              backToTop.classList.remove('back-to-top--visible');
-            }
-            updateBackToTopTone();
-          };
-
-          window.addEventListener('scroll', () => {
-            toggleBackToTop();
-          }, { passive: true });
-
-          window.addEventListener('resize', updateBackToTopTone);
-          toggleBackToTop();
-
-          backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-          });
-        }
-
-        const scrollTriggers = Array.from(document.querySelectorAll('[data-scroll-target]'));
-        if (scrollTriggers.length) {
-          scrollTriggers.forEach((trigger) => {
-            trigger.addEventListener('click', () => {
-              const targetSelector = trigger.getAttribute('data-scroll-target');
-              if (!targetSelector) return;
-              const targetEl = document.querySelector(targetSelector);
-              if (!targetEl) return;
-              const top = targetEl.getBoundingClientRect().top + window.scrollY;
-              window.scrollTo({ top, behavior: 'smooth' });
-            });
-          });
-        }
-
-        const metricCounters = Array.from(document.querySelectorAll('[data-count]'));
-        if (metricCounters.length && 'IntersectionObserver' in window) {
-          const easeOutCubic = (t) => 1 - Math.pow(1 - t, 3);
-
-          metricCounters.forEach((counter) => {
-            const suffix = counter.dataset.countSuffix || '';
-            counter.dataset.countSuffix = suffix;
-            counter.dataset.countCurrent = '0';
-            counter.textContent = `0${suffix}`;
-            counter.dataset.animate = 'true';
-          });
-
-          const activeAnimations = new WeakMap();
-
-          const observer = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                const counter = entry.target;
-                if (!entry.isIntersecting) {
-                  counter.dataset.countCurrent = '0';
-                  counter.textContent = `0${counter.dataset.countSuffix || ''}`;
-                  if (activeAnimations.has(counter)) {
-                    cancelAnimationFrame(activeAnimations.get(counter));
-                    activeAnimations.delete(counter);
-                  }
-                  return;
-                }
-
-                const targetValue = Number.parseFloat(counter.dataset.count || '0');
-                if (Number.isNaN(targetValue)) return;
-
-                const duration = 900;
-                const start = performance.now();
-
-                const animate = (timestamp) => {
-                  const progress = Math.min((timestamp - start) / duration, 1);
-                  const eased = easeOutCubic(progress);
-                  const currentValue = Math.floor(targetValue * eased);
-                  const suffix = counter.dataset.countSuffix || '';
-                  counter.textContent = `${currentValue}${suffix}`;
-                  if (progress < 1) {
-                    const frame = requestAnimationFrame(animate);
-                    activeAnimations.set(counter, frame);
-                  } else {
-                    counter.textContent = `${targetValue}${suffix}`;
-                    activeAnimations.delete(counter);
-                  }
-                };
-
-                const frame = requestAnimationFrame(animate);
-                activeAnimations.set(counter, frame);
-              });
-            },
-            {
-              threshold: 0.45,
-            }
-          );
-
-          metricCounters.forEach((counter) => observer.observe(counter));
-        }
-
-        const gallerySlides = Array.from(document.querySelectorAll('[data-gallery-slide]'));
-        const galleryPrev = document.querySelector('[data-gallery-prev]');
-        const galleryNext = document.querySelector('[data-gallery-next]');
-        const galleryDots = Array.from(document.querySelectorAll('[data-gallery-dot]'));
-
-        if (gallerySlides.length) {
-          let galleryIndex = 0;
-
-          const applyGalleryState = (nextIndex) => {
-            const total = gallerySlides.length;
-            const safeIndex = ((nextIndex % total) + total) % total;
-
-            gallerySlides.forEach((slide, idx) => {
-              slide.classList.toggle('is-active', idx === safeIndex);
-            });
-
-            galleryDots.forEach((dot, idx) => {
-              const isActive = idx === safeIndex;
-              dot.classList.toggle('design-gallery__dot--active', isActive);
-              dot.setAttribute('aria-selected', String(isActive));
-            });
-
-            galleryIndex = safeIndex;
-          };
-
-          const stepGallery = (delta) => {
-            applyGalleryState(galleryIndex + delta);
-          };
-
-          if (galleryPrev) {
-            galleryPrev.addEventListener('click', () => {
-              stepGallery(-1);
-            });
-          }
-
-          if (galleryNext) {
-            galleryNext.addEventListener('click', () => {
-              stepGallery(1);
-            });
-          }
-
-          galleryDots.forEach((dot) => {
-            const index = Number.parseInt(dot.dataset.galleryDot || '', 10);
-            if (Number.isNaN(index)) return;
-            dot.addEventListener('click', () => {
-              applyGalleryState(index);
-            });
-          });
-
-          applyGalleryState(0);
-        }
-
-        const siteHeader = document.querySelector('.site-header');
-        const footerEl = document.querySelector('.site-footer');
-        if (siteHeader && footerEl && 'IntersectionObserver' in window) {
-          const footerObserver = new IntersectionObserver(
-            (entries) => {
-              entries.forEach((entry) => {
-                siteHeader.classList.toggle('site-header--hidden', entry.isIntersecting);
-              });
-            },
-            { threshold: 0.2 }
-          );
-
-          footerObserver.observe(footerEl);
+          bq.classList.add('line-clamp-4');
+          bq.setAttribute('data-expanded', 'false');
         }
       });
-    </script>
+
+      document.querySelectorAll('[data-review-btn]').forEach(b => {
+        b.innerText = isExpanding ? 'see less' : '...see more';
+      });
+    }
+  </script>
 </body>
+
 </html>

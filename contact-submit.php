@@ -1,7 +1,9 @@
 <?php
 declare(strict_types=1);
 
-const CONTACT_LOG_PATH = __DIR__ . '/logs/contact-form.log';
+if (!defined('CONTACT_LOG_PATH')) {
+    define('CONTACT_LOG_PATH', __DIR__ . '/logs/contact-form.log');
+}
 
 $logEvent = static function (array $payload): void {
     $payload['ip'] = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
@@ -13,9 +15,31 @@ $logEvent = static function (array $payload): void {
 
     try {
         $logLine = json_encode($payload, JSON_THROW_ON_ERROR);
-        file_put_contents(CONTACT_LOG_PATH, $logLine . PHP_EOL, FILE_APPEND | LOCK_EX);
-    } catch (Throwable $e) {
-        // If logging fails we silently ignore—form should still complete.
+
+        // Self-healing: Check if the log directory exists, and attempt to create it if not
+        $logDir = dirname(CONTACT_LOG_PATH);
+        if (!is_dir($logDir)) {
+            @mkdir($logDir, 0755, true);
+        }
+
+        // Attempt to write to log file
+        $written = @file_put_contents(CONTACT_LOG_PATH, $logLine . PHP_EOL, FILE_APPEND | LOCK_EX);
+
+        // If file_put_contents failed, try to fix permissions and write again
+        if ($written === false) {
+            @chmod(CONTACT_LOG_PATH, 0644);
+            @chmod($logDir, 0755);
+            $written = @file_put_contents(CONTACT_LOG_PATH, $logLine . PHP_EOL, FILE_APPEND | LOCK_EX);
+        }
+
+        // Fallback: If still unable to write to the file, write to the server's default PHP system log
+        if ($written === false) {
+            error_log('LuxCraft Form Submission (File Write Failed): ' . $logLine);
+        }
+    }
+    catch (Throwable $e) {
+        // Final fallback if json_encode or anything else failed
+        error_log('LuxCraft Form Submission Log Error: ' . $e->getMessage());
     }
 };
 
@@ -32,109 +56,169 @@ $name = $sanitize($_POST['name'] ?? '');
 $email = $sanitize($_POST['email'] ?? '');
 $phone = $sanitize($_POST['phone'] ?? '');
 $project = $sanitize($_POST['project'] ?? '');
+$source = $sanitize($_POST['source'] ?? '');
 $message = $sanitize($_POST['message'] ?? '');
 $privacyAccepted = isset($_POST['privacy']);
 
+// Anti-spam checks
+$honeypot = $_POST['company_website'] ?? '';
+
 $errors = [];
-
-if ($name === '') {
-    $errors[] = 'Please provide your full name.';
-}
-
-if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    $errors[] = 'Please enter a valid email address or leave the field blank.';
-}
-
-if ($phone === '') {
-    $errors[] = 'Please provide your contact number.';
-}
-
-if (!$privacyAccepted) {
-    $errors[] = 'You must accept the privacy policy before submitting.';
-}
-
 $mailSent = false;
 $errorDetails = null;
-if (!$errors) {
-    $recipient = 'sean.soo@luxcraft.sg';
-    $subject = 'LuxCraft Consultation Request';
 
-    $lines = [
-        "Full Name: {$name}",
-        "Contact Number: {$phone}",
-    ];
+if ($honeypot !== '') {
+    // Silent Rejection: Honeypot field was filled (likely a bot).
+    // Log the spam attempt for auditing, bypass sending mail, and display
+    // a standard success response so the bot assumes its submission succeeded.
+    $logEvent([
+        'status' => 'honeypot_triggered_silent_rejection',
+        'inputs' => [
+            'name' => $name,
+            'email' => $email,
+            'phone' => $phone,
+            'project' => $project,
+            'source' => $source,
+            'message' => $message,
+            'company_website' => $honeypot,
+        ],
+        'transport' => 'none',
+        'envelope' => null,
+        'error' => null,
+    ]);
 
-    if ($email !== '') {
-        $lines[] = "Email: {$email}";
-    } else {
-        $lines[] = 'Email: (not provided)';
+    $mailSent = true;
+} else {
+    if ($name === '') {
+        $errors[] = 'Please provide your full name.';
     }
 
-    if ($project !== '') {
-        $lines[] = "Project Type: {$project}";
+    if ($email !== '' && !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Please enter a valid email address or leave the field blank.';
     }
 
-    if ($message !== '') {
-        $lines[] = "Project Details:\n{$message}";
+    $cleanPhone = preg_replace('/[\s\-\(\)\.]/', '', $phone);
+    $nationalPhone = preg_replace('/^(?:\+65|0065|65)/', '', $cleanPhone);
+
+    if ($phone === '') {
+        $errors[] = 'Please provide your contact number.';
+    } elseif (!preg_match('/^[689]\d{7}$/', $nationalPhone)) {
+        $errors[] = 'Please provide a valid Singapore contact number (8 digits starting with 6, 8, or 9, e.g. +65 8XXX XXXX).';
     }
 
-    $lines[] = 'Privacy Policy Accepted: Yes';
-
-    $body = implode("\n\n", $lines);
-
-    $headers = [
-        'From: LuxCraft Website <no-reply@luxcraft.sg>',
-        'Content-Type: text/plain; charset=utf-8',
-        'Return-Path: no-reply@luxcraft.sg',
-        'X-Mailer: PHP/' . PHP_VERSION,
-    ];
-
-    if ($email !== '') {
-        $headers[] = "Reply-To: {$email}";
-    } else {
-        $headers[] = 'Reply-To: no-reply@luxcraft.sg';
+    if (!$privacyAccepted) {
+        $errors[] = 'You must accept the privacy policy before submitting.';
     }
 
-    error_clear_last();
-    $compiledHeaders = implode("\r\n", $headers);
-    $envelopeSender = '-fno-reply@luxcraft.sg';
+    if (!$errors) {
+        $recipient = 'contact@luxcraft.sg, sean.soo@luxcraft.sg';
+        $subject = 'LuxCraft Consultation Request';
 
-    if (!ini_get('safe_mode')) {
-        $mailSent = @mail($recipient, $subject, $body, $compiledHeaders, $envelopeSender);
-    } else {
-        $mailSent = @mail($recipient, $subject, $body, $compiledHeaders);
+        $lines = [
+            "Full Name: {$name}",
+            "Contact Number: {$phone}",
+        ];
+
+        if ($email !== '') {
+            $lines[] = "Email: {$email}";
+        }
+        else {
+            $lines[] = 'Email: (not provided)';
+        }
+
+        if ($project !== '') {
+            $lines[] = "Project Type: {$project}";
+        }
+
+        if ($source !== '') {
+            $lines[] = "Where did you hear about us: {$source}";
+        }
+
+        if ($message !== '') {
+            $lines[] = "Project Details:\n{$message}";
+        }
+
+        $lines[] = 'Privacy Policy Accepted: Yes';
+
+        $body = implode("\n\n", $lines);
+
+        $headers = [
+            'From: LuxCraft Website <no-reply@luxcraft.sg>',
+            'Content-Type: text/plain; charset=utf-8',
+            'Return-Path: no-reply@luxcraft.sg',
+            'X-Mailer: PHP/' . PHP_VERSION,
+        ];
+
+        if ($email !== '') {
+            $headers[] = "Reply-To: {$email}";
+        }
+        else {
+            $headers[] = 'Reply-To: no-reply@luxcraft.sg';
+        }
+
+        error_clear_last();
+        $compiledHeaders = implode("\r\n", $headers);
+        $envelopeSender = '-fno-reply@luxcraft.sg';
+
+        if (!ini_get('safe_mode')) {
+            $mailSent = @mail($recipient, $subject, $body, $compiledHeaders, $envelopeSender);
+        }
+        else {
+            $mailSent = @mail($recipient, $subject, $body, $compiledHeaders);
+        }
+        $mailError = error_get_last();
+
+        if (!$mailSent) {
+            $errors[] = 'We were unable to send your message. Please try again later or contact us directly at contact@luxcraft.sg.';
+            $errorDetails = $mailError['message'] ?? 'mail() returned false without additional error information.';
+        }
     }
-    $mailError = error_get_last();
 
+    $status = 'success';
     if (!$mailSent) {
-        $errors[] = 'We were unable to send your message. Please try again later or contact us directly at contact@luxcraft.sg.';
-        $errorDetails = $mailError['message'] ?? 'mail() returned false without additional error information.';
+        $status = $errorDetails !== null ? 'mail_failure' : 'validation_failed';
     }
-}
 
-$logEvent([
-    'status' => $mailSent ? 'success' : 'failure',
-    'inputs' => [
-        'name' => $name,
-        'email' => $email,
-        'phone' => $phone,
-        'project' => $project,
-    ],
-    'transport' => 'mail()',
-    'envelope' => $envelopeSender ?? null,
-    'error' => $errorDetails,
-]);
+    $logEvent([
+        'status' => $status,
+        'inputs' => [
+            'name' => $name,
+            'email' => $email,
+            'phone' => $phone,
+            'project' => $project,
+            'source' => $source,
+            'message' => $message,
+        ],
+        'validation_errors' => $errors ?: null,
+        'transport' => $mailSent ? 'mail()' : 'none',
+        'envelope' => $envelopeSender ?? null,
+        'error' => $errorDetails,
+    ]);
+}
 
 $pageTitle = $errors ? 'Submission Error' : 'Thank You';
 $statusClass = $errors ? 'error' : 'success';
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $pageTitle ?> – LuxCraft</title>
+    <title>
+        <?= $pageTitle?> – LuxCraft
+    </title>
     <link rel="stylesheet" href="/assets/styles.css">
+    <script src="/assets/js/analytics.js?v=1.0.1" defer></script>
+    <?php if (empty($errors)): ?>
+    <script>
+        window.fbq = window.fbq || function() {
+            window.fbq.queue = window.fbq.queue || [];
+            window.fbq.queue.push(arguments);
+        };
+        fbq('track', 'Lead');
+    </script>
+    <?php endif; ?>
     <style>
         .contact-response {
             min-height: 100vh;
@@ -228,39 +312,52 @@ $statusClass = $errors ? 'error' : 'success';
         }
     </style>
 </head>
-<body>
-<main class="contact-response">
-    <div class="contact-response__card">
-        <div class="contact-response__status-icon <?= $statusClass ?>">
-            <?= $errors ? '!' : '&#10003;' ?>
-        </div>
-        <h1><?= $errors ? 'We hit a snag' : 'Thank you for reaching out' ?></h1>
 
-        <?php if ($errors): ?>
+<body>
+    <main class="contact-response">
+        <div class="contact-response__card">
+            <div class="contact-response__status-icon <?= $statusClass?>">
+                <?= $errors ? '!' : '&#10003;'?>
+            </div>
+            <h1>
+                <?= $errors ? 'We hit a snag' : 'Thank you for reaching out'?>
+            </h1>
+
+            <?php if ($errors): ?>
             <p>We couldn't process your submission because of the following:</p>
             <ul>
                 <?php foreach ($errors as $error): ?>
-                    <li><?= $error ?></li>
-                <?php endforeach; ?>
+                <li>
+                    <?= $error?>
+                </li>
+                <?php
+    endforeach; ?>
             </ul>
             <?php if ($errorDetails): ?>
-                <p style="font-size:0.875rem;color:#85796b;">
-                    Diagnostic hint: <?= htmlspecialchars($errorDetails, ENT_QUOTES, 'UTF-8'); ?>
-                </p>
-            <?php endif; ?>
+            <p style="font-size:0.875rem;color:#85796b;">
+                Diagnostic hint:
+                <?= htmlspecialchars($errorDetails, ENT_QUOTES, 'UTF-8'); ?>
+            </p>
+            <?php
+    endif; ?>
             <p>Please go back and correct the highlighted items, then try submitting the form again.</p>
-        <?php else: ?>
-            <p>Your consultation request has been sent successfully. A member of the LuxCraft team will get back to you within one business day.</p>
+            <?php
+else: ?>
+            <p>Your consultation request has been sent successfully. A member of the LuxCraft team will get back to you
+                within one business day.</p>
             <?php if ($mailSent): ?>
-                <p>We've emailed the details to our team at <strong>contact@luxcraft.sg</strong>.</p>
-            <?php endif; ?>
-        <?php endif; ?>
+            <p>We've emailed the details to our team at <strong>contact@luxcraft.sg</strong>.</p>
+            <?php
+    endif; ?>
+            <?php
+endif; ?>
 
-        <div class="contact-response__actions">
-            <a class="primary" href="/contact.html">Back to Contact Page</a>
-            <a class="secondary" href="/index.html">Return Home</a>
+            <div class="contact-response__actions">
+                <a class="primary" href="/contact.html">Back to Contact Page</a>
+                <a class="secondary" href="/index.html">Return Home</a>
+            </div>
         </div>
-    </div>
-</main>
+    </main>
 </body>
+
 </html>
