@@ -16,6 +16,11 @@ jobs:
         with:
           fetch-depth: 2
 
+      - name: Check contact handler syntax
+        run: |
+          php -l contact-submit.php
+          python3 -m unittest discover -s tests -v
+
       - name: Deploy via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
@@ -34,3 +39,18 @@ jobs:
             **/*.tar.gz
             **/logs/**
             **/scratch/**
+            **/tests/**
+            **/scripts/**
+            **/mail-diagnostics.php
+            **/*.log
+            **/.luxcraft-private/**
+
+      - name: Remove retired diagnostics from hosting
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+        run: python3 scripts/remove-mail-diagnostics.py
+
+      - name: Verify private routes are blocked
+        run: python3 scripts/check-contact-privacy.py

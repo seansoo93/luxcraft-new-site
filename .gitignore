@@ -52,3 +52,7 @@ test.html
 *.sublime-project
 *.sublime-workspace
 
+
+# Python deployment checks and regression tests
+__pycache__/
+*.pyc

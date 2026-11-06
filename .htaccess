@@ -4,6 +4,13 @@
 RewriteEngine On
 RewriteBase /
 
+# Deny access before redirects, including existing files left on the server.
+RewriteRule ^(?:logs|\.luxcraft-private)(?:/|$) - [F,L,NC]
+RewriteRule ^mail-diagnostics(?:\.php)?(?:/|$) - [F,L,NC]
+<FilesMatch "(?i)(?:\.(?:log|bak|backup)$|^error_log$)">
+    Require all denied
+</FilesMatch>
+
 # Force HTTPS redirect
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]

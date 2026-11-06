@@ -1,45 +1,42 @@
 <?php
 declare(strict_types=1);
 
-if (!defined('CONTACT_LOG_PATH')) {
-    define('CONTACT_LOG_PATH', __DIR__ . '/logs/contact-form.log');
-}
-
+// Keep operational events outside the document root. Never log enquiry contents.
 $logEvent = static function (array $payload): void {
-    $payload['ip'] = $_SERVER['REMOTE_ADDR'] ?? 'unknown';
-    $payload['user_agent'] = $_SERVER['HTTP_USER_AGENT'] ?? 'unknown';
-    $payload['timestamp'] = gmdate('c');
-    $payload['sendmail_path'] = ini_get('sendmail_path') ?: null;
-    $payload['smtp'] = ini_get('SMTP') ?: null;
-    $payload['smtp_port'] = ini_get('smtp_port') ?: null;
-
+    $event = [
+        'reference' => bin2hex(random_bytes(8)),
+        'timestamp' => gmdate('c'),
+        'status' => $payload['status'],
+    ];
+    $line = json_encode($event, JSON_THROW_ON_ERROR) . PHP_EOL;
+    $directory = dirname(__DIR__) . '/.luxcraft-private';
+    $oldUmask = umask(0077);
     try {
-        $logLine = json_encode($payload, JSON_THROW_ON_ERROR);
-
-        // Self-healing: Check if the log directory exists, and attempt to create it if not
-        $logDir = dirname(CONTACT_LOG_PATH);
-        if (!is_dir($logDir)) {
-            @mkdir($logDir, 0755, true);
+        if (!is_dir($directory) && !@mkdir($directory, 0700, true)) {
+            throw new RuntimeException('Private directory unavailable');
         }
-
-        // Attempt to write to log file
-        $written = @file_put_contents(CONTACT_LOG_PATH, $logLine . PHP_EOL, FILE_APPEND | LOCK_EX);
-
-        // If file_put_contents failed, try to fix permissions and write again
-        if ($written === false) {
-            @chmod(CONTACT_LOG_PATH, 0644);
-            @chmod($logDir, 0755);
-            $written = @file_put_contents(CONTACT_LOG_PATH, $logLine . PHP_EOL, FILE_APPEND | LOCK_EX);
+        $resolved = realpath($directory);
+        $publicRoots = [realpath(__DIR__), realpath($_SERVER['DOCUMENT_ROOT'] ?? __DIR__)];
+        foreach ($publicRoots as $root) {
+            if ($root !== false && ($resolved === $root || strpos($resolved . '/', rtrim($root, '/') . '/') === 0)) {
+                throw new RuntimeException('Log directory must be outside document root');
+            }
         }
-
-        // Fallback: If still unable to write to the file, write to the server's default PHP system log
-        if ($written === false) {
-            error_log('LuxCraft Form Submission (File Write Failed): ' . $logLine);
+        $path = $directory . '/contact-events-' . gmdate('Y-m-d') . '.log';
+        if (@file_put_contents($path, $line, FILE_APPEND | LOCK_EX) === false) {
+            throw new RuntimeException('Private log unavailable');
         }
-    }
-    catch (Throwable $e) {
-        // Final fallback if json_encode or anything else failed
-        error_log('LuxCraft Form Submission Log Error: ' . $e->getMessage());
+        // Retain operational metadata for 30 days; never touch legacy enquiry logs.
+        foreach (glob($directory . '/contact-events-????-??-??.log') ?: [] as $oldPath) {
+            if (basename($oldPath) < 'contact-events-' . gmdate('Y-m-d', time() - 30 * 86400) . '.log') {
+                @unlink($oldPath);
+            }
+        }
+    } catch (Throwable $e) {
+        // Metadata only: do not forward mail errors, request data or exception text.
+        error_log('LuxCraft contact event: ' . trim($line));
+    } finally {
+        umask($oldUmask);
     }
 };
 
@@ -71,21 +68,7 @@ if ($honeypot !== '') {
     // Silent Rejection: Honeypot field was filled (likely a bot).
     // Log the spam attempt for auditing, bypass sending mail, and display
     // a standard success response so the bot assumes its submission succeeded.
-    $logEvent([
-        'status' => 'honeypot_triggered_silent_rejection',
-        'inputs' => [
-            'name' => $name,
-            'email' => $email,
-            'phone' => $phone,
-            'project' => $project,
-            'source' => $source,
-            'message' => $message,
-            'company_website' => $honeypot,
-        ],
-        'transport' => 'none',
-        'envelope' => null,
-        'error' => null,
-    ]);
+    $logEvent(['status' => 'honeypot_triggered_silent_rejection']);
 
     $mailSent = true;
 } else {
@@ -179,21 +162,7 @@ if ($honeypot !== '') {
         $status = $errorDetails !== null ? 'mail_failure' : 'validation_failed';
     }
 
-    $logEvent([
-        'status' => $status,
-        'inputs' => [
-            'name' => $name,
-            'email' => $email,
-            'phone' => $phone,
-            'project' => $project,
-            'source' => $source,
-            'message' => $message,
-        ],
-        'validation_errors' => $errors ?: null,
-        'transport' => $mailSent ? 'mail()' : 'none',
-        'envelope' => $envelopeSender ?? null,
-        'error' => $errorDetails,
-    ]);
+    $logEvent(['status' => $status]);
 }
 
 $pageTitle = $errors ? 'Submission Error' : 'Thank You';
