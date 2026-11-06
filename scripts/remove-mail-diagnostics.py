@@ -4,7 +4,11 @@ import ssl
 from ftplib import FTP_TLS
 from pathlib import PurePosixPath
 
-with FTP_TLS(context=ssl.create_default_context(), timeout=30) as ftp:
+context = ssl.create_default_context()
+# A hosting administrator may provide the trusted private CA; verification stays on.
+if os.environ.get("FTP_CA_CERT"):
+    context.load_verify_locations(cadata=os.environ["FTP_CA_CERT"])
+with FTP_TLS(context=context, timeout=30) as ftp:
     ftp.connect(os.environ["FTP_SERVER"])
     ftp.login(os.environ["FTP_USERNAME"], os.environ["FTP_PASSWORD"])
     ftp.prot_p()

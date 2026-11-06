@@ -21,12 +21,8 @@ jobs:
           php -l contact-submit.php
           python3 -m unittest discover -s tests -v
 
-      - name: Inspect public hosting certificate chain
-        env:
-          FTP_SERVER: ${{ secrets.FTP_SERVER }}
-        run: python3 scripts/inspect-hosting-tls.py
-
       - name: Deploy via FTPS
+        id: deploy
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_SERVER }}
@@ -55,7 +51,9 @@ jobs:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
           FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_CA_CERT: ${{ secrets.FTP_CA_CERT }}
         run: python3 scripts/remove-mail-diagnostics.py
 
       - name: Verify private routes are blocked
+        if: ${{ !cancelled() && steps.deploy.outcome == 'success' }}
         run: python3 scripts/check-contact-privacy.py

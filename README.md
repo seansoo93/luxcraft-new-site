@@ -88,3 +88,10 @@ Run regression tests with PHP CLI and Python 3:
 ```sh
 python3 -m unittest discover -s tests -v
 ```
+
+The retired-file cleanup verifies the FTPS certificate. For a hosting server
+using a private CA, an administrator must configure the `FTP_CA_CERT` GitHub
+Actions secret with the trusted CA's PEM certificate. Do not substitute an
+unverified server certificate. Confirm that `server-dir` refers to the live
+luxcraft.sg document root before changing deployment destinations. Live access
+checks still run if cleanup fails, so a successful upload cannot mask exposure.
