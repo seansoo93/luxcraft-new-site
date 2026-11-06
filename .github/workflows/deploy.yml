@@ -21,6 +21,11 @@ jobs:
           php -l contact-submit.php
           python3 -m unittest discover -s tests -v
 
+      - name: Inspect public hosting certificate chain
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        run: python3 scripts/inspect-hosting-tls.py
+
       - name: Deploy via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:

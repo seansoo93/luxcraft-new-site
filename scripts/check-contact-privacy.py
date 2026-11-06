@@ -1,19 +1,17 @@
 """Check access controls without downloading enquiry records."""
 import time
-from urllib.error import HTTPError
-from urllib.request import Request, urlopen
+import subprocess
 
 BASE = "https://www.luxcraft.sg"
 PROTECTED = ["/logs/", "/logs/contact-form.log", "/mail-diagnostics.php",
              "/mail-diagnostics", "/mail-diagnostics.php/extra", "/.luxcraft-private/"]
 
 def status(path):
-    request = Request(BASE + path, method="HEAD", headers={"Cache-Control": "no-cache"})
-    try:
-        with urlopen(request, timeout=20) as response:
-            return response.status
-    except HTTPError as error:
-        return error.code
+    result = subprocess.run(["curl", "--silent", "--show-error", "--head", "--location",
+                             "--max-time", "20", "--output", "/dev/null",
+                             "--write-out", "%{http_code}", BASE + path],
+                            capture_output=True, text=True, check=True)
+    return int(result.stdout)
 
 for attempt in range(3):
     try:
